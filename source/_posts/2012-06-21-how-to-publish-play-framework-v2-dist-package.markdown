@@ -1,10 +1,15 @@
 ---
 layout: post
-title: "How to publish Play Framework v2 'dist' package ?"
+title: "How to publish Play2 'dist' package ?"
 date: 2012-06-21 17:20
 comments: true
 categories: [play20, SBT]
 ---
+
+In an enterprise context, it is often necessary to deploy (maven) or publish (Ivy/SBT) artifacts in a central repository.
+
+Here is a sample Play2 project configured to publish artifact in a local folder (`~/.ivy2/publish`), but you can easily adapt it to publish
+to your central repository ([Nexus](http://www.cakesolutions.net/teamblogs/2012/01/28/publishing-sbt-projects-to-nexus/), Artifactory, ...)
 
 ```scala
 import sbt._
@@ -51,3 +56,5 @@ object ApplicationBuild extends Build {
     publishMavenStyle := true)
 }
 ```
+
+Next step: to able to "release" a Play2 project with SBT (update version in project, tag, build and publish artifacts).
