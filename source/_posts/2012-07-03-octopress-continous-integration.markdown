@@ -31,7 +31,8 @@ RUBY_VERSION=1.9.2-p320 \
 source ./use-ruby
 gem install --conservative bundler
 bundle install
-rake setup_github_pages[git@github.com:dlecan/dlecan.github.com.git]
+# Only once, otherwise your 'master' branch will be a real mess
+#rake setup_github_pages[git@github.com:dlecan/dlecan.github.com.git]
 rake generate
 rake deploy
 ```
