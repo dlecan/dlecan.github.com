@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Octopress continous integration"
 date: 2012-03-21 21:17
