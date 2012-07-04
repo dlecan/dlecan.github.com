@@ -3,7 +3,7 @@ layout: post
 title: "Octopress continous integration"
 date: 2012-03-21 21:17
 comments: true
-published: true
+published: false
 categories: [octopress, cloudbees, jenkins]
 ---
 [Octopress](http://octopress.org) is great for blogging:
