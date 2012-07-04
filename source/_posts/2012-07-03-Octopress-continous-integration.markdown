@@ -37,4 +37,4 @@ rake deploy
 ```
 That's it! Just replace `git@github.com:dlecan/dlecan.github.com.git` by your Git repository.
 
-this blog is also powered thanks to Cloudbees :) {% img right http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png %}
+This blog is also built thanks to Cloudbees :) {% img right http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png %}
