@@ -7,8 +7,8 @@ published: true
 categories: [octopress, cloudbees, jenkins]
 ---
 [Octopress](http://octopress.org) is great for blogging:
-- Clear and easy syntax thanks to Markdown
-- Offline editing (write your post offline, push it to Github, see it in 'production)
+ - [Clear and easy-to-read syntax](http://daringfireball.net/projects/markdown/syntax/) thanks to [Markdown](http://daringfireball.net/projects/markdown/syntax/)
+ - Offline editing (write your post offline, push it to Github, see it in 'production)
 
 This blog is powered by Octopress.
 
@@ -16,8 +16,8 @@ But Octopress relies on Ruby rake to be generated and deploy your blog posts, so
 And installing theses tools are generally a pain: ruby/rvm, rake, bundler, encoding issues between platforms, ...
 
 So the perfect "blog post flow" would be:
-- write blog post everywhere: laptop, personnal/professional computer, ...
-- generate and deploy from only one place
+ 1. write blog post everywhere: laptop, personnal/professional computer, ...
+ 2. generate and deploy from only one place
 
 I found a centralized place to generate and deploy this blog: a [Cloudbees](http://www.cloudbees.com) Jenkins instance!
 Jenkins is a continuous integration server, which allows you to build and deploy Java, Ruby, ... applications.
