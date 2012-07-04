@@ -57,4 +57,4 @@ object ApplicationBuild extends Build {
 }
 ```
 
-Next step: to able to "release" a Play2 project with SBT (update version in project, tag, build and publish artifacts).
+Next step: to be able to "release" a Play2 project with SBT (update version in project, tag, build and publish artifacts).
