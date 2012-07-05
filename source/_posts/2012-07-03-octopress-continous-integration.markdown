@@ -13,7 +13,7 @@ categories: [octopress, cloudbees, jenkins]
 
 This blog is powered by Octopress.
 
-But Octopress relies on Ruby rake to be generated and deploy your blog posts, so you need to install them on each computer from where you want to deploy your blog.
+But Octopress relies on Ruby rake to generate and deploy your blog posts, so you need to install them on each computer from where you want to deploy your blog.
 And installing theses tools are generally a pain: ruby/rvm, rake, bundler, encoding issues between platforms, ...
 
 So the perfect "blog post flow" would be:
