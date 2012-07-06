@@ -26,7 +26,7 @@ Jenkins is a continuous integration server, which allows you to build and deploy
 
 What about a ruby/rake/bundler build ?
 
-Configure a new free-style projet, with the following shell job:
+Configure a new free-style projet, with the following *shell* job:
 
 ```sh
 curl -s -o use-ruby https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/use-ruby
@@ -34,8 +34,7 @@ RUBY_VERSION=1.9.2-p320 \
 source ./use-ruby
 gem install --conservative bundler
 bundle install
-# Only once, otherwise your 'master' branch will be a real mess
-#rake setup_github_pages[git@github.com:dlecan/dlecan.github.com.git]
+rake setup_github_pages[git@github.com:dlecan/dlecan.github.com.git]
 rake generate
 rake deploy
 ```
