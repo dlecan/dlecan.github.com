@@ -114,7 +114,9 @@ val projectSettings = Play2WarPlugin.play2WarSettings ++ Seq(
 
 ...
 
-val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(projectSettings: _*)
+val main = PlayProject(
+   appName, appVersion, appDependencies, mainLang = JAVA
+).settings(projectSettings: _*)
 ```
 
 ### Configure servlet container version
@@ -148,7 +150,9 @@ object ApplicationBuild extends Build {
       // Nothing
     )
 
-    val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(projectSettings: _*)
+    val main = PlayProject(
+      appName, appVersion, appDependencies, mainLang = JAVA
+    ).settings(projectSettings: _*)
 
 }
 ```
