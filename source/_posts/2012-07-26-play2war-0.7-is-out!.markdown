@@ -1,0 +1,50 @@
+---
+layout: post
+title: "Play2War 0.7 is out!"
+date: 2012-07-26 21:34
+comments: true
+published: true
+categories: [play2, play2war]
+---
+== A major release
+
+Despite of his version, Play2War v0.7 is really a major release of this plugin for play Framework 2: 
+Servlet 2.5 containers (Tomcat 6, Jetty 7, ...) can now be used to deploy your Play applications!
+
+But this compatibility as a price: performances. They are much worth than with Servlet 3.0, 
+themselves worth than with native Play 2.
+
+Two threads are indeed necessary to compute each request:
+
+* one for handling HTTP request
+* one for Akka asynchronous computing
+
+Standard Java synchronization mecanisms (wait/notify) are then used to make theses threads work together. 
+Of course, they are managed by threads pools, but synchronization has a cost. So if you need high performances
+and have to deploy WAR packages, please upgrade to a modern servlet 3.0 container, such as Tomcat 7, 
+Jetty 8, JBoss 7.x, Glassfish 3.x (not tested yet), ...
+
+== Upgrade your project's configuration
+
+Switching between Servlet 2.5 and 3.0 requires configuration, so you will need to upgrade to Play project 
+to be compatible with Play2War 0.7.
+
+Here is a typical Play2 project using Play2war v0.6:
+
+Follow the next steps to upgrade it to play2War v0.7.
+
+=== Remove Play2War core dependency
+
+=== Update Play2War plugin version
+
+=== Move all settings in a variable
+
+=== Import Play2War SBT settings
+
+=== Add Play2War SBT settings to your project's settings
+
+=== Configure servlet container version
+
+=== Final result
+
+=== Package your application
