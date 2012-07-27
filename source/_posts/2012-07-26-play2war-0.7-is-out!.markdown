@@ -33,7 +33,7 @@ Jetty 8, JBoss 7.x, Glassfish 3.x (not tested yet), ...
 
 Don't forget to look at full [Changelog](https://github.com/dlecan/play2-war-plugin/wiki/Changelog).
 
-== Upgrade your project's configuration
+## Upgrade your project's configuration
 
 Switching between Servlet 2.5 and 3.0 requires configuration, so you will need to upgrade to Play project 
 to be compatible with Play2War 0.7.
