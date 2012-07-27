@@ -18,8 +18,8 @@ Servlet 2.5 containers can now be used to deploy your Play applications!
 
 Servlet 2.5 containers means Tomcat 6, Jetty 7, ...
 
-But this compatibility as a price: performances. They are much worse than with Servlet 3.0, 
-themselves worse than with native Play 2.
+But this compatibility as a price: performances. They are worth than with Servlet 3.0, 
+themselves worth than with native Play 2.
 
 Two threads are indeed necessary to compute each request:
 
