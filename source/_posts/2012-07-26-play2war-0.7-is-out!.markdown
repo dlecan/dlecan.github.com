@@ -8,11 +8,18 @@ categories: [play2, play2war]
 ---
 ## A major release
 
-Despite of his version number, Play2War v0.7 is really a major release of this plugin for play Framework 2: 
-Servlet 2.5 containers (Tomcat 6, Jetty 7, ...) can now be used to deploy your Play applications!
+Despite of his version number, (Play2War)[https://github.com/dlecan/play2-war-plugin] v0.7 is 
+really a major release of this plugin for (Play Framework 2)[http://www.playframework.org/], 
+the famous productive web framework:
 
-But this compatibility as a price: performances. They are much worth than with Servlet 3.0, 
-themselves worth than with native Play 2.
+{% blockquote %} 
+Servlet 2.5 containers can now be used to deploy your Play applications!
+{% endblockquote %}
+
+Servlet 2.5 containers means Tomcat 6, Jetty 7, ...
+
+But this compatibility as a price: performances. They are much worse than with Servlet 3.0, 
+themselves worse than with native Play 2.
 
 Two threads are indeed necessary to compute each request:
 
