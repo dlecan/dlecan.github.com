@@ -8,8 +8,8 @@ categories: [play2, play2war]
 ---
 ## A major release
 
-Despite of his version number, (Play2War)[https://github.com/dlecan/play2-war-plugin] v0.7 is 
-really a major release of this plugin for (Play Framework 2)[http://www.playframework.org/], 
+Despite of his version number, [Play2War](https://github.com/dlecan/play2-war-plugin( v0.7 is 
+really a major release of this plugin for [Play Framework 2](http://www.playframework.org/), 
 the famous productive web framework:
 
 {% blockquote %} 
