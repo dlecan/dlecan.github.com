@@ -1,7 +1,7 @@
 ﻿
 ---
 layout: post
-title: "Partage de connexion Internet avec Androïd par câble USB"
+title: "Partage de connexion Internet avec Android par câble USB"
 date: 2012-08-16 15:17
 comments: true
 published: true
