@@ -3,7 +3,7 @@ layout: post
 title: "How to publish Play2 'dist' package ?"
 date: 2012-06-21 17:20
 comments: true
-categories: [play20, SBT]
+categories: [play2, SBT]
 ---
 
 In an enterprise context, it is often necessary to deploy (maven) or publish (Ivy/SBT) artifacts in a central repository.
