@@ -8,8 +8,8 @@ published: true
 categories: [autres]
 ---
 
-J'ai décidé de soutenir l'action "Blog zéro Carbone" de (Petits gestes écolos)[http://www.bonial.fr/] qui vise 
-à (planter un arbre pour chaque blog)[http://www.bonial.fr/environnement/blog-neutre-en-carbone/un-blog-un-arbre-principe/] 
+J'ai décidé de soutenir l'action "Blog zéro Carbone" de [Petits gestes écolos](http://www.bonial.fr/) qui vise 
+à [planter un arbre pour chaque blog](http://www.bonial.fr/environnement/blog-neutre-en-carbone/un-blog-un-arbre-principe/) 
 déclaré auprès d'eux.
 
 Le principe est simple :
