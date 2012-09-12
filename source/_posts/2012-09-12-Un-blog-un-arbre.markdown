@@ -1,18 +1,21 @@
 ﻿
 ---
 layout: post
-title: "Partage de connexion Internet avec Android par câble USB"
-date: 2012-08-16 15:17
+title: "Un blog, un arbre"
+date: 2012-09-12 15:17
 comments: true
 published: true
-categories: [android, freemobile]
+categories: [autres]
 ---
 
-Depuis Free Mobile, il est possible de partager la connexion Internet de son mobile avec son ordinateur, sa tablette, ... sans coût supplémentaire.
-Si vous devez payer, changez d'opérateur.
+J'ai décidé de soutenir l'action "Blog zéro Carbone" de (Petits gestes écolos)[http://www.bonial.fr/] qui vise 
+à (planter un arbre pour chaque blog)[http://www.bonial.fr/environnement/blog-neutre-en-carbone/un-blog-un-arbre-principe/] 
+déclaré auprès d'eux.
 
-Encore faut-il savoir comment faire (câble USB, Wifi, Bluetooth), que ce soit sur le smartphone ou l'ordinateur.
+Le principe est simple :
 
-On trouve moultes applications de partage de connexion (tether/tethering) plus ou moins bridées et payantes alors que Google [fournit désormais tout cela gratuitement](http://www.android.com/tether), même [les pilotes pour Windows XP](http://www.android.com/drivers/tetherxp.inf) (nécessaires pour partager la connexion au travers d'un câble USB).
+- Je publie un petit article sur la démarche et j'appose un badge sur mon blog (ci-contre)
+- Je les préviens via blog-zerocarbone@bonial.fr
+- Ils se chargent de tout pour la plantation de mon arbre en Bretagne
 
-Simple et gratuit.
+Reste plus qu'à trouver, par la suite, un moyen d'identifier mon arbre dans la plantation et lui rendre visite régulièrement :-)
