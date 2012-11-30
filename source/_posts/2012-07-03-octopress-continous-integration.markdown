@@ -6,6 +6,9 @@ comments: true
 published: true
 categories: [octopress, cloudbees, jenkins]
 ---
+
+**Update 2012-11-30**: update `use-ruby` script path.
+
 [Octopress](http://octopress.org) is great for blogging:
 
  - [Clear and easy-to-read syntax](http://daringfireball.net/projects/markdown/syntax/) thanks to [Markdown](http://daringfireball.net/projects/markdown/syntax/)
@@ -29,7 +32,7 @@ What about a ruby/rake/bundler build ?
 Configure a new free-style projet, with the following *shell* job:
 
 ```sh
-curl -s -o use-ruby https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/use-ruby
+curl -s -o use-ruby https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/ruby/use-ruby
 RUBY_VERSION=1.9.2-p320 \
 source ./use-ruby
 gem install --conservative bundler
