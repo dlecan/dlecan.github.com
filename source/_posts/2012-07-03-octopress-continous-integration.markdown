@@ -37,7 +37,7 @@ Configure a new free-style projet, with the following *shell* job:
 curl -s -o use-ruby https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/ruby/use-ruby
 RUBY_VERSION=1.9.3-p327 \
 source ./use-ruby
-ln -s /scratch/jenkins/ruby /scratch/jenkins/rubies
+ln -fs /scratch/jenkins/ruby /scratch/jenkins/rubies
 gem install --conservative bundler
 bundle install
 rake setup_github_pages[git@github.com:dlecan/dlecan.github.com.git]
