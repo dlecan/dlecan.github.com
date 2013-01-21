@@ -33,7 +33,6 @@ do
   ln -s $f ~/.sbt/
 done
 ``` 
-
 This script will create a symbolic link in `~/.sbt/` for each files found in `/private/<my_account>/.sbt`.
 
 ## Add a new Jenkins Job to excute the shell script
