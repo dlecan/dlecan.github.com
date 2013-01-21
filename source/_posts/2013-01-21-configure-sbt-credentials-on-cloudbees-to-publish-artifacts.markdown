@@ -18,7 +18,7 @@ As I want to load crendentials in SBT, that is to say secret passwords, I used t
 
 ## Create and upload your `*.sbt` file your private folder
 
-I choose to copy all my `*.sbt` files into `/private/<my_account>/.sbt` folder.
+I have choosen to copy all my `*.sbt` files into `/private/<my_account>/.sbt` folder.
 
 ## Create a new shell script
 
