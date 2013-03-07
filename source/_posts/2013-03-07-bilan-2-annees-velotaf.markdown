@@ -47,18 +47,18 @@ Depuis :
 
 Fréquemment la même séquence de réactions : d'abord admiratifs :
 
-> Whoa, 16km par jour de vélo ? Impressionnant !
+> Whoa ! 16km par jour de vélo ? Impressionnant !
 
 Puis, quand j'annonce que j'ai un vélo à assistance électrique et que sans 
 lui ce n'est pas faisable (arriver sec au boulot, vitesse moyenne élevée, ...), ils sont 
 sarcastiques :
 
-> ah, un vélo électrique, comme un scooter quoi. Trop facile
+> Ah ?! Un vélo électrique... comme un scooter, quoi. Trop facile...
 
-Comme si je trichais. Je cherche toujours à quel jeu ils pensent que je triche...
+Comme si je trichais. Je cherche toujours à quel jeu ils pensent que je triche.
 
 
-Quelques uns se sont décidés à prendre leur vélo pour venir au travail et sont très contents de leur choix.
+Quelques-uns se sont décidés à prendre leur vélo pour venir au travail et sont très contents de leur choix.
 
 
 D'autres en parlent et ne dépasseront sans doute pas ce stade.
@@ -76,7 +76,7 @@ car on ne peut pas toujours tout faire en vélo non plus, c'est une question d'o
 
 
 J'ai réussi à m'en affranchir probablement parce que j'ai une piètre image de la voiture : ruineuse, 
-ennuyante, pénible à garer, ...
+ennuyante, pénible à garer, ... 
 Attention, je n'en nie pas les avantages (je fais mes courses avec une fois par semaine, je vais à la 
 plage, ...), mais au quotidien, je trouve que les inconvénients prennent le dessus. Je prends tout 
 même la voiture 2-3j par mois pour aller à mon travail (météo trop difficile, client trop éloigné, ...).
