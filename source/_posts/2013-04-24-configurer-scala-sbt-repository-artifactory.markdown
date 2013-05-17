@@ -69,13 +69,13 @@ La configuration de SBT s'effectue en deux temps.
 
 Pour cela, créez le fichier `~/sbt/.repositories` avec le contenu suivant :
 
-``` ~/sbt/.repositories
+{% codeblock ~/sbt/.repositories %}
 [repositories]
   local
   maven-local
   ivy-proxy-releases: http://localhost:8180/artifactory/ivy-remote-repos/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]
   maven-proxy-releases: http://localhost:8180/artifactory/maven-remote-repos/
-```
+{% endcodeblock %}
 
 Ce fichier indique à SBT l'ensemble des dépôts qu'il peut consulter pour résoudre les dépendances :
 - `local` : dépôt Ivy local par défaut, localisé dans `~/.ivy2/`
