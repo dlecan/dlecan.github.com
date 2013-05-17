@@ -32,7 +32,7 @@ C'est ce dernier paramétrage que je vous propose de décrire en détails.
 
 Voici ce que nous allons configurer :
 
-{% img /images/proxy-cloud-setup.png 650 528 'Artifactory dans son environnement' 'Source: http://www.scala-sbt.org/release/docs/Detailed-Topics/Proxy-Repositories.html' %}
+{% img center /images/proxy-cloud-setup.png 650 528 'Artifactory dans son environnement' 'Source: http://www.scala-sbt.org/release/docs/Detailed-Topics/Proxy-Repositories.html' %}
 
 {% pullquote %}
 Il existe plusieurs outils qui peuvent permettre de gérer des artifacts, dans différents formats (Maven, RPM, Deb, P2, ...), comme [Sonatype Nexus](nexus) ou [JFrog Artifactory](artifactory).
@@ -49,15 +49,15 @@ La configuration des dépôts d'Artifactory s'effectue en deux étapes :
     `sbt-plugin-releases` => http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/
     `typesafe-ivy-releases` => http://repo.typesafe.com/typesafe/ivy-releases/
 
-2. Ajouter un nouveau dépôt virtuel de type "Ivy" qui pointent sur `sbt-plugin-releases` et `typesafe-ivy-releases`, que j'ai nommé `ivy-remote-repos`
+2. Ajouter un nouveau dépôt virtuel de type "Ivy" qui pointe sur `sbt-plugin-releases` et `typesafe-ivy-releases`, que j'ai nommé `ivy-remote-repos`
 
-**L'erreur à ne pas commettre est de fusionner les dépôts Maven et Ivy en un seul**, au format Maven par exemple. En effet, le format Ivy est plus riche que le Maven et des informations essentielles pour la résolutions des plugins SBT seraient perdues.
+**L'erreur à ne pas commettre est de fusionner les dépôts Maven et Ivy en un seul**, au format Maven par exemple. En effet, le format Ivy est plus riche que celui de Maven et des informations essentielles pour la résolution des plugins SBT seraient perdues.
 
 A ce stade de la configuration d'Artifactory, ces trois paramètres sont disponibles :
 
 - L'URL d'accès à votre instance d'Artifactory : `http://localhost:8180/artifactory/` par exemple
-- Le nom du dépôt Maven 2 virtuel qui aggrège vos dépôts Maven 2 : `maven-remote-repos`
-- Le nom du dépôt Ivy virtuel qui aggrège vos dépôts Ivy : `ivy-remote-repos`
+- Le nom du dépôt Maven 2 virtuel qui agrège vos dépôts Maven 2 : `maven-remote-repos`
+- Le nom du dépôt Ivy virtuel qui agrège vos dépôts Ivy : `ivy-remote-repos`
 
 # Configurer Scala SBT
 
