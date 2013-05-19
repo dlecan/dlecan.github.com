@@ -32,7 +32,7 @@ C'est ce dernier paramétrage que je vous propose de décrire en détails.
 
 Voici ce que nous allons configurer :
 
-{% img center /images/proxy-cloud-setup.png 650 528 'Artifactory dans son environnement' 'Source: http://www.scala-sbt.org/release/docs/Detailed-Topics/Proxy-Repositories.html' %}
+{% img /images/sbt-proxy-cloud-setup.png 650 528 'Artifactory dans son environnement' 'Source: documentation de Scala SBT_OPTS' %}
 
 {% pullquote %}
 Il existe plusieurs outils qui peuvent permettre de gérer des artifacts, dans différents formats (Maven, RPM, Deb, P2, ...), comme [Sonatype Nexus](nexus) ou [JFrog Artifactory](artifactory).
