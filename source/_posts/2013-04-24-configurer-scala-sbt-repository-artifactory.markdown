@@ -62,8 +62,6 @@ A ce stade de la configuration d'Artifactory, ces trois paramètres sont disponi
 
 # Configurer Scala SBT
 
-http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html
-
 La configuration de SBT s'effectue en deux temps.
 
 ## Ajouter les nouveaux dépôts à la configuration générale de SBT
