@@ -77,9 +77,13 @@ Pour cela, créez le fichier `~/sbt/.repositories` avec le contenu suivant :
 {% endcodeblock %}
 
 Ce fichier indique à SBT l'ensemble des dépôts qu'il peut consulter pour résoudre les dépendances :
+
 - `local` : dépôt Ivy local par défaut, localisé dans `~/.ivy2/`
+
 - `maven-local` : dépôt Maven local par défaut, localisé dans `~/.m2/repository/`
+
 - `ivy-proxy-releases` : suivi d'une URL et d'un pattern, on indique à SBT qu'il pourra trouver les artifacts qui respectent ce pattern dans ce dépôts (pattern Ivy)
+
 - `maven-proxy-releases` : suivi d'une URL, le dépôt au format Maven pour les autres dépendances
 
 ## Bloquer tous les dépôts configurés dans les builds projets
