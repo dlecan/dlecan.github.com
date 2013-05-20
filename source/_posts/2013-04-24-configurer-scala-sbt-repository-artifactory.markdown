@@ -46,8 +46,9 @@ La configuration des dépôts d'Artifactory s'effectue en deux étapes :
 
 1. Ajouter les deux dépôts distants manquants, à savoir :
 
-    `sbt-plugin-releases` => http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/
-    `typesafe-ivy-releases` => http://repo.typesafe.com/typesafe/ivy-releases/
+    - `sbt-plugin-releases` => http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/
+
+    - `typesafe-ivy-releases` => http://repo.typesafe.com/typesafe/ivy-releases/
 
 2. Ajouter un nouveau dépôt virtuel de type "Ivy" qui pointe sur `sbt-plugin-releases` et `typesafe-ivy-releases`, que j'ai nommé `ivy-remote-repos`
 
