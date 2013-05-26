@@ -42,17 +42,19 @@ Il existe plusieurs outils qui peuvent permettre de gérer des artifacts, dans d
 Je vous passe les détails d'installation de l'outil, ils sont [très bien décrits dans sa documentation](install-artifactory).
 {% endpullquote %}
 
-La configuration des dépôts d'Artifactory s'effectue en deux étapes :
+La configuration des dépôts d'Artifactory s'effectue de la manière suivante :
 
 1. Ajouter les deux dépôts distants manquants, à savoir :
 
-    - `sbt-plugin-releases` => http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/
+    - `sbt-plugin-releases` => `http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/`
 
-    - `typesafe-ivy-releases` => http://repo.typesafe.com/typesafe/ivy-releases/
+    - `typesafe-ivy-releases` => `http://repo.typesafe.com/typesafe/ivy-releases/`
 
-2. Ajouter un nouveau dépôt virtuel de type "Ivy" qui pointe sur `sbt-plugin-releases` et `typesafe-ivy-releases`, que j'ai nommé `ivy-remote-repos`
+2. Ajouter un nouveau dépôt virtuel de type "Ivy" qui pointe sur `sbt-plugin-releases` et `typesafe-ivy-releases`. Je l'ai nommé `ivy-remote-repos`.
 
-**L'erreur à ne pas commettre est de fusionner les dépôts Maven et Ivy en un seul**, au format Maven par exemple. En effet, le format Ivy est plus riche que celui de Maven et des informations essentielles pour la résolution des plugins SBT seraient perdues.
+    **Fusionner les dépôts Maven et Ivy en un seul est l'erreur à ne pas commettre** (au format Maven par exemple). En effet, le format Ivy est plus riche que celui de Maven et des informations essentielles pour la résolution des plugins SBT seraient perdues.
+
+3. (Optionnel) Si vous développez pour Play Framework, rajouter le dépôt Maven des releases Typesafe `http://repo.typesafe.com/typesafe/maven-releases/` à votre dépôt virtuel Maven peut être une bonne idée.
 
 A ce stade de la configuration d'Artifactory, ces trois paramètres sont disponibles :
 
