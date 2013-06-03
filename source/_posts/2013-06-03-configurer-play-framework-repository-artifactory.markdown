@@ -12,6 +12,7 @@ categories: [sbt, playframework, artifactory]
 de votre projet Play Framework depuis des dépôts centralisés, comme [Maven Central](repo-maven2-central).
 
 Cette technique est très intéressante, mais il faut bien tenir compte des inconvénients induits :
+
 1. Pas de maîtrise des dépendances ou des dépôts configurés par les développeurs : on télécharge n'importe quoi depuis n'importe où
 
 2. Gâchi de bande passante / latence : chaque développeur télécharge chaque dépendance depuis Internet, là où une mutualisation depuis un 
@@ -23,7 +24,7 @@ En entreprise, 1/ est généralement résolu par "blocage naturel" : on ne peut 
 
 Comment paramétrer Play Framework pour utiliser Artifactory ?
 
-[J'ai déjà expliqué comment configurer SBT pour utiliser Artifactory](/configurer-scala-sbt-repository-artifactory/), mais, bien que Play Framework utilise SBT, ces explications ne s'appliquent pas (pour le moment) à Play Framework. SBT étant embarqué dans Play Framework, il ne lit pas les instructions de configuration fournies en ligne de commande.
+[J'ai déjà expliqué comment configurer SBT pour utiliser Artifactory](/configurer-scala-sbt-repository-artifactory/), mais, bien que Play Framework utilise SBT, ces explications ne s'y appliquent pas (pour le moment). SBT étant embarqué dans Play Framework, il ne lit pas les instructions de configuration fournies en ligne de commande.
 
 Pas de différence du côté d'Artifactory en revanche.
 
@@ -53,9 +54,9 @@ Ce fichier indique à SBT l'ensemble des dépôts qu'il peut consulter pour rés
 
 ## Forcer Play Framework à lire le fichier `~/sbt/.repositories`
 
-Éditez le fichier `PLAY_HOME/framework/sbt/sbt.boot.properties` et complétez le bloc suivant :
+Éditez le fichier `$PLAY_HOME/framework/sbt/sbt.boot.properties` et complétez le bloc suivant :
 
-{% codeblock PLAY_HOME/framework/sbt/sbt.boot.properties %}
+{% codeblock $PLAY_HOME/framework/sbt/sbt.boot.properties %}
 ...
 [ivy]
   ivy-home: ${play.home}/../repository
@@ -64,7 +65,7 @@ Ce fichier indique à SBT l'ensemble des dépôts qu'il peut consulter pour rés
 
 De cette manière :
 
-{% codeblock PLAY_HOME/framework/sbt/sbt.boot.properties %}
+{% codeblock $PLAY_HOME/framework/sbt/sbt.boot.properties %}
 ...
 [ivy]
   ivy-home: ${play.home}/../repository
@@ -72,6 +73,8 @@ De cette manière :
   repository-config: ${sbt.global.base-${user.home}/.sbt}/repositories
 
 {% endcodeblock %}
+
+Avec ces deux instructions, on force Play Framework à utiliser uniquement les dépôts configurés dans le fichier `~/sbt/.repositories`.
 
 ## Tester
 
@@ -116,6 +119,8 @@ play! 2.1.1 (using Java 1.7.0_21 and Scala 2.10.0), http://www.playframework.org
 [projet_test] $
 
 ```
+
+Les dépendances sont téléchargées depuis `http://localhost:8180/...`, comme voulu.
 
 Note : l'affichage obtenu peut varier selon vos dépendances paramétrées.
 
