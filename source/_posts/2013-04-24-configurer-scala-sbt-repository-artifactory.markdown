@@ -92,7 +92,7 @@ Ce fichier indique à SBT l'ensemble des dépôts qu'il peut consulter pour rés
 
 La configuration précédente permet d'ajouter des dépôts à la configuration de SBT. Mais des dépôts peuvent être paramétrés dans chaque projet SBT, ce qui ne fonctionnera pas si vous n'avez pas accès à Internet. Si vous désirez que toutes les demandes de dépendances SBT passent par votre proxy Artifactory, il vous faut le paramétrage complémentaire suivant :
 
-```
+```sh
 -Dsbt.override.build.repos=true
 ```
 
@@ -104,7 +104,7 @@ Un simple `sbt update` dans un projet SBT suffit à vérifier la bonne mise à j
 
 # Et pour Play Framework 2 ?
 
-Cette configuration ne fonctionne pas pour Play Framework 2, j'y reviendrai dans un autre article.
+Cette configuration ne fonctionnant pas pour Play Framework 2, [consultez cet article dédié](/configurer-play-framework-repository-artifactory/).
 
 [scala-sbt]: http://www.scala-sbt.org/	Projet Scala SBT
 [maven]: http://maven.apache.org/ 		Projet Maven
