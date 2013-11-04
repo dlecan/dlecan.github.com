@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Applications HTML5 sur Android : la solution Geckoview de Mozilla"
@@ -45,7 +44,7 @@ La *webview* d'Android est l'Internet Explorer du monde mobile.
 En effet, comme Android est aujourd'hui [la plateforme mobile dominante sur le marché](pdm-android), une stratégie de développement d'applications "sexies" basée sur HTML5 vous expose donc à l'ire et aux complaintes de vos utilisateurs équipés de terminaux Android. Et même si le moteur de la *webview* a été mis à jour dans Android 4.4 (très proche de Chrome pour Android), des fonctionnalités importantes de HTML5 ne sont pas encore disponibles (WebGL, WebRTC, ... Websockets ?) et il faudra des années à cette nouvelle version pour être suffisamment déployée.
 
 
-En 2013, résoudre ce problème sur Android se résume donc très simplement : embarquer un moteur HTML performant directement **dans** les applications HTML5, sous forme d'une librairie statique. Le moteur HTML5 fournit avec la version d'Android livrée avec votre tablette ou votre smartphone ne serait ainsi plus utilisée, remplacé par un Chrome ou un Firefox performant.
+En 2013, résoudre ce problème sur Android se résume donc très simplement : embarquer un moteur HTML performant directement **dans** les applications HTML5, sous forme d'une librairie statique. Le moteur HTML5 fourni avec la version d'Android livrée avec votre tablette ou votre smartphone ne serait ainsi plus utilisé, remplacé par un Chrome ou un Firefox performant.
 
 Voyons donc les [travaux proposées](wip-static-webview) qui me paraissent les plus prometteurs :
 
@@ -61,7 +60,7 @@ Le projet est très actif et il est d'ores et déjà possible de monter des prot
 
 ### Geckoview est-il l'avenir du HTML5 sur Android ?
 
-Compte-tenu du fait qu'Android 4.4 ne résout que partiellement la problématique, la solution qui consiste à embarquer un nouveau moteur de *webview* directement dans nos applications HTLM5 à de l'avenir. Et sur ce point, Mozilla est bien parti.
+Compte-tenu du fait qu'Android 4.4 ne résout que partiellement la problématique, la solution qui consiste à embarquer un nouveau moteur de *webview* directement dans nos applications HTML5 à de l'avenir. Et sur ce point, Mozilla est bien parti.
 
 
 [pdm-android]: http://techcrunch.com/2013/08/07/android-nears-80-market-share-in-global-smartphone-shipments-as-ios-and-blackberry-share-slides-per-idc/
