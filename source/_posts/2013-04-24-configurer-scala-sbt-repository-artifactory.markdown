@@ -8,17 +8,17 @@ published: true
 categories: [sbt, artifactory]
 ---
 
-[Scala SBT](scala-sbt) est à Scala ce que [Maven](maven) est à Java : un outil de build dédié qui épouse la philosophie du langage.
+[Scala SBT][scala-sbt] est à Scala ce que [Maven][maven] est à Java : un outil de build dédié qui épouse la philosophie du langage.
 
-Comme [Gradle](gradle) avec Groovy, SBT est beaucoup plus puissant que Maven, dans le sens où, par exemple, étendre le build est beaucoup plus simple que de construire systématiquement un plugin (qu'il faut versionner, déployer, ...).
+Comme [Gradle][gradle] avec Groovy, SBT est beaucoup plus puissant que Maven, dans le sens où, par exemple, étendre le build est beaucoup plus simple que de construire systématiquement un plugin (qu'il faut versionner, déployer, ...).
 
 Cela dit, il ne faut pas occulter certains de ses inconvénients : incompatibilité des binaires de plugins entre versions de SBT, syntaxe complexe (en tout cas plus compliqué que du simple XML) ...
 
-Scala SBT se répand petit à petit, avec [Play Framework 2](play2) comme cheval de Troie. En effet, Play2 a fait le choix de Scala SBT comme système de build :
+Scala SBT se répand petit à petit, avec [Play Framework 2][play2] comme cheval de Troie. En effet, Play2 a fait le choix de Scala SBT comme système de build :
 - suite aux nombreuses critiques du système de build très fermé de Play 1
 - car Play2 est écrit en Scala et se marrie donc naturellement avec SBT
 
-Comme Maven, SBT se base sur le dépôt d'artifacts [Maven 2 Central](repo-maven2-central), mais aussi sur deux dépôts au format Ivy : [celui de Typesafe](repo-typesafe) et celui [dédié à SBT](repo-sbt).
+Comme Maven, SBT se base sur le dépôt d'artifacts [Maven 2 Central]repo-maven2-central], mais aussi sur deux dépôts au format Ivy : [celui de Typesafe][repo-typesafe] et celui [dédié à SBT][repo-sbt].
 
 # Scala SBT *à la Maven*
 
@@ -35,11 +35,11 @@ Voici ce que nous allons configurer :
 {% img /images/sbt-proxy-cloud-setup.png 650 528 'Artifactory dans son environnement' 'Source: documentation de Scala SBT_OPTS' %}
 
 {% pullquote %}
-Il existe plusieurs outils qui peuvent permettre de gérer des artifacts, dans différents formats (Maven, RPM, Deb, P2, ...), comme [Sonatype Nexus](nexus) ou [JFrog Artifactory](artifactory).
+Il existe plusieurs outils qui peuvent permettre de gérer des artifacts, dans différents formats (Maven, RPM, Deb, P2, ...), comme [Sonatype Nexus][nexus] ou [JFrog Artifactory][artifactory].
 
 {"Ce qui compte pour SBT, c'est un gestionnaire d'artifacts qui supporte les formats Ivy et Maven."} J'ai donc choisi Artifactory.
 
-Je vous passe les détails d'installation de l'outil, ils sont [très bien décrits dans sa documentation](install-artifactory).
+Je vous passe les détails d'installation de l'outil, ils sont [très bien décrits dans sa documentation][install-artifactory].
 {% endpullquote %}
 
 La configuration des dépôts d'Artifactory s'effectue de la manière suivante :
@@ -104,7 +104,7 @@ Un simple `sbt update` dans un projet SBT suffit à vérifier la bonne mise à j
 
 # Et pour Play Framework 2 ?
 
-Cette configuration ne fonctionnant pas pour Play Framework 2, [consultez cet article dédié](/configurer-play-framework-repository-artifactory/).
+Cette configuration ne fonctionnant pas pour Play Framework 2, [consultez cet article dédié][/configurer-play-framework-repository-artifactory/].
 
 [scala-sbt]: http://www.scala-sbt.org/	Projet Scala SBT
 [maven]: http://maven.apache.org/ 		Projet Maven

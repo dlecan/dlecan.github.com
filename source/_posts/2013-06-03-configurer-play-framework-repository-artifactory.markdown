@@ -8,8 +8,8 @@ published: true
 categories: [sbt, playframework, artifactory]
 ---
 
-[Play Framework](play2) utilise [Scala SBT](scala-sbt) comme outil de build depuis la version 2.0. *A la Maven*, il télécharge les dépendances
-de votre projet Play Framework depuis des dépôts centralisés, comme [Maven Central](repo-maven2-central).
+[Play Framework[(play2] utilise [Scala SBT][scala-sbt] comme outil de build depuis la version 2.0. *A la Maven*, il télécharge les dépendances
+de votre projet Play Framework depuis des dépôts centralisés, comme [Maven Central][repo-maven2-central].
 
 Cette technique est très intéressante, mais il faut bien tenir compte des inconvénients induits :
 
@@ -20,11 +20,11 @@ serveur localisé dans le réseau de l'entreprise ferait économiser de la bande
 
 3. Vous ne pouvez pas dépendre d'artifacts uniquement internes à votre entreprise (sans les publier sur Internet)
 
-En entreprise, 1/ est généralement résolu par "blocage naturel" : on ne peut pas télécharger depuis Internet. 2/ et 3/ peuvent se résoudre à l'aide d'un serveur proxy dédié à Maven, SBT, ... comme [Sonatype Nexus](nexus) ou [JFrog Artifactory](artifactory).
+En entreprise, 1/ est généralement résolu par "blocage naturel" : on ne peut pas télécharger depuis Internet. 2/ et 3/ peuvent se résoudre à l'aide d'un serveur proxy dédié à Maven, SBT, ... comme [Sonatype Nexus][nexus] ou [JFrog Artifactory][artifactory].
 
 Comment paramétrer Play Framework pour utiliser Artifactory ?
 
-[J'ai déjà expliqué comment configurer SBT pour utiliser Artifactory](/configurer-scala-sbt-repository-artifactory/), mais, bien que Play Framework utilise SBT, ces explications ne s'y appliquent pas (pour le moment). SBT étant embarqué dans Play Framework, il ne lit pas les instructions de configuration fournies en ligne de commande.
+[J'ai déjà expliqué comment configurer SBT pour utiliser Artifactory][/configurer-scala-sbt-repository-artifactory/], mais, bien que Play Framework utilise SBT, ces explications ne s'y appliquent pas (pour le moment). SBT étant embarqué dans Play Framework, il ne lit pas les instructions de configuration fournies en ligne de commande.
 
 Pas de différence du côté d'Artifactory en revanche.
 
