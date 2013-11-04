@@ -5,7 +5,7 @@ date: 2013-11-01 16:35
 comments: true
 published: true
 categories: [html5, mozilla, android]
----l
+---
 
 Les applications HTML5 sur mobile ont pour principal avantage une portabilité élevée et donc potentiellement des coûts de développement plus réduits à mesure que le nombre de plateformes à supporter grandit. Comme la présence de ces applications dans les "stores" est un prérequis, une application HTML5 doit donc être "packagée", c'est-à-dire encapsulée dans un lanceur écrit en code natif. Elle est alors exécutée dans ce que l'on appelle une *webview*, dont on peut paramétrer finement le comportement : activer ou non le zoom, taille du cache HTML5, gestion particulière de la sécurité, ...
 
