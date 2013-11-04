@@ -8,9 +8,7 @@ published: true
 categories: [html5, mozilla, android]
 ---
 
-Si les débats "applications natives" vs "applications HTML5" sont toujours aussi agités, c'est avant tout parce qu'aucune des deux approches ne se démarquent significative de l'autre : le natif a principalement pour lui l'avantage de la performance ou de la réactivité et le HTML5 celui de la portabilité (dans ses grandes lignes) et donc potentiellement celui de coûts de développement plus réduits à mesure que le nombre de plateformes à supporter grandit.
-
-La présence des applications dans les "stores" étant un prérequis désormais, une application HTML5 doit donc être "packagée", c'est-à-dire encapsulée dans un lanceur écrit en code natif. Elle est alors exécutée dans ce que l'on appelle une *webview*, dont on peut paramétrer finement le comportement : activer ou non le zoom, taille du cache HTML5, gestion fine de la sécurité, ...
+Les applications HTML5 sur mobile ont pour principal avantage une portabilité élevée et donc potentiellement des coûts de développement plus réduits à mesure que le nombre de plateformes à supporter grandit. Comme la présence de ces applications dans les "stores" est un prérequis, une application HTML5 doit donc être "packagée", c'est-à-dire encapsulée dans un lanceur écrit en code natif. Elle est alors exécutée dans ce que l'on appelle une *webview*, dont on peut paramétrer finement le comportement : activer ou non le zoom, taille du cache HTML5, gestion particulière de la sécurité, ...
 
 
 Voici une synthèse des *webviews* disponibles selon les plateformes :
