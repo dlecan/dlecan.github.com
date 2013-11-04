@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Applications HTML5 sur Android : la solution Geckoview de Mozilla"
@@ -61,7 +60,7 @@ Le projet est très actif et il est d'ores et déjà possible de monter des prot
 
 ### Geckoview est-il l'avenir du HTML5 sur Android ?
 
-Compte-tenu du fait qu'Android 4.4 ne résout que partiellement la problématique, la solution qui consiste à embarquer un nouveau moteur de *webview* directement dans nos applications HTLM5 à de l'avenir. Et sur ce point, Mozilla est bien parti.
+Compte-tenu du fait qu'Android 4.4 ne résout que partiellement la problématique, la solution qui consiste à embarquer un nouveau moteur de *webview* directement dans nos applications HTML5 à de l'avenir. Et sur ce point, Mozilla est bien parti.
 
 
 [pdm-android]: http://techcrunch.com/2013/08/07/android-nears-80-market-share-in-global-smartphone-shipments-as-ios-and-blackberry-share-slides-per-idc/
