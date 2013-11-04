@@ -5,7 +5,7 @@ date: 2013-11-01 16:35
 comments: true
 published: true
 categories: [html5, mozilla, android]
----
+---l
 
 Les applications HTML5 sur mobile ont pour principal avantage une portabilité élevée et donc potentiellement des coûts de développement plus réduits à mesure que le nombre de plateformes à supporter grandit. Comme la présence de ces applications dans les "stores" est un prérequis, une application HTML5 doit donc être "packagée", c'est-à-dire encapsulée dans un lanceur écrit en code natif. Elle est alors exécutée dans ce que l'on appelle une *webview*, dont on peut paramétrer finement le comportement : activer ou non le zoom, taille du cache HTML5, gestion particulière de la sécurité, ...
 
@@ -44,7 +44,7 @@ La *webview* d'Android est l'Internet Explorer du monde mobile.
 En effet, comme Android est aujourd'hui [la plateforme mobile dominante sur le marché](pdm-android), une stratégie de développement d'applications "sexies" basée sur HTML5 vous expose donc à l'ire et aux complaintes de vos utilisateurs équipés de terminaux Android. Et même si le moteur de la *webview* a été mis à jour dans Android 4.4 (très proche de Chrome pour Android), des fonctionnalités importantes de HTML5 ne sont pas encore disponibles (WebGL, WebRTC, ... Websockets ?) et il faudra des années à cette nouvelle version pour être suffisamment déployée.
 
 
-En 2013, résoudre ce problème sur Android se résume donc très simplement : embarquer un moteur HTML performant directement **dans** les applications HTML5, sous forme d'une librairie statique. Le moteur HTML5 fournit avec la version d'Android livrée avec votre tablette ou votre smartphone ne serait ainsi plus utilisée, remplacé par un Chrome ou un Firefox performant.
+En 2013, résoudre ce problème sur Android se résume donc très simplement : embarquer un moteur HTML performant directement **dans** les applications HTML5, sous forme d'une librairie statique. Le moteur HTML5 fourni avec la version d'Android livrée avec votre tablette ou votre smartphone ne serait ainsi plus utilisé, remplacé par un Chrome ou un Firefox performant.
 
 Voyons donc les [travaux proposées](wip-static-webview) qui me paraissent les plus prometteurs :
 
