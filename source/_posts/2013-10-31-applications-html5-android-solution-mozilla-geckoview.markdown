@@ -2,7 +2,7 @@
 ---
 layout: post
 title: "Applications HTML5 sur Android : la solution Geckoview de Mozilla"
-date: 2013-10-31 16:35
+date: 2013-11-01 16:35
 comments: true
 published: true
 categories: [html5, mozilla, android]
@@ -13,14 +13,14 @@ Les applications HTML5 sur mobile ont pour principal avantage une portabilité �
 
 Voici une synthèse des *webviews* disponibles selon les plateformes :
 
-- Windows 8.x : IE 10/11 dans un mode d'exécution adapté à une application HTML5
-- iOS : Safari, amputé de son moteur d'exécution Javascript performant
-- Firefox OS : Firefox dans un mode d'exécution adapté à une application HTML5
-- Android <= 4.3.x : un "truc" vaguement basé sur Chromium, le moteur partagé avec Chrome, peu compatible avec HTML5 : WebGL, WebRTC, Websockets, SSE, ... sont manquants
-- Android >= 4.4 : [une image de Chrome pour Android](chrome-as-webview), mais qui, a priori, se met à jour uniquement avec Android lui-même 
+- **Windows 8.x Pro** : IE 10/11 dans un mode d'exécution adapté à une application HTML5
+- **iOS** : Safari, amputé de son moteur d'exécution Javascript performant
+- **Firefox OS** : Firefox dans un mode d'exécution adapté à une application HTML5
+- **Android <= 4.3.x** : un "truc" vaguement basé sur Chromium, le moteur partagé avec Chrome, peu compatible avec HTML5 : WebGL, WebRTC, Websockets, SSE, ... sont manquants
+- **Android >= 4.4** : [une image de Chrome pour Android](chrome-as-webview), mais qui, a priori, se met à jour uniquement avec Android lui-même 
 
 
-Que valent ces navigateurs ?
+### Que valent ces navigateurs ?
 
 Prenez une application HTML5 qui a été conçue pour se faire passer pour du natif, c'est-à-dire reposant massivement sur des animations, des rotations, des effets de fondus, d'apparition avec dégradés, du défilement infini ... comme j'ai pu en voir une récemment.
 
@@ -53,13 +53,13 @@ Voyons donc les [travaux proposées](wip-static-webview) qui me paraissent les p
 - Le projet [Geckoview](geckoview) de Mozilla
 
 {% pullquote %}
-C'est surtout le deuxième qui me semble le plus prometteur, parce qu'il ne se restreint pas à la seule plateforme Android. {" L'ambition de ce projet est de fournir une webview basée sur Firefox pour toutes les plateformes, d'aujourd'hui ou à venir, mobiles ou non "} : Android, Windows, Linux, ... Seul [iOS fait exception](firefox-apple-restrictions) car les restrictions imposées par Apple ne permettent pas de déployer Firefox dans de bonnes conditions. Mais c'est sans conséquence pour une application HTML5, iOS étant une plateforme de choix pour exécuter du HTML5 comme nous l'avons déjà évoqué plus haut. Au prix de 25Mo (!), Geckoview est compatible avec les versions Android 2.x/3.x et avec toutes les fonctionnalités HTML5 avancées : à vous SSE, websockets, WebGL, ...
+C'est surtout le deuxième qui me semble le plus prometteur, parce qu'il ne se restreint pas à la seule plateforme Android. {" L'ambition de ce projet est de fournir une webview basée sur Firefox pour toutes les plateformes, d'aujourd'hui ou à venir, mobiles ou non "} : Android, Windows, Linux, ... Seul [iOS fait exception](firefox-apple-restrictions) car les restrictions imposées par Apple ne permettent pas de déployer Firefox dans de bonnes conditions. Mais c'est sans conséquence pour une application HTML5, iOS étant une plateforme de choix pour exécuter du HTML5 comme nous l'avons déjà évoqué plus haut. Au prix de 25Mo (!), Geckoview est compatible avec les versions Android 2.x / 3.x / 4.x et avec toutes les fonctionnalités HTML5 avancées : à vous SSE, websockets, WebGL, ...
 {% endpullquote %}
 
 Le projet est très actif et il est d'ores et déjà possible de monter des prototypes avec [le code mis à disposition par l'équipe de développement](geckoview-static-library), qui propose notamment [un navigateur basé sur Geckoview](geckbrowser). Pour l'avoir déjà mis en oeuvre sur un projet à titre de démonstration, c'est très, très prometteur : sur la fameuse application qui veut se faire passer pour du natif dont je vous ai parlé plus haut, les performances du HTML5 sont très proches de celles du natif !
 
 
-Alors, Geckoview est-il l'avenir du HTML5 sur Android ?
+### Geckoview est-il l'avenir du HTML5 sur Android ?
 
 Compte-tenu du fait qu'Android 4.4 ne résout que partiellement la problématique, la solution qui consiste à embarquer un nouveau moteur de *webview* directement dans nos applications HTLM5 à de l'avenir. Et sur ce point, Mozilla est bien parti.
 
