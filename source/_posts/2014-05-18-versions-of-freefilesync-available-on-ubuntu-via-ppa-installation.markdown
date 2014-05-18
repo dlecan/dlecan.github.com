@@ -8,7 +8,7 @@ published: true
 categories: [ubuntu, freefilesync]
 ---
 
-Author of [FreeFileSync](site) publishes [binaries](binaries) for Ubuntu for each release. But you have to install them again and again, once a month. That's why I am the maintainer of [FreeFileSync PPA](ppa), the way in Ubuntu to distribute binaries with automatic updates.
+Author of [FreeFileSync][site] publishes [binaries][binaries] for Ubuntu for each release. But you have to install them again and again, once a month. That's why I am the maintainer of [FreeFileSync PPA][ppa], the way in Ubuntu to distribute binaries with automatic updates.
 
 As of May 2014, here are the FreeFileSync versions available for each Ubuntu series:
 
