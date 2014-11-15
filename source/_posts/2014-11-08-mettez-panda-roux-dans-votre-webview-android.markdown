@@ -17,6 +17,6 @@ Au-delà du simple navigateur pour Android, Firefox est aussi une plateforme d'e
 Après une présentation de Mozilla Geckoview et de ce qu'il peut apporter à vos applications HTML5 sous Android par rapport à une Webview standard (modernité, performances...), nous détaillerons l'initiative de Mozilla avec les Open Web Apps et verrons concrètement comment l'utiliser pour déployer des applications HTML5 sous Android.
 {% endblockquote %}
 
-Le support de présentation est aussi accessible :
+Et le support de présentation :
 
 [<img src="/images/prez-panda-roux-webview-android/cover.png" width="768" height="432" alt='Support de présentation de la conférence'>](http://blog.dlecan.com/devfestnantes2014/prez-panda-roux-webview-android/ Supports de présentation "Mettez un Panda Roux dans votre Webview")
