@@ -8,7 +8,7 @@ published: true
 categories: [devfest, conference]
 ---
 
-J'ai eu le plaisir de participer à cette superbe conférence que fut le [Devfest Nantes 2014](devfest), à la fois en tant que visiteur mais aussi en tant qu'orateur.
+J'ai eu le plaisir de participer à cette superbe conférence que fut le [Devfest Nantes 2014](http://devfest.gdgnantes.com/ Site du Devfest Nantes 2014), à la fois en tant que visiteur mais aussi en tant qu'orateur.
 
 J'y ai présenté la conférence "Mettez un Panda Roux dans votre Webview", dont voici le résumé :
 
@@ -19,7 +19,4 @@ Après une présentation de Mozilla Geckoview et de ce qu'il peut apporter à vo
 
 Le support de présentation est aussi accessible :
 
-[{% img /images/prez-panda-roux-webview-android/cover.png 768 432 'Support de présentation de la conférence' %}](prez)
-
-[devfest]: http://devfest.gdgnantes.com/ Site du Devfest Nantes 2014
-[prez]: http://blog.dlecan.com/devfestnantes2014/prez-panda-roux-webview-android/ Supports de présentation "Mettez un Panda Roux dans votre Webview"
+[<img src="/images/prez-panda-roux-webview-android/cover.png" width="768" height="432" alt='Support de présentation de la conférence'>](http://blog.dlecan.com/devfestnantes2014/prez-panda-roux-webview-android/ Supports de présentation "Mettez un Panda Roux dans votre Webview")
