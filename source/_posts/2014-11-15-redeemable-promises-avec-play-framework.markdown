@@ -156,9 +156,9 @@ return
 	.recover(error ->
 		// Serialize exception as JSON
 		// and send HTTP 500 status
-		internalServerError(Json.toJson((error));
+		internalServerError(Json.toJson(error));
 	);
 ```
 
 Au final, nous avons pu rendre l'appel du Client synchrone en à peine quelques lignes de code grâce à l'API riche de Play Framework.
-Enfin, vous remarquerez que malgré la syntaxe Java 8, c'est encore lourd à coder. On est loin de Scala, de Groovy ou tout simplement, de Javascript.
+Enfin, vous remarquerez que Java 8 améliore significativement la lisibilité du code. Cependant, on reste loin de Scala, de Groovy ou tout simplement de Javascript.
