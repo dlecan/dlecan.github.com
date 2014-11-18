@@ -25,7 +25,7 @@ Le programme en Play Framework est nommé "PassePlat" dans ce diagramme.
 Les messages montants sont implémentés sous forme d'une API RESTful ; tandis que le retour du "Serveur", asynchrone, est implémentée avec des *callbacks* et une requête REST vers le client d'origine. Voici un exemple de pseudo-code Java sur le traitement du message de retour :
 
 
-``` [java]
+``` java
 ...
 /**
  * Receive responses from "server"
@@ -77,13 +77,13 @@ On peut faire cela très simplement avec les [RedeemablePromise](https://www.pla
 
 Les [RedeemablePromise](https://www.playframework.com/documentation/2.4.x/api/java/play/libs/F.RedeemablePromise.html) sont une implémentation du design pattern *promise*, désormais répandu dans l'informatique pour résoudre le [*callback hell*](http://callbackhell.com/) -l'enfer des callbacks-, problème très fréquent avec la programmation asynchrone. En effet, votre code est exécuté au sein de *callbacks* en réponse à des évènements : fin de traitement, lecture d'un fichier, arrivée d'un message par Web Socket, ...
 
-On trouve des implémentations de ce pattern naturellement en [Javascript](https://www.promisejs.org/) ([plusieurs même](https://docs.angularjs.org/api/ng/service/$q)), mais aussi en [Scala](http://docs.scala-lang.org/overviews/core/futures.html), en [Java](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html), ...
+On trouve des implémentations de ce pattern naturellement en [Javascript](https://www.promisejs.org/) ([plusieurs même](https://docs.angularjs.org/api/ng/service/$q)), mais aussi en [Scala](http://docs.scala-lang.org/overviews/core/futures.html), en java(https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html), ...
 
 Voyons comment nous pouvons les utiliser pour répondre à notre nouveau besoin.
 
 Adaptons la classe qui réceptionne les évènements venant du Serveur :
 
-``` [java]
+``` java
 ...
 /**
  * Receive responses from "server"
@@ -112,7 +112,7 @@ L'élément clé ici est le fait de "résoudre" ou "compléter" la promesse en s
 
 Jetons maintenant un coup d'oeil au contrôleur REST sur le PassePlat qui reçoit les requêtes HTTP depuis le Client et qui "bloque" tant que la réponse du Serveur n'est pas parvenue :
 
-``` [java]
+``` java
 ...
 public static Promise<Result> sendMessage(...) {
 	
@@ -142,7 +142,7 @@ Dans le cas nominal, la `Response` sera convertie en `Result` au sein de la mét
 Et dans le cas où la promesse a été résolue en erreur ?
 Par défaut, Play va générer une réponse HTTP avec un code retour 500 et une sérialisation de l'exception renvoyée. Si vous souhaitez définir vous-même votre propre retour, il faut que le traitement de l'erreur génère un `Result` standard`. Voici comment adapter la transformation de la promesse pour renvoyer une erreur 500 et une sérialisation de l'exception en cas de promesse résolue en erreur :
 
-``` [java]
+``` java
 ...
 return
 	// Promesse de type Promise<Response>
