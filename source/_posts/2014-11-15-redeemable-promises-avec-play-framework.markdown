@@ -10,7 +10,7 @@ categories: [async, playframework]
 
 J'ai eu à intervenir récemment sur un programme écrit en Play Framework v2.3, dont le rôle est assez simple : faire passe-plat entre un client et un serveur et effectuant notamment des transformations protocolaires (comme REST vers TCP par exemple). Ce qui m'a donné l'occasion d'utiliser les [RedeemablePromise](https://www.playframework.com/documentation/2.4.x/api/java/play/libs/F.RedeemablePromise.html) de Play Framework, pas du tout documentées à ce jour.
 
-# Client asynchrone
+## Client asynchrone
 
 Les différents échanges de messages entre les systèmes peuvent être représentés à l'aide du diagramme de séquence suivant :
 
@@ -58,9 +58,9 @@ Le système complet fonctionne bien, mais n'est pas très satisfaisant :
 
 - Le fonctionnement du Serveur est asynchrone (messages montants et de retours sont décorrélés) et cette implémentation a déporté l'asynchronisme jusqu'au Client, alors que le client (l'humain cette fois-ci :-) voulait plutôt un fonctionnement synchrone du Client, ce qui était plus facile à appréhender pour lui.
 
-# Client synchrone
+## Client synchrone
 
-On a donc travaillé sur une implémentation du système plutôt comme ceci :
+Nous avons donc travaillés sur une implémentation du système plutôt comme ceci :
 
 {% comment %}
 http://www.websequencediagrams.com/?lz=dGl0bGUgQ2xpZW50IHN5bmNocm9uZQoKAAwGLT5QYXNzZVBsYXQ6UE9TVCBtZXNzYWdlCgAOCS0-U2VydmV1cjpzZW5kABcJAA4HLQA1DCBhY2sKCm5vdGUgb3ZlcgBuBywAWQksAEIIIFBsdXMgdGFyZCwgdW4AbAggZGUgcmV0b3VyCgBWCQBSDHJlc3BvbnMAgRAMLT4AgVMGOiAyMDAAGAkgKwCBBQUAgTATADsJQWNr&s=modern-blue
@@ -71,7 +71,7 @@ http://www.websequencediagrams.com/?lz=dGl0bGUgQ2xpZW50IHN5bmNocm9uZQoKAAwGLT5QY
 
 L'appel du Client vers le PassePlat est donc bloqué tant que l'acquittement **et** la réponse du Serveur ne sont pas parvenus au PassePlat.
 
-## Comment ?
+### Comment ?
 
 On peut faire cela très simplement avec les [RedeemablePromise](https://www.playframework.com/documentation/2.4.x/api/java/play/libs/F.RedeemablePromise.html) de Play Framework.
 
