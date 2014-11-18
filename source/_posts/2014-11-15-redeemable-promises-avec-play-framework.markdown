@@ -8,7 +8,7 @@ published: true
 categories: [async, playframework]
 ---
 
-Récemment, j'ai eu à intervenir sur un programme écrit en Play Framework v2.3, dont le rôle est assez simple : faire passe-plat entre un client et un serveur et effectuant, entre autres, des transformations protocolaires (comme REST vers TCP par exemple). Ce qui m'a donné l'occasion d'utiliser les [RedeemablePromise](https://www.playframework.com/documentation/2.4.x/api/java/play/libs/F.RedeemablePromise.html) de Play Framework, pas du tout documentées à ce jour.
+J'ai eu à intervenir récemment sur un programme écrit en Play Framework v2.3, dont le rôle est assez simple : faire passe-plat entre un client et un serveur et effectuant notamment des transformations protocolaires (comme REST vers TCP par exemple). Ce qui m'a donné l'occasion d'utiliser les [RedeemablePromise](https://www.playframework.com/documentation/2.4.x/api/java/play/libs/F.RedeemablePromise.html) de Play Framework, pas du tout documentées à ce jour.
 
 # Client asynchrone
 
@@ -34,6 +34,7 @@ public class ServerReceiver {
 
 	public void onServerResponse(Response response) {
 		// Utilisation de la librairie play.libs.ws.WS
+		// pour effectuer des appels REST
 		WS.url("http://client_url/api/response")
 			.setContentType("application/json")
 			.post(response.asJson());
@@ -42,7 +43,8 @@ public class ServerReceiver {
 	public void onServerError(Throwable error) {
 		WS.url("http://client_url/api/response")
 			.setContentType("application/json")
-			.post(... // error serialized as Json);
+			// Serialize exception as JSON
+			.post(Helper.asJson(error);
 	}
 
 }
@@ -52,9 +54,9 @@ public class ServerReceiver {
 
 Le système complet fonctionne bien, mais n'est pas très satisfaisant :
 
-- le Client et le PassePlat sont très couplés. En effet, le Client doit connaître l'adresse du PassePlat pour lui envoyer les messages montants et le PassePlat doit connaitre l'adresse du Client pour lui renvoyer le message de retour. Bref, une dépendance cyclique. Donc bof ;
+- le Client et le PassePlat sont très couplés. En effet, le Client doit connaître l'adresse du PassePlat pour lui envoyer les messages montants et le PassePlat doit connaitre l'adresse du Client pour lui renvoyer le message de retour. Bref, une dépendance cyclique ;
 
-- Le fonctionnement du Serveur est asynchrone (messages montants et de retours sont décorrélés) et cette implémentation a déporté l'asynchronisme jusqu'au Client, alors que le client (l'humain cette fois-ci :-) voulait plutôt un fonctionnement synchrone du côté du Client, ce qui était plus facile à appréhender pour lui.
+- Le fonctionnement du Serveur est asynchrone (messages montants et de retours sont décorrélés) et cette implémentation a déporté l'asynchronisme jusqu'au Client, alors que le client (l'humain cette fois-ci :-) voulait plutôt un fonctionnement synchrone du Client, ce qui était plus facile à appréhender pour lui.
 
 # Client synchrone
 
@@ -75,7 +77,7 @@ On peut faire cela très simplement avec les [RedeemablePromise](https://www.pla
 
 Les [RedeemablePromise](https://www.playframework.com/documentation/2.4.x/api/java/play/libs/F.RedeemablePromise.html) sont une implémentation du design pattern *promise*, désormais répandu dans l'informatique pour résoudre le [*callback hell*](http://callbackhell.com/) -l'enfer des callbacks-, problème très fréquent avec la programmation asynchrone. En effet, votre code est exécuté au sein de *callbacks* en réponse à des évènements : fin de traitement, lecture d'un fichier, arrivée d'un message par Web Socket, ...
 
-On trouve des implémentations de pattern naturellement en [Javascript](https://www.promisejs.org/) ([plusieurs même](https://docs.angularjs.org/api/ng/service/$q)), mais aussi en [Scala](http://docs.scala-lang.org/overviews/core/futures.html), en [Java](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html), ...
+On trouve des implémentations de ce pattern naturellement en [Javascript](https://www.promisejs.org/) ([plusieurs même](https://docs.angularjs.org/api/ng/service/$q)), mais aussi en [Scala](http://docs.scala-lang.org/overviews/core/futures.html), en [Java](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html), ...
 
 Voyons comment nous pouvons les utiliser pour répondre à notre nouveau besoin.
 
@@ -106,6 +108,8 @@ public class ServerReceiver {
 ...
 ```
 
+L'élément clé ici est le fait de "résoudre" ou "compléter" la promesse en succès ou en erreur selon le cas. Attention à n'oublier aucun cas de fin de traitement du Serveur, sinon le Client restera bloqué dans ces cas non prévus.
+
 Jetons maintenant un coup d'oeil au contrôleur REST sur le PassePlat qui reçoit les requêtes HTTP depuis le Client et qui "bloque" tant que la réponse du Serveur n'est pas parvenue :
 
 ``` [java]
@@ -113,7 +117,7 @@ Jetons maintenant un coup d'oeil au contrôleur REST sur le PassePlat qui reçoi
 public static Promise<Result> sendMessage(...) {
 	
 	// Initialisation de la promesse, à vide
-	RedeemablePromise promise = RedeemablePromise.empty();
+	RedeemablePromise<Response> promise = RedeemablePromise.empty();
 
 	// Envoi du message entrant vers le serveur
 	// server.send(message)
@@ -122,10 +126,37 @@ public static Promise<Result> sendMessage(...) {
 
 	server.listen(serverReceiver);
 
-	// promise est du type <Response>, alors que Play attend un <Result>
-	// on fait la conversion
-	return promise.map(reponse ->
-		ok(response.asJson());
-	)
+	return
+		// Promesse de type Promise<Response>
+		promise
+		// Conversion 'success' en Promise<Result>
+		.map(response ->
+			ok(response.asJson());
+		);
 }
+...
 ```
+
+Dans le cas nominal, la `Response` sera convertie en `Result` au sein de la méthode `map` (programmation fonctionnelle).
+
+Et dans le cas où la promesse a été résolue en erreur ?
+Par défaut, Play va générer une réponse HTTP avec un code retour 500 et une sérialisation de l'exception renvoyée. Si vous souhaitez définir vous-même votre propre retour, il faut que le traitement de l'erreur génère un `Result` standard`. Voici comment adapter la transformation de la promesse pour renvoyer une erreur 500 et une sérialisation de l'exception en cas de promesse résolue en erreur :
+
+``` [java]
+...
+return
+	// Promesse de type Promise<Response>
+	promise
+	// Conversion 'success' en Promise<Result>
+	.map(response ->
+		ok(Json.toJson(response));
+	)
+	// Conversion 'failure' en Promise<Result>
+	.recover(error ->
+		// Serialize exception as JSON
+		internalServerError(Json.toJson((error));
+	);
+```
+
+Au final, nous avons pu rendre l'appel du Client synchrone en à peine quelques lignes de code grâce à l'API riche de Play Framework.
+Enfin, vous remarquerez que malgré la syntaxe Java 8, c'est encore lourd à coder. On est loin de Scala, de Groovy ou tout simplement, de Javascript.
