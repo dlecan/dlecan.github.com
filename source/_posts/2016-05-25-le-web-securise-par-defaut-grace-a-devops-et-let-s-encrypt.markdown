@@ -8,7 +8,7 @@ published: true
 categories: [devops, letsencrypt]
 ---
 
-* [Initialement publié sur le Journal Du Net](http://www.journaldunet.com/solutions/expert/64185/le-web-securise-par-defaut-grace-a-devops-et-let-s-encrypt.shtml)*.
+*[Initialement publié sur le Journal Du Net](http://www.journaldunet.com/solutions/expert/64185/le-web-securise-par-defaut-grace-a-devops-et-let-s-encrypt.shtml)*.
 
 **L'accès à de nombreux sites Web n'est pas sécurisé pour plusieurs raisons : c'est compliqué et cher. Voyons comment les principes du DevOps et un coup de pouce de Let's Encrypt pourraient nous conduire au Web sécurisé par défaut.**
 
