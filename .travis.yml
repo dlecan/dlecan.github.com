@@ -1,4 +1,3 @@
-## Kinda does not works in current Travis :(
 branches:
   only:
     - source
@@ -9,7 +8,7 @@ before_script:
   - git config --global user.name "dlecan"
   - git config --global user.email "dev@dlecan.com"
   # Set read-write git origin
-  - git remote set-url origin $REPO.git
+  - git remote set-url origin git@github.com:dlecan/dlecan.github.com.git
   # Unpack ssh key for git
   - echo -n $id_rsa_{00..30} >> ~/.ssh/id_rsa_base64
   - base64 --decode --ignore-garbage ~/.ssh/id_rsa_base64 > ~/.ssh/id_rsa
@@ -17,18 +16,18 @@ before_script:
   # Disable SSH server fingerprint verification
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   # Set deployment target to github pages
-  - rake setup_github_pages[$REPO]
+  - bundle exec rake setup_github_pages[git@github.com:dlecan/dlecan.github.com.git]
   - git checkout -- _config.yml
 script:
   - set LC_ALL=fr_FR.UTF-8
   - set LANG=fr_FR.UTF-8
   # Generate site
-  - rake generate
+  - bundle exec rake generate
 after_script:
   # Workaround for travis not to try run rake on generated site
   - ! 'echo ''script: "ls *.html"'' > public/.travis.yml'
   # Deploy!
-#  - rake deploy
+#  - bundle exec rake deploy
 
 env:
   global:
