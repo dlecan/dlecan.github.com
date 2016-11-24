@@ -98,3 +98,13 @@ google_analytics_tracking_id: UA-29727134-2
 
 # Facebook Like
 facebook_like: false
+
+prose:
+  rooturl: "source"
+  metadata:
+    "source/_posts": |
+      layout: post
+      title: "ECT"
+      comments: true
+      categories: 
+      published: true
