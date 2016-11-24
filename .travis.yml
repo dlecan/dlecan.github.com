@@ -6,6 +6,8 @@ language: ruby
 rvm:
   - 1.9.3
 before_script: 
+  - git config --global user.name "dlecan"
+  - git config --global user.email "dev@dlecan.com"
   # Set read-write git origin
   - git remote set-url origin $REPO.git
   # Unpack ssh key for git
@@ -18,6 +20,8 @@ before_script:
   - rake setup_github_pages[$REPO]
   - git checkout -- _config.yml
 script:
+  - set LC_ALL=fr_FR.UTF-8
+  - set LANG=fr_FR.UTF-8
   # Generate site
   - rake generate
 after_script:
