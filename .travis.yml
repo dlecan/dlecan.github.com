@@ -4,7 +4,10 @@ branches:
 language: ruby
 rvm:
   - 1.9.3
-before_script: 
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y python-dev
+before_script:
   - git config --global user.name "dlecan"
   - git config --global user.email "dev@dlecan.com"
   # Set read-write git origin
