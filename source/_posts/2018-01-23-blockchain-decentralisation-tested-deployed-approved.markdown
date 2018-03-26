@@ -16,6 +16,6 @@ Une belle occasion pour présenter la notion de [Ð](https://en.wikipedia.org/wi
 
 Les slides de notre présentation :
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRg9iV-YbON8rNSH159OMZhuoExZ0pr4RZvoJ1Dx4gHTZoNkIJAuipC_nDQpwFSSfsSmqntAAY3bbbN/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRg9iV-YbON8rNSH159OMZhuoExZ0pr4RZvoJ1Dx4gHTZoNkIJAuipC_nDQpwFSSfsSmqntAAY3bbbN/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 Merci au public présent !
