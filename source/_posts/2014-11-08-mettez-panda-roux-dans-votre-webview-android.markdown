@@ -19,7 +19,7 @@ Après une présentation de Mozilla Geckoview et de ce qu'il peut apporter à vo
 
 Et le support de présentation :
 
-[<img src="/images/prez-panda-roux-webview-android/cover.png" width="768" height="432" alt='Support de présentation de la conférence'>](http://blog.dlecan.com/devfestnantes2014/prez-panda-roux-webview-android/)
+[<img src="/images/prez-panda-roux-webview-android/cover.png" width="768" height="432" alt='Support de présentation de la conférence' target='_blank'>](http://blog.dlecan.com/devfestnantes2014/prez-panda-roux-webview-android/)
 
 La vidéo :
 
