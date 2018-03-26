@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: "Supports de présentation de ma conférence au BreizhCamp 2013"
+title: "Conférence 'Papy fait du Scala' au BreizhCamp 2013"
 date: 2013-06-14 09:11
 comments: true
 published: true
