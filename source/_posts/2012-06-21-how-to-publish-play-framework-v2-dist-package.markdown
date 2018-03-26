@@ -3,7 +3,7 @@ layout: post
 title: "How to publish Play2 'dist' package ?"
 date: 2012-06-21 17:20
 comments: true
-categories: [play2, SBT]
+categories: [play2, sbt]
 ---
 
 In an enterprise context, it is often necessary to deploy (maven) or publish (Ivy/SBT) artifacts in a central repository.
@@ -21,9 +21,9 @@ object ApplicationBuild extends Build {
   val appName = "sample"
   val appVersion = "1.0-SNAPSHOT"
 
-  // Properties to add configure the new Artifact  
+  // Properties to add configure the new Artifact
   lazy val distSettings = Seq[Setting[_]] (
-    
+
     // Type of the Artifact : zip
     // Extension of the Artifact : zip
     artifact in dist <<= moduleName(n => Artifact(n, "zip", "zip"))
@@ -33,8 +33,8 @@ object ApplicationBuild extends Build {
     // Add your project dependencies here,
   )
 
-  val main = PlayProject(appName, appVersion, appDependencies, 
-                         mainLang = SCALA, 
+  val main = PlayProject(appName, appVersion, appDependencies,
+                         mainLang = SCALA,
                          // Don't forget to add defaultSettings !
                          settings = Defaults.defaultSettings ++ distSettings
              ).settings(

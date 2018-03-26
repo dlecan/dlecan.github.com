@@ -3,7 +3,7 @@ layout: post
 title: "Configure SBT credentials on Cloudbees platform to publish artifacts"
 date: 2013-01-21 17:10
 comments: true
-categories: [Cloudbees, SBT]
+categories: [cloudbees, sbt]
 ---
 
 When you want to deploy your Scala artifacts (or anything else) with [SBT](http://www.scala-sbt.org), its reference documentation [explains well how to configure](http://www.scala-sbt.org/release/docs/Community/Using-Sonatype.html#fourth-adding-credentials) your own repository's credentials.
