@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: "Tool In Action at Devoxx FR 2016 'Sécuriser vos applications Web gratuitement'"
+title: "Tool In Action 'Sécuriser vos applications Web gratuitement' à Devoxx 2016"
 date: 2016-04-22 12:02
 comments: true
 published: true

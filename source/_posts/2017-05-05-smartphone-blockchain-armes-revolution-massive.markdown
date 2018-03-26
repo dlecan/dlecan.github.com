@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: "Conférence au Breizhcamp 2017 'Smartphone et Blockchain'"
+title: "Conférence 'Smartphone et Blockchain' au Breizhcamp 2017"
 date: 2017-05-05 21:51
 comments: true
 published: true

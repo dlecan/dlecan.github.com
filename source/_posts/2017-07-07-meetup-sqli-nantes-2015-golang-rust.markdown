@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: "Meetup SQLI Nantes 2015 - Go & Rust"
+title: "Conférence 'Go & Rust' au meetup SQLI Nantes 2015"
 date: 2015-07-07 10:27
 comments: true
 published: true

@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: "Conférence Web2Day 2016 'Du SSL gratuit pour tous'"
+title: "Conférence 'Du SSL gratuit pour tous' au Web2Day 2016"
 date: 2016-06-17 18:24
 comments: true
 published: true

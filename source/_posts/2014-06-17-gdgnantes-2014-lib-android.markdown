@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: "Conférence GDG Nantes 'Des libs Android pour un dev carré'"
+title: "Conférence 'Des libs Android pour un dev carré' au GDG Nantes"
 date: 2014-06-17 09:34
 comments: true
 published: true
