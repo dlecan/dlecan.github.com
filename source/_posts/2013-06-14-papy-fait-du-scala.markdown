@@ -5,7 +5,7 @@ title: "Supports de présentation de ma conférence au BreizhCamp 2013"
 date: 2013-06-14 09:11
 comments: true
 published: true
-categories: [breizhcamp, conference]
+categories: [breizhcamp, conference, scala]
 ---
 
 J'ai eu le plaisir de participer au [BreizhCamp 2013](http://2013.breizhcamp.org/), à la fois en tant que visiteur mais aussi en tant qu'orateur.
