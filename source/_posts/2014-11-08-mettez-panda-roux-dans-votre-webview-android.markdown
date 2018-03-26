@@ -1,11 +1,11 @@
 
 ---
 layout: post
-title: "Supports de présentation de ma conférence au Devfest Nantes 2014"
+title: "Conférence 'Mozilla Geckoview' au Devfest Nantes 2014"
 date: 2014-11-10 16:31
 comments: true
 published: true
-categories: [devfest, conference]
+categories: [devfest, conference, mobile, firefox]
 ---
 
 J'ai eu le plaisir de participer à cette superbe conférence que fut le [Devfest Nantes 2014](http://devfest.gdgnantes.com/), à la fois en tant que visiteur mais aussi en tant qu'orateur.
@@ -20,3 +20,7 @@ Après une présentation de Mozilla Geckoview et de ce qu'il peut apporter à vo
 Et le support de présentation :
 
 [<img src="/images/prez-panda-roux-webview-android/cover.png" width="768" height="432" alt='Support de présentation de la conférence'>](http://blog.dlecan.com/devfestnantes2014/prez-panda-roux-webview-android/)
+
+La vidéo :
+
+{% youtube SBzsADcBdBE %}
