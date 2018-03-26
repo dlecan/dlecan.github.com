@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: "Supports de présentation de ma conférence au GDG Nantes de Janvier 2018"
+title: "Conférence 'Web décentralisé' au GDG Nantes"
 date: 2018-01-23 23:47
 comments: true
 published: true
