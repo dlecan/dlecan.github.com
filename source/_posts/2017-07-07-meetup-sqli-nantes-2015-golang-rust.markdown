@@ -5,7 +5,7 @@ title: "Meetup SQLI Nantes 2015 - Go & Rust"
 date: 2015-07-07 10:27
 comments: true
 published: true
-categories: [sqli, conference, golang, rust, discovery]
+categories: [sqli, conference, golang, rust, discovery, speaker]
 ---
 
 [Go](https://golang.org/) et [Rust](https://www.rust-lang.org/) font partie de ses "nouveaux" langages très exitants : à la fois modernes mais aussi très puissants.

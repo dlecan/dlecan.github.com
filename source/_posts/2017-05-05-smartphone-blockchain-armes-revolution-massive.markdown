@@ -5,7 +5,7 @@ title: "Conférence au Breizhcamp 2017 'Smartphone et Blockchain'"
 date: 2017-05-05 21:51
 comments: true
 published: true
-categories: [breizhcamp, conference, blockchain, android, ethereum, ethmobile]
+categories: [breizhcamp, conference, blockchain, android, ethereum, ethmobile, speaker]
 ---
 
 Les slides de la présentation "Smartphone et Blockchain, armes de révolution massive" que j'ai eu le plaisir co-animer avec [GuiillaumeN](https://twitter.com/guiillaumeN) au [Breizhcamp 2017](http://www.breizhcamp.org/).
