@@ -26,11 +26,11 @@ $ rustc --version
 
 Si vous obtenez quelque chose comme `rustc 1.10.0 (cfcb716cf 2016-07-03)`, le compilateur Rust est opérationnel sur votre poste !
 
-# Editeur de texte malin ou environnement de développement intégré (IDE) ?
+## Editeur de texte malin ou environnement de développement intégré (IDE) ?
 
 Autant vous le dire d’emblée, les "assistants" de développement Rust sont loin d’être du niveau de ce que l’on peut trouver dans d’autres langages comme Java ou .Net. Il y a encore beaucoup de travail à faire mais on arrive tout même à se créer un environnement acceptable. Personnellement, je travaille avec Sublime Text, complété par quelques plugins qui me permettent d’avoir la coloration syntaxique, le formatage et le linting, une validation moins précise de la syntaxe. Je vous invite à consulter areweideyet.com pour choisir l’environnement le plus adapté à votre contexte : Vim, Emacs, Atom, Visual Studio, Eclipse ... ou simplement, si vous souhaitez aller vite, un éditeur de texte type Notepad++, Geany ou Sublime Text seront suffisants.
 
-# Calculer division : reboot
+## Calculer division : reboot
 
 Vous souvenez-vous de votre premier programme Rust écrit dans la première partie de ce dossier ? Nous allons le revisiter avec les nouveaux outils dont nous nous sommes dotés, et en particulier cargo. C’est un mix de Maven pour la structure standard des projets Rust, de npm pour la gestion de dépendances ou l’installation d’un programme et de commandes permettant de gérer un projet Rust.
 
@@ -82,7 +82,7 @@ $ ./target/debug/division
 Résultat : -2
 ```
 
-# Une API sûre
+## Une API sûre
 
 Nous allons variabiliser le numérateur de notre division et le passer en paramètre de la ligne de commande. Explorons l’API de Rust pour ce besoin : lire les arguments en paramètre du programme s’effectue grâce à une fonction du module std::env déclarée comme ceci (Cf. https://doc.rust-lang.org/std/env/fn.args.html) :
 
@@ -92,7 +92,7 @@ pub fn args() -> Args
 
 La fonction `std::env::args()` nous renvoie donc une instance de la *struct* `Args` (elle-même dans le module `std::env`), une structure qui va contenir des champs et des méthodes permettant de manipuler les arguments du programme, et ce de manière sûre. Qu’est-ce que cela signifie ? Sûr implique par exemple le bannissement de la "nullité", source de fréquentes erreurs d’exécution (le fameux *NullPointerException* en Java par exemple). En Rust, toutes les API sont conçues pour renvoyer quelque chose -un résultat ou une erreur- et même "rien" est quelque chose en Rust.
 
-# `Option` - `Some` - `None`
+## `Option` - `Some` - `None`
 
 Regardons la déclaration de la fonction nth de Args qui va nous permettre de récupérer le nième argument de notre programme. Elle est déclarée comme ceci (la signature est légèrement adaptée pour une compréhension plus aisée) :
 
@@ -130,7 +130,7 @@ Notez l’utilisation du module env importé par une ligne en début de programm
 
 Avec les `Option` et l’API de Rust, nous avons pu extraire notre paramètre de ligne de commande et l’avons rendu obligatoire. Ce n’est cependant pas suffisant : en effet, la fonction `nth` renvoie un `Option<String>` dans notre cas, ce qui veut dire que la variable numerateur ci-dessus est de type `String`, alors que nous attendons un `i32`. Il faut donc convertir notre valeur.
 
-# `Result` - `Ok` - `Err`
+## `Result` - `Ok` - `Err`
 
 Rust propose une API de conversion de `String` :
 
@@ -199,4 +199,4 @@ Résultat : 2
 
 Bravo, en quelques lignes de code robustes, vous avez gérés la présence et l’absence d’argument lors de l’exécution de notre programme et ce, de manière plutôt élégante.
 
-Ainsi se termine cette 2è partie de notre dossier consacré à Rust. Dans la prochaine partie, le niveau de difficulté montera d’un cran : il sera en effet temps de se confronter au *borrow checker* !
+Ainsi se termine cette 2è partie de notre dossier consacré à Rust. [Dans la prochaine partie](/introduction-rust-part-3/), le niveau de difficulté montera d’un cran : il sera en effet temps de se confronter au *borrow checker* !
