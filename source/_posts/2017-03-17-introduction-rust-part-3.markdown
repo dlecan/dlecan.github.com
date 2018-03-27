@@ -1,4 +1,5 @@
-  ---
+
+---
 layout: post
 title: "Introduction au langage de programmation Rust - Partie 3"
 date: 2017-03-17 21:32
