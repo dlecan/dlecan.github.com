@@ -89,7 +89,7 @@ impl Division {
 }
 ```
 
-Pensez à remplacer l’instanciation manuelle de `Division` dans votre programme par l’usage de la fonction `new` (code complet https://git.io/v1XLo).
+Pensez à remplacer l’instanciation manuelle de `Division` dans votre programme par l’usage de la fonction `new` (code complet [https://git.io/v1XLo](https://git.io/v1XLo)).
 
 Outre les `struct`, Rust propose un autre mécanisme qui permet d’indiquer au compilateur les fonctionnalités qu’un type doit obligatoirement fournir : les `trait`. Par exemple, si nous souhaitons constraindre la façon dont une Division doit déclarer le symbole qu’elle représente, nous pouvons déclarer le *trait* suivant :
 
@@ -105,7 +105,7 @@ Les *traits* ressemblent aux interfaces Java ou C#, avec globalement les mêmes 
 - certaines fonctions peuvent avoir une implémentation par défaut
 - un *trait* peut implémenter un autre *trait*, et donc "hériter" de ses caractéristiques (concrètement, il faudra implémenter les deux traits sur votre type)
 
-Implémentons notre *trait* pour la Division :
+Implémentons notre *trait* pour la `Division` :
 
 ```rust
 impl HasSymbol for Division {
