@@ -34,7 +34,7 @@ Autant vous le dire d’emblée, les "assistants" de développement Rust sont lo
 
 Vous souvenez-vous de votre premier programme Rust écrit dans la première partie de ce dossier ? Nous allons le revisiter avec les nouveaux outils dont nous nous sommes dotés, et en particulier cargo. C’est un mix de Maven pour la structure standard des projets Rust, de npm pour la gestion de dépendances ou l’installation d’un programme et de commandes permettant de gérer un projet Rust.
 
-Créons-en un de type "programme Rust" (grâce au paramètre `-bin`) :
+Créons-en un de type "programme Rust" (grâce au paramètre `--bin`) :
 
 ```
 $ cargo new --bin division
