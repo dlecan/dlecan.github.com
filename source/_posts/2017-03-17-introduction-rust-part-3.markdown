@@ -1,4 +1,4 @@
----
+  ---
 layout: post
 title: "Introduction au langage de programmation Rust - Partie 3"
 date: 2017-03-17 21:32
@@ -7,7 +7,7 @@ published: true
 categories: [rust, development, tutorial]
 ---
 
-> Initialement publié sur https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3
+> Initialement publié sur [https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3](https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3)
 
 Après avoir vu comment installer le compilateur Rust et Cargo, puis écrit quelques lignes de code dans la (seconde partie de cette introduction](/introduction-rust-part-2/), nous allons continuer dans cette troisième partie à faire évoluer notre programme en découvrant de nouvelles caractéristiques de Rust.
 
@@ -72,7 +72,7 @@ Mettez à jour votre programme Rust :
 - remplacer la déclaration de la méthode statique `calculer_division` par une méthode `calculer` qui implémente le type `Division` (attention à la signature de la méthode `calculer`)
 - remplacer l’appel à la méthode `calculer_division` par l’instanciation du type `Division` avec le paramètre qui vient de l’analyse de la ligne de commande, puis calculer le résultat et l’afficher.
 
-A ce stade, vous devez avoir un programme qui compile et s’exécute, ce que vous pouvez vérifier à l’aide de la commande `cargo run 4` (code complet https://git.io/v1XJL).
+A ce stade, vous devez avoir un programme qui compile et s’exécute, ce que vous pouvez vérifier à l’aide de la commande `cargo run 4` (code complet [https://git.io/v1XJL](https://git.io/v1XJL)).
 
 S’il n’existe pas de "vrai" constructeur en Rust, les us et coutumes du langage encouragent cependant l’encapsulation de l’opération d’instanciation d’un type au sein d’une fonction statique déclarée dans l’implémentation de la struct elle-même, nommée par convention `new` et qui retourne évidemment une instance de votre type. Ce qui donne pour `Division` :
 
@@ -123,7 +123,7 @@ let division = Division::new(numerateur, 2);
 println!("Symbole : {}", division.symbol());
 ```
 
-Le résultat d’exécution de votre programme est désormais enrichi du symbole de la Division (code complet https://git.io/v1X4I) :
+Le résultat d’exécution de votre programme est désormais enrichi du symbole de la Division (code complet [https://git.io/v1X4I](https://git.io/v1X4I)) :
 
 ```
 $ cargo run 2
@@ -163,7 +163,7 @@ error[E0382]: use of moved value: `division`
 
 Le compilateur Rust vous indique que la valeur pointée par la variable division est déplacée (*moved*). En effet, une valeur ne peut être référencée que par une seule variable dans tout notre code. C’est le concept de possession (*ownership*), contrôlée à la lettre par le compilateur, qui va garantir la sécurité et la robustesse d’exécution d’un programme Rust. Nous avons déplacé la possession de la valeur de division vers division2, par conséquent, division ne peut plus être utilisée.
 
-Qui dit "possession", dit "emprunt" (*borrowing*) ou "copie" et pour illustrer l’une ou l’autre des solutions, nous allons introduire une nouvelle fonction statique et l’utiliser (code complet https://git.io/v1X2m):
+Qui dit "possession", dit "emprunt" (*borrowing*) ou "copie" et pour illustrer l’une ou l’autre des solutions, nous allons introduire une nouvelle fonction statique et l’utiliser (code complet [https://git.io/v1X2m](https://git.io/v1X2m)):
 
 ```rust
 fn display_symbol(division: Division) {
@@ -186,7 +186,7 @@ La solution 1/ est une façon de mettre le problème sous le tapis ou de le repo
 
 Copier toute la valeur de la variable (solution 2) est une façon intéressante de résoudre le problème. Dans cette solution, la valeur de la variable est entièrement copiée lors de l’appel à la fonction. Notez bien qu’il n’y a donc plus de lien entre la variable déclarée avant l’appel de la fonction et la variable utilisée dans la fonction.
 
-Pour déclarer un type "copiable", il suffit d’implémenter le *trait* `Copy`, ainsi que le *trait* `Clone` dont hérite `Copy`. Le plus simple, est d’utiliser l’implémentation automatique de certains traits, proposée par l’attribut `#[derive(...)]` (documentation : https://bit.ly/2hASRHt), à appliquer directement sur un type :
+Pour déclarer un type "copiable", il suffit d’implémenter le *trait* `Copy`, ainsi que le *trait* `Clone` dont hérite `Copy`. Le plus simple, est d’utiliser l’implémentation automatique de certains traits, proposée par l’attribut `#[derive(...)]` (documentation : [https://bit.ly/2hASRHt](https://bit.ly/2hASRHt)), à appliquer directement sur un type :
 
 ```rust
 #[derive(Copy, Clone)]
@@ -194,7 +194,7 @@ Division {
   ...
 ```
 
-Avec cet ajout, notre programme compile de nouveau (code complet https://git.io/v11tL). Cependant, si cette solution peut sembler magique et simple (et de plus proposée par le compilateur), elle a ausi ses limites :
+Avec cet ajout, notre programme compile de nouveau (code complet [https://git.io/v11tL](https://git.io/v11tL)). Cependant, si cette solution peut sembler magique et simple (et de plus proposée par le compilateur), elle a ausi ses limites :
 
 - un type peut implémenter `Copy` uniquement si l’ensemble de ses composants implémente aussi `Copy` (dans notre exemple, `i32` implémente `Copy`, donc `Division` peut implémenter `Copy`). Pour les Javaistes, on retrouve ici une propriété équivalente dans l’esprit aux objets sérialisables
 - un certain nombre de types n’implémentent pas `Copy` ; par oubli du développeur ou par incompatibililté technique. Par exemple, les `String` ne sont pas compatibles avec `Copy`.
@@ -212,7 +212,7 @@ let division = Division::new(numerateur, 2);
 display_symbol(&division); // <= Notez le & ici
 ```
 
-La fonction `display_symbol` attend une référence vers un type `Division`, identifiée par le symbole `&` et nous pouvons passer la référence vers une valeur en ajoutant le même symbole devant le nom d’une variable (code complet https://git.io/v11ml). Cette solution est la plus universelle, au prix d’une complexité intellectuelle plus élevée.
+La fonction `display_symbol` attend une référence vers un type `Division`, identifiée par le symbole `&` et nous pouvons passer la référence vers une valeur en ajoutant le même symbole devant le nom d’une variable (code complet [https://git.io/v11ml](https://git.io/v11ml)). Cette solution est la plus universelle, au prix d’une complexité intellectuelle plus élevée.
 
 Finalement, grâce à ces différents mécanismes, le cycle de vie de toutes les données référencées par des variables, est connu dès la compilation de votre programme, ce qui garantit une bonne gestion de la mémoire et donc une certaine robustesse. En revanche, elle vous garantit aussi quelques "combats" contre le borrow checker du compilateur Rust.
 
@@ -220,4 +220,4 @@ Finalement, grâce à ces différents mécanismes, le cycle de vie de toutes les
 
 Au cours de ces trois articles d’introduction à Rust, nous avons abordés les outils et les concepts les plus importants du langage : *struct*, *trait*, *pattern matching*, *enum*, possession (*ownership*), emprunt (*borrowing*), notions de programmation fonctionnelle ... Ces connaissances devraient être suffisantes pour écrire vos premiers programmes avec Rust.
 
-Vous découvrirez par vous-même des concepts plus avancés du langage comme les *lifetimes*, les types génériques, les modules et les *crates*, les *macros*, les tests, les itérateurs, la concurrence, la gestion des erreurs ... La lecture du livre "The Rust programming language" sera donc à ce propos un bon point de départ pour vous : https://doc.rust-lang.org/book/. Enfin, tous ces concepts pourraient faire l’objet d’articles dédiés, avis donc aux amateurs !
+Vous découvrirez par vous-même des concepts plus avancés du langage comme les *lifetimes*, les types génériques, les modules et les *crates*, les *macros*, les tests, les itérateurs, la concurrence, la gestion des erreurs ... La lecture du livre "The Rust programming language" sera donc à ce propos un bon point de départ pour vous : [https://doc.rust-lang.org/book/](https://doc.rust-lang.org/book/). Enfin, tous ces concepts pourraient faire l’objet d’articles dédiés, avis donc aux amateurs !

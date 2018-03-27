@@ -7,6 +7,8 @@ published: true
 categories: [rust, development, tutorial]
 ---
 
+> Article initialement publié sur [https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3](https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3)
+
 Rust est un jeune langage qui a pour ambition de se substituer au C/C++ en proposant de nouveaux paradigmes de programmation, une librairie standard de haut niveau et un écosystème riche soutenu par une communauté très active.
 
 Multiplateformes (systèmes d’exploitation ou architectures de processeurs) et pourvu de tous les concepts de programmation attendus pour un langage moderne (programmation orientée “objet”, programmation fonctionnelle, facilités à développer des programmes d’exécution concurrente), Rust a beaucoup d’atouts pour séduire.
@@ -33,7 +35,7 @@ Enfin, un mot sur la communauté de développeurs Rust. Elle est accueillante et
 
 ## Bonjour lecteurs !
 
-Commençons à écrire quelques lignes de code, sans installation préalable de Rust sur votre poste. Rendez-vous sur https://play.rust-lang.org/ pour ouvrir l’interpréteur web Rust, qui fonctionne très bien sur smartphone ou tablette. Idéal pour tester simplement Rust sans vous prendre la tête ! Ne modifiez pas le paramétrage par défaut de la page (boutons du haut) et concentrez-vous sur la zone de texte centrale : c’est là qu’il faut taper le code Rust.
+Commençons à écrire quelques lignes de code, sans installation préalable de Rust sur votre poste. Rendez-vous sur [https://play.rust-lang.org/](https://play.rust-lang.org/) pour ouvrir l’interpréteur web Rust, qui fonctionne très bien sur smartphone ou tablette. Idéal pour tester simplement Rust sans vous prendre la tête ! Ne modifiez pas le paramétrage par défaut de la page (boutons du haut) et concentrez-vous sur la zone de texte centrale : c’est là qu’il faut taper le code Rust.
 
 Lors de votre première connexion, le formulaire est déjà préinitialisé avec un morceau de code que je vous propose de substituer par un contenu plus adapté à notre contexte :
 
@@ -55,11 +57,11 @@ La syntaxe s’inspire fortement du langage C (que l’on retrouve en Java, Java
 - `fn` permet de déclarer une fonction, nommée ici main et sans argument. Par convention, c’est le point d’entrée unique d’un programme écrit en Rust
 - `println!` permet d’écrire dans la sortie standard, du texte ou des structures plus complexes. Notez le `!` qui signifie que `println!` est une macro. C’est une routine de génération de code **à la compilation** et un pattern de développement très utilisé par les développeurs Rust pour masquer une complexité
 
-Je vous recommande l’utilisation de `println!` à deux arguments et plus, syntaxe familière à ceux qui connaissent les fonctions `printf/fprintf` du C ou `str.format` de Python : le 1er paramètre représente la mise en forme, les suivants les valeurs à substituer aux `{}` présents dans le contenu du 1er argument (plus de détails sur https://doc.rust-lang.org/std/fmt/)
+Je vous recommande l’utilisation de `println!` à deux arguments et plus, syntaxe familière à ceux qui connaissent les fonctions `printf/fprintf` du C ou `str.format` de Python : le 1er paramètre représente la mise en forme, les suivants les valeurs à substituer aux `{}` présents dans le contenu du 1er argument (plus de détails sur [https://doc.rust-lang.org/std/fmt/](https://doc.rust-lang.org/std/fmt/))
 
 - `;` obligatoire en fin de ligne la plupart du temps en Rust
 
-Modifions maintenant notre programme en déclarant une variable (https://is.gd/SIDHI3) :
+Modifions maintenant notre programme en déclarant une variable ([https://is.gd/SIDHI3](https://is.gd/SIDHI3)) :
 
 ```rust
 fn main() {
@@ -82,7 +84,7 @@ fn calculer_division(x: i32, y: i32) -> i32  {
 }
 ```
 
-L’appel de la fonction que nous venons de déclarer s’effectue exactement comme l’on s’y attend (programme complet : https://is.gd/0U61pa) :
+L’appel de la fonction que nous venons de déclarer s’effectue exactement comme l’on s’y attend (programme complet : [https://is.gd/0U61pa](https://is.gd/0U61pa)) :
 
 ```rust
 ...
@@ -101,7 +103,7 @@ Exemples :
 
 - `i16` : est un nombre de longueur 16 octets, positif ou négatif, donc un nombre compris entre -32 768 (-2^16/2) et 32 767 (2^16/2-1)
 
-Je vous conseille d’explorer la liste complète des types primitifs pour vous faire une idée des autres types disponibles (https://doc.rust-lang.org/book /primitive-types.html).
+Je vous conseille d’explorer la liste complète des types primitifs pour vous faire une idée des autres types disponibles ([https://doc.rust-lang.org/book/primitive-types.html](https://doc.rust-lang.org/book/primitive-types.html)).
 
 Les plus attentifs d’entre vous aurons remarqué que cette fonction ne “retourne” explicitement rien comparé à d’autres langages et que la dernière ligne ne se termine pas par un point-virgule, alors que l’on a précédemment vu qu’il était obligatoire. En Rust, il y a un return implicite sur la dernière expression exécutée d’une fonction. Attention, ce n’est pas nécessairement la dernière ligne de code de la fonction. Dans l’exemple ci-dessous, il y a 2 façons de sortir de la fonction et aucune d’entre elles ne correspond à la dernière ligne de code de la fonction.
 
@@ -119,7 +121,7 @@ fn main() {
 }
 ```
 
-Exemple complet : https://is.gd/9LKj2d.
+Exemple complet : [https://is.gd/9LKj2d](https://is.gd/9LKj2d).
 
 A propos du point-virgule, dans notre cas ici qui semble manquant, vous ne devez pas en mettre en fin de ligne. Essayez, vous aurez une erreur de compilation ! Pourquoi ? Rust est un langage basé sur les expressions et non sur des déclarations. Cela signifie que tout renvoie quelque chose : assigner une variable renvoie quelque chose, if renvoie quelque chose … L’expression `x / y` renvoie le résultat de la division, compatible avec le type `i32`, là où l’expression `x / y;` un résultat dont le type est `()`, incompatible avec `i32`.
 
@@ -139,7 +141,7 @@ fn main() {
 }
 ```
 
-Exemple complet : https://is.gd/X7889d.
+Exemple complet : [https://is.gd/X7889d](https://is.gd/X7889d).
 
 La syntaxe parle d’elle-même, c’est simple à comprendre. Le `match` permet de gérer plus de cas que ne peut le faire un simple if tout en rendant obligatoire le traitement du cas par défaut. Qui n’a jamais oublié un else ou un case default en Java, par exemple ? En Rust, c’est impossible car le compilateur s’assure que tous les cas possibles de matching sont bien déclarés et gérés par le développeur. `_` signifie au compilateur “tous les autres cas de matching” (dans notre cas, “tout sauf 0 et 1”). Sachez aussi que le matching offre aussi beaucoup plus de possibilités que ne montre ce simple exemple.
 

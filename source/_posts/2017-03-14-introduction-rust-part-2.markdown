@@ -7,16 +7,16 @@ published: true
 categories: [rust, development, tutorial]
 ---
 
-> Article initialement publié sur https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-2
+> Article initialement publié sur [https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-2](https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-2)
 
 Nous poursuivons notre découverte du langage Rust après [une première partie](/introduction-rust-part-1/) dans laquelle vous avez pratiqué quelques concepts de base de Rust : éléments de syntaxe, déclaration de variables immuables, fonctions et matching. Si la pratique de Rust directement dans le navigateur était adaptée pour débuter, je vous propose désormais de développer directement sur votre poste. Nous pourrons alors continuer à explorer les possibilités de Rust.
 Installer Rust
 
-Le site officiel https://www.rust-lang.org propose des binaires ou des installeurs pour Linux, Mac ou Windows, qui ne se mettent pas à jour automatiquement. Sachant qu’une nouvelle version du langage Rust et des outils est publiée toutes les six semaines et que l’on est régulièrement amené à jongler entre les différents channels de Rust (stable, beta, nightly), je vous déconseille cette façon d’installer Rust.
+Le site officiel [https://www.rust-lang.org](https://www.rust-lang.org) propose des binaires ou des installeurs pour Linux, Mac ou Windows, qui ne se mettent pas à jour automatiquement. Sachant qu’une nouvelle version du langage Rust et des outils est publiée toutes les six semaines et que l’on est régulièrement amené à jongler entre les différents channels de Rust (stable, beta, nightly), je vous déconseille cette façon d’installer Rust.
 
-Préférez plutôt l’usage de Rustup, le nouveau programme officiel d’installation de Rust (la page officielle de téléchargement commence aussi à y faire référence). Vous trouvez la procédure d’installation sur le site https://www.rustup.rs, à savoir une simple commande à taper dans une console : `curl https://sh.rustup.rs -sSf | sh`. Vous installez Rustup qui ensuite installe pour vous le compilateur Rust rustc, l’outil de gestion de dépendances et de build cargo, ainsi que le débuggueur ou le formateur de code de la version stable courante de Rust. Vous pourrez très simplement mettre à jour cette version stable avec rustup update quand vous en aurez besoin (toutes les six semaines !) ou bien installer la beta par exemple (rustup install beta).
+Préférez plutôt l’usage de Rustup, le nouveau programme officiel d’installation de Rust (la page officielle de téléchargement commence aussi à y faire référence). Vous trouvez la procédure d’installation sur le site [https://www.rustup.rs](https://www.rustup.rs), à savoir une simple commande à taper dans une console : `curl https://sh.rustup.rs -sSf | sh`. Vous installez Rustup qui ensuite installe pour vous le compilateur Rust rustc, l’outil de gestion de dépendances et de build cargo, ainsi que le débuggueur ou le formateur de code de la version stable courante de Rust. Vous pourrez très simplement mettre à jour cette version stable avec rustup update quand vous en aurez besoin (toutes les six semaines !) ou bien installer la beta par exemple (rustup install beta).
 
-Précis et efficace ... quand vous avez curl et un interpréteur sh à disposition, ce qui n’est pas le cas par défaut sous Windows. Si vous développez avec Rust sous Windows, vous aurez, tôt ou tard, besoin aussi de Git pour versionner vos fichiers sources. Je vous recommande donc d’installer d’abord l’outillage de Git qui vient avec une ligne de commande assez complète et qui ressemble à ce que vous pourriez obtenir sur un Linux : https://git-for-windows.github.io. Téléchargez l’installeur 32 ou 64 bits selon votre machine, puis lancez la commande d’installation de Rustup dans le shell proposé par Git for Windows.
+Précis et efficace ... quand vous avez curl et un interpréteur sh à disposition, ce qui n’est pas le cas par défaut sous Windows. Si vous développez avec Rust sous Windows, vous aurez, tôt ou tard, besoin aussi de Git pour versionner vos fichiers sources. Je vous recommande donc d’installer d’abord l’outillage de Git qui vient avec une ligne de commande assez complète et qui ressemble à ce que vous pourriez obtenir sur un Linux : [https://git-for-windows.github.io](https://git-for-windows.github.io). Téléchargez l’installeur 32 ou 64 bits selon votre machine, puis lancez la commande d’installation de Rustup dans le shell proposé par Git for Windows.
 
 A la fin de l’installation, en ligne de commande (sous Windows celle de Git for Windows, n’oubliez pas car je ne le répéterai plus :-), tapez :
 
@@ -61,7 +61,7 @@ fn main() {
 }
 ```
 
-Code complet sur ce Gist : https://git.io/vKcsS. Sauvegardez, puis lancez en ligne de commande :
+Code complet sur ce Gist : [https://git.io/vKcsS](https://git.io/vKcsS). Sauvegardez, puis lancez en ligne de commande :
 
 ```
 $ cargo run
@@ -84,7 +84,7 @@ Résultat : -2
 
 ## Une API sûre
 
-Nous allons variabiliser le numérateur de notre division et le passer en paramètre de la ligne de commande. Explorons l’API de Rust pour ce besoin : lire les arguments en paramètre du programme s’effectue grâce à une fonction du module std::env déclarée comme ceci (Cf. https://doc.rust-lang.org/std/env/fn.args.html) :
+Nous allons variabiliser le numérateur de notre division et le passer en paramètre de la ligne de commande. Explorons l’API de Rust pour ce besoin : lire les arguments en paramètre du programme s’effectue grâce à une fonction du module std::env déclarée comme ceci (Cf. [https://doc.rust-lang.org/std/env/fn.args.html](https://doc.rust-lang.org/std/env/fn.args.html)) :
 
 ``` rust
 pub fn args() -> Args
@@ -185,7 +185,7 @@ Il faut un peu aider le compilateur car il ne peut pas deviner quelle conversion
 
 Si le `parse` s’est bien déroulé, le matching sur `Ok` permet d’extraire le numérateur sous forme de `i32` désormais ; sinon avec le matching sur `Err`, on arrête une nouvelle fois le programme avec un message d’erreur adéquat.
 
-Enfin, substituez le premier paramètre de l’appel de la fonction calculer_division par la variable numerateur (code complet : https://git.io/v6ypr), compilez et exécutez en une fois :
+Enfin, substituez le premier paramètre de l’appel de la fonction calculer_division par la variable numerateur (code complet : [https://git.io/v6ypr](https://git.io/v6ypr)), compilez et exécutez en une fois :
 
 ```
 $ cargo run 4
