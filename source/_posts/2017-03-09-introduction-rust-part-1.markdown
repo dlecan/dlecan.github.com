@@ -13,7 +13,7 @@ Multiplateformes (systèmes d’exploitation ou architectures de processeurs) et
 
 Au travers de cette série d’articles, nous allons découvrir ensemble ce langage qui me paraît être le plus excitant depuis ces dernières années.
 
-# Genèse
+## Genèse
 
 Avant de plonger dans le code, je vous propose de revenir sur les origines du langage. Elles remontent à 2010 : Graydon Hoare, ingénieur chez Mozilla, révèle ses travaux sur Rust. A l’époque, le “marché” des langages informatiques est un peu similaire à aujourd’hui, à savoir une domination de C/C++ et de Java, chacun cantonné à ses domaines de prédilection. En schématisant, Java règne sur l’informatique de “gestion” (systèmes d’information bancaires, assurance …) ainsi que sur Android, tandis que C/C++ est le choix par défaut de la programmation que je qualifierais de “système” ou “bas niveau” : système d’exploitation, pilotes, informatique embarquée, machines virtuelles (Java lui- même, ou NodeJS par exemple) …
 
@@ -31,7 +31,7 @@ Avant de démarrer, soyez attentifs lors de vos recherches sur Internet à la ve
 
 Enfin, un mot sur la communauté de développeurs Rust. Elle est accueillante et bienveillante, vous trouverez de nombreux développeurs prêts à vous aider, à vous faire progresser ainsi qu’à critiquer votre code de manière constructive. Une bonne surprise et une des forces de ce langage.
 
-# Bonjour lecteurs !
+## Bonjour lecteurs !
 
 Commençons à écrire quelques lignes de code, sans installation préalable de Rust sur votre poste. Rendez-vous sur https://play.rust-lang.org/ pour ouvrir l’interpréteur web Rust, qui fonctionne très bien sur smartphone ou tablette. Idéal pour tester simplement Rust sans vous prendre la tête ! Ne modifiez pas le paramétrage par défaut de la page (boutons du haut) et concentrez-vous sur la zone de texte centrale : c’est là qu’il faut taper le code Rust.
 
@@ -143,4 +143,4 @@ Exemple complet : https://is.gd/X7889d.
 
 La syntaxe parle d’elle-même, c’est simple à comprendre. Le `match` permet de gérer plus de cas que ne peut le faire un simple if tout en rendant obligatoire le traitement du cas par défaut. Qui n’a jamais oublié un else ou un case default en Java, par exemple ? En Rust, c’est impossible car le compilateur s’assure que tous les cas possibles de matching sont bien déclarés et gérés par le développeur. `_` signifie au compilateur “tous les autres cas de matching” (dans notre cas, “tout sauf 0 et 1”). Sachez aussi que le matching offre aussi beaucoup plus de possibilités que ne montre ce simple exemple.
 
-Ici se termine la 1ère partie de cette introduction à Rust. Je vous invite à poursuivre la lecture de ce dossier avec la seconde partie, dans laquelle vous installerez Rust et ses outils sur votre poste de développement et découvrirez d’autres concepts passionnants du langage, avec quelques notions de programmation fonctionnelle.
+Ici se termine la 1ère partie de cette introduction à Rust. Je vous invite à poursuivre la lecture de ce dossier avec [la seconde partie](/introduction-rust-part-2/), dans laquelle vous installerez Rust et ses outils sur votre poste de développement et découvrirez d’autres concepts passionnants du langage, avec quelques notions de programmation fonctionnelle.
