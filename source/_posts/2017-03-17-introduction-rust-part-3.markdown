@@ -10,7 +10,7 @@ categories: [rust, development, tutorial]
 
 > Initialement publié sur [https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3](https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3)
 
-Après avoir vu comment installer le compilateur Rust et Cargo, puis écrit quelques lignes de code dans la (seconde partie de cette introduction](/introduction-rust-part-2/), nous allons continuer dans cette troisième partie à faire évoluer notre programme en découvrant de nouvelles caractéristiques de Rust.
+Après avoir vu comment installer le compilateur Rust et Cargo, puis écrit quelques lignes de code dans la [seconde partie de cette introduction](/introduction-rust-part-2/), nous allons continuer dans cette troisième partie à faire évoluer notre programme en découvrant de nouvelles caractéristiques de Rust.
 
 Avant de nous lancer, rappelez-vous, une nouvelle version de Rust est publiée toutes les six semaines ; il est donc très probable que la version que vous avez installée est déjà obsolète.
 
