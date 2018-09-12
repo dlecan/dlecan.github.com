@@ -7,7 +7,7 @@ published: true
 categories: [rust, development, tutorial]
 ---
 
-> Article initialement publié sur [https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3](https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3)
+> Article initialement publié sur [https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-1](https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-1)
 
 Rust est un jeune langage qui a pour ambition de se substituer au C/C++ en proposant de nouveaux paradigmes de programmation, une librairie standard de haut niveau et un écosystème riche soutenu par une communauté très active.
 
