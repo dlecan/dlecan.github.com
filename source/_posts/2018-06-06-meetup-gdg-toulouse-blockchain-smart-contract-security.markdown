@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: "Conférence 'Proof-of-Stake' au meetup Blockchain et Société"
+title: "Conférence 'Smart-contracts under attack' au GDG Toulouse"
 date: 2018-06-06 11:10
 comments: true
 published: true
