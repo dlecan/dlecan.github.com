@@ -1,14 +1,14 @@
 
 ---
 layout: post
-title: "Keynote 'Etat de l'art des Blockchains & co.'"
+title: "Keynote 'État de l'art des Blockchains & co.' à Blockchain Paris 2018"
 date: 2018-12-07 17:17
 comments: true
 published: true
-categories: [blockchainparis, conference, keynote decentralisation, blockchain, speaker]
+categories: [Blockchain Paris, conference, keynote, decentralisation, blockchain, speaker]
 ---
 
-J'ai présenté la semaine dernière la keynote "Etat de l'art de Blockchain & co." à [Blockchain Paris](https://blockchainevent.fr/2018/) à la Cité Universitaire Internationale. Ca a été l'occasion de revenir sur les bases de la Blockchain :
+J'ai présenté la semaine dernière [la keynote "État de l'art de Blockchain & co."](https://blockchainevent.fr/2018/speakers/damien-lecan/) à [Blockchain Paris 2018](https://blockchainevent.fr/2018/) à la Cité Universitaire Internationale. Ca a été l'occasion de revenir sur les bases de la Blockchain :
 
 - ses valeurs : la confiance, qui vient de immuabilité, transparence, la décentralisation et la désintermédiation
 - des modèles de gouvernance : publique, privée, consortium ...
