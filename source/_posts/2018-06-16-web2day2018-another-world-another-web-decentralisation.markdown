@@ -5,7 +5,7 @@ title: "Conférence 'Another World, another Web' au Web2day 2018"
 date: 2018-06-13 09:13
 comments: true
 published: true
-categories: [web2day, conference, decentralisation, blockchain, ethereum, smart-contract, ipfs, speaker]
+categories: [web2day, conference, decentralisation, blockchain, ethereum, smart-contract, ipfs, speaker, video]
 ---
 
 Avec [GuiillaumeN](https://twitter.com/guiillaumeN), j'ai eu l'honneur de présenter ["Another World, another Web" au Web2day 2018](https://web2day.co/evenements/another-world-another-web/), sur le thème du web décentralisé et distribué.

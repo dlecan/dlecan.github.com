@@ -5,7 +5,7 @@ title: "Conférence 'Papy fait du Scala' au BreizhCamp 2013"
 date: 2013-06-14 09:11
 comments: true
 published: true
-categories: [breizhcamp, conference, scala, speaker]
+categories: [breizhcamp, conference, scala, speaker, video]
 ---
 
 J'ai eu le plaisir de participer au [BreizhCamp 2013](http://2013.breizhcamp.org/), à la fois en tant que visiteur mais aussi en tant qu'orateur.

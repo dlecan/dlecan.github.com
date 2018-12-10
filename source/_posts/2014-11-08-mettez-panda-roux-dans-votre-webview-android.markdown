@@ -5,7 +5,7 @@ title: "Conférence 'Mozilla Geckoview' au Devfest Nantes 2014"
 date: 2014-11-10 16:31
 comments: true
 published: true
-categories: [devfest, conference, mobile, firefox, android, web, speaker]
+categories: [devfest, conference, mobile, firefox, android, web, speaker, video]
 ---
 
 J'ai eu le plaisir de participer à cette superbe conférence que fut le [Devfest Nantes 2014](http://devfest.gdgnantes.com/), à la fois en tant que visiteur mais aussi en tant qu'orateur.
