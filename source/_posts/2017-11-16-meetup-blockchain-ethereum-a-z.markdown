@@ -10,6 +10,20 @@ categories: [meetup, conference, decentralisation, blockchain, ethereum, smart-c
 
 Hier soir, j'ai eu le plaisir de présenter avec [GuiillaumeN](https://twitter.com/guiillaumeN) et [Benjamin](https://twitter.com/benjifontaine5) notre conférence "Ethereum, de A(lliance) à Z(k-snarks)" au [meetup de novembre](https://www.meetup.com/fr-FR/Blockchain-Societe-Nantes/events/244570850/) de l'association [Blockchain et Société](https://blockchainsociete.org).
 
+{% blockquote %}
+Soirée spéciale Ethereum, la Blockchain en pleine croissance !
+
+Nous vous présenterons tous les concepts de la plateforme :
+
+- Origine, gouvernance, culture
+
+- Écosystème et outils : Geth, Parity, Web3, Quorum, Mist ...
+
+- Roadmap : Homestead, Metropolis ...
+
+Nous finirons par une séance de questions-réponses. Par exemple : qu'est-ce que l'Ethereum Enterprise Alliance ? Que sont les hard-forks ? ...
+{% endblockquote %}
+
 Une belle soirée !
 
 Les slides de notre présentation :
