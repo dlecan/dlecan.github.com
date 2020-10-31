@@ -8,7 +8,7 @@ published: true
 categories: [meetup, conference, decentralisation, blockchain, ethereum, speaker, gdgtoulouse, security, video]
 ---
 
-J'ai été invité le 5 juin 2019 à venir parler des *smart-contracts* Ethereum au [GDG Toulouse](https://www.meetup.com/fr-FR/GDG-Toulouse/events/250099870/).
+J'ai été invité le 5 juin 2018 à venir parler des *smart-contracts* Ethereum au [GDG Toulouse](https://www.meetup.com/fr-FR/GDG-Toulouse/events/250099870/).
 Avec [Paul Marty](https://twitter.com/polo46), expert sécurité chez Orange Cybersécurité, nous avons orienté notre présentation autour de la sécurité des *smart-contracts*, avec une séance de live-coding avec attaque en direct : moi, développeur un peu naif, qui déploie des *smart-contrats* sur Ethereum et Paul qui siphonne l'argent en temps réel 😅.
 
 Une belle soirée sur Toulouse !
