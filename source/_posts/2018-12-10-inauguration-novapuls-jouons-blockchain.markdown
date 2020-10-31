@@ -15,7 +15,7 @@ Par groupe de 4-6 personnes, la quarantaine de participants a joué à la Blockc
 Quelques images :
 
 <a href="https://www.linkedin.com/feed/update/urn:li:activity:6476009903461924864">
-{% img center https://image-store.slidesharecdn.com/024b1b23-7466-47a3-b119-981ed4649a15-original.jpeg Damien Lecan à Novapuls sur un post linkedIn %}
+{% img center https://media-exp1.licdn.com/dms/image/C5622AQE7_rMYVO9Hdw/feedshare-shrink_800/0?e=1606953600&v=beta&t=57z02jMKwepOuBYGEnYjEMj_jgPqvaotIRUjrZnoDP0 Damien Lecan à Novapuls sur un post linkedIn %}
 </a>
 
 {% blockquote Amélie André (@Amelie_novapuls) https://twitter.com/Amelie_novapuls/status/1070236752076517376 %}
