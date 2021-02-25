@@ -1,0 +1,1497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[ECT]]></title>
+  <link href="https://blog.dlecan.com//atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-02-25T08:43:45+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Serious game 'Jouons à la Blockchain' pour l'inauguration de Novapuls]]></title>
+    <link href="https://blog.dlecan.com//inauguration-novapuls-jouons-blockchain/"/>
+    <updated>2018-12-10T15:00:00+00:00</updated>
+    <id>https://blog.dlecan.com//inauguration-novapuls-jouons-blockchain</id>
+    <content type="html"><![CDATA[<p><a href="https://twitter.com/lauremerlin">Laure Merlin</a> et moi avons animé un <em>serious game</em> grandeur nature sur le thème de la Blockchain pour l&#8217;inauguration de <a href="http://novapuls.fr/">l&#8217;incubateur de start-ups nantais Novapuls</a> mercredi 05 décembre 2018 : Jouons à la Blockchain.</p>
+
+<p>Par groupe de 4-6 personnes, la quarantaine de participants a joué à la Blockchain avec des Legos : miner par preuve de travail (Proof-of-Work - PoW) ou preuve de possession (Proof-of-Stake - PoS), diffuser des informations ou des blocs, enregistrer des informations, résister à des <em>hacks</em>, executer des *smart-contracts&#8221; &#8230; tout le monde s&#8217;est pris au jeu !</p>
+
+<p>Quelques images :</p>
+
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:6476009903461924864">
+<img class="center" src="https://media-exp1.licdn.com/dms/image/C5622AQE7_rMYVO9Hdw/feedshare-shrink_800/0?e=1606953600&v=beta&t=57z02jMKwepOuBYGEnYjEMj_jgPqvaotIRUjrZnoDP0" title="Damien Lecan à Novapuls sur un post linkedIn" >
+</a></p>
+
+<blockquote><p>[Inauguration <a href="https://twitter.com/Novapuls_ouest">@Novapuls_ouest</a> ] Tout comprendre sur la <a href="https://twitter.com/hashtag/blockchain">#blockchain</a> avec <a href="https://twitter.com/lauremerlin">@lauremerlin</a> et <a href="https://twitter.com/dlecan">@dlecan</a>. Jouons aux legos chez <a href="https://twitter.com/SoderoGestion">@SoderoGestion</a> pour comprendre le noeud, le bloc, le minage, la fraude, le smart contract,&#8230;</p><p><img class="center" src="https://blog.dlecan.com//images/2018-12-jouons-blockchain-1.jpg"></p><footer><strong>Amélie André (@Amelie_novapuls)</strong> <cite><a href='https://twitter.com/Amelie_novapuls/status/1070236752076517376'>twitter.com/Amelie_novapuls/&hellip;</a></cite></footer></blockquote>
+
+
+
+
+<blockquote><p><a href="https://twitter.com/hashtag/Inauguration">#Inauguration</a> 🚀 l Atelier conférence : Jouons ensemble à la <a href="https://twitter.com/hashtag/Blockchain">#Blockchain</a> par <a href="https://twitter.com/dlecan">@dlecan</a> CTO de <a href="https://twitter.com/UnikName_UNS">@UnikName_UNS</a> et <a href="https://twitter.com/lauremerlin">@lauremerlin</a> CEO de <a href="https://twitter.com/ChainSpring">@ChainSpring</a> 😉 <a href="https://twitter.com/hashtag/startups">#startups</a> <a href="https://twitter.com/hashtag/cryptocurrency">#cryptocurrency</a></p><p><video width='' height='' preload='none' controls poster=''><source src='https://blog.dlecan.com//images/2018-12-jouons-blockchain-2.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/></video></p><footer><strong>Novapuls (@Novapuls_ouest)</strong> <cite><a href='https://twitter.com/Novapuls_ouest/status/1070233162565996544'>twitter.com/Novapuls_ouest/&hellip;</a></cite></footer></blockquote>
+
+
+<p>Un succès aux dires des participants et des organisateurs 😅</p>
+
+<p>Merci au public présent et à Novapuls pour sa confiance.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Keynote 'État de l'art des Blockchains & co.' à Blockchain Paris 2018]]></title>
+    <link href="https://blog.dlecan.com//keynote-blockchain-paris-etat-art/"/>
+    <updated>2018-12-07T17:17:00+00:00</updated>
+    <id>https://blog.dlecan.com//keynote-blockchain-paris-etat-art</id>
+    <content type="html"><![CDATA[<p>J&#8217;ai présenté la semaine dernière <a href="https://blockchainevent.fr/2018/speakers/damien-lecan/">la keynote &#8220;État de l&#8217;art de Blockchain &amp; co.&#8221;</a> à <a href="https://blockchainevent.fr/2018/">Blockchain Paris 2018</a> à la Cité Universitaire Internationale. Ca a été l&#8217;occasion de revenir sur les bases de la Blockchain :</p>
+
+<ul>
+<li>ses valeurs : la confiance, qui vient de immuabilité, transparence, la décentralisation et la désintermédiation</li>
+<li>des modèles de gouvernance : publique, privée, consortium &#8230;</li>
+<li>un état rapide du marché et de ses entreprises</li>
+<li>et de finir sur le challenge du moment : soutenir les entreprises du secteur malgré le contexte &#8220;crypto&#8221; morose (ça n&#8217;a aucun rapport, mais le bébé part avec l&#8217;eau du bain en ce moment)</li>
+</ul>
+
+
+<h2>Les slides</h2>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSXfdvrmc3N6tSMAekUYySxawdomejhRfx9lzSzIshDqpAg7y-0KCAdnu723m7GdeTvrpc-WE4QqfqA/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Another World, another Web' au Web2day 2018]]></title>
+    <link href="https://blog.dlecan.com//web2day2018-another-world-another-web-decentralisation/"/>
+    <updated>2018-06-13T09:13:00+00:00</updated>
+    <id>https://blog.dlecan.com//web2day2018-another-world-another-web-decentralisation</id>
+    <content type="html"><![CDATA[<p>Avec <a href="https://twitter.com/guiillaumeN">GuiillaumeN</a>, j&#8217;ai eu l&#8217;honneur de présenter <a href="https://web2day.co/evenements/another-world-another-web/">&#8220;Another World, another Web&#8221; au Web2day 2018</a>, sur le thème du web décentralisé et distribué.</p>
+
+<h2>Le pitch</h2>
+
+<blockquote><p>Vous rêvez d’un site web à la fois sécurisé, disponible h24/7j, fiable et respectueux de la vie privée ?
+Une architecture classique mêlerait cloud, load-balancers, chiffrement … plutôt compliqué pour des besoins élémentaires.</p>
+
+<p>Figurez vous qu’un autre monde existe déjà et se trouve à votre portée. Noms de domaines, stockage et distribution des fichiers, logique métier décentralisée, navigateurs adaptés … nous allons tout vous présenter !</p>
+
+<p>Voyage dans un autre monde, au coeur du Web décentralisé.</p></blockquote>
+
+<h2>La vidéo</h2>
+
+<div class="embed-video-container"><iframe src="https://blog.dlecan.com///www.youtube.com/embed/_0hO9uKDlok" allowfullscreen></iframe></div>
+
+
+<h2>Les slides</h2>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTVdjK6h78FPaYWS9C8d4In_LJt8dkaxe1RW2rkY6oUbF3nwDd9VH7jBVD2zU2hfD5BSSR1GtsCU7_Z/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Smart-contracts under attack' au GDG Toulouse]]></title>
+    <link href="https://blog.dlecan.com//meetup-gdg-toulouse-blockchain-smart-contract-security/"/>
+    <updated>2018-06-06T11:10:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-gdg-toulouse-blockchain-smart-contract-security</id>
+    <content type="html"><![CDATA[<p>J&#8217;ai été invité le 5 juin 2018 à venir parler des <em>smart-contracts</em> Ethereum au <a href="https://www.meetup.com/fr-FR/GDG-Toulouse/events/250099870/">GDG Toulouse</a>.
+Avec <a href="https://twitter.com/polo46">Paul Marty</a>, expert sécurité chez Orange Cybersécurité, nous avons orienté notre présentation autour de la sécurité des <em>smart-contracts</em>, avec une séance de live-coding avec attaque en direct : moi, développeur un peu naif, qui déploie des <em>smart-contrats</em> sur Ethereum et Paul qui siphonne l&#8217;argent en temps réel 😅.</p>
+
+<p>Une belle soirée sur Toulouse !</p>
+
+<p>Les slides de notre présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSuT2L6_82F7WhApJ6Ehdgj41bzPSkBRlFSXrZoay5aVqmf45kgcX_8sfq53m_j8PubUdWl642bqWH0/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>La vidéo :</p>
+
+<div class="embed-video-container"><iframe src="https://blog.dlecan.com///www.youtube.com/embed/rQywiljTQdg" allowfullscreen></iframe></div>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Proof-of-Stake' au meetup Blockchain et Société]]></title>
+    <link href="https://blog.dlecan.com//meetup-blockchain-proof-stake/"/>
+    <updated>2018-05-18T09:13:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-blockchain-proof-stake</id>
+    <content type="html"><![CDATA[<p>Hier soir, j&#8217;ai eu le plaisir de présenter une conférence à base de gâteau Michel et Augustin 🤣 présentant la &#8220;Proof-Of-Stake&#8221; ou preuve d&#8217;enjeu <a href="https://www.meetup.com/fr-FR/Blockchain-Societe-Nantes/events/250342863/">meetup de mai</a> de l&#8217;association <a href="https://blockchainsociete.org">Blockchain et Société</a>.</p>
+
+<blockquote><p>🍟 Introduction à la Proof-Of-Stake 🍟</p><p>La Proof-Of-Work (PoW) est reine dans le domaine des blockchains publiques comme Bitcoin ou Ethereum, mais elle n&#8217;est pas sans inconvénients.<br/>La Proof-Of-Stake (PoS) est bien placée pour remplacer la PoW, mais comment-fonctionne-t-elle ? Qu&#8217;apporte-t-elle ? Pourquoi n&#8217;a-t-elle pas remplacé la PoW ?</p><p>Agenda :</p><p> - Introduction à la PoS<br/> - Présentation de Qtum, une blockchain qui est mue nativement par la PoS.</p></blockquote>
+
+
+<p>Une belle soirée !</p>
+
+<p>Les slides de ma présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSZhUnxaXOfdtWbT-dsiIxsVIbmkQlwP09i4Hu7HfQ6NGxjD1l92gId5i6DuA30qTnrIxMOeE9sa41q/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Web décentralisé' au GDG Nantes]]></title>
+    <link href="https://blog.dlecan.com//blockchain-decentralisation-tested-deployed-approved/"/>
+    <updated>2018-01-23T23:47:00+00:00</updated>
+    <id>https://blog.dlecan.com//blockchain-decentralisation-tested-deployed-approved</id>
+    <content type="html"><![CDATA[<p><a href="https://twitter.com/guiillaumeN">GuiillaumeN</a> et moi avons été invités par le <a href="https://www.meetup.com/fr-FR/GDG-Nantes/">GDG Nantes</a> à présenter notre conférence &#8220;Web décentralisé : testé, déployé, approuvé ✔️ !&#8221; fin janvier 2018.</p>
+
+<h1>Web décentralisé : testé, déployé, approuvé ✔️ !</h1>
+
+<p>Une belle occasion pour présenter la notion de <a href="https://en.wikipedia.org/wiki/%C3%90">Ð</a>app, des applications Web décentralisées, à la fois sur le code métier (dé)localisé dans une blockchain <a href="https://en.wikipedia.org/wiki/Ethereum">Ethereum</a>, mais aussi sur tous les assets nécessaires à l&#8217;application (Javacript, CSS, HTML &#8230;), (dé)localisés eux dans un système de fichier réparti comme <a href="https://en.wikipedia.org/wiki/InterPlanetary_File_System">IPFS</a>.</p>
+
+<p>Les slides de notre présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRg9iV-YbON8rNSH159OMZhuoExZ0pr4RZvoJ1Dx4gHTZoNkIJAuipC_nDQpwFSSfsSmqntAAY3bbbN/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Ethereum de A à Z' au meetup Blockchain et Société]]></title>
+    <link href="https://blog.dlecan.com//meetup-blockchain-ethereum-a-z/"/>
+    <updated>2017-11-17T21:11:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-blockchain-ethereum-a-z</id>
+    <content type="html"><![CDATA[<p>Hier soir, j&#8217;ai eu le plaisir de présenter avec <a href="https://twitter.com/guiillaumeN">GuiillaumeN</a> et <a href="https://twitter.com/benjifontaine5">Benjamin</a> notre conférence &#8220;Ethereum, de A(lliance) à Z(k-snarks)&#8221; au <a href="https://www.meetup.com/fr-FR/Blockchain-Societe-Nantes/events/244570850/">meetup de novembre</a> de l&#8217;association <a href="https://blockchainsociete.org">Blockchain et Société</a>.</p>
+
+<blockquote><p>Soirée spéciale Ethereum, la Blockchain en pleine croissance !</p><p>Nous vous présenterons tous les concepts de la plateforme :</p><p>- Origine, gouvernance, culture</p><p>- Écosystème et outils : Geth, Parity, Web3, Quorum, Mist &#8230;</p><p>- Roadmap : Homestead, Metropolis &#8230;</p><p>Nous finirons par une séance de questions-réponses. Par exemple : qu&#8217;est-ce que l&#8217;Ethereum Enterprise Alliance ? Que sont les hard-forks ? &#8230;</p></blockquote>
+
+
+<p>Une belle soirée !</p>
+
+<p>Les slides de notre présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTz2ykgmnij1V3v9prs07qepDMA5SligE55O3ikitVfD4H-aM-6tJ10JiuWU2y6Q3zfK8jxV2CqCK6Q/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Smartphone et Blockchain' au Breizhcamp 2017]]></title>
+    <link href="https://blog.dlecan.com//smartphone-blockchain-armes-revolution-massive/"/>
+    <updated>2017-05-05T21:51:00+00:00</updated>
+    <id>https://blog.dlecan.com//smartphone-blockchain-armes-revolution-massive</id>
+    <content type="html"><![CDATA[<p>Les slides de la présentation &#8220;Smartphone et Blockchain, armes de révolution massive&#8221; que j&#8217;ai eu le plaisir co-animer avec <a href="https://twitter.com/guiillaumeN">GuiillaumeN</a> au <a href="http://www.breizhcamp.org/">Breizhcamp 2017</a>.</p>
+
+<p><a href="https://the-blockchain-machine.github.io/breizhcamp2017_revolution-blockchain-mobile-android/"><img src="https://blog.dlecan.com//images/prez-smartphone-blockchain/cover.png" width="690" height="519"></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction au langage de programmation Rust - Partie 3]]></title>
+    <link href="https://blog.dlecan.com//introduction-rust-part-3/"/>
+    <updated>2017-03-17T21:32:00+00:00</updated>
+    <id>https://blog.dlecan.com//introduction-rust-part-3</id>
+    <content type="html"><![CDATA[<blockquote><p>Initialement publié sur <a href="https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3">https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3</a></p></blockquote>
+
+<p>Après avoir vu comment installer le compilateur Rust et Cargo, puis écrit quelques lignes de code dans la <a href="https://blog.dlecan.com//introduction-rust-part-2/">seconde partie de cette introduction</a>, nous allons continuer dans cette troisième partie à faire évoluer notre programme en découvrant de nouvelles caractéristiques de Rust.</p>
+
+<p>Avant de nous lancer, rappelez-vous, une nouvelle version de Rust est publiée toutes les six semaines ; il est donc très probable que la version que vous avez installée est déjà obsolète.</p>
+
+<p>Mettez à jour Rustup lui-même, puis ensuite Rust :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rustup self update // mise à jour de Rustup
+</span><span class='line'> ...
+</span><span class='line'>$ rustup update // mise à jour de tous les canaux de Rust installés</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pensez à effectuer régulièrement ces opérations : une version à jour de Rust vous donne accès à de nouvelles fonctionnalités et une meilleure compatibilité avec les librairies de la communauté.</p>
+
+<h2><code>Struct</code> et <code>trait</code></h2>
+
+<p>Notre programme des deux premières parties était structuré de manière procédurale. Nous allons lui donner une allure plus lisible et plus encapsulée, pour ne pas dire plus &#8220;objet&#8221;. Rust n’a pas pour autant des &#8220;classes&#8221; comme dans d’autres langages, mais des <code>struct</code> et des <code>trait</code>.</p>
+
+<p>Comme leur nom l’indique, les struct sont des structures qui permettent de stocker un ensemble de données complexes ; on dira qu’une struct définie un nouveau type. Notez qu’il n’y a pas de constructeur ou d’accesseurs à proprement parler comme dans d’autre langage, Rust reste très simple ici.</p>
+
+<p>Faisons évoluer notre programme en introduisant une <em>struct</em> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">struct</span> <span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">numerateur</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span>
+</span><span class='line'>  <span class="n">denominateur</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La structure peut-être ensuite instanciée et ses propriétés manipulées :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">let</span> <span class="n">une_division</span> <span class="o">=</span> <span class="n">Division</span> <span class="p">{</span><span class="n">numerateur</span><span class="o">:</span> <span class="m">10</span><span class="p">,</span> <span class="n">denominateur</span><span class="o">:</span> <span class="m">12</span><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Une division ({} - {})&quot;</span><span class="p">,</span> <span class="n">une_division</span><span class="p">.</span><span class="n">numerateur</span><span class="p">,</span> <span class="n">une_division</span><span class="p">.</span><span class="n">denominateur</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Continuons notre logique d’encapsulation en ajoutant des méthodes à notre structure. Ici, la syntaxe de Rust sort vraiment de l’ordinaire. En effet, les méthodes ne sont pas ajoutées directement dans le corps de la <em>struct</em>, mais déclarées où vous le souhaitez dans votre programme avec le mot-clé impl.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">impl</span> <span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">fn</span> <span class="n">calculer</span><span class="p">(</span><span class="o">&amp;</span><span class="n">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">i32</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">match</span> <span class="n">self</span><span class="p">.</span><span class="n">denominateur</span> <span class="p">{</span>
+</span><span class='line'>            <span class="m">0</span> <span class="o">=&gt;</span> <span class="n">panic</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Division par 0&quot;</span><span class="p">),</span>
+</span><span class='line'>            <span class="m">1</span> <span class="o">=&gt;</span> <span class="n">self</span><span class="p">.</span><span class="n">numerateur</span><span class="p">,</span>
+</span><span class='line'>            <span class="n">_</span> <span class="o">=&gt;</span> <span class="n">self</span><span class="p">.</span><span class="n">numerateur</span> <span class="o">/</span> <span class="n">self</span><span class="p">.</span><span class="n">denominateur</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le code de la méthode calculer est repris de la méthode <code>calculer_division</code> vu dans la précédente partie de cet article.</p>
+
+<p>Il est tentant de penser qu’on peut faire n’importe quoi, comme en Javascript, à savoir rajouter des méthodes à n’importe quelle <em>struct</em>, écrite par vous ou fournie par le langage. Par exemple, en Javascript, on peut rajouter des méthodes au prototype <code>String</code> et les utiliser comme des méthodes du langage (cette capacité est notamment utilisée par tous les polyfills).</p>
+
+<p>En Rust, il est impossible d’ajouter des méthodes à n’importe quelle <em>struct</em> ; les <code>impl</code> doivent être déclarés dans le même module (<code>crates</code> en Rust) que la <em>struct</em>.</p>
+
+<p>Mettez à jour votre programme Rust :</p>
+
+<ul>
+<li>déclarer le nouveau type <code>Division</code> à l’aide d’une <em>struct</em></li>
+<li>remplacer la déclaration de la méthode statique <code>calculer_division</code> par une méthode <code>calculer</code> qui implémente le type <code>Division</code> (attention à la signature de la méthode <code>calculer</code>)</li>
+<li>remplacer l’appel à la méthode <code>calculer_division</code> par l’instanciation du type <code>Division</code> avec le paramètre qui vient de l’analyse de la ligne de commande, puis calculer le résultat et l’afficher.</li>
+</ul>
+
+
+<p>A ce stade, vous devez avoir un programme qui compile et s’exécute, ce que vous pouvez vérifier à l’aide de la commande <code>cargo run 4</code> (code complet <a href="https://git.io/v1XJL">https://git.io/v1XJL</a>).</p>
+
+<p>S’il n’existe pas de &#8220;vrai&#8221; constructeur en Rust, les us et coutumes du langage encouragent cependant l’encapsulation de l’opération d’instanciation d’un type au sein d’une fonction statique déclarée dans l’implémentation de la struct elle-même, nommée par convention <code>new</code> et qui retourne évidemment une instance de votre type. Ce qui donne pour <code>Division</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">impl</span> <span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">fn</span> <span class="n">new</span><span class="p">(</span><span class="n">x</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span> <span class="n">y</span><span class="o">:</span> <span class="k">i32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>            <span class="n">numerateur</span><span class="o">:</span> <span class="n">x</span><span class="p">,</span>
+</span><span class='line'>            <span class="n">denominateur</span><span class="o">:</span> <span class="n">y</span><span class="p">,</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="p">...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pensez à remplacer l’instanciation manuelle de <code>Division</code> dans votre programme par l’usage de la fonction <code>new</code> (code complet <a href="https://git.io/v1XLo">https://git.io/v1XLo</a>).</p>
+
+<p>Outre les <code>struct</code>, Rust propose un autre mécanisme qui permet d’indiquer au compilateur les fonctionnalités qu’un type doit obligatoirement fournir : les <code>trait</code>. Par exemple, si nous souhaitons constraindre la façon dont une Division doit déclarer le symbole qu’elle représente, nous pouvons déclarer le <em>trait</em> suivant :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">trait</span> <span class="n">HasSymbol</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">fn</span> <span class="n">symbol</span><span class="p">(</span><span class="o">&amp;</span><span class="n">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">String</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Les <em>traits</em> ressemblent aux interfaces Java ou C#, avec globalement les mêmes caractéristiques :</p>
+
+<ul>
+<li>ensemble de fonctions que le type doit obligatoirement redéfinir</li>
+<li>certaines fonctions peuvent avoir une implémentation par défaut</li>
+<li>un <em>trait</em> peut implémenter un autre <em>trait</em>, et donc &#8220;hériter&#8221; de ses caractéristiques (concrètement, il faudra implémenter les deux traits sur votre type)</li>
+</ul>
+
+
+<p>Implémentons notre <em>trait</em> pour la <code>Division</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">impl</span> <span class="n">HasSymbol</span> <span class="k">for</span> <span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">fn</span> <span class="n">symbol</span><span class="p">(</span><span class="o">&amp;</span><span class="n">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">String</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s">&quot;/&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">()</span> <span class="c1">// &quot;/&quot; est du type &amp;str, qu&#39;il faut donc convertir</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Notez ce point important, impossible en Java par exemple : implémenter un <em>trait</em> pour un type est une section de code déclarée a posteriori de la déclaration de ce type, ce qui veut dire qu’un nouveau <em>trait </em>peut enrichir retrospectivement un type existant (avec quelques restrictions cependant).</p>
+
+<p>Désormais, il est possible de tracer le symbole de la <code>Division</code>, juste après sa construction par exemple :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">let</span> <span class="n">division</span> <span class="o">=</span> <span class="n">Division</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="n">numerateur</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+</span><span class='line'><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Symbole : {}&quot;</span><span class="p">,</span> <span class="n">division</span><span class="p">.</span><span class="n">symbol</span><span class="p">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le résultat d’exécution de votre programme est désormais enrichi du symbole de la Division (code complet <a href="https://git.io/v1X4I">https://git.io/v1X4I</a>) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">$</span> <span class="n">cargo</span> <span class="n">run</span> <span class="m">2</span>
+</span><span class='line'>    <span class="n">Running</span> <span class="err">`</span><span class="n">target</span><span class="o">/</span><span class="n">debug</span><span class="o">/</span><span class="n">division</span> <span class="m">2</span><span class="err">`</span>
+</span><span class='line'><span class="n">Symbole</span><span class="o">:</span> <span class="o">/</span>
+</span><span class='line'><span class="n">R</span><span class="err">é</span><span class="n">sultat</span> <span class="o">:</span> <span class="m">1</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Encore quelques concepts à maîtriser par le Rustacéen qui débute</h2>
+
+<p>Vous vous en souvenez peut-être, je vous avais promis dans la première partie de cet article de la sueur, en particulier avec la gestion de la mémoire : elle n’est ni à la charge du développeur, ni à la charge d’une machine virtuelle et de son ramasse-miette.</p>
+
+<p>Il est temps de mettre les mains dans le camboui et de transpirer. Accrochez-vous !</p>
+
+<p>Reprenons le code décrit plus haut, et ajoutons-y une instruction qui paraît anodine :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">let</span> <span class="n">division</span> <span class="o">=</span> <span class="n">Division</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="n">numerateur</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+</span><span class='line'><span class="k">let</span> <span class="n">division2</span> <span class="o">=</span> <span class="n">division</span><span class="p">;</span> <span class="c1">// &lt;= instruction anodine :-)</span>
+</span><span class='line'><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Symbole : {}&quot;</span><span class="p">,</span> <span class="n">division</span><span class="p">.</span><span class="n">symbol</span><span class="p">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Que se passe-t-il à la compilation (<code>cargo build</code>) ?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">error</span><span class="p">[</span><span class="n">E0382</span><span class="p">]</span><span class="o">:</span> <span class="k">use</span> <span class="n">of</span> <span class="n">moved</span> <span class="n">value</span><span class="o">:</span> <span class="err">`</span><span class="n">division</span><span class="err">`</span>
+</span><span class='line'>  <span class="o">--&gt;</span> <span class="n">src</span><span class="o">/</span><span class="n">main</span><span class="p">.</span><span class="n">rs</span><span class="o">:</span><span class="m">48</span><span class="o">:</span><span class="m">30</span>
+</span><span class='line'>  <span class="o">|</span>
+</span><span class='line'><span class="m">47</span> <span class="o">|</span>     <span class="k">let</span> <span class="n">division2</span> <span class="o">=</span> <span class="n">division</span><span class="p">;</span>
+</span><span class='line'>  <span class="o">|</span>         <span class="o">---------</span> <span class="n">value</span> <span class="n">moved</span> <span class="n">here</span>
+</span><span class='line'><span class="m">48</span> <span class="o">|</span>     <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Symbole : {}&quot;</span><span class="p">,</span> <span class="n">division</span><span class="p">.</span><span class="n">symbol</span><span class="p">());</span>
+</span><span class='line'>  <span class="o">|</span>                              <span class="o">^^^^^^^^</span> <span class="n">value</span> <span class="n">used</span> <span class="n">here</span> <span class="n">after</span> <span class="n">move</span>
+</span><span class='line'>  <span class="o">|</span>
+</span><span class='line'>  <span class="o">=</span> <span class="k">note</span><span class="o">:</span> <span class="n">move</span> <span class="n">occurs</span> <span class="n">because</span> <span class="err">`</span><span class="n">division</span><span class="err">`</span> <span class="n">has</span> <span class="k">type</span> <span class="err">`</span><span class="n">Division</span><span class="err">`</span><span class="p">,</span> <span class="n">which</span>
+</span><span class='line'>  <span class="n">does</span> <span class="n">not</span> <span class="n">implement</span> <span class="n">the</span> <span class="err">`</span><span class="n">Copy</span><span class="err">`</span> <span class="n">trait</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le compilateur Rust vous indique que la valeur pointée par la variable division est déplacée (<em>moved</em>). En effet, une valeur ne peut être référencée que par une seule variable dans tout notre code. C’est le concept de possession (<em>ownership</em>), contrôlée à la lettre par le compilateur, qui va garantir la sécurité et la robustesse d’exécution d’un programme Rust. Nous avons déplacé la possession de la valeur de division vers division2, par conséquent, division ne peut plus être utilisée.</p>
+
+<p>Qui dit &#8220;possession&#8221;, dit &#8220;emprunt&#8221; (<em>borrowing</em>) ou &#8220;copie&#8221; et pour illustrer l’une ou l’autre des solutions, nous allons introduire une nouvelle fonction statique et l’utiliser (code complet <a href="https://git.io/v1X2m">https://git.io/v1X2m</a>):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">display_symbol</span><span class="p">(</span><span class="n">division</span><span class="o">:</span> <span class="n">Division</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Symbole: {}&quot;</span><span class="p">,</span> <span class="n">division</span><span class="p">.</span><span class="n">symbol</span><span class="p">());</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">...</span>
+</span><span class='line'><span class="k">let</span> <span class="n">division</span> <span class="o">=</span> <span class="n">Division</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="n">numerateur</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+</span><span class='line'><span class="n">display_symbol</span><span class="p">(</span><span class="n">division</span><span class="p">);</span> <span class="c1">// &lt;= à la place du &#39;let division2 = ...&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ce code ne compile pas et vous optenez un message d’erreur très similaire au précédent. Trois solutions pour résoudre cette erreur de compilation s’offrent à nous :</p>
+
+<p>1/ Ne plus utiliser la variable division après l’appel à la méthode <code>display_symbol</code></p>
+
+<p>2/ Copier toute la valeur de la variable</p>
+
+<p>3/ Permettre l’emprunt de la variable et utiliser sa référence</p>
+
+<p>La solution 1/ est une façon de mettre le problème sous le tapis ou de le repousser, ce n’est pas vraiment une solution (même si le programme compilera effectivement 😉</p>
+
+<p>Copier toute la valeur de la variable (solution 2) est une façon intéressante de résoudre le problème. Dans cette solution, la valeur de la variable est entièrement copiée lors de l’appel à la fonction. Notez bien qu’il n’y a donc plus de lien entre la variable déclarée avant l’appel de la fonction et la variable utilisée dans la fonction.</p>
+
+<p>Pour déclarer un type &#8220;copiable&#8221;, il suffit d’implémenter le <em>trait</em> <code>Copy</code>, ainsi que le <em>trait</em> <code>Clone</code> dont hérite <code>Copy</code>. Le plus simple, est d’utiliser l’implémentation automatique de certains traits, proposée par l’attribut <code>#[derive(...)]</code> (documentation : <a href="https://bit.ly/2hASRHt">https://bit.ly/2hASRHt</a>), à appliquer directement sur un type :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="cp">#[derive(Copy, Clone)]</span>
+</span><span class='line'><span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Avec cet ajout, notre programme compile de nouveau (code complet <a href="https://git.io/v11tL">https://git.io/v11tL</a>). Cependant, si cette solution peut sembler magique et simple (et de plus proposée par le compilateur), elle a ausi ses limites :</p>
+
+<ul>
+<li>un type peut implémenter <code>Copy</code> uniquement si l’ensemble de ses composants implémente aussi <code>Copy</code> (dans notre exemple, <code>i32</code> implémente <code>Copy</code>, donc <code>Division</code> peut implémenter <code>Copy</code>). Pour les Javaistes, on retrouve ici une propriété équivalente dans l’esprit aux objets sérialisables</li>
+<li>un certain nombre de types n’implémentent pas <code>Copy</code> ; par oubli du développeur ou par incompatibililté technique. Par exemple, les <code>String</code> ne sont pas compatibles avec <code>Copy</code>.</li>
+</ul>
+
+
+<p>La troisième et dernière solution s’applique donc à tous les autres cas. Elle s’appuie sur le principe de l’emprunt, à savoir qu’on va passer à notre fonction non pas la valeur d’une variable, mais une référence vers la valeur de cette variable.</p>
+
+<p>Concrètement, il faut faire évoluer la signature de notre fonction d’affichage pour permettre l’emprunt et l’usage de référence :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">display_symbol</span><span class="p">(</span><span class="n">division</span><span class="o">:</span> <span class="o">&amp;</span><span class="n">Division</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// &lt;= Notez le &amp; ici</span>
+</span><span class='line'>    <span class="p">...</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">...</span>
+</span><span class='line'><span class="k">let</span> <span class="n">division</span> <span class="o">=</span> <span class="n">Division</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="n">numerateur</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+</span><span class='line'><span class="n">display_symbol</span><span class="p">(</span><span class="o">&amp;</span><span class="n">division</span><span class="p">);</span> <span class="c1">// &lt;= Notez le &amp; ici</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La fonction <code>display_symbol</code> attend une référence vers un type <code>Division</code>, identifiée par le symbole <code>&amp;</code> et nous pouvons passer la référence vers une valeur en ajoutant le même symbole devant le nom d’une variable (code complet <a href="https://git.io/v11ml">https://git.io/v11ml</a>). Cette solution est la plus universelle, au prix d’une complexité intellectuelle plus élevée.</p>
+
+<p>Finalement, grâce à ces différents mécanismes, le cycle de vie de toutes les données référencées par des variables, est connu dès la compilation de votre programme, ce qui garantit une bonne gestion de la mémoire et donc une certaine robustesse. En revanche, elle vous garantit aussi quelques &#8220;combats&#8221; contre le borrow checker du compilateur Rust.</p>
+
+<h2>Conclusion</h2>
+
+<p>Au cours de ces trois articles d’introduction à Rust, nous avons abordés les outils et les concepts les plus importants du langage : <em>struct</em>, <em>trait</em>, <em>pattern matching</em>, <em>enum</em>, possession (<em>ownership</em>), emprunt (<em>borrowing</em>), notions de programmation fonctionnelle &#8230; Ces connaissances devraient être suffisantes pour écrire vos premiers programmes avec Rust.</p>
+
+<p>Vous découvrirez par vous-même des concepts plus avancés du langage comme les <em>lifetimes</em>, les types génériques, les modules et les <em>crates</em>, les <em>macros</em>, les tests, les itérateurs, la concurrence, la gestion des erreurs &#8230; La lecture du livre &#8220;The Rust programming language&#8221; sera donc à ce propos un bon point de départ pour vous : <a href="https://doc.rust-lang.org/book/">https://doc.rust-lang.org/book/</a>. Enfin, tous ces concepts pourraient faire l’objet d’articles dédiés, avis donc aux amateurs !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction au langage de programmation Rust - Partie 2]]></title>
+    <link href="https://blog.dlecan.com//introduction-rust-part-2/"/>
+    <updated>2017-03-14T14:21:00+00:00</updated>
+    <id>https://blog.dlecan.com//introduction-rust-part-2</id>
+    <content type="html"><![CDATA[<blockquote><p>Article initialement publié sur <a href="https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-2">https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-2</a></p></blockquote>
+
+<p>Nous poursuivons notre découverte du langage Rust après <a href="https://blog.dlecan.com//introduction-rust-part-1/">une première partie</a> dans laquelle vous avez pratiqué quelques concepts de base de Rust : éléments de syntaxe, déclaration de variables immuables, fonctions et matching. Si la pratique de Rust directement dans le navigateur était adaptée pour débuter, je vous propose désormais de développer directement sur votre poste. Nous pourrons alors continuer à explorer les possibilités de Rust.
+Installer Rust</p>
+
+<p>Le site officiel <a href="https://www.rust-lang.org">https://www.rust-lang.org</a> propose des binaires ou des installeurs pour Linux, Mac ou Windows, qui ne se mettent pas à jour automatiquement. Sachant qu’une nouvelle version du langage Rust et des outils est publiée toutes les six semaines et que l’on est régulièrement amené à jongler entre les différents channels de Rust (stable, beta, nightly), je vous déconseille cette façon d’installer Rust.</p>
+
+<p>Préférez plutôt l’usage de Rustup, le nouveau programme officiel d’installation de Rust (la page officielle de téléchargement commence aussi à y faire référence). Vous trouvez la procédure d’installation sur le site <a href="https://www.rustup.rs">https://www.rustup.rs</a>, à savoir une simple commande à taper dans une console : <code>curl https://sh.rustup.rs -sSf | sh</code>. Vous installez Rustup qui ensuite installe pour vous le compilateur Rust rustc, l’outil de gestion de dépendances et de build cargo, ainsi que le débuggueur ou le formateur de code de la version stable courante de Rust. Vous pourrez très simplement mettre à jour cette version stable avec rustup update quand vous en aurez besoin (toutes les six semaines !) ou bien installer la beta par exemple (rustup install beta).</p>
+
+<p>Précis et efficace &#8230; quand vous avez curl et un interpréteur sh à disposition, ce qui n’est pas le cas par défaut sous Windows. Si vous développez avec Rust sous Windows, vous aurez, tôt ou tard, besoin aussi de Git pour versionner vos fichiers sources. Je vous recommande donc d’installer d’abord l’outillage de Git qui vient avec une ligne de commande assez complète et qui ressemble à ce que vous pourriez obtenir sur un Linux : <a href="https://git-for-windows.github.io">https://git-for-windows.github.io</a>. Téléchargez l’installeur 32 ou 64 bits selon votre machine, puis lancez la commande d’installation de Rustup dans le shell proposé par Git for Windows.</p>
+
+<p>A la fin de l’installation, en ligne de commande (sous Windows celle de Git for Windows, n’oubliez pas car je ne le répéterai plus :-), tapez :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rustc --version</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Si vous obtenez quelque chose comme <code>rustc 1.10.0 (cfcb716cf 2016-07-03)</code>, le compilateur Rust est opérationnel sur votre poste !</p>
+
+<h2>Editeur de texte malin ou environnement de développement intégré (IDE) ?</h2>
+
+<p>Autant vous le dire d’emblée, les &#8220;assistants&#8221; de développement Rust sont loin d’être du niveau de ce que l’on peut trouver dans d’autres langages comme Java ou .Net. Il y a encore beaucoup de travail à faire mais on arrive tout même à se créer un environnement acceptable. Personnellement, je travaille avec Sublime Text, complété par quelques plugins qui me permettent d’avoir la coloration syntaxique, le formatage et le linting, une validation moins précise de la syntaxe. Je vous invite à consulter areweideyet.com pour choisir l’environnement le plus adapté à votre contexte : Vim, Emacs, Atom, Visual Studio, Eclipse &#8230; ou simplement, si vous souhaitez aller vite, un éditeur de texte type Notepad++, Geany ou Sublime Text seront suffisants.</p>
+
+<h2>Calculer division : reboot</h2>
+
+<p>Vous souvenez-vous de votre premier programme Rust écrit dans la première partie de ce dossier ? Nous allons le revisiter avec les nouveaux outils dont nous nous sommes dotés, et en particulier cargo. C’est un mix de Maven pour la structure standard des projets Rust, de npm pour la gestion de dépendances ou l’installation d’un programme et de commandes permettant de gérer un projet Rust.</p>
+
+<p>Créons-en un de type &#8220;programme Rust&#8221; (grâce au paramètre <code>--bin</code>) :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cargo new --bin division</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Avec votre éditeur de texte, copiez-collez le contenu de notre dernier programme dans le fichier src/main.rs du répertoire division créé par Cargo :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">calculer_division</span><span class="p">(</span><span class="n">x</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span> <span class="n">y</span><span class="o">:</span> <span class="k">i32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">i32</span>  <span class="p">{</span>
+</span><span class='line'>    <span class="n">match</span> <span class="n">y</span> <span class="p">{</span>
+</span><span class='line'>        <span class="m">0</span> <span class="o">=&gt;</span> <span class="n">panic</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Division par 0&quot;</span><span class="p">),</span>
+</span><span class='line'>        <span class="m">1</span> <span class="o">=&gt;</span> <span class="n">x</span><span class="p">,</span>
+</span><span class='line'>        <span class="n">_</span> <span class="o">=&gt;</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">let</span> <span class="n">resultat</span> <span class="o">=</span> <span class="n">calculer_division</span><span class="p">(</span><span class="o">-</span><span class="m">4</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Résultat : {}&quot;</span><span class="p">,</span> <span class="n">resultat</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Code complet sur ce Gist : <a href="https://git.io/vKcsS">https://git.io/vKcsS</a>. Sauvegardez, puis lancez en ligne de commande :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">$</span> <span class="n">cargo</span> <span class="n">run</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">Compiling</span> <span class="n">division</span> <span class="n">v0</span><span class="p">.</span><span class="m">1.0</span> <span class="p">(</span><span class="n">file</span><span class="o">:</span><span class="c1">//.../division)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">Running</span> <span class="err">`</span><span class="n">target</span><span class="o">/</span><span class="n">debug</span><span class="o">/</span><span class="n">division</span><span class="err">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">R</span><span class="err">é</span><span class="n">sultat</span> <span class="o">:</span> <span class="o">-</span><span class="m">2</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Cargo compile et lance à la suite le programme sans argument. Si vous souhaitez simplement compiler, lancez cargo build et si vous souhaitez lancer le programme vous-même, sachez qu’il se trouve dans le répertoire target/debug :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">$</span> <span class="p">.</span><span class="o">/</span><span class="n">target</span><span class="o">/</span><span class="n">debug</span><span class="o">/</span><span class="n">division</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">R</span><span class="err">é</span><span class="n">sultat</span> <span class="o">:</span> <span class="o">-</span><span class="m">2</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Une API sûre</h2>
+
+<p>Nous allons variabiliser le numérateur de notre division et le passer en paramètre de la ligne de commande. Explorons l’API de Rust pour ce besoin : lire les arguments en paramètre du programme s’effectue grâce à une fonction du module std::env déclarée comme ceci (Cf. <a href="https://doc.rust-lang.org/std/env/fn.args.html">https://doc.rust-lang.org/std/env/fn.args.html</a>) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">pub</span> <span class="k">fn</span> <span class="n">args</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Args</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La fonction <code>std::env::args()</code> nous renvoie donc une instance de la <em>struct</em> <code>Args</code> (elle-même dans le module <code>std::env</code>), une structure qui va contenir des champs et des méthodes permettant de manipuler les arguments du programme, et ce de manière sûre. Qu’est-ce que cela signifie ? Sûr implique par exemple le bannissement de la &#8220;nullité&#8221;, source de fréquentes erreurs d’exécution (le fameux <em>NullPointerException</em> en Java par exemple). En Rust, toutes les API sont conçues pour renvoyer quelque chose -un résultat ou une erreur- et même &#8220;rien&#8221; est quelque chose en Rust.</p>
+
+<h2><code>Option</code> - <code>Some</code> - <code>None</code></h2>
+
+<p>Regardons la déclaration de la fonction nth de Args qui va nous permettre de récupérer le nième argument de notre programme. Elle est déclarée comme ceci (la signature est légèrement adaptée pour une compréhension plus aisée) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">nth</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span> <span class="n">self</span><span class="p">,</span> <span class="n">n</span><span class="o">:</span> <span class="n">usize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Option</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mettons de coté le &amp;mut self, nous y reviendrons par la suite. nth est une fonction qui renvoie un Option de type String. Option est une énumération Rust à deux variantes possibles :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">pub</span> <span class="k">enum</span> <span class="n">Option</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">None</span><span class="p">,</span>
+</span><span class='line'>    <span class="n">Some</span><span class="p">(</span><span class="n">T</span><span class="p">),</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Si vous substituez le type générique <code>T</code> par <code>String</code>, vous comprenez alors que la méthode <code>nth</code> peut renvoyer soit <code>None</code>, qui signifie qu’il y a pas de valeur à cette position, soit <code>Some(String)</code>, qui signifie qu’il existe une valeur à la position demandée et quelle peut être extraite de la valeur de l’énumération. Ce qui est génial, c’est que ces variantes peuvent être &#8220;matchées&#8221; (Cf. partie 1 de ce dossier) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">use</span> <span class="n">std</span><span class="o">::</span><span class="n">env</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">...</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">let</span> <span class="n">numerateur</span> <span class="o">=</span> <span class="n">match</span> <span class="n">env</span><span class="o">::</span><span class="n">args</span><span class="p">().</span><span class="n">nth</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">Some</span><span class="p">(</span><span class="n">argument</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">argument</span><span class="p">,</span>
+</span><span class='line'>    <span class="n">None</span> <span class="o">=&gt;</span> <span class="n">panic</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Argument obligatoire manquant : le numérateur&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ici, on effectue aussi du pattern matching pour extraire la valeur contenue dans le <code>Some</code>. <code>Some(argument)</code> permet de déclarer la variable argument, affectée à la valeur contenu dans le <code>Some</code>, que l’on peut alors renvoyer (avec un <code>return</code> implicite). On arrête le programme prématurément avec la macro <code>panic!</code> et un message explicite en cas de <code>None</code>.</p>
+
+<p>Enfin, cerise sur le gâteau, comme tout est expression en Rust, on peut affecter directement le retour de notre match à une variable : <code>let numerateur = match env::args() ...</code>.</p>
+
+<p>Notez l’utilisation du module env importé par une ligne en début de programme, <code>use std::env;</code>, à ajouter pour chaque module utilisé dans le programme.</p>
+
+<p>Avec les <code>Option</code> et l’API de Rust, nous avons pu extraire notre paramètre de ligne de commande et l’avons rendu obligatoire. Ce n’est cependant pas suffisant : en effet, la fonction <code>nth</code> renvoie un <code>Option&lt;String&gt;</code> dans notre cas, ce qui veut dire que la variable numerateur ci-dessus est de type <code>String</code>, alors que nous attendons un <code>i32</code>. Il faut donc convertir notre valeur.</p>
+
+<h2><code>Result</code> - <code>Ok</code> - <code>Err</code></h2>
+
+<p>Rust propose une API de conversion de <code>String</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">parse</span><span class="o">&lt;</span><span class="n">F</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Result</span><span class="o">&lt;</span><span class="n">F</span><span class="p">,</span> <span class="n">F</span><span class="o">::</span><span class="n">Err</span><span class="o">&gt;</span> <span class="n">where</span> <span class="n">F</span><span class="o">:</span> <span class="n">FromStr</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Prenons quelques instants pour comprendre la signature de cette fonction :</p>
+
+<ul>
+<li><code>fn parse</code> : &#8220;parse&#8221; est le nom de la fonction :-)</li>
+<li><code>F</code> : il s’agit d’un type générique, que vous pouvez substituer mentalement par le type que vous voulez obtenir après le parsing de votre <code>String</code>
+La définition en est donnée en fin de ligne, <code>where F: FromStr</code>, ce qui signifie que <code>F</code> doit respecter le contrat décrit dans le <em>trait</em> <code>std::str::FromStr</code> (c’est une sorte d’interface)</li>
+<li><code>&amp;self</code> : il s’agit de la syntaxe spécifique à Rust qui indique que cette fonction n’est pas statique et qu’elle s’applique sur des instances de l’objet courant (<code>String</code> ici)</li>
+<li><code>Result&lt;F, F::Err&gt;</code> : le type de retour, encapsulant <code>F</code> et un type d’erreur associée à <code>F</code></li>
+</ul>
+
+
+<p><code>Result</code> est la façon élégante en Rust de gérer les éventuels retours en erreur d’un traitement. Il est décrit comme ceci dans l’API de Rust :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">pub</span> <span class="k">enum</span> <span class="n">Result</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">E</span><span class="o">&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">Ok</span><span class="p">(</span><span class="n">T</span><span class="p">),</span>
+</span><span class='line'>  <span class="n">Err</span><span class="p">(</span><span class="n">E</span><span class="p">),</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Un peu comme <code>Option</code> vue précédemment, <code>Result</code> est une énumération à deux variantes, sur lesquelles on pourra <em>matcher</em> :</p>
+
+<ul>
+<li><code>Ok</code> est utilisé pour encapsuler le résultat d’un traitement qui s’est bien déroulé</li>
+<li><code>Err</code> permet de propager les erreurs de traitement</li>
+</ul>
+
+
+<p>Il n’y a donc pas d’exception en Rust et l’usage des codes retours pour indiquer un résultat de traitement est considéré comme une mauvaise pratique, car non sûre.</p>
+
+<p>Le type <code>i32</code> implémentant bien le <em>trait</em> <code>std::str::FromStr</code>, on pourrait écrire la fonction dédiée au parsing d’une <code>String</code> en <code>i32</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">parse</span><span class="p">(</span><span class="o">&amp;</span><span class="n">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Result</span><span class="o">&lt;</span><span class="k">i32</span><span class="p">,</span> <span class="n">ParseIntError</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>L’association de <code>ParseIntError</code> à <code>i32</code> est décrite dans sa documentation (cherchez <code>impl FromStr for i32</code> et juste en dessous le type <code>Err = ParseIntError</code>).</p>
+
+<p>Gardez en tête que c’est une simple vue de l’esprit, car elle est redondante avec la définition de la fonction décrite avec un type générique, mais elle permet de fixer les idées quand on n’est pas encore à l’aise avec la syntaxe de Rust.</p>
+
+<p>Nous pouvons donc convertir notre <code>String</code> numerateur en <code>i32</code> après un <em>matching</em> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">let</span> <span class="n">numerateur</span> <span class="o">=</span> <span class="n">match</span> <span class="n">numerateur</span><span class="p">.</span><span class="n">parse</span><span class="o">::&lt;</span><span class="k">i32</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">Ok</span><span class="p">(</span><span class="n">numerateur</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">numerateur</span><span class="p">,</span>
+</span><span class='line'>    <span class="n">Err</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">panic</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Impossible de convertir notre argument. Raison: {}&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Il faut un peu aider le compilateur car il ne peut pas deviner quelle conversion on souhaite appliquer. Pour cela, on utilise la syntaxe <em>turbofish</em>: <code>::&lt;&gt;</code>, qui permet de spécifier le type de destination.</p>
+
+<p>Si le <code>parse</code> s’est bien déroulé, le matching sur <code>Ok</code> permet d’extraire le numérateur sous forme de <code>i32</code> désormais ; sinon avec le matching sur <code>Err</code>, on arrête une nouvelle fois le programme avec un message d’erreur adéquat.</p>
+
+<p>Enfin, substituez le premier paramètre de l’appel de la fonction calculer_division par la variable numerateur (code complet : <a href="https://git.io/v6ypr">https://git.io/v6ypr</a>), compilez et exécutez en une fois :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">$</span> <span class="n">cargo</span> <span class="n">run</span> <span class="m">4</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">Compiling</span> <span class="n">division</span> <span class="n">v0</span><span class="p">.</span><span class="m">1.0</span> <span class="p">(</span><span class="n">file</span><span class="o">:</span><span class="c1">//.../division)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">Running</span> <span class="err">`</span><span class="n">target</span><span class="o">/</span><span class="n">debug</span><span class="o">/</span><span class="n">division</span> <span class="m">4</span><span class="err">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">R</span><span class="err">é</span><span class="n">sultat</span> <span class="o">:</span> <span class="m">2</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Bravo, en quelques lignes de code robustes, vous avez gérés la présence et l’absence d’argument lors de l’exécution de notre programme et ce, de manière plutôt élégante.</p>
+
+<p>Ainsi se termine cette 2è partie de notre dossier consacré à Rust. <a href="https://blog.dlecan.com//introduction-rust-part-3/">Dans la prochaine partie</a>, le niveau de difficulté montera d’un cran : il sera en effet temps de se confronter au <em>borrow checker</em> !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction au langage de programmation Rust - Partie 1]]></title>
+    <link href="https://blog.dlecan.com//introduction-rust-part-1/"/>
+    <updated>2017-03-09T11:34:00+00:00</updated>
+    <id>https://blog.dlecan.com//introduction-rust-part-1</id>
+    <content type="html"><![CDATA[<blockquote><p>Article initialement publié sur <a href="https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-1">https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-1</a></p></blockquote>
+
+<p>Rust est un jeune langage qui a pour ambition de se substituer au C/C++ en proposant de nouveaux paradigmes de programmation, une librairie standard de haut niveau et un écosystème riche soutenu par une communauté très active.</p>
+
+<p>Multiplateformes (systèmes d’exploitation ou architectures de processeurs) et pourvu de tous les concepts de programmation attendus pour un langage moderne (programmation orientée &#8220;objet&#8221;, programmation fonctionnelle, facilités à développer des programmes d’exécution concurrente), Rust a beaucoup d’atouts pour séduire.</p>
+
+<p>Au travers de cette série d’articles, nous allons découvrir ensemble ce langage qui me paraît être le plus excitant depuis ces dernières années.</p>
+
+<h2>Genèse</h2>
+
+<p>Avant de plonger dans le code, je vous propose de revenir sur les origines du langage. Elles remontent à 2010 : Graydon Hoare, ingénieur chez Mozilla, révèle ses travaux sur Rust. A l’époque, le &#8220;marché&#8221; des langages informatiques est un peu similaire à aujourd’hui, à savoir une domination de C/C++ et de Java, chacun cantonné à ses domaines de prédilection. En schématisant, Java règne sur l’informatique de &#8220;gestion&#8221; (systèmes d’information bancaires, assurance &#8230;) ainsi que sur Android, tandis que C/C++ est le choix par défaut de la programmation que je qualifierais de &#8220;système&#8221; ou &#8220;bas niveau&#8221; : système d’exploitation, pilotes, informatique embarquée, machines virtuelles (Java lui- même, ou NodeJS par exemple) &#8230;</p>
+
+<p>Quelle caractéristique clivante peut bien isoler à ce point ces deux mondes de l’informatique ? Je pense qu’il s’agit principalement de la gestion de la mémoire, qui diverge totalement. Avec Java, elle est en grande partie masquée au développeur, c’est-à-dire que lorsqu’un développeur crée des objets en mémoire, il n’a pas vraiment à se soucier de son nettoyage. En effet, un processus qui s’exécute en arrière-plan, le ramasse-miette (garbage collector), se charge de détecter les objets qui ne seraient plus utilisés et de les supprimer de la mémoire. Le travail du développeur est donc grandement simplifié et celui-ci peut se concentrer sur le code métier le plus utile. C’est ce qui explique le succès de tous les langages à machine virtuelle et ramasse-miettes, comme Javascript ou .Net.</p>
+
+<p>Si le fonctionnement du ramasse-miettes n’a pas ou peu de conséquences négatives -largement compensées par d’autres avantages- dans les applications de haut niveau comme celles dédiées au web, il est problématique, voire rédhibitoire pour d’autres. La latence, certes réduite, induite par l’initialisation ou le fonctionnement du ramasse-miettes, ne permet pas de construire des systèmes de plus bas niveau, comme les systèmes d’exploitation, les pilotes, les machines virtuelles elles-mêmes ou encore des programmes en ligne de commandes efficaces &#8230; Dans ces cas, la mémoire doit donc être gérée &#8220;à la main&#8221;.</p>
+
+<p>En C/C++, la responsabilité du cycle de vie des structures ou objets en mémoire incombe au développeur et gare à la qualité du logiciel si cette tâche est mal effectuée : corruption de données, plantages, failles de sécurité &#8230; sont les conséquences principales d’une mauvaise gestion de la mémoire, phénomène encore aggravé dans un contexte de programme à exécution concurrente. Ne jetons pas la pierre aux développeurs : c’est une tâche ingrate, pénible et peu outillée. Alors dans ces conditions, comment produire des logiciels bas niveau de qualité ?</p>
+
+<p>Depuis les premières ébauches, c’est précisément l’un des objectifs du langages Rust. Il ne repose ni sur un ramasse-miettes (ex: Java), ni sur une gestion mémoire manuelle du développeur (ex: C/C++). Rust propose une nouvelle façon de gérer la mémoire, qui se veut sûre et garantie à la compilation, ce qui permet d’en limiter l’impact sur les performances à l’exécution. Autant vous prévenir tout de suite : la courbe d’apprentissage de Rust est donc plus lente que dans d’autres langages mais largement compensée en qualité et fiabilité des programmes produits. Concrètement, vous allez transpirer au début mais serez fiers de la qualité de vos productions. Nous verrons par la suite comment elle se concrétise.</p>
+
+<p>La syntaxe du langage, ainsi que la librairie standard, ont été débattues, testées, amendées par la -déjà très active- communauté, pendant des années, la première version stable 1.0 de Rust ayant été publiée en avril 2015. Ce délai a permis aussi de mettre en place une gouvernance ouverte et transparente qui régit l’évolution du langage, à laquelle chacun peut participer (board central, RFC ouvertes &#8230;). Trois channels de Rust sont édités en parallèle : nightly, beta et stable. De nouvelles versions de Rust stable et beta sont publiées toutes les 6 semaines, apportant à chaque fois leurs lots d’évolutions au langage.</p>
+
+<p>Avant de démarrer, soyez attentifs lors de vos recherches sur Internet à la version de Rust concernée par les articles de blogs ou les solutions apportées sur Stack Overflow. On y trouve en effet beaucoup de contenus obsolètes, car applicables à des versions de Rust antérieures à la version 1.0.</p>
+
+<p>Enfin, un mot sur la communauté de développeurs Rust. Elle est accueillante et bienveillante, vous trouverez de nombreux développeurs prêts à vous aider, à vous faire progresser ainsi qu’à critiquer votre code de manière constructive. Une bonne surprise et une des forces de ce langage.</p>
+
+<h2>Bonjour lecteurs !</h2>
+
+<p>Commençons à écrire quelques lignes de code, sans installation préalable de Rust sur votre poste. Rendez-vous sur <a href="https://play.rust-lang.org/">https://play.rust-lang.org/</a> pour ouvrir l’interpréteur web Rust, qui fonctionne très bien sur smartphone ou tablette. Idéal pour tester simplement Rust sans vous prendre la tête ! Ne modifiez pas le paramétrage par défaut de la page (boutons du haut) et concentrez-vous sur la zone de texte centrale : c’est là qu’il faut taper le code Rust.</p>
+
+<p>Lors de votre première connexion, le formulaire est déjà préinitialisé avec un morceau de code que je vous propose de substituer par un contenu plus adapté à notre contexte :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span> <span class="s">&quot;Bonjour Programmez!&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Si vous avez des difficultés à saisir ce code, vous pouvez ouvrir directement cette URL : https://is.gd/JzBaCy. Par la suite, je présenterai systématiquement un lien vers le code présenté, vous permettant éventuellement de le copier/coller.</p>
+
+<p>Cliquez ensuite sur le gros bouton rouge &#8220;Run&#8221; en haut pour exécuter ce programme. Vous devez alors obtenir sous la zone de texte de code l’affichage de &#8220;Bonjour Programmez!&#8221;. Bravo, vous venez d’écrire votre premier programme Rust !</p>
+
+<h2>Analysons ensemble ces quelques lignes</h2>
+
+<p>La syntaxe s’inspire fortement du langage C (que l’on retrouve en Java, Javascript, .Net &#8230;) et le formatage du code est standardisé par le langage : indentation, espaces, positions des accolades &#8230; Notez le bouton &#8220;Format&#8221; dans l’interpréteur Web qui formate le code de la zone de texte comme on peut s’y attendre 🙂</p>
+
+<ul>
+<li><code>fn</code> permet de déclarer une fonction, nommée ici main et sans argument. Par convention, c’est le point d’entrée unique d’un programme écrit en Rust</li>
+<li><code>println!</code> permet d’écrire dans la sortie standard, du texte ou des structures plus complexes. Notez le <code>!</code> qui signifie que <code>println!</code> est une macro. C’est une routine de génération de code <strong>à la compilation</strong> et un pattern de développement très utilisé par les développeurs Rust pour masquer une complexité</li>
+</ul>
+
+
+<p>Je vous recommande l’utilisation de <code>println!</code> à deux arguments et plus, syntaxe familière à ceux qui connaissent les fonctions <code>printf/fprintf</code> du C ou <code>str.format</code> de Python : le 1er paramètre représente la mise en forme, les suivants les valeurs à substituer aux <code>{}</code> présents dans le contenu du 1er argument (plus de détails sur <a href="https://doc.rust-lang.org/std/fmt/">https://doc.rust-lang.org/std/fmt/</a>)</p>
+
+<ul>
+<li><code>;</code> obligatoire en fin de ligne la plupart du temps en Rust</li>
+</ul>
+
+
+<p>Modifions maintenant notre programme en déclarant une variable (<a href="https://is.gd/SIDHI3">https://is.gd/SIDHI3</a>) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">let</span> <span class="n">une_chaine</span> <span class="o">=</span> <span class="s">&quot;Bonjour Programmez!&quot;</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span> <span class="n">une_chaine</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Les variables se déclarent avec le mot-clé <code>let</code>, sont immuables (que l’on ne peut pas réaffecter) et sont fortement typées. Pourtant vous remarquerez que nous n’avons pas déclaré le type de cette variable. En effet, Rust met en œuvre de l’inférence de type, à savoir qu’il tente de détecter le type des variables mais pas des paramètres. Un allègement significatif de la syntaxe qui facilite l’écriture et la relecture. Il faudra cependant parfois l’aider à deviner correctement le type. Remarquez enfin la syntaxe de type <em>snake case</em>, avec des <code>_</code> pour séparer les concepts dans les noms des variables (par opposition à la syntaxe <em>camel case</em>: <code>uneVariable</code>). Pratique, car le compilateur râlera si vous ne respectez pas cette convention.</p>
+
+<p>Lancez avec &#8220;Run&#8221; pour compiler et exécuter ce code.</p>
+
+<p>Poursuivons la découverte des concepts de Rust en introduisant une nouvelle fonction qui permet d’effectuer la division d’un nombre par un autre :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">calculer_division</span><span class="p">(</span><span class="n">x</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span> <span class="n">y</span><span class="o">:</span> <span class="k">i32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">i32</span>  <span class="p">{</span>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Numérateur: {}&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Dénominateur: {}&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>L’appel de la fonction que nous venons de déclarer s’effectue exactement comme l’on s’y attend (programme complet : <a href="https://is.gd/0U61pa">https://is.gd/0U61pa</a>) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="p">...</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">let</span> <span class="n">resultat</span> <span class="o">=</span> <span class="n">calculer_division</span><span class="p">(</span><span class="o">-</span><span class="m">4</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Résultat : {}&quot;</span><span class="p">,</span> <span class="n">resultat</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Par choix, il n’y a pas d’inférence de type en Rust lors de la déclaration des fonctions : les types des paramètres d’entrée et du retour doivent être explicitement spécifiés. Le type des arguments est indiqué après chaque nom de variable suivi de : et le type de retour est spécifié après la flèche <code>-&gt;</code>. Rust propose une liste de types primitifs très complète, puisque vous avez par exemple la possibilité de choisir des entiers, des flottants signés ou non signés, des entiers ou des flottants de &#8220;longueur&#8221; variable.</p>
+
+<p>Exemples :</p>
+
+<ul>
+<li><p><code>u8</code> : est un nombre de longueur 8 octets uniquement positif, donc un nombre compris entre 0 et 255 (2⁸-1)</p></li>
+<li><p><code>i16</code> : est un nombre de longueur 16 octets, positif ou négatif, donc un nombre compris entre -32 768 (-2<sup>16/2)</sup> et 32 767 (2<sup>16/2-1)</sup></p></li>
+</ul>
+
+
+<p>Je vous conseille d’explorer la liste complète des types primitifs pour vous faire une idée des autres types disponibles (<a href="https://doc.rust-lang.org/book/primitive-types.html">https://doc.rust-lang.org/book/primitive-types.html</a>).</p>
+
+<p>Les plus attentifs d’entre vous aurons remarqué que cette fonction ne &#8220;retourne&#8221; explicitement rien comparé à d’autres langages et que la dernière ligne ne se termine pas par un point-virgule, alors que l’on a précédemment vu qu’il était obligatoire. En Rust, il y a un return implicite sur la dernière expression exécutée d’une fonction. Attention, ce n’est pas nécessairement la dernière ligne de code de la fonction. Dans l’exemple ci-dessous, il y a 2 façons de sortir de la fonction et aucune d’entre elles ne correspond à la dernière ligne de code de la fonction.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">calculer_division</span><span class="p">(</span><span class="n">x</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span> <span class="n">y</span><span class="o">:</span> <span class="k">i32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">i32</span>  <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">y</span> <span class="o">!=</span> <span class="m">0</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">panic</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Division par 0&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'><span class="p">...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Exemple complet : <a href="https://is.gd/9LKj2d">https://is.gd/9LKj2d</a>.</p>
+
+<p>A propos du point-virgule, dans notre cas ici qui semble manquant, vous ne devez pas en mettre en fin de ligne. Essayez, vous aurez une erreur de compilation ! Pourquoi ? Rust est un langage basé sur les expressions et non sur des déclarations. Cela signifie que tout renvoie quelque chose : assigner une variable renvoie quelque chose, if renvoie quelque chose &#8230; L’expression <code>x / y</code> renvoie le résultat de la division, compatible avec le type <code>i32</code>, là où l’expression <code>x / y;</code> un résultat dont le type est <code>()</code>, incompatible avec <code>i32</code>.</p>
+
+<p>Enfin, modifions une dernière fois notre programme pour induire une syntaxe plus habituelle pour les Rustacéens (traduction de <em>Rustaceans&#8221;, le nom officiel des développeurs Rust) : le </em>matching*.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">calculer_division</span><span class="p">(</span><span class="n">x</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span> <span class="n">y</span><span class="o">:</span> <span class="k">i32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">i32</span>  <span class="p">{</span>
+</span><span class='line'>    <span class="n">match</span> <span class="n">y</span> <span class="p">{</span>
+</span><span class='line'>        <span class="m">0</span> <span class="o">=&gt;</span> <span class="n">panic</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Division par 0&quot;</span><span class="p">),</span>
+</span><span class='line'>        <span class="m">1</span> <span class="o">=&gt;</span> <span class="n">x</span><span class="p">,</span>
+</span><span class='line'>        <span class="n">_</span> <span class="o">=&gt;</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'><span class="p">...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Exemple complet : <a href="https://is.gd/X7889d">https://is.gd/X7889d</a>.</p>
+
+<p>La syntaxe parle d’elle-même, c’est simple à comprendre. Le <code>match</code> permet de gérer plus de cas que ne peut le faire un simple if tout en rendant obligatoire le traitement du cas par défaut. Qui n’a jamais oublié un else ou un case default en Java, par exemple ? En Rust, c’est impossible car le compilateur s’assure que tous les cas possibles de matching sont bien déclarés et gérés par le développeur. <code>_</code> signifie au compilateur &#8220;tous les autres cas de matching&#8221; (dans notre cas, &#8220;tout sauf 0 et 1&#8221;). Sachez aussi que le matching offre aussi beaucoup plus de possibilités que ne montre ce simple exemple.</p>
+
+<p>Ici se termine la 1ère partie de cette introduction à Rust. Je vous invite à poursuivre la lecture de ce dossier avec <a href="https://blog.dlecan.com//introduction-rust-part-2/">la seconde partie</a>, dans laquelle vous installerez Rust et ses outils sur votre poste de développement et découvrirez d’autres concepts passionnants du langage, avec quelques notions de programmation fonctionnelle.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to configure Docker DNS on Ubuntu in a corporate environment?]]></title>
+    <link href="https://blog.dlecan.com//how-to-configure-docker-dns-on-ubuntu-in-a-corporate-environment/"/>
+    <updated>2016-11-24T22:17:00+00:00</updated>
+    <id>https://blog.dlecan.com//how-to-configure-docker-dns-on-ubuntu-in-a-corporate-environment</id>
+    <content type="html"><![CDATA[<p>When you are in a corporate environment, network is often configured to restrict outgoing requests, such as DNS resolution requests. By default, Docker uses Google DNS (8.8.8.8 and 8.8.4.4) to resolve domain names:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ docker run busybox nslookup google.com
+</span><span class='line'>Server:    8.8.8.8
+</span><span class='line'>Address 1: 8.8.8.8
+</span><span class='line'>nslookup: can't resolve 'google.com'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you are in a corporate environment, resolution fails because you have to use your internal DNS server.</p>
+
+<p>You can find many, many documentation about how to configure Docker DNS on Ubuntu (such as official <a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/#/configure-a-dns-server-for-use-by-docker">Docker doc</a>), but none of them answer these requirements all together:</p>
+
+<p>1/ Configuration must be portable: works at home or at work or anywhere else</p>
+
+<p>2/ Configuration must be written in files not provided by a deb package to avoid conflicts after package updates</p>
+
+<h2>Portable configuration</h2>
+
+<p>Ubuntu provides Dnsmasq, a local DNS server configured to use DNS server of your network through DHCP. Docker can&#8217;t use it because it doesn&#8217;t allow to use a local DNS server if its IP address is a local configuration, such as <code>127.0.0.1</code>.</p>
+
+<p>So we&#8217;ll configure Dnsmasq to listen to another available IP address, such as the one provided by <code>docker0</code> interface, to solve this issue.</p>
+
+<p>Edit the new file <code>/etc/NetworkManager/dnsmasq.d/docker.conf</code> (as sudo):</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>interface=docker0</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then restart NetworkManager service:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo service network-manager restart</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Configure Docker DNS</h2>
+
+<p>Extract the IP address of the <code>docker0</code> interface:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ docker network inspect bridge | grep Gateway
+</span><span class='line'>                    "Gateway": "172.17.0.1"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then edit <code>/etc/docker/daemon.json</code> (as sudo):</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{
+</span><span class='line'>    "dns": ["172.17.0.1"]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Restart Docker:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo service docker restart</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally, check DNS resolution works again:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ docker run busybox nslookup google.com
+</span><span class='line'>Server:    172.17.0.1
+</span><span class='line'>Address 1: 172.17.0.1
+</span><span class='line'>Name:      google.com
+</span><span class='line'>Address 1: 2a00:1450:4009:811::200e lhr26s02-in-x200e.1e100.net
+</span><span class='line'>Address 2: 216.58.198.174 lhr25s10-in-f14.1e100.net</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Du SSL gratuit pour tous' au Web2Day 2016]]></title>
+    <link href="https://blog.dlecan.com//web2day-ssl-gratuit-pour-tous/"/>
+    <updated>2016-06-17T18:24:00+00:00</updated>
+    <id>https://blog.dlecan.com//web2day-ssl-gratuit-pour-tous</id>
+    <content type="html"><![CDATA[<p>J&#8217;ai été retenu par la prestigieuse conférence <a href="https://web2day.co">Web2Day</a> à Nantes pour présenter <a href="https://web2day.co/2016/evenements/du-ssl-gratuit-pour-tous/">&#8220;Du SSL gratuit pour tous&#8221;</a> en juin 2016, où je démontre comment très facilement configurer du TLS/SSL sur votre site web à l&#8217;aide de la nouvelle autorité de certification <a href="https://letsencrypt.org/">Let&#8217;s Encrypt</a>, qui délivre gratuitement des certificats.</p>
+
+<p>Merci !</p>
+
+<p>Support de présentation :</p>
+
+<p><a href="http://blog.dlecan.com/web2day2016-ssl-simple-gratuit-avec-lets-encrypt/"><img src="https://blog.dlecan.com//images/prez-web2day-lets-encrypt/cover.png" width="700" height="394" alt='Support de présentation de la conférence'></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Le Web sécurisé par défaut grâce à DevOps et Let's Encrypt ? ]]></title>
+    <link href="https://blog.dlecan.com//le-web-securise-par-defaut-grace-a-devops-et-let-s-encrypt/"/>
+    <updated>2016-05-25T21:13:00+00:00</updated>
+    <id>https://blog.dlecan.com//le-web-securise-par-defaut-grace-a-devops-et-let-s-encrypt</id>
+    <content type="html"><![CDATA[<p><em><a href="http://www.journaldunet.com/solutions/expert/64185/le-web-securise-par-defaut-grace-a-devops-et-let-s-encrypt.shtml">Initialement publié sur le Journal Du Net</a></em>.</p>
+
+<p><strong>L&#8217;accès à de nombreux sites Web n&#8217;est pas sécurisé pour plusieurs raisons : c&#8217;est compliqué et cher. Voyons comment les principes du DevOps et un coup de pouce de Let&#8217;s Encrypt pourraient nous conduire au Web sécurisé par défaut.</strong></p>
+
+<p>Les principes du DevOps insistent fortement sur l&#8217;automatisation des processus de construction ou de déploiement des systèmes informatiques. De nombreuses entreprises se sont emparées de ces nouveaux outils et les mettent en œuvre progressivement afin de livrer plus vite, au meilleur coût, avec une qualité élevée, des fonctionnalités à forte valeur ajoutée à leurs clients et leurs utilisateurs.</p>
+
+<p>La plupart des étapes du processus de construction des systèmes informatique sont en effet automatisables : construction et paramétrage des serveurs, construction des applications (serveur ou mobiles), exécution des tests, livraison, déploiement, gestion et prise en compte des pannes&#8230; La liste est chaque jour plus longue. Il reste pourtant un domaine où l&#8217;automatisation est faible voire inexistante : la sécurité de l&#8217;accès aux sites Internet. Or, le contexte actuel d&#8217;(in)sécurité du Web en général montre que la sécurité ne doit plus être sacrifiée sur l&#8217;autel de la complexité ou du prix.</p>
+
+<h2>La sécurité du Web</h2>
+
+<p>Cette sécurité repose sur des protocoles comme HTTPS, TLS, des algorithmes de chiffrement ou de hashage et au cœur, des certificats X.509. La combinaison de ces éléments nous permet d&#8217;accéder à des sites Internet de manière sécurisée (httpS://&#8230;), nous garantissant des échanges de données chiffrées et donc illisibles pour tout tiers qui tenterait d&#8217;intercepter les données. Du moins, en théorie car les failles de sécurités des systèmes informatiques et le talent des pirates leur permettent quelquefois d&#8217;accéder à des données confidentielles.</p>
+
+<p>En pratique, la sécurité repose sur d&#8217;autres concepts qui permettent de renforcer la sécurité et de limiter les risques de piratage mais l&#8217;essentiel du processus repose sur les certificats de la norme X.509.</p>
+
+<h2>Normés certes, mais compliqués et chers</h2>
+
+<p><a href="https://fr.wikipedia.org/wiki/X.509">X.509</a> est une norme qui définit entre autres les fameux certificats sur lesquels reposent HTTPS et TLS. Une chaine de confiance hiérarchique est établie, dans laquelle des certificats particuliers -dits &#8220;racine&#8221;- signent et valident d&#8217;autres certificats. Les certificats racines sont gérés par des autorités de certification qui sont responsables de l&#8217;émission de nouveaux certificats.</p>
+
+<p>Les certificats racines sont directement embarqués dans les navigateurs web, ce qui permet à ces derniers d&#8217;ouvrir des connexions sécurisées avec des sites web lorsqu&#8217;ils présentent un certificat délivré par une autorités de certification reconnue.</p>
+
+<p><em>Les certificats X.509 sont de bons concepts cryptographiques, qui présentent cependant des inconvénients majeurs.</em></p>
+
+<p>1/ Ils sont compliqués à gérer. Un certificat doit être d&#8217;abord généré, ce qui requiert plusieurs étapes et fait intervenir plusieurs acteurs. L&#8217;utilisateur émetteur doit générer une demande de signature de certificat (CSR) lors de laquelle il choisit un certain nombre de paramètres, tels que la taille de la clé du certificat (il faut se tenir au courant des valeurs assurant un niveau de sécurité adéquat, ce qui évolue avec le temps) et un mot de passe optionnel qui sera requit à chaque usage du certificat. Puis l&#8217;autorité de certification doit signer la demande et renvoyer le certificat à l&#8217;émetteur de la demande. Enfin, il faut configurer le site web avec le certificat reçu de l&#8217;autorité et d&#8217;autres paramètres, ce qui est tout sauf évident : les serveurs web ne proposant que rarement une configuration simplifiée (des dizaines de paramètres sont ajustables).</p>
+
+<p>Un certificat a en outre une durée de vie limitée -généralement entre 1 et 3 ans- et doit donc être renouvelé avant son expiration par un processus proche de sa génération initiale. Il faut alors de nouveau mettre à jour la configuration du serveur.</p>
+
+<p>Corollaire direct, gérer les certificats est long et lent. Comme le processus fait intervenir plusieurs acteurs, avec une complexité élevée et d&#8217;occurrence rare, pourquoi automatiser quelque chose qui se produit très rarement ? Les certificat sont donc dans la plupart des organisations générés et gérés manuellement et la difficulté est élevée à chaque fois qu&#8217;il faut les générer ou renouveler.</p>
+
+<p>2/ Ils sont chers. Demander un certificat à une autorité de certification publique est la plupart du temps payant (jusqu&#8217;à plusieurs centaine d&#8217;euros par certificat).</p>
+
+<p>Compte tenu de ces inconvénients, le choix des concepteurs de site web est donc radical : ils ne sécurisent pas ou très peu quand ils ne peuvent pas faire autrement. Pourtant, l&#8217;accès sécurisé à un site web est désormais essentiel ! <a href="https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html">Google favorise et privilégie</a> les sites Internet accessibles au travers de HTTPS en leur offrant un meilleur référencement sur son moteur de recherche. De nouveaux protocoles qui vont apporter de meilleures performances dans les usages mobiles comme HTTP/2, requièrent, aussi, obligatoirement HTTPS, donc TLS, donc des certificats.</p>
+
+<h2>Des nouvelles autorités de certification</h2>
+
+<p>Revenons à nos pratiques DevOps, et en particulier l&#8217;automatisation. Certains acteurs majeurs du Cloud ont bien compris la problématique et proposent depuis quelques temps la gestion complète des certificats, de leur cycle de vie et de leur configuration dans les serveurs web, sans (presque) aucune opération manuelle ! (comme <a href="https://aws.amazon.com/fr/certificate-manager/">AWS certificate Manager</a>) Une raison de plus pour basculer dans le Cloud !</p>
+
+<p>Pour les autres, une nouvelle autorité de certification répond aux trois problématiques exposées précédemment : Let&#8217;s Encrypt. Let&#8217;s Encrypt est une autorité de certification <a href="https://letsencrypt.org/2016/04/12/leaving-beta-new-sponsors.html">officiellement opérationnelle depuis le 12 avril 2016</a>, avec comme principes clés la gratuité, l&#8217;automatisation et la sécurité. Le tout garanti par la transparence et l&#8217;ouverture de ses processus et de ses codes sources.</p>
+
+<p>Comme toute autorité de certification, Let&#8217;s Encrypt délivre des certificats, les renouvelle mais aussi les configure sur les serveurs web, et ce automatiquement, sans autre intervention humaine que de fournir un paramétrage initial. Ensuite, les outils s&#8217;occupent de tout ! Et comme un bon processus est un processus récurrent fréquent, Let&#8217;s Encrypt force à l&#8217;automatisation en générant des certificats à durée de vie extrêmement courte : seulement trois mois, avec préconisation de renouvellement au bout de deux mois. Impossible à utiliser sans automatisation donc.</p>
+
+<h2>Le Web sécurisé par défaut grâce aux principes DevOps ?</h2>
+
+<p><a href="https://letsencrypt.org/sponsors/">De nombreuses entreprises et entités soutiennent Let&#8217;s Encrypt</a>, financièrement et moralement, comme Mozilla, Akamai, Cisco, OVH, Google, Facebook, Gemalto, Gandi, Free, HP… et l&#8217;usage des certificats émis par Let&#8217;s Encrypt se répand comme une trainée de poudre : <a href="https://letsencrypt.org/2016/03/08/our-millionth-cert.html">le cap du million de certificats générés</a> a été franchi en mars 2016 et la progression continue sur le même rythme ; de plus en plus de services Internet proposent ou vont proposer très prochainement de sécuriser les sites web de leurs utilisateurs au travers de Let&#8217;s Encrypt : Gandi, Free/Online, Wordpress, OVH, sans compter divers CDN (KeyCDN, Kloudsec, CDNSun …).</p>
+
+<p>L&#8217;usage simplifié promu par Let&#8217;s Encrypt n&#8217;est pas étranger à cette adoption, qui sera sans nul doute, massive dans les années à venir.
+En effet, tout le monde y gagne :</p>
+
+<ul>
+<li>Les concepteurs de site : activation de la sécurité de manière simple, voire transparente, voire même par défaut ; meilleur référencement auprès de Google,</li>
+<li>Les utilisateurs : garantie de confidentialité de leurs activités sur de nombreux sites web ; en ce temps d&#8217;espionnage massif, c&#8217;est essentiel pour garantir la confiance,</li>
+<li>Les services Internet d&#8217;hébergement de sites ou les CDN : c&#8217;est un service gratuit de plus à offrir à leur client et qui peut en attirer de nouveaux.</li>
+</ul>
+
+
+<p>Les autorités de certification traditionnelles sont pour le moment relativement épargnées puisque que ce sont principalement des sites web qui n&#8217;étaient pas auparavant sécurisés qui basculent vers Let&#8217;s Encrypt. De plus, certains types de certificats ne sont actuellement pas pris en compte par Let&#8217;s Encrypt, ce qui continue de garantir leur monopole. Mais pour combien de temps ?</p>
+
+<p><a href="https://blog.imirhil.fr/2015/12/12/letsencrypt-joie-deception.html">Certains considèrent cependant</a> que les choix effectués par Let&#8217;s Encrypt vont à l&#8217;encontre de l&#8217;élévation du niveau de sécurité des sites web. Mais ce sont justement ces choix qui permettent et conduisent à l&#8217;automatisation. Le web sécurisé par défaut n&#8217;a jamais été aussi proche grâce aux principes DevOps et à Let&#8217;s Encrypt.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tool In Action 'Sécuriser vos applications Web gratuitement' à Devoxx 2016]]></title>
+    <link href="https://blog.dlecan.com//devoxx-securiser-web/"/>
+    <updated>2016-04-22T12:02:00+00:00</updated>
+    <id>https://blog.dlecan.com//devoxx-securiser-web</id>
+    <content type="html"><![CDATA[<p>J&#8217;ai été retenu par la prestigieuse conférence <a href="https://devoxx.fr">Devoxx FR</a> pour démontrer les capacité de <a href="https://letsencrypt.org/">Let&#8217;s Encrypt</a> lors d&#8217;un <em>tool in action</em> <a href="http://cfp.devoxx.fr/2016/talk/WFF-3798/Securisez_vos_applications_Web_gratuitement_en_quelques_minutes_avec_Let's_Encrypt.html">&#8220;Sécurisez vos applications Web gratuitement en quelques minutes avec Let&#8217;s Encrypt&#8221;</a> en avril 2016, où je démontre comment très facilement configurer du TLS/SSL sur votre site web à l&#8217;aide de cette nouvelle autorité de certification.</p>
+
+<p>Elle délivre en effet gratuitement des certificats.</p>
+
+<p>Merci !</p>
+
+<p>La vidéo de la session :</p>
+
+<div class="embed-video-container"><iframe src="https://blog.dlecan.com///www.youtube.com/embed/hD4923vHXsY" allowfullscreen></iframe></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Go & Rust' au meetup SQLI Nantes 2015]]></title>
+    <link href="https://blog.dlecan.com//meetup-sqli-nantes-2015-golang-rust/"/>
+    <updated>2015-07-07T10:27:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-sqli-nantes-2015-golang-rust</id>
+    <content type="html"><![CDATA[<p><a href="https://golang.org/">Go</a> et <a href="https://www.rust-lang.org/">Rust</a> font partie de ses &#8220;nouveaux&#8221; langages très exitants : à la fois modernes mais aussi très puissants.
+Je les ai présentés et comparés lors de ce meetup organisé par <a href="http://www.sqli.com/">SQLI Nantes</a> en juillet 2015.</p>
+
+<p>Support de présentation :</p>
+
+<p><a href="http://blog.dlecan.com/meetupsqlinantes2015-prez/#2"><img src="https://blog.dlecan.com//images/prez-meetup-sqli-go-rust/cover.png" width="752" height="366" alt='Support de présentation de la conférence'></a></p>
+
+<p>La vidéo (à partir de 66&#8217; pour ma conférence &#8220;Go &amp; Rust&#8221;) :</p>
+
+<div class="embed-video-container"><iframe src="https://blog.dlecan.com///www.youtube.com/embed/OKg9gIs6W0Y" allowfullscreen></iframe></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Redeemable promises avec Play Framework]]></title>
+    <link href="https://blog.dlecan.com//redeemable-promises-avec-play-framework/"/>
+    <updated>2014-11-15T22:34:00+00:00</updated>
+    <id>https://blog.dlecan.com//redeemable-promises-avec-play-framework</id>
+    <content type="html"><![CDATA[<p>J&#8217;ai eu à intervenir récemment sur un programme écrit en Play Framework v2.3, dont le rôle est assez simple : faire passe-plat entre un client et un serveur et effectuant notamment des transformations protocolaires (comme REST vers TCP par exemple). Ce qui m&#8217;a donné l&#8217;occasion d&#8217;utiliser les <a href="https://www.playframework.com/documentation/2.4.x/api/java/play/libs/F.RedeemablePromise.html">RedeemablePromise</a> de Play Framework, pas du tout documentées à ce jour.</p>
+
+<h2>Client asynchrone</h2>
+
+<p>Les différents échanges de messages entre les systèmes peuvent être représentés à l&#8217;aide du diagramme de séquence suivant :</p>
+
+<p><img class="center" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgQ2xpZW50IGFzeW5jaHJvbmUKCgANBi0-UGFzc2VQbGF0OlBPU1QgbWVzc2FnZQoADgktPlNlcnZldXI6c2VuZAAXCQAOBy0ANQwgYWNrAC4LLT4AcQY6IDIwMAAXBQpub3RlIG92ZXIAgQsHLAB1CSwAXgggUGx1cyB0YXJkLCB1bgCBCAggZGUgcmV0b3VyCgByCQBuDHJlc3BvbnMAgSsNAHYIAIFTBQAYCQCBcQcAgSsNAIEYCACBMAwAgQcJYWNr&s=modern-blue"></p>
+
+<p>Le programme en Play Framework est nommé &#8220;PassePlat&#8221; dans ce diagramme.</p>
+
+<p>Les messages montants sont implémentés sous forme d&#8217;une API RESTful ; tandis que le retour du &#8220;Serveur&#8221;, asynchrone, est implémentée avec des <em>callbacks</em> et une requête REST vers le client d&#8217;origine. Voici un exemple de pseudo-code Java sur le traitement du message de retour :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="o">...</span>
+</span><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * Receive responses from &quot;server&quot;</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ServerReceiver</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onServerResponse</span><span class="o">(</span><span class="n">Response</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="c1">// Utilisation de la librairie play.libs.ws.WS</span>
+</span><span class='line'>      <span class="c1">// pour effectuer des appels REST</span>
+</span><span class='line'>      <span class="n">WS</span><span class="o">.</span><span class="na">url</span><span class="o">(</span><span class="s">&quot;http://client_url/api/response&quot;</span><span class="o">)</span>
+</span><span class='line'>          <span class="o">.</span><span class="na">setContentType</span><span class="o">(</span><span class="s">&quot;application/json&quot;</span><span class="o">)</span>
+</span><span class='line'>          <span class="o">.</span><span class="na">post</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">asJson</span><span class="o">());</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onServerError</span><span class="o">(</span><span class="n">Throwable</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">WS</span><span class="o">.</span><span class="na">url</span><span class="o">(</span><span class="s">&quot;http://client_url/api/response&quot;</span><span class="o">)</span>
+</span><span class='line'>          <span class="o">.</span><span class="na">setContentType</span><span class="o">(</span><span class="s">&quot;application/json&quot;</span><span class="o">)</span>
+</span><span class='line'>          <span class="c1">// Serialize exception as JSON</span>
+</span><span class='line'>          <span class="o">.</span><span class="na">post</span><span class="o">(</span><span class="n">Helper</span><span class="o">.</span><span class="na">asJson</span><span class="o">(</span><span class="n">error</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="o">...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le système complet fonctionne bien, mais n&#8217;est pas très satisfaisant :</p>
+
+<ul>
+<li><p>le Client et le PassePlat sont très couplés. En effet, le Client doit connaître l&#8217;adresse du PassePlat pour lui envoyer les messages montants et le PassePlat doit connaitre l&#8217;adresse du Client pour lui renvoyer le message de retour. Bref, une dépendance cyclique ;</p></li>
+<li><p>Le fonctionnement du Serveur est asynchrone (messages montants et de retours sont décorrélés) et cette implémentation a déporté l&#8217;asynchronisme jusqu&#8217;au Client, alors que le client (l&#8217;humain cette fois-ci :-) voulait plutôt un fonctionnement synchrone du Client, ce qui était plus facile à appréhender pour lui.</p></li>
+</ul>
+
+
+<h2>Client synchrone</h2>
+
+<p>Nous avons donc travaillés sur une implémentation du système plutôt comme ceci :</p>
+
+<p><img class="center" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgQ2xpZW50IHN5bmNocm9uZQoKAAwGLT5QYXNzZVBsYXQ6UE9TVCBtZXNzYWdlCgAOCS0-U2VydmV1cjpzZW5kABcJAA4HLQA1DCBhY2sKCm5vdGUgb3ZlcgBuBywAWQksAEIIIFBsdXMgdGFyZCwgdW4AbAggZGUgcmV0b3VyCgBWCQBSDHJlc3BvbnMAgRAMLT4AgVMGOiAyMDAAGAkgKwCBBQUAgTATADsJQWNr&s=modern-blue"></p>
+
+<p>L&#8217;appel du Client vers le PassePlat est donc bloqué tant que l&#8217;acquittement <strong>et</strong> la réponse du Serveur ne sont pas parvenus au PassePlat.</p>
+
+<h3>Comment ?</h3>
+
+<p>On peut faire cela très simplement avec les <a href="https://www.playframework.com/documentation/2.4.x/api/java/play/libs/F.RedeemablePromise.html">RedeemablePromise</a> de Play Framework.</p>
+
+<p>Les <a href="https://www.playframework.com/documentation/2.4.x/api/java/play/libs/F.RedeemablePromise.html">RedeemablePromise</a> sont une implémentation du design pattern <em>promise</em>, désormais répandu dans l&#8217;informatique pour résoudre le <a href="http://callbackhell.com/"><em>callback hell</em></a> -l&#8217;enfer des callbacks-, problème très fréquent avec la programmation asynchrone. En effet, votre code est exécuté au sein de <em>callbacks</em> en réponse à des évènements : fin de traitement, lecture d&#8217;un fichier, arrivée d&#8217;un message par Web Socket, &#8230;</p>
+
+<p>On trouve des implémentations de ce pattern naturellement en <a href="https://www.promisejs.org/">Javascript</a> (<a href="https://docs.angularjs.org/api/ng/service/$q">plusieurs même</a>), mais aussi en <a href="http://docs.scala-lang.org/overviews/core/futures.html">Scala</a>, en <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html">Java</a>, &#8230;</p>
+
+<p>Voyons comment nous pouvons les utiliser pour répondre à notre nouveau besoin.</p>
+
+<p>Adaptons la classe qui réceptionne les évènements venant du Serveur :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="o">...</span>
+</span><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * Receive responses from &quot;server&quot;</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ServerReceiver</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Initialisation de la promesse, à vide</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">RedeemablePromise</span><span class="o">&lt;</span><span class="n">Response</span><span class="o">&gt;</span> <span class="n">promise</span> <span class="o">=</span> <span class="n">RedeemablePromise</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// get/set</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onServerResponse</span><span class="o">(</span><span class="n">Response</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="c1">// La promesse est résolue ou complétée avec succès ici</span>
+</span><span class='line'>      <span class="n">promise</span><span class="o">.</span><span class="na">success</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onServerError</span><span class="o">(</span><span class="n">Throwable</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="c1">// La promesse est résolue ou complétée en erreur avec l&#39;exception</span>
+</span><span class='line'>      <span class="n">promise</span><span class="o">.</span><span class="na">failure</span><span class="o">(</span><span class="n">error</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="o">...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>L&#8217;élément clé ici est le fait de &#8220;résoudre&#8221; ou &#8220;compléter&#8221; la promesse en succès ou en erreur selon le cas. Attention à n&#8217;oublier aucun cas de fin de traitement du Serveur, sinon le Client restera bloqué dans ces cas non prévus.</p>
+
+<p>Jetons maintenant un coup d&#8217;oeil au contrôleur REST sur le PassePlat qui reçoit les requêtes HTTP depuis le Client et qui &#8220;bloque&#8221; tant que la réponse du Serveur n&#8217;est pas parvenue :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="o">...</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">static</span> <span class="n">Promise</span><span class="o">&lt;</span><span class="n">Result</span><span class="o">&gt;</span> <span class="nf">sendMessage</span><span class="o">(...)</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Envoi du message entrant vers le serveur</span>
+</span><span class='line'>  <span class="c1">// server.send(message)</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">ServerReceiver</span> <span class="n">serverReceiver</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ServerReceiver</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Ecoute des messages retour</span>
+</span><span class='line'>  <span class="n">server</span><span class="o">.</span><span class="na">listen</span><span class="o">(</span><span class="n">serverReceiver</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">return</span>
+</span><span class='line'>      <span class="c1">// Promesse de type Promise&lt;Response&gt;</span>
+</span><span class='line'>      <span class="n">serverReceiver</span><span class="o">.</span><span class="na">getPromise</span><span class="o">()</span>
+</span><span class='line'>      <span class="c1">// Conversion &#39;success&#39; en Promise&lt;Result&gt;</span>
+</span><span class='line'>      <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">response</span> <span class="o">-&gt;</span>
+</span><span class='line'>          <span class="n">ok</span><span class="o">(</span><span class="n">JSON</span><span class="o">.</span><span class="na">toJson</span><span class="o">(</span><span class="n">response</span><span class="o">));</span>
+</span><span class='line'>      <span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="o">...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dans le cas nominal, la <code>Response</code> sera convertie en <code>Result</code> au sein de la méthode <code>map</code> (programmation fonctionnelle).</p>
+
+<p>Et dans le cas où la promesse a été résolue en erreur ?
+Par défaut, Play va générer une réponse HTTP avec un code retour 500 et une sérialisation de l&#8217;exception renvoyée. Si vous souhaitez définir vous-même votre propre retour, il faut que le traitement de l&#8217;erreur génère un <code>Result</code> standard.</p>
+
+<p>Voici comment adapter la transformation de la promesse pour renvoyer une erreur 500 et une sérialisation de l&#8217;exception en cas de promesse résolue en erreur :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="o">...</span>
+</span><span class='line'><span class="k">return</span>
+</span><span class='line'>  <span class="c1">// Promesse de type Promise&lt;Response&gt;</span>
+</span><span class='line'>  <span class="n">promise</span>
+</span><span class='line'>  <span class="c1">// Conversion &#39;success&#39; en Promise&lt;Result&gt;</span>
+</span><span class='line'>  <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">response</span> <span class="o">-&gt;</span>
+</span><span class='line'>      <span class="n">ok</span><span class="o">(</span><span class="n">Json</span><span class="o">.</span><span class="na">toJson</span><span class="o">(</span><span class="n">response</span><span class="o">));</span>
+</span><span class='line'>  <span class="o">)</span>
+</span><span class='line'>  <span class="c1">// Conversion &#39;failure&#39; en Promise&lt;Result&gt;</span>
+</span><span class='line'>  <span class="o">.</span><span class="na">recover</span><span class="o">(</span><span class="n">error</span> <span class="o">-&gt;</span>
+</span><span class='line'>      <span class="c1">// Serialize exception as JSON</span>
+</span><span class='line'>      <span class="c1">// and send HTTP 500 status</span>
+</span><span class='line'>      <span class="n">internalServerError</span><span class="o">(</span><span class="n">Json</span><span class="o">.</span><span class="na">toJson</span><span class="o">(</span><span class="n">error</span><span class="o">));</span>
+</span><span class='line'>  <span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Au final, nous avons pu rendre l&#8217;appel du Client synchrone en à peine quelques lignes de code grâce à l&#8217;API riche de Play Framework.
+Enfin, vous remarquerez que Java 8 améliore significativement la lisibilité du code. Cependant, on reste loin de Scala, de Groovy ou tout simplement de Javascript.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Mozilla Geckoview' au Devfest Nantes 2014]]></title>
+    <link href="https://blog.dlecan.com//mettez-panda-roux-dans-votre-webview-android/"/>
+    <updated>2014-11-10T16:31:00+00:00</updated>
+    <id>https://blog.dlecan.com//mettez-panda-roux-dans-votre-webview-android</id>
+    <content type="html"><![CDATA[<p>J&#8217;ai eu le plaisir de participer à cette superbe conférence que fut le <a href="http://devfest.gdgnantes.com/">Devfest Nantes 2014</a>, à la fois en tant que visiteur mais aussi en tant qu&#8217;orateur.</p>
+
+<p>J&#8217;y ai présenté la conférence &#8220;Mettez un Panda Roux dans votre Webview&#8221;, dont voici le résumé :</p>
+
+<blockquote><p>Au-delà du simple navigateur pour Android, Firefox est aussi une plateforme d&#8217;exécution d&#8217;applications HTML5 ouverte, les Open Web Apps.<br/>Après une présentation de Mozilla Geckoview et de ce qu&#8217;il peut apporter à vos applications HTML5 sous Android par rapport à une Webview standard (modernité, performances&#8230;), nous détaillerons l&#8217;initiative de Mozilla avec les Open Web Apps et verrons concrètement comment l&#8217;utiliser pour déployer des applications HTML5 sous Android.</p></blockquote>
+
+
+<p>Et le support de présentation :</p>
+
+<p><a href="http://blog.dlecan.com/devfestnantes2014/prez-panda-roux-webview-android/"><img src="https://blog.dlecan.com//images/prez-panda-roux-webview-android/cover.png" width="768" height="432" alt='Support de présentation de la conférence' target='_blank'></a></p>
+
+<p>La vidéo :</p>
+
+<div class="embed-video-container"><iframe src="https://blog.dlecan.com///www.youtube.com/embed/SBzsADcBdBE" allowfullscreen></iframe></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Des libs Android pour un dev carré' au GDG Nantes]]></title>
+    <link href="https://blog.dlecan.com//gdgnantes-2014-lib-android/"/>
+    <updated>2014-06-17T09:34:00+00:00</updated>
+    <id>https://blog.dlecan.com//gdgnantes-2014-lib-android</id>
+    <content type="html"><![CDATA[<p>Le <a href="http://gdgnantes.com">GDG Nantes</a> m&#8217;a invité à venir présenter les fantastiques librairies de développement Android de Square le 16 juin 2014 au soir.</p>
+
+<p>Merci pour l&#8217;apéro et pour le public !</p>
+
+<p>Support de présentation :</p>
+
+<p><a href="http://blog.dlecan.com/lib-android-dev-carre/prez/"><img src="https://blog.dlecan.com//images/prez-gdgnantes-2014-lib-android/cover.png" width="700" height="450" alt='Support de présentation de la conférence'></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Versions of FreeFileSync available on Ubuntu via PPA installation]]></title>
+    <link href="https://blog.dlecan.com//versions-of-freefilesync-available-on-ubuntu-via-ppa-installation/"/>
+    <updated>2014-05-18T21:19:00+00:00</updated>
+    <id>https://blog.dlecan.com//versions-of-freefilesync-available-on-ubuntu-via-ppa-installation</id>
+    <content type="html"><![CDATA[<p>Author of <a href="http://freefilesync.sourceforge.net/">FreeFileSync</a> publishes <a href="http://www.fosshub.com/FreeFileSync.html">binaries</a> for Ubuntu for each release. But you have to install them again and again, once a month. That&#8217;s why I am the maintainer of <a href="https://launchpad.net/~freefilesync/+archive/ffs">FreeFileSync PPA</a>, the way in Ubuntu to distribute binaries with automatic updates.</p>
+
+<p>As of May 2014, here are the FreeFileSync versions available for each Ubuntu series:</p>
+
+<table>
+<thead>
+<tr>
+<th>Ubuntu series </th>
+<th align="center"> Last available version of FreeFileSync </th>
+<th align="center"> Supported ? </th>
+<th> Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Natty         </td>
+<td align="center"> 4.0                                    </td>
+<td align="center"> No          </td>
+<td></td>
+</tr>
+<tr>
+<td>Oneiric       </td>
+<td align="center"> 5.5                                    </td>
+<td align="center"> No          </td>
+<td></td>
+</tr>
+<tr>
+<td>Precise       </td>
+<td align="center"> 5.21                                   </td>
+<td align="center"> No          </td>
+<td> Requires newer libraries</td>
+</tr>
+<tr>
+<td>Quantal       </td>
+<td align="center"> 5.23                                   </td>
+<td align="center"> No          </td>
+<td> Requires newer libraries</td>
+</tr>
+<tr>
+<td>Raring        </td>
+<td align="center"> 5.23                                   </td>
+<td align="center"> No          </td>
+<td> Requires newer libraries</td>
+</tr>
+<tr>
+<td>Saucy         </td>
+<td align="center"> 6.0                                    </td>
+<td align="center"> Could be if asked </td>
+<td></td>
+</tr>
+<tr>
+<td>Trusty        </td>
+<td align="center"> 6.5                                    </td>
+<td align="center"> Yes         </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+]]></content>
+  </entry>
+  
+</feed>

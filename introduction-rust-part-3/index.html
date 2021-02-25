@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Introduction au langage de programmation Rust - Partie 3 - ECT</title>
+  <meta name="author" content="Damien Lecan">
+
+  
+  <meta name="description" content="Initialement publié sur https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3 Après avoir vu comment installer le compilateur &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="uns-url-checker-verification" content="OmkUasE55sagTRMA_blFwhgGS0IG9BntA3XCJXY8L3fh-1QHLiJPT473b8CnbIPU1Be5WNkn1ed7_cAK8WYAUQ">
+
+  
+  <link rel="canonical" href="https://blog.dlecan.com//introduction-rust-part-3/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="ECT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29727134-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">ECT</a></h1>
+  
+    <h2>Etoile Cercle Triangle - Star Circle Triangle</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.dlecan.com/" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+﻿<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="https://github.com/dlecan/">GitHub projects</a></li>
+  <li>
+    <a href="https://www.linkedin.com/in/damienlecan">LinkedIn profile</a>
+  </li>
+  <li><a href="/blog/categories/speaker/">Speaker</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Introduction au langage de programmation Rust - Partie 3</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-03-17T21:32:00+00:00" pubdate data-updated="true">2017-03-17</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><blockquote><p>Initialement publié sur <a href="https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3">https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3</a></p></blockquote>
+
+<p>Après avoir vu comment installer le compilateur Rust et Cargo, puis écrit quelques lignes de code dans la <a href="/introduction-rust-part-2/">seconde partie de cette introduction</a>, nous allons continuer dans cette troisième partie à faire évoluer notre programme en découvrant de nouvelles caractéristiques de Rust.</p>
+
+<p>Avant de nous lancer, rappelez-vous, une nouvelle version de Rust est publiée toutes les six semaines ; il est donc très probable que la version que vous avez installée est déjà obsolète.</p>
+
+<p>Mettez à jour Rustup lui-même, puis ensuite Rust :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rustup self update // mise à jour de Rustup
+</span><span class='line'> ...
+</span><span class='line'>$ rustup update // mise à jour de tous les canaux de Rust installés</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pensez à effectuer régulièrement ces opérations : une version à jour de Rust vous donne accès à de nouvelles fonctionnalités et une meilleure compatibilité avec les librairies de la communauté.</p>
+
+<h2><code>Struct</code> et <code>trait</code></h2>
+
+<p>Notre programme des deux premières parties était structuré de manière procédurale. Nous allons lui donner une allure plus lisible et plus encapsulée, pour ne pas dire plus &#8220;objet&#8221;. Rust n’a pas pour autant des &#8220;classes&#8221; comme dans d’autres langages, mais des <code>struct</code> et des <code>trait</code>.</p>
+
+<p>Comme leur nom l’indique, les struct sont des structures qui permettent de stocker un ensemble de données complexes ; on dira qu’une struct définie un nouveau type. Notez qu’il n’y a pas de constructeur ou d’accesseurs à proprement parler comme dans d’autre langage, Rust reste très simple ici.</p>
+
+<p>Faisons évoluer notre programme en introduisant une <em>struct</em> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">struct</span> <span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">numerateur</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span>
+</span><span class='line'>  <span class="n">denominateur</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La structure peut-être ensuite instanciée et ses propriétés manipulées :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">let</span> <span class="n">une_division</span> <span class="o">=</span> <span class="n">Division</span> <span class="p">{</span><span class="n">numerateur</span><span class="o">:</span> <span class="m">10</span><span class="p">,</span> <span class="n">denominateur</span><span class="o">:</span> <span class="m">12</span><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Une division ({} - {})&quot;</span><span class="p">,</span> <span class="n">une_division</span><span class="p">.</span><span class="n">numerateur</span><span class="p">,</span> <span class="n">une_division</span><span class="p">.</span><span class="n">denominateur</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Continuons notre logique d’encapsulation en ajoutant des méthodes à notre structure. Ici, la syntaxe de Rust sort vraiment de l’ordinaire. En effet, les méthodes ne sont pas ajoutées directement dans le corps de la <em>struct</em>, mais déclarées où vous le souhaitez dans votre programme avec le mot-clé impl.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">impl</span> <span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">fn</span> <span class="n">calculer</span><span class="p">(</span><span class="o">&amp;</span><span class="n">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">i32</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">match</span> <span class="n">self</span><span class="p">.</span><span class="n">denominateur</span> <span class="p">{</span>
+</span><span class='line'>            <span class="m">0</span> <span class="o">=&gt;</span> <span class="n">panic</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Division par 0&quot;</span><span class="p">),</span>
+</span><span class='line'>            <span class="m">1</span> <span class="o">=&gt;</span> <span class="n">self</span><span class="p">.</span><span class="n">numerateur</span><span class="p">,</span>
+</span><span class='line'>            <span class="n">_</span> <span class="o">=&gt;</span> <span class="n">self</span><span class="p">.</span><span class="n">numerateur</span> <span class="o">/</span> <span class="n">self</span><span class="p">.</span><span class="n">denominateur</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le code de la méthode calculer est repris de la méthode <code>calculer_division</code> vu dans la précédente partie de cet article.</p>
+
+<p>Il est tentant de penser qu’on peut faire n’importe quoi, comme en Javascript, à savoir rajouter des méthodes à n’importe quelle <em>struct</em>, écrite par vous ou fournie par le langage. Par exemple, en Javascript, on peut rajouter des méthodes au prototype <code>String</code> et les utiliser comme des méthodes du langage (cette capacité est notamment utilisée par tous les polyfills).</p>
+
+<p>En Rust, il est impossible d’ajouter des méthodes à n’importe quelle <em>struct</em> ; les <code>impl</code> doivent être déclarés dans le même module (<code>crates</code> en Rust) que la <em>struct</em>.</p>
+
+<p>Mettez à jour votre programme Rust :</p>
+
+<ul>
+<li>déclarer le nouveau type <code>Division</code> à l’aide d’une <em>struct</em></li>
+<li>remplacer la déclaration de la méthode statique <code>calculer_division</code> par une méthode <code>calculer</code> qui implémente le type <code>Division</code> (attention à la signature de la méthode <code>calculer</code>)</li>
+<li>remplacer l’appel à la méthode <code>calculer_division</code> par l’instanciation du type <code>Division</code> avec le paramètre qui vient de l’analyse de la ligne de commande, puis calculer le résultat et l’afficher.</li>
+</ul>
+
+
+<p>A ce stade, vous devez avoir un programme qui compile et s’exécute, ce que vous pouvez vérifier à l’aide de la commande <code>cargo run 4</code> (code complet <a href="https://git.io/v1XJL">https://git.io/v1XJL</a>).</p>
+
+<p>S’il n’existe pas de &#8220;vrai&#8221; constructeur en Rust, les us et coutumes du langage encouragent cependant l’encapsulation de l’opération d’instanciation d’un type au sein d’une fonction statique déclarée dans l’implémentation de la struct elle-même, nommée par convention <code>new</code> et qui retourne évidemment une instance de votre type. Ce qui donne pour <code>Division</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">impl</span> <span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">fn</span> <span class="n">new</span><span class="p">(</span><span class="n">x</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span> <span class="n">y</span><span class="o">:</span> <span class="k">i32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>            <span class="n">numerateur</span><span class="o">:</span> <span class="n">x</span><span class="p">,</span>
+</span><span class='line'>            <span class="n">denominateur</span><span class="o">:</span> <span class="n">y</span><span class="p">,</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="p">...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pensez à remplacer l’instanciation manuelle de <code>Division</code> dans votre programme par l’usage de la fonction <code>new</code> (code complet <a href="https://git.io/v1XLo">https://git.io/v1XLo</a>).</p>
+
+<p>Outre les <code>struct</code>, Rust propose un autre mécanisme qui permet d’indiquer au compilateur les fonctionnalités qu’un type doit obligatoirement fournir : les <code>trait</code>. Par exemple, si nous souhaitons constraindre la façon dont une Division doit déclarer le symbole qu’elle représente, nous pouvons déclarer le <em>trait</em> suivant :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">trait</span> <span class="n">HasSymbol</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">fn</span> <span class="n">symbol</span><span class="p">(</span><span class="o">&amp;</span><span class="n">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">String</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Les <em>traits</em> ressemblent aux interfaces Java ou C#, avec globalement les mêmes caractéristiques :</p>
+
+<ul>
+<li>ensemble de fonctions que le type doit obligatoirement redéfinir</li>
+<li>certaines fonctions peuvent avoir une implémentation par défaut</li>
+<li>un <em>trait</em> peut implémenter un autre <em>trait</em>, et donc &#8220;hériter&#8221; de ses caractéristiques (concrètement, il faudra implémenter les deux traits sur votre type)</li>
+</ul>
+
+
+<p>Implémentons notre <em>trait</em> pour la <code>Division</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">impl</span> <span class="n">HasSymbol</span> <span class="k">for</span> <span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">fn</span> <span class="n">symbol</span><span class="p">(</span><span class="o">&amp;</span><span class="n">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">String</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s">&quot;/&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">()</span> <span class="c1">// &quot;/&quot; est du type &amp;str, qu&#39;il faut donc convertir</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Notez ce point important, impossible en Java par exemple : implémenter un <em>trait</em> pour un type est une section de code déclarée a posteriori de la déclaration de ce type, ce qui veut dire qu’un nouveau <em>trait </em>peut enrichir retrospectivement un type existant (avec quelques restrictions cependant).</p>
+
+<p>Désormais, il est possible de tracer le symbole de la <code>Division</code>, juste après sa construction par exemple :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">let</span> <span class="n">division</span> <span class="o">=</span> <span class="n">Division</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="n">numerateur</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+</span><span class='line'><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Symbole : {}&quot;</span><span class="p">,</span> <span class="n">division</span><span class="p">.</span><span class="n">symbol</span><span class="p">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le résultat d’exécution de votre programme est désormais enrichi du symbole de la Division (code complet <a href="https://git.io/v1X4I">https://git.io/v1X4I</a>) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">$</span> <span class="n">cargo</span> <span class="n">run</span> <span class="m">2</span>
+</span><span class='line'>    <span class="n">Running</span> <span class="err">`</span><span class="n">target</span><span class="o">/</span><span class="n">debug</span><span class="o">/</span><span class="n">division</span> <span class="m">2</span><span class="err">`</span>
+</span><span class='line'><span class="n">Symbole</span><span class="o">:</span> <span class="o">/</span>
+</span><span class='line'><span class="n">R</span><span class="err">é</span><span class="n">sultat</span> <span class="o">:</span> <span class="m">1</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Encore quelques concepts à maîtriser par le Rustacéen qui débute</h2>
+
+<p>Vous vous en souvenez peut-être, je vous avais promis dans la première partie de cet article de la sueur, en particulier avec la gestion de la mémoire : elle n’est ni à la charge du développeur, ni à la charge d’une machine virtuelle et de son ramasse-miette.</p>
+
+<p>Il est temps de mettre les mains dans le camboui et de transpirer. Accrochez-vous !</p>
+
+<p>Reprenons le code décrit plus haut, et ajoutons-y une instruction qui paraît anodine :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">let</span> <span class="n">division</span> <span class="o">=</span> <span class="n">Division</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="n">numerateur</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+</span><span class='line'><span class="k">let</span> <span class="n">division2</span> <span class="o">=</span> <span class="n">division</span><span class="p">;</span> <span class="c1">// &lt;= instruction anodine :-)</span>
+</span><span class='line'><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Symbole : {}&quot;</span><span class="p">,</span> <span class="n">division</span><span class="p">.</span><span class="n">symbol</span><span class="p">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Que se passe-t-il à la compilation (<code>cargo build</code>) ?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="n">error</span><span class="p">[</span><span class="n">E0382</span><span class="p">]</span><span class="o">:</span> <span class="k">use</span> <span class="n">of</span> <span class="n">moved</span> <span class="n">value</span><span class="o">:</span> <span class="err">`</span><span class="n">division</span><span class="err">`</span>
+</span><span class='line'>  <span class="o">--&gt;</span> <span class="n">src</span><span class="o">/</span><span class="n">main</span><span class="p">.</span><span class="n">rs</span><span class="o">:</span><span class="m">48</span><span class="o">:</span><span class="m">30</span>
+</span><span class='line'>  <span class="o">|</span>
+</span><span class='line'><span class="m">47</span> <span class="o">|</span>     <span class="k">let</span> <span class="n">division2</span> <span class="o">=</span> <span class="n">division</span><span class="p">;</span>
+</span><span class='line'>  <span class="o">|</span>         <span class="o">---------</span> <span class="n">value</span> <span class="n">moved</span> <span class="n">here</span>
+</span><span class='line'><span class="m">48</span> <span class="o">|</span>     <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Symbole : {}&quot;</span><span class="p">,</span> <span class="n">division</span><span class="p">.</span><span class="n">symbol</span><span class="p">());</span>
+</span><span class='line'>  <span class="o">|</span>                              <span class="o">^^^^^^^^</span> <span class="n">value</span> <span class="n">used</span> <span class="n">here</span> <span class="n">after</span> <span class="n">move</span>
+</span><span class='line'>  <span class="o">|</span>
+</span><span class='line'>  <span class="o">=</span> <span class="k">note</span><span class="o">:</span> <span class="n">move</span> <span class="n">occurs</span> <span class="n">because</span> <span class="err">`</span><span class="n">division</span><span class="err">`</span> <span class="n">has</span> <span class="k">type</span> <span class="err">`</span><span class="n">Division</span><span class="err">`</span><span class="p">,</span> <span class="n">which</span>
+</span><span class='line'>  <span class="n">does</span> <span class="n">not</span> <span class="n">implement</span> <span class="n">the</span> <span class="err">`</span><span class="n">Copy</span><span class="err">`</span> <span class="n">trait</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le compilateur Rust vous indique que la valeur pointée par la variable division est déplacée (<em>moved</em>). En effet, une valeur ne peut être référencée que par une seule variable dans tout notre code. C’est le concept de possession (<em>ownership</em>), contrôlée à la lettre par le compilateur, qui va garantir la sécurité et la robustesse d’exécution d’un programme Rust. Nous avons déplacé la possession de la valeur de division vers division2, par conséquent, division ne peut plus être utilisée.</p>
+
+<p>Qui dit &#8220;possession&#8221;, dit &#8220;emprunt&#8221; (<em>borrowing</em>) ou &#8220;copie&#8221; et pour illustrer l’une ou l’autre des solutions, nous allons introduire une nouvelle fonction statique et l’utiliser (code complet <a href="https://git.io/v1X2m">https://git.io/v1X2m</a>):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">display_symbol</span><span class="p">(</span><span class="n">division</span><span class="o">:</span> <span class="n">Division</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Symbole: {}&quot;</span><span class="p">,</span> <span class="n">division</span><span class="p">.</span><span class="n">symbol</span><span class="p">());</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">...</span>
+</span><span class='line'><span class="k">let</span> <span class="n">division</span> <span class="o">=</span> <span class="n">Division</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="n">numerateur</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+</span><span class='line'><span class="n">display_symbol</span><span class="p">(</span><span class="n">division</span><span class="p">);</span> <span class="c1">// &lt;= à la place du &#39;let division2 = ...&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ce code ne compile pas et vous optenez un message d’erreur très similaire au précédent. Trois solutions pour résoudre cette erreur de compilation s’offrent à nous :</p>
+
+<p>1/ Ne plus utiliser la variable division après l’appel à la méthode <code>display_symbol</code></p>
+
+<p>2/ Copier toute la valeur de la variable</p>
+
+<p>3/ Permettre l’emprunt de la variable et utiliser sa référence</p>
+
+<p>La solution 1/ est une façon de mettre le problème sous le tapis ou de le repousser, ce n’est pas vraiment une solution (même si le programme compilera effectivement 😉</p>
+
+<p>Copier toute la valeur de la variable (solution 2) est une façon intéressante de résoudre le problème. Dans cette solution, la valeur de la variable est entièrement copiée lors de l’appel à la fonction. Notez bien qu’il n’y a donc plus de lien entre la variable déclarée avant l’appel de la fonction et la variable utilisée dans la fonction.</p>
+
+<p>Pour déclarer un type &#8220;copiable&#8221;, il suffit d’implémenter le <em>trait</em> <code>Copy</code>, ainsi que le <em>trait</em> <code>Clone</code> dont hérite <code>Copy</code>. Le plus simple, est d’utiliser l’implémentation automatique de certains traits, proposée par l’attribut <code>#[derive(...)]</code> (documentation : <a href="https://bit.ly/2hASRHt">https://bit.ly/2hASRHt</a>), à appliquer directement sur un type :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="cp">#[derive(Copy, Clone)]</span>
+</span><span class='line'><span class="n">Division</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Avec cet ajout, notre programme compile de nouveau (code complet <a href="https://git.io/v11tL">https://git.io/v11tL</a>). Cependant, si cette solution peut sembler magique et simple (et de plus proposée par le compilateur), elle a ausi ses limites :</p>
+
+<ul>
+<li>un type peut implémenter <code>Copy</code> uniquement si l’ensemble de ses composants implémente aussi <code>Copy</code> (dans notre exemple, <code>i32</code> implémente <code>Copy</code>, donc <code>Division</code> peut implémenter <code>Copy</code>). Pour les Javaistes, on retrouve ici une propriété équivalente dans l’esprit aux objets sérialisables</li>
+<li>un certain nombre de types n’implémentent pas <code>Copy</code> ; par oubli du développeur ou par incompatibililté technique. Par exemple, les <code>String</code> ne sont pas compatibles avec <code>Copy</code>.</li>
+</ul>
+
+
+<p>La troisième et dernière solution s’applique donc à tous les autres cas. Elle s’appuie sur le principe de l’emprunt, à savoir qu’on va passer à notre fonction non pas la valeur d’une variable, mais une référence vers la valeur de cette variable.</p>
+
+<p>Concrètement, il faut faire évoluer la signature de notre fonction d’affichage pour permettre l’emprunt et l’usage de référence :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">display_symbol</span><span class="p">(</span><span class="n">division</span><span class="o">:</span> <span class="o">&amp;</span><span class="n">Division</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// &lt;= Notez le &amp; ici</span>
+</span><span class='line'>    <span class="p">...</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">...</span>
+</span><span class='line'><span class="k">let</span> <span class="n">division</span> <span class="o">=</span> <span class="n">Division</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="n">numerateur</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+</span><span class='line'><span class="n">display_symbol</span><span class="p">(</span><span class="o">&amp;</span><span class="n">division</span><span class="p">);</span> <span class="c1">// &lt;= Notez le &amp; ici</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La fonction <code>display_symbol</code> attend une référence vers un type <code>Division</code>, identifiée par le symbole <code>&amp;</code> et nous pouvons passer la référence vers une valeur en ajoutant le même symbole devant le nom d’une variable (code complet <a href="https://git.io/v11ml">https://git.io/v11ml</a>). Cette solution est la plus universelle, au prix d’une complexité intellectuelle plus élevée.</p>
+
+<p>Finalement, grâce à ces différents mécanismes, le cycle de vie de toutes les données référencées par des variables, est connu dès la compilation de votre programme, ce qui garantit une bonne gestion de la mémoire et donc une certaine robustesse. En revanche, elle vous garantit aussi quelques &#8220;combats&#8221; contre le borrow checker du compilateur Rust.</p>
+
+<h2>Conclusion</h2>
+
+<p>Au cours de ces trois articles d’introduction à Rust, nous avons abordés les outils et les concepts les plus importants du langage : <em>struct</em>, <em>trait</em>, <em>pattern matching</em>, <em>enum</em>, possession (<em>ownership</em>), emprunt (<em>borrowing</em>), notions de programmation fonctionnelle &#8230; Ces connaissances devraient être suffisantes pour écrire vos premiers programmes avec Rust.</p>
+
+<p>Vous découvrirez par vous-même des concepts plus avancés du langage comme les <em>lifetimes</em>, les types génériques, les modules et les <em>crates</em>, les <em>macros</em>, les tests, les itérateurs, la concurrence, la gestion des erreurs &#8230; La lecture du livre &#8220;The Rust programming language&#8221; sera donc à ce propos un bon point de départ pour vous : <a href="https://doc.rust-lang.org/book/">https://doc.rust-lang.org/book/</a>. Enfin, tous ces concepts pourraient faire l’objet d’articles dédiés, avis donc aux amateurs !</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Damien Lecan</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-03-17T21:32:00+00:00" pubdate data-updated="true">2017-03-17</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/development/'>development</a>, <a class='category' href='/blog/categories/rust/'>rust</a>, <a class='category' href='/blog/categories/tutorial/'>tutorial</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://blog.dlecan.com//introduction-rust-part-3/" data-via="dlecan" data-counturl="https://blog.dlecan.com//introduction-rust-part-3/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/introduction-rust-part-2/" title="Previous Post: Introduction au langage de programmation Rust - Partie 2">&laquo; Introduction au langage de programmation Rust - Partie 2</a>
+      
+      
+        <a class="basic-alignment right" href="/smartphone-blockchain-armes-revolution-massive/" title="Next Post: Conférence 'Smartphone et Blockchain' au Breizhcamp 2017">Conférence 'Smartphone et Blockchain' au Breizhcamp 2017 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me - A propos</h1>
+  <h2>Damien Lecan</h2>
+  <p>
+    #CTO @ <a href="https://www.spacelephant.org">Space Elephant</a> #blockchain
+    #decentralized #family #bike
+  </p>
+  <p></p>
+  <p>
+    #<a href="http://www.droitauvelo.org/spip.php?breve419">Vélotafeur</a> at
+    Nantes, France
+  </p>
+  <p>
+    <a href="https://www.bonial.fr/environnement/carbonneutral-blog/"
+      ><img
+        border="0"
+        width="100"
+        height="100"
+        src="https://www.bonial.fr/shared/content/uploads/sites/3/blog-zero-carbone/badge-co2_blog_bleu_100_tpt_2.png"
+        title="un arbre grâce au petit geste écolo de mon blog"
+        alt="plantez un arbre pour votre blog avec bonial"
+    /></a>
+  </p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/inauguration-novapuls-jouons-blockchain/">Serious game 'Jouons à la Blockchain' pour l'inauguration de Novapuls</a>
+      </li>
+    
+      <li class="post">
+        <a href="/keynote-blockchain-paris-etat-art/">Keynote 'État de l'art des Blockchains & co.' à Blockchain Paris 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/web2day2018-another-world-another-web-decentralisation/">Conférence 'Another World, another Web' au Web2day 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/meetup-gdg-toulouse-blockchain-smart-contract-security/">Conférence 'Smart-contracts under attack' au GDG Toulouse</a>
+      </li>
+    
+      <li class="post">
+        <a href="/meetup-blockchain-proof-stake/">Conférence 'Proof-of-Stake' au meetup Blockchain et Société</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Top Categories</h1>
+    <ul id="top-category-list"><li><a href='/blog/categories/Monde'>Monde (26)</a></li><li><a href='/blog/categories/speaker'>speaker (14)</a></li><li><a href='/blog/categories/conference'>conference (13)</a></li><li><a href='/blog/categories/Europe'>Europe (11)</a></li><li><a href='/blog/categories/FreeFileSync'>FreeFileSync (8)</a></li><li><a href='/blog/categories/blockchain'>blockchain (8)</a></li><li><a href='/blog/categories/Ubuntu'>Ubuntu (8)</a></li><li><a href='/blog/categories/Le reste'>Le reste (7)</a></li><li><a href='/blog/categories/video'>video (6)</a></li><li><a href='/blog/categories/decentralisation'>decentralisation (6)</a></li></ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2021 - Damien Lecan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'ect';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'https://blog.dlecan.com//introduction-rust-part-3/';
+        var disqus_url = 'https://blog.dlecan.com//introduction-rust-part-3/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'https://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

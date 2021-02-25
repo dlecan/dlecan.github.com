@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Introduction au langage de programmation Rust - Partie 1 - ECT</title>
+  <meta name="author" content="Damien Lecan">
+
+  
+  <meta name="description" content="Article initialement publié sur https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-1 Rust est un jeune langage qui a pour &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="uns-url-checker-verification" content="OmkUasE55sagTRMA_blFwhgGS0IG9BntA3XCJXY8L3fh-1QHLiJPT473b8CnbIPU1Be5WNkn1ed7_cAK8WYAUQ">
+
+  
+  <link rel="canonical" href="https://blog.dlecan.com//introduction-rust-part-1/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="ECT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29727134-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">ECT</a></h1>
+  
+    <h2>Etoile Cercle Triangle - Star Circle Triangle</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.dlecan.com/" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+﻿<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="https://github.com/dlecan/">GitHub projects</a></li>
+  <li>
+    <a href="https://www.linkedin.com/in/damienlecan">LinkedIn profile</a>
+  </li>
+  <li><a href="/blog/categories/speaker/">Speaker</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Introduction au langage de programmation Rust - Partie 1</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-03-09T11:34:00+00:00" pubdate data-updated="true">2017-03-09</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><blockquote><p>Article initialement publié sur <a href="https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-1">https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-1</a></p></blockquote>
+
+<p>Rust est un jeune langage qui a pour ambition de se substituer au C/C++ en proposant de nouveaux paradigmes de programmation, une librairie standard de haut niveau et un écosystème riche soutenu par une communauté très active.</p>
+
+<p>Multiplateformes (systèmes d’exploitation ou architectures de processeurs) et pourvu de tous les concepts de programmation attendus pour un langage moderne (programmation orientée &#8220;objet&#8221;, programmation fonctionnelle, facilités à développer des programmes d’exécution concurrente), Rust a beaucoup d’atouts pour séduire.</p>
+
+<p>Au travers de cette série d’articles, nous allons découvrir ensemble ce langage qui me paraît être le plus excitant depuis ces dernières années.</p>
+
+<h2>Genèse</h2>
+
+<p>Avant de plonger dans le code, je vous propose de revenir sur les origines du langage. Elles remontent à 2010 : Graydon Hoare, ingénieur chez Mozilla, révèle ses travaux sur Rust. A l’époque, le &#8220;marché&#8221; des langages informatiques est un peu similaire à aujourd’hui, à savoir une domination de C/C++ et de Java, chacun cantonné à ses domaines de prédilection. En schématisant, Java règne sur l’informatique de &#8220;gestion&#8221; (systèmes d’information bancaires, assurance &#8230;) ainsi que sur Android, tandis que C/C++ est le choix par défaut de la programmation que je qualifierais de &#8220;système&#8221; ou &#8220;bas niveau&#8221; : système d’exploitation, pilotes, informatique embarquée, machines virtuelles (Java lui- même, ou NodeJS par exemple) &#8230;</p>
+
+<p>Quelle caractéristique clivante peut bien isoler à ce point ces deux mondes de l’informatique ? Je pense qu’il s’agit principalement de la gestion de la mémoire, qui diverge totalement. Avec Java, elle est en grande partie masquée au développeur, c’est-à-dire que lorsqu’un développeur crée des objets en mémoire, il n’a pas vraiment à se soucier de son nettoyage. En effet, un processus qui s’exécute en arrière-plan, le ramasse-miette (garbage collector), se charge de détecter les objets qui ne seraient plus utilisés et de les supprimer de la mémoire. Le travail du développeur est donc grandement simplifié et celui-ci peut se concentrer sur le code métier le plus utile. C’est ce qui explique le succès de tous les langages à machine virtuelle et ramasse-miettes, comme Javascript ou .Net.</p>
+
+<p>Si le fonctionnement du ramasse-miettes n’a pas ou peu de conséquences négatives -largement compensées par d’autres avantages- dans les applications de haut niveau comme celles dédiées au web, il est problématique, voire rédhibitoire pour d’autres. La latence, certes réduite, induite par l’initialisation ou le fonctionnement du ramasse-miettes, ne permet pas de construire des systèmes de plus bas niveau, comme les systèmes d’exploitation, les pilotes, les machines virtuelles elles-mêmes ou encore des programmes en ligne de commandes efficaces &#8230; Dans ces cas, la mémoire doit donc être gérée &#8220;à la main&#8221;.</p>
+
+<p>En C/C++, la responsabilité du cycle de vie des structures ou objets en mémoire incombe au développeur et gare à la qualité du logiciel si cette tâche est mal effectuée : corruption de données, plantages, failles de sécurité &#8230; sont les conséquences principales d’une mauvaise gestion de la mémoire, phénomène encore aggravé dans un contexte de programme à exécution concurrente. Ne jetons pas la pierre aux développeurs : c’est une tâche ingrate, pénible et peu outillée. Alors dans ces conditions, comment produire des logiciels bas niveau de qualité ?</p>
+
+<p>Depuis les premières ébauches, c’est précisément l’un des objectifs du langages Rust. Il ne repose ni sur un ramasse-miettes (ex: Java), ni sur une gestion mémoire manuelle du développeur (ex: C/C++). Rust propose une nouvelle façon de gérer la mémoire, qui se veut sûre et garantie à la compilation, ce qui permet d’en limiter l’impact sur les performances à l’exécution. Autant vous prévenir tout de suite : la courbe d’apprentissage de Rust est donc plus lente que dans d’autres langages mais largement compensée en qualité et fiabilité des programmes produits. Concrètement, vous allez transpirer au début mais serez fiers de la qualité de vos productions. Nous verrons par la suite comment elle se concrétise.</p>
+
+<p>La syntaxe du langage, ainsi que la librairie standard, ont été débattues, testées, amendées par la -déjà très active- communauté, pendant des années, la première version stable 1.0 de Rust ayant été publiée en avril 2015. Ce délai a permis aussi de mettre en place une gouvernance ouverte et transparente qui régit l’évolution du langage, à laquelle chacun peut participer (board central, RFC ouvertes &#8230;). Trois channels de Rust sont édités en parallèle : nightly, beta et stable. De nouvelles versions de Rust stable et beta sont publiées toutes les 6 semaines, apportant à chaque fois leurs lots d’évolutions au langage.</p>
+
+<p>Avant de démarrer, soyez attentifs lors de vos recherches sur Internet à la version de Rust concernée par les articles de blogs ou les solutions apportées sur Stack Overflow. On y trouve en effet beaucoup de contenus obsolètes, car applicables à des versions de Rust antérieures à la version 1.0.</p>
+
+<p>Enfin, un mot sur la communauté de développeurs Rust. Elle est accueillante et bienveillante, vous trouverez de nombreux développeurs prêts à vous aider, à vous faire progresser ainsi qu’à critiquer votre code de manière constructive. Une bonne surprise et une des forces de ce langage.</p>
+
+<h2>Bonjour lecteurs !</h2>
+
+<p>Commençons à écrire quelques lignes de code, sans installation préalable de Rust sur votre poste. Rendez-vous sur <a href="https://play.rust-lang.org/">https://play.rust-lang.org/</a> pour ouvrir l’interpréteur web Rust, qui fonctionne très bien sur smartphone ou tablette. Idéal pour tester simplement Rust sans vous prendre la tête ! Ne modifiez pas le paramétrage par défaut de la page (boutons du haut) et concentrez-vous sur la zone de texte centrale : c’est là qu’il faut taper le code Rust.</p>
+
+<p>Lors de votre première connexion, le formulaire est déjà préinitialisé avec un morceau de code que je vous propose de substituer par un contenu plus adapté à notre contexte :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span> <span class="s">&quot;Bonjour Programmez!&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Si vous avez des difficultés à saisir ce code, vous pouvez ouvrir directement cette URL : https://is.gd/JzBaCy. Par la suite, je présenterai systématiquement un lien vers le code présenté, vous permettant éventuellement de le copier/coller.</p>
+
+<p>Cliquez ensuite sur le gros bouton rouge &#8220;Run&#8221; en haut pour exécuter ce programme. Vous devez alors obtenir sous la zone de texte de code l’affichage de &#8220;Bonjour Programmez!&#8221;. Bravo, vous venez d’écrire votre premier programme Rust !</p>
+
+<h2>Analysons ensemble ces quelques lignes</h2>
+
+<p>La syntaxe s’inspire fortement du langage C (que l’on retrouve en Java, Javascript, .Net &#8230;) et le formatage du code est standardisé par le langage : indentation, espaces, positions des accolades &#8230; Notez le bouton &#8220;Format&#8221; dans l’interpréteur Web qui formate le code de la zone de texte comme on peut s’y attendre 🙂</p>
+
+<ul>
+<li><code>fn</code> permet de déclarer une fonction, nommée ici main et sans argument. Par convention, c’est le point d’entrée unique d’un programme écrit en Rust</li>
+<li><code>println!</code> permet d’écrire dans la sortie standard, du texte ou des structures plus complexes. Notez le <code>!</code> qui signifie que <code>println!</code> est une macro. C’est une routine de génération de code <strong>à la compilation</strong> et un pattern de développement très utilisé par les développeurs Rust pour masquer une complexité</li>
+</ul>
+
+
+<p>Je vous recommande l’utilisation de <code>println!</code> à deux arguments et plus, syntaxe familière à ceux qui connaissent les fonctions <code>printf/fprintf</code> du C ou <code>str.format</code> de Python : le 1er paramètre représente la mise en forme, les suivants les valeurs à substituer aux <code>{}</code> présents dans le contenu du 1er argument (plus de détails sur <a href="https://doc.rust-lang.org/std/fmt/">https://doc.rust-lang.org/std/fmt/</a>)</p>
+
+<ul>
+<li><code>;</code> obligatoire en fin de ligne la plupart du temps en Rust</li>
+</ul>
+
+
+<p>Modifions maintenant notre programme en déclarant une variable (<a href="https://is.gd/SIDHI3">https://is.gd/SIDHI3</a>) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">let</span> <span class="n">une_chaine</span> <span class="o">=</span> <span class="s">&quot;Bonjour Programmez!&quot;</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span> <span class="n">une_chaine</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Les variables se déclarent avec le mot-clé <code>let</code>, sont immuables (que l’on ne peut pas réaffecter) et sont fortement typées. Pourtant vous remarquerez que nous n’avons pas déclaré le type de cette variable. En effet, Rust met en œuvre de l’inférence de type, à savoir qu’il tente de détecter le type des variables mais pas des paramètres. Un allègement significatif de la syntaxe qui facilite l’écriture et la relecture. Il faudra cependant parfois l’aider à deviner correctement le type. Remarquez enfin la syntaxe de type <em>snake case</em>, avec des <code>_</code> pour séparer les concepts dans les noms des variables (par opposition à la syntaxe <em>camel case</em>: <code>uneVariable</code>). Pratique, car le compilateur râlera si vous ne respectez pas cette convention.</p>
+
+<p>Lancez avec &#8220;Run&#8221; pour compiler et exécuter ce code.</p>
+
+<p>Poursuivons la découverte des concepts de Rust en introduisant une nouvelle fonction qui permet d’effectuer la division d’un nombre par un autre :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">calculer_division</span><span class="p">(</span><span class="n">x</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span> <span class="n">y</span><span class="o">:</span> <span class="k">i32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">i32</span>  <span class="p">{</span>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Numérateur: {}&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Dénominateur: {}&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>L’appel de la fonction que nous venons de déclarer s’effectue exactement comme l’on s’y attend (programme complet : <a href="https://is.gd/0U61pa">https://is.gd/0U61pa</a>) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="p">...</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">let</span> <span class="n">resultat</span> <span class="o">=</span> <span class="n">calculer_division</span><span class="p">(</span><span class="o">-</span><span class="m">4</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Résultat : {}&quot;</span><span class="p">,</span> <span class="n">resultat</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Par choix, il n’y a pas d’inférence de type en Rust lors de la déclaration des fonctions : les types des paramètres d’entrée et du retour doivent être explicitement spécifiés. Le type des arguments est indiqué après chaque nom de variable suivi de : et le type de retour est spécifié après la flèche <code>-&gt;</code>. Rust propose une liste de types primitifs très complète, puisque vous avez par exemple la possibilité de choisir des entiers, des flottants signés ou non signés, des entiers ou des flottants de &#8220;longueur&#8221; variable.</p>
+
+<p>Exemples :</p>
+
+<ul>
+<li><p><code>u8</code> : est un nombre de longueur 8 octets uniquement positif, donc un nombre compris entre 0 et 255 (2⁸-1)</p></li>
+<li><p><code>i16</code> : est un nombre de longueur 16 octets, positif ou négatif, donc un nombre compris entre -32 768 (-2<sup>16/2)</sup> et 32 767 (2<sup>16/2-1)</sup></p></li>
+</ul>
+
+
+<p>Je vous conseille d’explorer la liste complète des types primitifs pour vous faire une idée des autres types disponibles (<a href="https://doc.rust-lang.org/book/primitive-types.html">https://doc.rust-lang.org/book/primitive-types.html</a>).</p>
+
+<p>Les plus attentifs d’entre vous aurons remarqué que cette fonction ne &#8220;retourne&#8221; explicitement rien comparé à d’autres langages et que la dernière ligne ne se termine pas par un point-virgule, alors que l’on a précédemment vu qu’il était obligatoire. En Rust, il y a un return implicite sur la dernière expression exécutée d’une fonction. Attention, ce n’est pas nécessairement la dernière ligne de code de la fonction. Dans l’exemple ci-dessous, il y a 2 façons de sortir de la fonction et aucune d’entre elles ne correspond à la dernière ligne de code de la fonction.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">calculer_division</span><span class="p">(</span><span class="n">x</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span> <span class="n">y</span><span class="o">:</span> <span class="k">i32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">i32</span>  <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">y</span> <span class="o">!=</span> <span class="m">0</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">panic</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Division par 0&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'><span class="p">...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Exemple complet : <a href="https://is.gd/9LKj2d">https://is.gd/9LKj2d</a>.</p>
+
+<p>A propos du point-virgule, dans notre cas ici qui semble manquant, vous ne devez pas en mettre en fin de ligne. Essayez, vous aurez une erreur de compilation ! Pourquoi ? Rust est un langage basé sur les expressions et non sur des déclarations. Cela signifie que tout renvoie quelque chose : assigner une variable renvoie quelque chose, if renvoie quelque chose &#8230; L’expression <code>x / y</code> renvoie le résultat de la division, compatible avec le type <code>i32</code>, là où l’expression <code>x / y;</code> un résultat dont le type est <code>()</code>, incompatible avec <code>i32</code>.</p>
+
+<p>Enfin, modifions une dernière fois notre programme pour induire une syntaxe plus habituelle pour les Rustacéens (traduction de <em>Rustaceans&#8221;, le nom officiel des développeurs Rust) : le </em>matching*.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='rust'><span class='line'><span class="k">fn</span> <span class="n">calculer_division</span><span class="p">(</span><span class="n">x</span><span class="o">:</span> <span class="k">i32</span><span class="p">,</span> <span class="n">y</span><span class="o">:</span> <span class="k">i32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">i32</span>  <span class="p">{</span>
+</span><span class='line'>    <span class="n">match</span> <span class="n">y</span> <span class="p">{</span>
+</span><span class='line'>        <span class="m">0</span> <span class="o">=&gt;</span> <span class="n">panic</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Division par 0&quot;</span><span class="p">),</span>
+</span><span class='line'>        <span class="m">1</span> <span class="o">=&gt;</span> <span class="n">x</span><span class="p">,</span>
+</span><span class='line'>        <span class="n">_</span> <span class="o">=&gt;</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'><span class="p">...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Exemple complet : <a href="https://is.gd/X7889d">https://is.gd/X7889d</a>.</p>
+
+<p>La syntaxe parle d’elle-même, c’est simple à comprendre. Le <code>match</code> permet de gérer plus de cas que ne peut le faire un simple if tout en rendant obligatoire le traitement du cas par défaut. Qui n’a jamais oublié un else ou un case default en Java, par exemple ? En Rust, c’est impossible car le compilateur s’assure que tous les cas possibles de matching sont bien déclarés et gérés par le développeur. <code>_</code> signifie au compilateur &#8220;tous les autres cas de matching&#8221; (dans notre cas, &#8220;tout sauf 0 et 1&#8221;). Sachez aussi que le matching offre aussi beaucoup plus de possibilités que ne montre ce simple exemple.</p>
+
+<p>Ici se termine la 1ère partie de cette introduction à Rust. Je vous invite à poursuivre la lecture de ce dossier avec <a href="/introduction-rust-part-2/">la seconde partie</a>, dans laquelle vous installerez Rust et ses outils sur votre poste de développement et découvrirez d’autres concepts passionnants du langage, avec quelques notions de programmation fonctionnelle.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Damien Lecan</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-03-09T11:34:00+00:00" pubdate data-updated="true">2017-03-09</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/development/'>development</a>, <a class='category' href='/blog/categories/rust/'>rust</a>, <a class='category' href='/blog/categories/tutorial/'>tutorial</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://blog.dlecan.com//introduction-rust-part-1/" data-via="dlecan" data-counturl="https://blog.dlecan.com//introduction-rust-part-1/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/how-to-configure-docker-dns-on-ubuntu-in-a-corporate-environment/" title="Previous Post: How to configure Docker DNS on Ubuntu in a corporate environment?">&laquo; How to configure Docker DNS on Ubuntu in a corporate environment?</a>
+      
+      
+        <a class="basic-alignment right" href="/introduction-rust-part-2/" title="Next Post: Introduction au langage de programmation Rust - Partie 2">Introduction au langage de programmation Rust - Partie 2 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me - A propos</h1>
+  <h2>Damien Lecan</h2>
+  <p>
+    #CTO @ <a href="https://www.spacelephant.org">Space Elephant</a> #blockchain
+    #decentralized #family #bike
+  </p>
+  <p></p>
+  <p>
+    #<a href="http://www.droitauvelo.org/spip.php?breve419">Vélotafeur</a> at
+    Nantes, France
+  </p>
+  <p>
+    <a href="https://www.bonial.fr/environnement/carbonneutral-blog/"
+      ><img
+        border="0"
+        width="100"
+        height="100"
+        src="https://www.bonial.fr/shared/content/uploads/sites/3/blog-zero-carbone/badge-co2_blog_bleu_100_tpt_2.png"
+        title="un arbre grâce au petit geste écolo de mon blog"
+        alt="plantez un arbre pour votre blog avec bonial"
+    /></a>
+  </p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/inauguration-novapuls-jouons-blockchain/">Serious game 'Jouons à la Blockchain' pour l'inauguration de Novapuls</a>
+      </li>
+    
+      <li class="post">
+        <a href="/keynote-blockchain-paris-etat-art/">Keynote 'État de l'art des Blockchains & co.' à Blockchain Paris 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/web2day2018-another-world-another-web-decentralisation/">Conférence 'Another World, another Web' au Web2day 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/meetup-gdg-toulouse-blockchain-smart-contract-security/">Conférence 'Smart-contracts under attack' au GDG Toulouse</a>
+      </li>
+    
+      <li class="post">
+        <a href="/meetup-blockchain-proof-stake/">Conférence 'Proof-of-Stake' au meetup Blockchain et Société</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Top Categories</h1>
+    <ul id="top-category-list"><li><a href='/blog/categories/Monde'>Monde (26)</a></li><li><a href='/blog/categories/speaker'>speaker (14)</a></li><li><a href='/blog/categories/conference'>conference (13)</a></li><li><a href='/blog/categories/Europe'>Europe (11)</a></li><li><a href='/blog/categories/FreeFileSync'>FreeFileSync (8)</a></li><li><a href='/blog/categories/blockchain'>blockchain (8)</a></li><li><a href='/blog/categories/Ubuntu'>Ubuntu (8)</a></li><li><a href='/blog/categories/Le reste'>Le reste (7)</a></li><li><a href='/blog/categories/video'>video (6)</a></li><li><a href='/blog/categories/decentralisation'>decentralisation (6)</a></li></ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2021 - Damien Lecan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'ect';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'https://blog.dlecan.com//introduction-rust-part-1/';
+        var disqus_url = 'https://blog.dlecan.com//introduction-rust-part-1/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'https://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

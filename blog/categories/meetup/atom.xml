@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: meetup | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/meetup/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-02-25T08:43:45+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Smart-contracts under attack' au GDG Toulouse]]></title>
+    <link href="https://blog.dlecan.com//meetup-gdg-toulouse-blockchain-smart-contract-security/"/>
+    <updated>2018-06-06T11:10:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-gdg-toulouse-blockchain-smart-contract-security</id>
+    <content type="html"><![CDATA[<p>J'ai été invité le 5 juin 2018 à venir parler des <em>smart-contracts</em> Ethereum au <a href="https://www.meetup.com/fr-FR/GDG-Toulouse/events/250099870/">GDG Toulouse</a>.
+Avec <a href="https://twitter.com/polo46">Paul Marty</a>, expert sécurité chez Orange Cybersécurité, nous avons orienté notre présentation autour de la sécurité des <em>smart-contracts</em>, avec une séance de live-coding avec attaque en direct : moi, développeur un peu naif, qui déploie des <em>smart-contrats</em> sur Ethereum et Paul qui siphonne l'argent en temps réel 😅.</p>
+
+<p>Une belle soirée sur Toulouse !</p>
+
+<p>Les slides de notre présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSuT2L6_82F7WhApJ6Ehdgj41bzPSkBRlFSXrZoay5aVqmf45kgcX_8sfq53m_j8PubUdWl642bqWH0/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>La vidéo :</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/rQywiljTQdg" allowfullscreen></iframe></div></p>
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Proof-of-Stake' au meetup Blockchain et Société]]></title>
+    <link href="https://blog.dlecan.com//meetup-blockchain-proof-stake/"/>
+    <updated>2018-05-18T09:13:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-blockchain-proof-stake</id>
+    <content type="html"><![CDATA[<p>Hier soir, j'ai eu le plaisir de présenter une conférence à base de gâteau Michel et Augustin 🤣 présentant la "Proof-Of-Stake" ou preuve d'enjeu <a href="https://www.meetup.com/fr-FR/Blockchain-Societe-Nantes/events/250342863/">meetup de mai</a> de l'association <a href="https://blockchainsociete.org">Blockchain et Société</a>.</p>
+
+<p><blockquote><p>🍟 Introduction à la Proof-Of-Stake 🍟</p></p><p><p>La Proof-Of-Work (PoW) est reine dans le domaine des blockchains publiques comme Bitcoin ou Ethereum, mais elle n'est pas sans inconvénients.<br/>La Proof-Of-Stake (PoS) est bien placée pour remplacer la PoW, mais comment-fonctionne-t-elle ? Qu'apporte-t-elle ? Pourquoi n'a-t-elle pas remplacé la PoW ?</p></p><p><p>Agenda :</p></p><p><ul><br/><li>Introduction à la PoS</li><br/><li>Présentation de Qtum, une blockchain qui est mue nativement par la PoS.</li><br/></ul></p><p><br/><p></p></blockquote></p>
+
+<p>Une belle soirée !</p>
+
+<p>Les slides de ma présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSZhUnxaXOfdtWbT-dsiIxsVIbmkQlwP09i4Hu7HfQ6NGxjD1l92gId5i6DuA30qTnrIxMOeE9sa41q/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Ethereum de A à Z' au meetup Blockchain et Société]]></title>
+    <link href="https://blog.dlecan.com//meetup-blockchain-ethereum-a-z/"/>
+    <updated>2017-11-17T21:11:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-blockchain-ethereum-a-z</id>
+    <content type="html"><![CDATA[<p>Hier soir, j'ai eu le plaisir de présenter avec <a href="https://twitter.com/guiillaumeN">GuiillaumeN</a> et <a href="https://twitter.com/benjifontaine5">Benjamin</a> notre conférence "Ethereum, de A(lliance) à Z(k-snarks)" au <a href="https://www.meetup.com/fr-FR/Blockchain-Societe-Nantes/events/244570850/">meetup de novembre</a> de l'association <a href="https://blockchainsociete.org">Blockchain et Société</a>.</p>
+
+<p><blockquote><p>Soirée spéciale Ethereum, la Blockchain en pleine croissance !</p></p><p><p>Nous vous présenterons tous les concepts de la plateforme :</p></p><p><ul><br/><li><p>Origine, gouvernance, culture</p></li><br/><li><p>Écosystème et outils : Geth, Parity, Web3, Quorum, Mist ...</p></li><br/><li><p>Roadmap : Homestead, Metropolis ...</p></li><br/></ul></p><p><br/><p>Nous finirons par une séance de questions-réponses. Par exemple : qu'est-ce que l'Ethereum Enterprise Alliance ? Que sont les hard-forks ? ...</p></blockquote></p>
+
+<p>Une belle soirée !</p>
+
+<p>Les slides de notre présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTz2ykgmnij1V3v9prs07qepDMA5SligE55O3ikitVfD4H-aM-6tJ10JiuWU2y6Q3zfK8jxV2CqCK6Q/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+</feed>

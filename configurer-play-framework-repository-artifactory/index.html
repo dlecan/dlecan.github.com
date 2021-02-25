@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Configurer Play Framework 2.x avec un repository Artifactory - ECT</title>
+  <meta name="author" content="Damien Lecan">
+
+  
+  <meta name="description" content="[Play Framework[(play2] utilise Scala SBT comme outil de build depuis la version 2.0. A la Maven, il télécharge les dépendances
+de votre projet Play &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="uns-url-checker-verification" content="OmkUasE55sagTRMA_blFwhgGS0IG9BntA3XCJXY8L3fh-1QHLiJPT473b8CnbIPU1Be5WNkn1ed7_cAK8WYAUQ">
+
+  
+  <link rel="canonical" href="https://blog.dlecan.com//configurer-play-framework-repository-artifactory/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="ECT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29727134-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">ECT</a></h1>
+  
+    <h2>Etoile Cercle Triangle - Star Circle Triangle</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.dlecan.com/" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+﻿<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="https://github.com/dlecan/">GitHub projects</a></li>
+  <li>
+    <a href="https://www.linkedin.com/in/damienlecan">LinkedIn profile</a>
+  </li>
+  <li><a href="/blog/categories/speaker/">Speaker</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Configurer Play Framework 2.x avec un repository Artifactory</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-03T10:44:00+00:00" pubdate data-updated="true">2013-06-03</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>[Play Framework[(play2] utilise <a href="http://www.scala-sbt.org/">Scala SBT</a> comme outil de build depuis la version 2.0. <em>A la Maven</em>, il télécharge les dépendances
+de votre projet Play Framework depuis des dépôts centralisés, comme <a href="http://repo1.maven.org/maven2/">Maven Central</a>.</p>
+
+<p>Cette technique est très intéressante, mais il faut bien tenir compte des inconvénients induits :</p>
+
+<ol>
+<li><p>Pas de maîtrise des dépendances ou des dépôts configurés par les développeurs : on télécharge n&#8217;importe quoi depuis n&#8217;importe où</p></li>
+<li><p>Gâchi de bande passante / latence : chaque développeur télécharge chaque dépendance depuis Internet, là où une mutualisation depuis un
+serveur localisé dans le réseau de l&#8217;entreprise ferait économiser de la bande passante et gagner en réactivité (latence réduite)</p></li>
+<li><p>Vous ne pouvez pas dépendre d&#8217;artifacts uniquement internes à votre entreprise (sans les publier sur Internet)</p></li>
+</ol>
+
+
+<p>En entreprise, 1/ est généralement résolu par &#8220;blocage naturel&#8221; : on ne peut pas télécharger depuis Internet. 2/ et 3/ peuvent se résoudre à l&#8217;aide d&#8217;un serveur proxy dédié à Maven, SBT, &#8230; comme <a href="http://www.sonatype.org/nexus/">Sonatype Nexus</a> ou <a href="http://www.jfrog.com/home/v_artifactory_opensource_overview">JFrog Artifactory</a>.</p>
+
+<p>Comment paramétrer Play Framework pour utiliser Artifactory ?</p>
+
+<p>[J&#8217;ai déjà expliqué comment configurer SBT pour utiliser Artifactory][/configurer-scala-sbt-repository-artifactory/], mais, bien que Play Framework utilise SBT, ces explications ne s&#8217;y appliquent pas (pour le moment). SBT étant embarqué dans Play Framework, il ne lit pas les instructions de configuration fournies en ligne de commande.</p>
+
+<p>Pas de différence du côté d&#8217;Artifactory en revanche.</p>
+
+<p>Par la suite, je suppose que la variable <code>PLAY_HOME</code> pointe vers votre installation de Play Framework 2.x.</p>
+
+<h2>Configurer SBT pour lire les dépôts &#8220;miroirs&#8221;</h2>
+
+<p>Créez le fichier <code>~/sbt/.repositories</code> avec le contenu suivant :</p>
+
+<figure class='code'><figcaption><span>~/sbt/.repositories </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[repositories]
+</span><span class='line'>  local
+</span><span class='line'>  maven-local
+</span><span class='line'>  ivy-proxy-releases: http://localhost:8180/artifactory/ivy-remote-repos/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]
+</span><span class='line'>  maven-proxy-releases: http://localhost:8180/artifactory/maven-remote-repos/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ce fichier indique à SBT l&#8217;ensemble des dépôts qu&#8217;il peut consulter pour résoudre les dépendances :</p>
+
+<ul>
+<li><p><code>local</code> : dépôt Ivy local par défaut, localisé dans <code>~/.ivy2/</code></p></li>
+<li><p><code>maven-local</code> : dépôt Maven local par défaut, localisé dans <code>~/.m2/repository/</code></p></li>
+<li><p><code>ivy-proxy-releases</code> : suivi d&#8217;une URL et d&#8217;un pattern, on indique à SBT qu&#8217;il pourra trouver les artifacts qui respectent ce pattern dans ce dépôts (pattern Ivy)</p></li>
+<li><p><code>maven-proxy-releases</code> : suivi d&#8217;une URL, le dépôt au format Maven pour les autres dépendances</p></li>
+</ul>
+
+
+<h2>Forcer Play Framework à lire le fichier <code>~/sbt/.repositories</code></h2>
+
+<p>Éditez le fichier <code>$PLAY_HOME/framework/sbt/sbt.boot.properties</code> et complétez le bloc suivant :</p>
+
+<figure class='code'><figcaption><span>$PLAY_HOME/framework/sbt/sbt.boot.properties </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='properties'><span class='line'><span class="err">...</span>
+</span><span class='line'><span class="err">[ivy]</span>
+</span><span class='line'>  <span class="na">ivy-home</span><span class="o">:</span> <span class="s">${play.home}/../repository</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>De cette manière :</p>
+
+<figure class='code'><figcaption><span>$PLAY_HOME/framework/sbt/sbt.boot.properties </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='properties'><span class='line'><span class="err">...</span>
+</span><span class='line'><span class="err">[ivy]</span>
+</span><span class='line'>  <span class="na">ivy-home</span><span class="o">:</span> <span class="s">${play.home}/../repository</span>
+</span><span class='line'>  <span class="na">override-build-repos</span><span class="o">:</span> <span class="s">${sbt.override.build.repos-true}</span>
+</span><span class='line'>  <span class="na">repository-config</span><span class="o">:</span> <span class="s">${sbt.global.base-${user.home}/.sbt}/repositories</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Avec ces deux instructions, on force Play Framework à utiliser uniquement les dépôts configurés dans le fichier <code>~/sbt/.repositories</code>.</p>
+
+<h2>Tester</h2>
+
+<p>Commencez par nettoyer votre dépôt local de cache de Play Framework (par précaution, je vous propose de simplement le déplacer) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>mv <span class="nv">$PLAY_HOME</span>/repository/cache <span class="nv">$PLAY_HOME</span>/repository/cache.old
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Postionnez-vous dans un projet Play, et testez :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>dlecan@portable:~/dev/projet_test<span class="nv">$ </span>play
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span> Loading global plugins from /home/dlecan/.sbt/plugins
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span> Updating <span class="o">{</span>file:/home/dlecan/.sbt/plugins/<span class="o">}</span>default-ccfcd1...
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span> Resolving org.scala-sbt#precompiled-2_10_0;0.12.2 ...
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span> downloading http://localhost:8180/artifactory/ivy-remote-repos/com.typesafe.sbt/sbt-pgp/scala_2.9.2/sbt_0.12/0.8/jars/sbt-pgp.jar ...
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span>  <span class="o">[</span>SUCCESSFUL <span class="o">]</span> com.typesafe.sbt#sbt-pgp;0.8!sbt-pgp.jar <span class="o">(</span>50ms<span class="o">)</span>
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span> downloading http://localhost:8180/artifactory/maven-remote-repos/com/github/mpeltonen/sbt-idea_2.9.2_0.12/1.4.0/sbt-idea-1.4.0.jar ...
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span>  <span class="o">[</span>SUCCESSFUL <span class="o">]</span> com.github.mpeltonen#sbt-idea;1.4.0!sbt-idea.jar <span class="o">(</span>37ms<span class="o">)</span>
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span> downloading http://localhost:8180/artifactory/maven-remote-repos/com/jsuereth/gpg-library_2.9.2/0.8/gpg-library_2.9.2-0.8.jar ...
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span>  <span class="o">[</span>SUCCESSFUL <span class="o">]</span> com.jsuereth#gpg-library_2.9.2;0.8!gpg-library_2.9.2.jar <span class="o">(</span>29ms<span class="o">)</span>
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span> downloading http://localhost:8180/artifactory/maven-remote-repos/org/bouncycastle/bcpg-jdk16/1.46/bcpg-jdk16-1.46.jar ...
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span>  <span class="o">[</span>SUCCESSFUL <span class="o">]</span> org.bouncycastle#bcpg-jdk16;1.46!bcpg-jdk16.jar <span class="o">(</span>21ms<span class="o">)</span>
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span> downloading http://localhost:8180/artifactory/maven-remote-repos/org/bouncycastle/bcprov-jdk16/1.46/bcprov-jdk16-1.46.jar ...
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span>  <span class="o">[</span>SUCCESSFUL <span class="o">]</span> org.bouncycastle#bcprov-jdk16;1.46!bcprov-jdk16.jar <span class="o">(</span>41ms<span class="o">)</span>
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span> Done updating.
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span> Loading project definition from /home/dlecan/dev/truc/project
+</span><span class='line'><span class="o">[</span>info<span class="o">]</span> Set current project to truc <span class="o">(</span>in build file:/home/dlecan/dev/truc/<span class="o">)</span>
+</span><span class='line'>       _            _
+</span><span class='line'> _ __ | | __ _ _  _| |
+</span><span class='line'>| <span class="s1">&#39;_ \| |/ _&#39;</span> | <span class="o">||</span> |_|
+</span><span class='line'>|  __/|_|<span class="se">\_</span>___|<span class="se">\_</span>_ <span class="o">(</span>_<span class="o">)</span>
+</span><span class='line'>|_|            |__/
+</span><span class='line'>
+</span><span class='line'>play! 2.1.1 <span class="o">(</span>using Java 1.7.0_21 and Scala 2.10.0<span class="o">)</span>, http://www.playframework.org
+</span><span class='line'>
+</span><span class='line'>&gt; Type <span class="s2">&quot;help play&quot;</span> or <span class="s2">&quot;license&quot;</span> <span class="k">for </span>more information.
+</span><span class='line'>&gt; Type <span class="s2">&quot;exit&quot;</span> or use Ctrl+D to leave this console.
+</span><span class='line'>
+</span><span class='line'><span class="o">[</span>projet_test<span class="o">]</span> <span class="err">$</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Les dépendances sont téléchargées depuis <code>http://localhost:8180/...</code>, comme voulu.</p>
+
+<p>Note : l&#8217;affichage obtenu peut varier selon vos dépendances paramétrées.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Damien Lecan</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-03T10:44:00+00:00" pubdate data-updated="true">2013-06-03</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/artifactory/'>artifactory</a>, <a class='category' href='/blog/categories/playframework/'>playframework</a>, <a class='category' href='/blog/categories/sbt/'>sbt</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://blog.dlecan.com//configurer-play-framework-repository-artifactory/" data-via="dlecan" data-counturl="https://blog.dlecan.com//configurer-play-framework-repository-artifactory/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/configurer-scala-sbt-repository-artifactory/" title="Previous Post: Configurer Scala SBT avec un repository Artifactory">&laquo; Configurer Scala SBT avec un repository Artifactory</a>
+      
+      
+        <a class="basic-alignment right" href="/papy-fait-du-scala/" title="Next Post: Conférence 'Papy fait du Scala' au BreizhCamp 2013">Conférence 'Papy fait du Scala' au BreizhCamp 2013 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me - A propos</h1>
+  <h2>Damien Lecan</h2>
+  <p>
+    #CTO @ <a href="https://www.spacelephant.org">Space Elephant</a> #blockchain
+    #decentralized #family #bike
+  </p>
+  <p></p>
+  <p>
+    #<a href="http://www.droitauvelo.org/spip.php?breve419">Vélotafeur</a> at
+    Nantes, France
+  </p>
+  <p>
+    <a href="https://www.bonial.fr/environnement/carbonneutral-blog/"
+      ><img
+        border="0"
+        width="100"
+        height="100"
+        src="https://www.bonial.fr/shared/content/uploads/sites/3/blog-zero-carbone/badge-co2_blog_bleu_100_tpt_2.png"
+        title="un arbre grâce au petit geste écolo de mon blog"
+        alt="plantez un arbre pour votre blog avec bonial"
+    /></a>
+  </p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/inauguration-novapuls-jouons-blockchain/">Serious game 'Jouons à la Blockchain' pour l'inauguration de Novapuls</a>
+      </li>
+    
+      <li class="post">
+        <a href="/keynote-blockchain-paris-etat-art/">Keynote 'État de l'art des Blockchains & co.' à Blockchain Paris 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/web2day2018-another-world-another-web-decentralisation/">Conférence 'Another World, another Web' au Web2day 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/meetup-gdg-toulouse-blockchain-smart-contract-security/">Conférence 'Smart-contracts under attack' au GDG Toulouse</a>
+      </li>
+    
+      <li class="post">
+        <a href="/meetup-blockchain-proof-stake/">Conférence 'Proof-of-Stake' au meetup Blockchain et Société</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Top Categories</h1>
+    <ul id="top-category-list"><li><a href='/blog/categories/Monde'>Monde (26)</a></li><li><a href='/blog/categories/speaker'>speaker (14)</a></li><li><a href='/blog/categories/conference'>conference (13)</a></li><li><a href='/blog/categories/Europe'>Europe (11)</a></li><li><a href='/blog/categories/FreeFileSync'>FreeFileSync (8)</a></li><li><a href='/blog/categories/blockchain'>blockchain (8)</a></li><li><a href='/blog/categories/Ubuntu'>Ubuntu (8)</a></li><li><a href='/blog/categories/Le reste'>Le reste (7)</a></li><li><a href='/blog/categories/video'>video (6)</a></li><li><a href='/blog/categories/decentralisation'>decentralisation (6)</a></li></ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2021 - Damien Lecan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'ect';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'https://blog.dlecan.com//configurer-play-framework-repository-artifactory/';
+        var disqus_url = 'https://blog.dlecan.com//configurer-play-framework-repository-artifactory/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'https://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: video | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/video/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-02-25T08:43:45+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Another World, another Web' au Web2day 2018]]></title>
+    <link href="https://blog.dlecan.com//web2day2018-another-world-another-web-decentralisation/"/>
+    <updated>2018-06-13T09:13:00+00:00</updated>
+    <id>https://blog.dlecan.com//web2day2018-another-world-another-web-decentralisation</id>
+    <content type="html"><![CDATA[<p>Avec <a href="https://twitter.com/guiillaumeN">GuiillaumeN</a>, j'ai eu l'honneur de présenter <a href="https://web2day.co/evenements/another-world-another-web/">"Another World, another Web" au Web2day 2018</a>, sur le thème du web décentralisé et distribué.</p>
+
+<h2>Le pitch</h2>
+
+<blockquote><p>Vous rêvez d’un site web à la fois sécurisé, disponible h24/7j, fiable et respectueux de la vie privée ?
+Une architecture classique mêlerait cloud, load-balancers, chiffrement … plutôt compliqué pour des besoins élémentaires.</p>
+
+<p>Figurez vous qu’un autre monde existe déjà et se trouve à votre portée. Noms de domaines, stockage et distribution des fichiers, logique métier décentralisée, navigateurs adaptés … nous allons tout vous présenter !</p>
+
+<p>Voyage dans un autre monde, au coeur du Web décentralisé.</p></blockquote>
+
+<h2>La vidéo</h2>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/_0hO9uKDlok" allowfullscreen></iframe></div></p>
+
+<h2>Les slides</h2>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTVdjK6h78FPaYWS9C8d4In_LJt8dkaxe1RW2rkY6oUbF3nwDd9VH7jBVD2zU2hfD5BSSR1GtsCU7_Z/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Smart-contracts under attack' au GDG Toulouse]]></title>
+    <link href="https://blog.dlecan.com//meetup-gdg-toulouse-blockchain-smart-contract-security/"/>
+    <updated>2018-06-06T11:10:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-gdg-toulouse-blockchain-smart-contract-security</id>
+    <content type="html"><![CDATA[<p>J'ai été invité le 5 juin 2018 à venir parler des <em>smart-contracts</em> Ethereum au <a href="https://www.meetup.com/fr-FR/GDG-Toulouse/events/250099870/">GDG Toulouse</a>.
+Avec <a href="https://twitter.com/polo46">Paul Marty</a>, expert sécurité chez Orange Cybersécurité, nous avons orienté notre présentation autour de la sécurité des <em>smart-contracts</em>, avec une séance de live-coding avec attaque en direct : moi, développeur un peu naif, qui déploie des <em>smart-contrats</em> sur Ethereum et Paul qui siphonne l'argent en temps réel 😅.</p>
+
+<p>Une belle soirée sur Toulouse !</p>
+
+<p>Les slides de notre présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSuT2L6_82F7WhApJ6Ehdgj41bzPSkBRlFSXrZoay5aVqmf45kgcX_8sfq53m_j8PubUdWl642bqWH0/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>La vidéo :</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/rQywiljTQdg" allowfullscreen></iframe></div></p>
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tool In Action 'Sécuriser vos applications Web gratuitement' à Devoxx 2016]]></title>
+    <link href="https://blog.dlecan.com//devoxx-securiser-web/"/>
+    <updated>2016-04-22T12:02:00+00:00</updated>
+    <id>https://blog.dlecan.com//devoxx-securiser-web</id>
+    <content type="html"><![CDATA[<p>J'ai été retenu par la prestigieuse conférence <a href="https://devoxx.fr">Devoxx FR</a> pour démontrer les capacité de <a href="https://letsencrypt.org/">Let's Encrypt</a> lors d'un <em>tool in action</em> <a href="http://cfp.devoxx.fr/2016/talk/WFF-3798/Securisez_vos_applications_Web_gratuitement_en_quelques_minutes_avec_Let's_Encrypt.html">"Sécurisez vos applications Web gratuitement en quelques minutes avec Let's Encrypt"</a> en avril 2016, où je démontre comment très facilement configurer du TLS/SSL sur votre site web à l'aide de cette nouvelle autorité de certification.</p>
+
+<p>Elle délivre en effet gratuitement des certificats.</p>
+
+<p>Merci !</p>
+
+<p>La vidéo de la session :</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/hD4923vHXsY" allowfullscreen></iframe></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Go & Rust' au meetup SQLI Nantes 2015]]></title>
+    <link href="https://blog.dlecan.com//meetup-sqli-nantes-2015-golang-rust/"/>
+    <updated>2015-07-07T10:27:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-sqli-nantes-2015-golang-rust</id>
+    <content type="html"><![CDATA[<p><a href="https://golang.org/">Go</a> et <a href="https://www.rust-lang.org/">Rust</a> font partie de ses "nouveaux" langages très exitants : à la fois modernes mais aussi très puissants.
+Je les ai présentés et comparés lors de ce meetup organisé par <a href="http://www.sqli.com/">SQLI Nantes</a> en juillet 2015.</p>
+
+<p>Support de présentation :</p>
+
+<p><a href="http://blog.dlecan.com/meetupsqlinantes2015-prez/#2"><img src="https://blog.dlecan.com//images/prez-meetup-sqli-go-rust/cover.png" width="752" height="366" alt='Support de présentation de la conférence'></a></p>
+
+<p>La vidéo (à partir de 66' pour ma conférence "Go &amp; Rust") :</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/OKg9gIs6W0Y" allowfullscreen></iframe></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Mozilla Geckoview' au Devfest Nantes 2014]]></title>
+    <link href="https://blog.dlecan.com//mettez-panda-roux-dans-votre-webview-android/"/>
+    <updated>2014-11-10T16:31:00+00:00</updated>
+    <id>https://blog.dlecan.com//mettez-panda-roux-dans-votre-webview-android</id>
+    <content type="html"><![CDATA[<p>J'ai eu le plaisir de participer à cette superbe conférence que fut le <a href="http://devfest.gdgnantes.com/">Devfest Nantes 2014</a>, à la fois en tant que visiteur mais aussi en tant qu'orateur.</p>
+
+<p>J'y ai présenté la conférence "Mettez un Panda Roux dans votre Webview", dont voici le résumé :</p>
+
+<p><blockquote><p>Au-delà du simple navigateur pour Android, Firefox est aussi une plateforme d'exécution d'applications HTML5 ouverte, les Open Web Apps.<br/>Après une présentation de Mozilla Geckoview et de ce qu'il peut apporter à vos applications HTML5 sous Android par rapport à une Webview standard (modernité, performances...), nous détaillerons l'initiative de Mozilla avec les Open Web Apps et verrons concrètement comment l'utiliser pour déployer des applications HTML5 sous Android.</p></blockquote></p>
+
+<p>Et le support de présentation :</p>
+
+<p><a href="http://blog.dlecan.com/devfestnantes2014/prez-panda-roux-webview-android/"><img src="https://blog.dlecan.com//images/prez-panda-roux-webview-android/cover.png" width="768" height="432" alt='Support de présentation de la conférence' target='_blank'></a></p>
+
+<p>La vidéo :</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/SBzsADcBdBE" allowfullscreen></iframe></div></p>
+]]></content>
+  </entry>
+  
+</feed>
