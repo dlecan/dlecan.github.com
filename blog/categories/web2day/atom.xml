@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: web2day | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/web2day/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Another World, another Web' au Web2day 2018]]></title>
+    <link href="https://blog.dlecan.com//web2day2018-another-world-another-web-decentralisation/"/>
+    <updated>2018-06-13T09:13:00+00:00</updated>
+    <id>https://blog.dlecan.com//web2day2018-another-world-another-web-decentralisation</id>
+    <content type="html"><![CDATA[<p>Avec <a href="https://twitter.com/guiillaumeN">GuiillaumeN</a>, j'ai eu l'honneur de présenter <a href="https://web2day.co/evenements/another-world-another-web/">"Another World, another Web" au Web2day 2018</a>, sur le thème du web décentralisé et distribué.</p>
+
+<h2>Le pitch</h2>
+
+<blockquote><p>Vous rêvez d’un site web à la fois sécurisé, disponible h24/7j, fiable et respectueux de la vie privée ?
+Une architecture classique mêlerait cloud, load-balancers, chiffrement … plutôt compliqué pour des besoins élémentaires.</p>
+
+<p>Figurez vous qu’un autre monde existe déjà et se trouve à votre portée. Noms de domaines, stockage et distribution des fichiers, logique métier décentralisée, navigateurs adaptés … nous allons tout vous présenter !</p>
+
+<p>Voyage dans un autre monde, au coeur du Web décentralisé.</p></blockquote>
+
+<h2>La vidéo</h2>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/_0hO9uKDlok" allowfullscreen></iframe></div></p>
+
+<h2>Les slides</h2>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTVdjK6h78FPaYWS9C8d4In_LJt8dkaxe1RW2rkY6oUbF3nwDd9VH7jBVD2zU2hfD5BSSR1GtsCU7_Z/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Du SSL gratuit pour tous' au Web2Day 2016]]></title>
+    <link href="https://blog.dlecan.com//web2day-ssl-gratuit-pour-tous/"/>
+    <updated>2016-06-17T18:24:00+00:00</updated>
+    <id>https://blog.dlecan.com//web2day-ssl-gratuit-pour-tous</id>
+    <content type="html"><![CDATA[<p>J'ai été retenu par la prestigieuse conférence <a href="https://web2day.co">Web2Day</a> à Nantes pour présenter <a href="https://web2day.co/2016/evenements/du-ssl-gratuit-pour-tous/">"Du SSL gratuit pour tous"</a> en juin 2016, où je démontre comment très facilement configurer du TLS/SSL sur votre site web à l'aide de la nouvelle autorité de certification <a href="https://letsencrypt.org/">Let's Encrypt</a>, qui délivre gratuitement des certificats.</p>
+
+<p>Merci !</p>
+
+<p>Support de présentation :</p>
+
+<p><a href="http://blog.dlecan.com/web2day2016-ssl-simple-gratuit-avec-lets-encrypt/"><img src="https://blog.dlecan.com//images/prez-web2day-lets-encrypt/cover.png" width="700" height="394" alt='Support de présentation de la conférence'></a></p>
+]]></content>
+  </entry>
+  
+</feed>

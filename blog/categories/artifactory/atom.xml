@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: artifactory | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/artifactory/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Configurer Play Framework 2.x avec un repository Artifactory]]></title>
+    <link href="https://blog.dlecan.com//configurer-play-framework-repository-artifactory/"/>
+    <updated>2013-06-03T10:44:00+00:00</updated>
+    <id>https://blog.dlecan.com//configurer-play-framework-repository-artifactory</id>
+    <content type="html"><![CDATA[<p>[Play Framework[(play2] utilise <a href="http://www.scala-sbt.org/">Scala SBT</a> comme outil de build depuis la version 2.0. <em>A la Maven</em>, il télécharge les dépendances
+de votre projet Play Framework depuis des dépôts centralisés, comme <a href="http://repo1.maven.org/maven2/">Maven Central</a>.</p>
+
+<p>Cette technique est très intéressante, mais il faut bien tenir compte des inconvénients induits :</p>
+
+<ol>
+<li><p>Pas de maîtrise des dépendances ou des dépôts configurés par les développeurs : on télécharge n'importe quoi depuis n'importe où</p></li>
+<li><p>Gâchi de bande passante / latence : chaque développeur télécharge chaque dépendance depuis Internet, là où une mutualisation depuis un
+serveur localisé dans le réseau de l'entreprise ferait économiser de la bande passante et gagner en réactivité (latence réduite)</p></li>
+<li><p>Vous ne pouvez pas dépendre d'artifacts uniquement internes à votre entreprise (sans les publier sur Internet)</p></li>
+</ol>
+
+
+<p>En entreprise, 1/ est généralement résolu par "blocage naturel" : on ne peut pas télécharger depuis Internet. 2/ et 3/ peuvent se résoudre à l'aide d'un serveur proxy dédié à Maven, SBT, ... comme <a href="http://www.sonatype.org/nexus/">Sonatype Nexus</a> ou <a href="http://www.jfrog.com/home/v_artifactory_opensource_overview">JFrog Artifactory</a>.</p>
+
+<p>Comment paramétrer Play Framework pour utiliser Artifactory ?</p>
+
+<p>[J'ai déjà expliqué comment configurer SBT pour utiliser Artifactory][/configurer-scala-sbt-repository-artifactory/], mais, bien que Play Framework utilise SBT, ces explications ne s'y appliquent pas (pour le moment). SBT étant embarqué dans Play Framework, il ne lit pas les instructions de configuration fournies en ligne de commande.</p>
+
+<p>Pas de différence du côté d'Artifactory en revanche.</p>
+
+<p>Par la suite, je suppose que la variable <code>PLAY_HOME</code> pointe vers votre installation de Play Framework 2.x.</p>
+
+<h2>Configurer SBT pour lire les dépôts "miroirs"</h2>
+
+<p>Créez le fichier <code>~/sbt/.repositories</code> avec le contenu suivant :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>~/sbt/.repositories </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[repositories]
+</span><span class='line'>  local
+</span><span class='line'>  maven-local
+</span><span class='line'>  ivy-proxy-releases: http://localhost:8180/artifactory/ivy-remote-repos/, [organization]/[module]/(scala&lt;em>[scalaVersion]/)(sbt&lt;/em>[sbtVersion]/)[revision]/[type]s/&lt;a href="-[classifier]">artifact&lt;/a>.[ext]
+</span><span class='line'>  maven-proxy-releases: http://localhost:8180/artifactory/maven-remote-repos/</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Ce fichier indique à SBT l'ensemble des dépôts qu'il peut consulter pour résoudre les dépendances :</p>
+
+<ul>
+<li><p><code>local</code> : dépôt Ivy local par défaut, localisé dans <code>~/.ivy2/</code></p></li>
+<li><p><code>maven-local</code> : dépôt Maven local par défaut, localisé dans <code>~/.m2/repository/</code></p></li>
+<li><p><code>ivy-proxy-releases</code> : suivi d'une URL et d'un pattern, on indique à SBT qu'il pourra trouver les artifacts qui respectent ce pattern dans ce dépôts (pattern Ivy)</p></li>
+<li><p><code>maven-proxy-releases</code> : suivi d'une URL, le dépôt au format Maven pour les autres dépendances</p></li>
+</ul>
+
+
+<h2>Forcer Play Framework à lire le fichier <code>~/sbt/.repositories</code></h2>
+
+<p>Éditez le fichier <code>$PLAY_HOME/framework/sbt/sbt.boot.properties</code> et complétez le bloc suivant :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>$PLAY_HOME/framework/sbt/sbt.boot.properties </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='properties'><span class='line'><span class="err">...</span>
+</span><span class='line'><span class="err">[ivy]</span>
+</span><span class='line'>  <span class="na">ivy-home</span><span class="o">:</span> <span class="s">${play.home}/../repository&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>De cette manière :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>$PLAY_HOME/framework/sbt/sbt.boot.properties </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='properties'><span class='line'><span class="err">...</span>
+</span><span class='line'><span class="err">[ivy]</span>
+</span><span class='line'>  <span class="na">ivy-home</span><span class="o">:</span> <span class="s">${play.home}/../repository</span>
+</span><span class='line'>  <span class="na">override-build-repos</span><span class="o">:</span> <span class="s">${sbt.override.build.repos-true}</span>
+</span><span class='line'>  <span class="na">repository-config</span><span class="o">:</span> <span class="s">${sbt.global.base-${user.home}/.sbt}/repositories&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Avec ces deux instructions, on force Play Framework à utiliser uniquement les dépôts configurés dans le fichier <code>~/sbt/.repositories</code>.</p>
+
+<h2>Tester</h2>
+
+<p>Commencez par nettoyer votre dépôt local de cache de Play Framework (par précaution, je vous propose de simplement le déplacer) :</p>
+
+<p>```sh
+mv $PLAY_HOME/repository/cache $PLAY_HOME/repository/cache.old</p>
+
+<p>```</p>
+
+<p>Postionnez-vous dans un projet Play, et testez :</p>
+
+<p>```sh
+dlecan@portable:~/dev/projet_test$ play
+[info] Loading global plugins from /home/dlecan/.sbt/plugins
+[info] Updating {file:/home/dlecan/.sbt/plugins/}default-ccfcd1...
+[info] Resolving org.scala-sbt#precompiled-2_10_0;0.12.2 ...
+[info] downloading http://localhost:8180/artifactory/ivy-remote-repos/com.typesafe.sbt/sbt-pgp/scala_2.9.2/sbt_0.12/0.8/jars/sbt-pgp.jar ...
+[info]  [SUCCESSFUL ] com.typesafe.sbt#sbt-pgp;0.8!sbt-pgp.jar (50ms)
+[info] downloading http://localhost:8180/artifactory/maven-remote-repos/com/github/mpeltonen/sbt-idea_2.9.2_0.12/1.4.0/sbt-idea-1.4.0.jar ...
+[info]  [SUCCESSFUL ] com.github.mpeltonen#sbt-idea;1.4.0!sbt-idea.jar (37ms)
+[info] downloading http://localhost:8180/artifactory/maven-remote-repos/com/jsuereth/gpg-library_2.9.2/0.8/gpg-library_2.9.2-0.8.jar ...
+[info]  [SUCCESSFUL ] com.jsuereth#gpg-library_2.9.2;0.8!gpg-library_2.9.2.jar (29ms)
+[info] downloading http://localhost:8180/artifactory/maven-remote-repos/org/bouncycastle/bcpg-jdk16/1.46/bcpg-jdk16-1.46.jar ...
+[info]  [SUCCESSFUL ] org.bouncycastle#bcpg-jdk16;1.46!bcpg-jdk16.jar (21ms)
+[info] downloading http://localhost:8180/artifactory/maven-remote-repos/org/bouncycastle/bcprov-jdk16/1.46/bcprov-jdk16-1.46.jar ...
+[info]  [SUCCESSFUL ] org.bouncycastle#bcprov-jdk16;1.46!bcprov-jdk16.jar (41ms)
+[info] Done updating.
+[info] Loading project definition from /home/dlecan/dev/truc/project
+[info] Set current project to truc (in build file:/home/dlecan/dev/truc/)</p>
+
+<pre><code>   _            _
+</code></pre>
+
+<p> _ <strong> | | </strong> _ _  <em>| |
+| '</em> \| |/ <em>' | || |</em>|
+|  <strong>/|<em>|_</em></strong>|_<em> (</em>)
+|_|            |__/</p>
+
+<p>play! 2.1.1 (using Java 1.7.0_21 and Scala 2.10.0), http://www.playframework.org</p>
+
+<blockquote><p>Type "help play" or "license" for more information.
+Type "exit" or use Ctrl+D to leave this console.</p></blockquote>
+
+<p>[projet_test] $</p>
+
+<p>```</p>
+
+<p>Les dépendances sont téléchargées depuis <code>http://localhost:8180/...</code>, comme voulu.</p>
+
+<p>Note : l'affichage obtenu peut varier selon vos dépendances paramétrées.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Configurer Scala SBT avec un repository Artifactory]]></title>
+    <link href="https://blog.dlecan.com//configurer-scala-sbt-repository-artifactory/"/>
+    <updated>2013-05-16T10:17:00+00:00</updated>
+    <id>https://blog.dlecan.com//configurer-scala-sbt-repository-artifactory</id>
+    <content type="html"><![CDATA[<p><a href="http://www.scala-sbt.org/">Scala SBT</a> est à Scala ce que <a href="http://maven.apache.org/">Maven</a> est à Java : un outil de build dédié qui épouse la philosophie du langage.</p>
+
+<p>Comme <a href="http://www.gradle.org/">Gradle</a> avec Groovy, SBT est beaucoup plus puissant que Maven, dans le sens où, par exemple, étendre le build est beaucoup plus simple que de construire systématiquement un plugin (qu'il faut versionner, déployer, ...).</p>
+
+<p>Cela dit, il ne faut pas occulter certains de ses inconvénients : incompatibilité des binaires de plugins entre versions de SBT, syntaxe complexe (en tout cas plus compliqué que du simple XML) ...</p>
+
+<p>Scala SBT se répand petit à petit, avec <a href="http://www.playframework.com/">Play Framework 2</a> comme cheval de Troie. En effet, Play2 a fait le choix de Scala SBT comme système de build :
+- suite aux nombreuses critiques du système de build très fermé de Play 1
+- car Play2 est écrit en Scala et se marrie donc naturellement avec SBT</p>
+
+<p>Comme Maven, SBT se base sur le dépôt d'artifacts [Maven 2 Central]repo-maven2-central], mais aussi sur deux dépôts au format Ivy : <a href="http://repo.typesafe.com/typesafe/ivy-releases/">celui de Typesafe</a> et celui <a href="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/">dédié à SBT</a>.</p>
+
+<h1>Scala SBT <em>à la Maven</em></h1>
+
+<p>Qui dit entreprise, dit "proxy", "firewall", "anti-virus", ... bref tout ce qui empêche des outils de build comme SBT ou Maven de fonctionner en standard. Vous avez alors deux possibilités :
+- soit paramétrer le proxy permettant à l'outil d'accéder à Internet
+- soit paramétrer des dépôts d'artifacts <em>internes</em> à l'entreprise (ce qui ne nécessite plus d'accéder à Internet)</p>
+
+<p>C'est ce dernier paramétrage que je vous propose de décrire en détails.</p>
+
+<h1>Artifactory comme gestionnaire d'artifacts Maven et Ivy</h1>
+
+<p>Voici ce que nous allons configurer :</p>
+
+<p><img src="/images/sbt-proxy-cloud-setup.png" width="650" height="528" title="Artifactory dans son environnement" alt="Source: documentation de Scala SBT_OPTS"></p>
+
+<p><span class='pullquote-right' data-pullquote='Ce qui compte pour SBT, c&#8217;est un gestionnaire d&#8217;artifacts qui supporte les formats Ivy et Maven.'>
+Il existe plusieurs outils qui peuvent permettre de gérer des artifacts, dans différents formats (Maven, RPM, Deb, P2, ...), comme <a href="http://www.sonatype.org/nexus/">Sonatype Nexus</a> ou <a href="http://www.jfrog.com/home/v_artifactory_opensource_overview">JFrog Artifactory</a>.</p>
+
+<p>Ce qui compte pour SBT, c'est un gestionnaire d'artifacts qui supporte les formats Ivy et Maven. J'ai donc choisi Artifactory.</p>
+
+<p>Je vous passe les détails d'installation de l'outil, ils sont <a href="http://wiki.jfrog.org/confluence/display/RTF/Installing+Artifactory">très bien décrits dans sa documentation</a>.
+</span></p>
+
+<p>La configuration des dépôts d'Artifactory s'effectue de la manière suivante :</p>
+
+<ol>
+<li><p>Ajouter les deux dépôts distants manquants, à savoir :</p>
+
+<ul>
+<li><p><code>sbt-plugin-releases</code> => <code>http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/</code></p></li>
+<li><p><code>typesafe-ivy-releases</code> => <code>http://repo.typesafe.com/typesafe/ivy-releases/</code></p></li>
+</ul>
+</li>
+<li><p>Ajouter un nouveau dépôt virtuel de type "Ivy" qui pointe sur <code>sbt-plugin-releases</code> et <code>typesafe-ivy-releases</code>. Je l'ai nommé <code>ivy-remote-repos</code>.</p>
+
+<p> <strong>Fusionner les dépôts Maven et Ivy en un seul est l'erreur à ne pas commettre</strong> (au format Maven par exemple). En effet, le format Ivy est plus riche que celui de Maven et des informations essentielles pour la résolution des plugins SBT seraient perdues.</p></li>
+<li><p>(Optionnel) Si vous développez pour Play Framework, rajouter le dépôt Maven des releases Typesafe <code>http://repo.typesafe.com/typesafe/maven-releases/</code> à votre dépôt virtuel Maven peut être une bonne idée.</p></li>
+</ol>
+
+
+<p>A ce stade de la configuration d'Artifactory, ces trois paramètres sont disponibles :</p>
+
+<ul>
+<li>L'URL d'accès à votre instance d'Artifactory : <code>http://localhost:8180/artifactory/</code> par exemple</li>
+<li>Le nom du dépôt Maven 2 virtuel qui agrège vos dépôts Maven 2 : <code>maven-remote-repos</code></li>
+<li>Le nom du dépôt Ivy virtuel qui agrège vos dépôts Ivy : <code>ivy-remote-repos</code></li>
+</ul>
+
+
+<h1>Configurer Scala SBT</h1>
+
+<p>La configuration de SBT s'effectue en deux temps.</p>
+
+<h2>Ajouter les nouveaux dépôts à la configuration générale de SBT</h2>
+
+<p>Pour cela, créez le fichier <code>~/sbt/.repositories</code> avec le contenu suivant :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>~/sbt/.repositories </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[repositories]
+</span><span class='line'>  local
+</span><span class='line'>  maven-local
+</span><span class='line'>  ivy-proxy-releases: http://localhost:8180/artifactory/ivy-remote-repos/, [organization]/[module]/(scala&lt;em>[scalaVersion]/)(sbt&lt;/em>[sbtVersion]/)[revision]/[type]s/&lt;a href="-[classifier]">artifact&lt;/a>.[ext]
+</span><span class='line'>  maven-proxy-releases: http://localhost:8180/artifactory/maven-remote-repos/</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Ce fichier indique à SBT l'ensemble des dépôts qu'il peut consulter pour résoudre les dépendances :</p>
+
+<ul>
+<li><p><code>local</code> : dépôt Ivy local par défaut, localisé dans <code>~/.ivy2/</code></p></li>
+<li><p><code>maven-local</code> : dépôt Maven local par défaut, localisé dans <code>~/.m2/repository/</code></p></li>
+<li><p><code>ivy-proxy-releases</code> : suivi d'une URL et d'un pattern, on indique à SBT qu'il pourra trouver les artifacts qui respectent ce pattern dans ce dépôts (pattern Ivy)</p></li>
+<li><p><code>maven-proxy-releases</code> : suivi d'une URL, le dépôt au format Maven pour les autres dépendances</p></li>
+</ul>
+
+
+<h2>Bloquer tous les dépôts configurés dans les builds projets</h2>
+
+<p>La configuration précédente permet d'ajouter des dépôts à la configuration de SBT. Mais des dépôts peuvent être paramétrés dans chaque projet SBT, ce qui ne fonctionnera pas si vous n'avez pas accès à Internet. Si vous désirez que toutes les demandes de dépendances SBT passent par votre proxy Artifactory, il vous faut le paramétrage complémentaire suivant :</p>
+
+<p><code>sh
+-Dsbt.override.build.repos=true
+</code></p>
+
+<p>A passer directement en argument à la ligne de commande Java qui lance SBT ou bien à rajouter à la variable <code>SBT_OPTS</code> par exemple.</p>
+
+<h1>Tester</h1>
+
+<p>Un simple <code>sbt update</code> dans un projet SBT suffit à vérifier la bonne mise à jour des dépendances de SBT au travers d'Artifactory. Pour un projet Play2, la commande <code>play update</code> aura le même effet.</p>
+
+<h1>Et pour Play Framework 2 ?</h1>
+
+<p>Cette configuration ne fonctionnant pas pour Play Framework 2, [consultez cet article dédié][/configurer-play-framework-repository-artifactory/].</p>
+]]></content>
+  </entry>
+  
+</feed>

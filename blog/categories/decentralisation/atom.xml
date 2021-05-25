@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: decentralisation | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/decentralisation/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Keynote 'État de l'art des Blockchains & co.' à Blockchain Paris 2018]]></title>
+    <link href="https://blog.dlecan.com//keynote-blockchain-paris-etat-art/"/>
+    <updated>2018-12-07T17:17:00+00:00</updated>
+    <id>https://blog.dlecan.com//keynote-blockchain-paris-etat-art</id>
+    <content type="html"><![CDATA[<p>J'ai présenté la semaine dernière <a href="https://blockchainevent.fr/2018/speakers/damien-lecan/">la keynote "État de l'art de Blockchain &amp; co."</a> à <a href="https://blockchainevent.fr/2018/">Blockchain Paris 2018</a> à la Cité Universitaire Internationale. Ca a été l'occasion de revenir sur les bases de la Blockchain :</p>
+
+<ul>
+<li>ses valeurs : la confiance, qui vient de immuabilité, transparence, la décentralisation et la désintermédiation</li>
+<li>des modèles de gouvernance : publique, privée, consortium ...</li>
+<li>un état rapide du marché et de ses entreprises</li>
+<li>et de finir sur le challenge du moment : soutenir les entreprises du secteur malgré le contexte "crypto" morose (ça n'a aucun rapport, mais le bébé part avec l'eau du bain en ce moment)</li>
+</ul>
+
+
+<h2>Les slides</h2>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSXfdvrmc3N6tSMAekUYySxawdomejhRfx9lzSzIshDqpAg7y-0KCAdnu723m7GdeTvrpc-WE4QqfqA/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Another World, another Web' au Web2day 2018]]></title>
+    <link href="https://blog.dlecan.com//web2day2018-another-world-another-web-decentralisation/"/>
+    <updated>2018-06-13T09:13:00+00:00</updated>
+    <id>https://blog.dlecan.com//web2day2018-another-world-another-web-decentralisation</id>
+    <content type="html"><![CDATA[<p>Avec <a href="https://twitter.com/guiillaumeN">GuiillaumeN</a>, j'ai eu l'honneur de présenter <a href="https://web2day.co/evenements/another-world-another-web/">"Another World, another Web" au Web2day 2018</a>, sur le thème du web décentralisé et distribué.</p>
+
+<h2>Le pitch</h2>
+
+<blockquote><p>Vous rêvez d’un site web à la fois sécurisé, disponible h24/7j, fiable et respectueux de la vie privée ?
+Une architecture classique mêlerait cloud, load-balancers, chiffrement … plutôt compliqué pour des besoins élémentaires.</p>
+
+<p>Figurez vous qu’un autre monde existe déjà et se trouve à votre portée. Noms de domaines, stockage et distribution des fichiers, logique métier décentralisée, navigateurs adaptés … nous allons tout vous présenter !</p>
+
+<p>Voyage dans un autre monde, au coeur du Web décentralisé.</p></blockquote>
+
+<h2>La vidéo</h2>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/_0hO9uKDlok" allowfullscreen></iframe></div></p>
+
+<h2>Les slides</h2>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTVdjK6h78FPaYWS9C8d4In_LJt8dkaxe1RW2rkY6oUbF3nwDd9VH7jBVD2zU2hfD5BSSR1GtsCU7_Z/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Smart-contracts under attack' au GDG Toulouse]]></title>
+    <link href="https://blog.dlecan.com//meetup-gdg-toulouse-blockchain-smart-contract-security/"/>
+    <updated>2018-06-06T11:10:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-gdg-toulouse-blockchain-smart-contract-security</id>
+    <content type="html"><![CDATA[<p>J'ai été invité le 5 juin 2018 à venir parler des <em>smart-contracts</em> Ethereum au <a href="https://www.meetup.com/fr-FR/GDG-Toulouse/events/250099870/">GDG Toulouse</a>.
+Avec <a href="https://twitter.com/polo46">Paul Marty</a>, expert sécurité chez Orange Cybersécurité, nous avons orienté notre présentation autour de la sécurité des <em>smart-contracts</em>, avec une séance de live-coding avec attaque en direct : moi, développeur un peu naif, qui déploie des <em>smart-contrats</em> sur Ethereum et Paul qui siphonne l'argent en temps réel 😅.</p>
+
+<p>Une belle soirée sur Toulouse !</p>
+
+<p>Les slides de notre présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSuT2L6_82F7WhApJ6Ehdgj41bzPSkBRlFSXrZoay5aVqmf45kgcX_8sfq53m_j8PubUdWl642bqWH0/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>La vidéo :</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/rQywiljTQdg" allowfullscreen></iframe></div></p>
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Proof-of-Stake' au meetup Blockchain et Société]]></title>
+    <link href="https://blog.dlecan.com//meetup-blockchain-proof-stake/"/>
+    <updated>2018-05-18T09:13:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-blockchain-proof-stake</id>
+    <content type="html"><![CDATA[<p>Hier soir, j'ai eu le plaisir de présenter une conférence à base de gâteau Michel et Augustin 🤣 présentant la "Proof-Of-Stake" ou preuve d'enjeu <a href="https://www.meetup.com/fr-FR/Blockchain-Societe-Nantes/events/250342863/">meetup de mai</a> de l'association <a href="https://blockchainsociete.org">Blockchain et Société</a>.</p>
+
+<p><blockquote><p>🍟 Introduction à la Proof-Of-Stake 🍟</p></p><p><p>La Proof-Of-Work (PoW) est reine dans le domaine des blockchains publiques comme Bitcoin ou Ethereum, mais elle n'est pas sans inconvénients.<br/>La Proof-Of-Stake (PoS) est bien placée pour remplacer la PoW, mais comment-fonctionne-t-elle ? Qu'apporte-t-elle ? Pourquoi n'a-t-elle pas remplacé la PoW ?</p></p><p><p>Agenda :</p></p><p><ul><br/><li>Introduction à la PoS</li><br/><li>Présentation de Qtum, une blockchain qui est mue nativement par la PoS.</li><br/></ul></p><p><br/><p></p></blockquote></p>
+
+<p>Une belle soirée !</p>
+
+<p>Les slides de ma présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSZhUnxaXOfdtWbT-dsiIxsVIbmkQlwP09i4Hu7HfQ6NGxjD1l92gId5i6DuA30qTnrIxMOeE9sa41q/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Web décentralisé' au GDG Nantes]]></title>
+    <link href="https://blog.dlecan.com//blockchain-decentralisation-tested-deployed-approved/"/>
+    <updated>2018-01-23T23:47:00+00:00</updated>
+    <id>https://blog.dlecan.com//blockchain-decentralisation-tested-deployed-approved</id>
+    <content type="html"><![CDATA[<p><a href="https://twitter.com/guiillaumeN">GuiillaumeN</a> et moi avons été invités par le <a href="https://www.meetup.com/fr-FR/GDG-Nantes/">GDG Nantes</a> à présenter notre conférence "Web décentralisé : testé, déployé, approuvé ✔️ !" fin janvier 2018.</p>
+
+<h1>Web décentralisé : testé, déployé, approuvé ✔️ !</h1>
+
+<p>Une belle occasion pour présenter la notion de <a href="https://en.wikipedia.org/wiki/%C3%90">Ð</a>app, des applications Web décentralisées, à la fois sur le code métier (dé)localisé dans une blockchain <a href="https://en.wikipedia.org/wiki/Ethereum">Ethereum</a>, mais aussi sur tous les assets nécessaires à l'application (Javacript, CSS, HTML ...), (dé)localisés eux dans un système de fichier réparti comme <a href="https://en.wikipedia.org/wiki/InterPlanetary_File_System">IPFS</a>.</p>
+
+<p>Les slides de notre présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRg9iV-YbON8rNSH159OMZhuoExZ0pr4RZvoJ1Dx4gHTZoNkIJAuipC_nDQpwFSSfsSmqntAAY3bbbN/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+</feed>

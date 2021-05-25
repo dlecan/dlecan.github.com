@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: freemobile | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/freemobile/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Partage de connexion Internet avec Android par câble USB]]></title>
+    <link href="https://blog.dlecan.com//Partage-de-connection-Internet-avec-Android-par-cable-USB/"/>
+    <updated>2012-08-16T15:17:00+00:00</updated>
+    <id>https://blog.dlecan.com//Partage-de-connection-Internet-avec-Android-par-cable-USB</id>
+    <content type="html"><![CDATA[<p>Depuis Free Mobile, il est possible de partager la connexion Internet de son mobile avec son ordinateur, sa tablette, ... sans coût supplémentaire.
+Si vous devez payer, changez d'opérateur.</p>
+
+<p>Encore faut-il savoir comment faire (câble USB, Wifi, Bluetooth), que ce soit sur le smartphone ou l'ordinateur.</p>
+
+<p>On trouve moultes applications de partage de connexion (tether/tethering) plus ou moins bridées et payantes alors que Google <a href="http://www.android.com/tether">fournit désormais tout cela gratuitement</a>, même <a href="http://www.android.com/drivers/tetherxp.inf">les pilotes pour Windows XP</a> (nécessaires pour partager la connexion au travers d'un câble USB).</p>
+
+<p>Simple et gratuit.</p>
+]]></content>
+  </entry>
+  
+</feed>

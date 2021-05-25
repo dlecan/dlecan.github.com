@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: web | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/web/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Du SSL gratuit pour tous' au Web2Day 2016]]></title>
+    <link href="https://blog.dlecan.com//web2day-ssl-gratuit-pour-tous/"/>
+    <updated>2016-06-17T18:24:00+00:00</updated>
+    <id>https://blog.dlecan.com//web2day-ssl-gratuit-pour-tous</id>
+    <content type="html"><![CDATA[<p>J'ai été retenu par la prestigieuse conférence <a href="https://web2day.co">Web2Day</a> à Nantes pour présenter <a href="https://web2day.co/2016/evenements/du-ssl-gratuit-pour-tous/">"Du SSL gratuit pour tous"</a> en juin 2016, où je démontre comment très facilement configurer du TLS/SSL sur votre site web à l'aide de la nouvelle autorité de certification <a href="https://letsencrypt.org/">Let's Encrypt</a>, qui délivre gratuitement des certificats.</p>
+
+<p>Merci !</p>
+
+<p>Support de présentation :</p>
+
+<p><a href="http://blog.dlecan.com/web2day2016-ssl-simple-gratuit-avec-lets-encrypt/"><img src="https://blog.dlecan.com//images/prez-web2day-lets-encrypt/cover.png" width="700" height="394" alt='Support de présentation de la conférence'></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tool In Action 'Sécuriser vos applications Web gratuitement' à Devoxx 2016]]></title>
+    <link href="https://blog.dlecan.com//devoxx-securiser-web/"/>
+    <updated>2016-04-22T12:02:00+00:00</updated>
+    <id>https://blog.dlecan.com//devoxx-securiser-web</id>
+    <content type="html"><![CDATA[<p>J'ai été retenu par la prestigieuse conférence <a href="https://devoxx.fr">Devoxx FR</a> pour démontrer les capacité de <a href="https://letsencrypt.org/">Let's Encrypt</a> lors d'un <em>tool in action</em> <a href="http://cfp.devoxx.fr/2016/talk/WFF-3798/Securisez_vos_applications_Web_gratuitement_en_quelques_minutes_avec_Let's_Encrypt.html">"Sécurisez vos applications Web gratuitement en quelques minutes avec Let's Encrypt"</a> en avril 2016, où je démontre comment très facilement configurer du TLS/SSL sur votre site web à l'aide de cette nouvelle autorité de certification.</p>
+
+<p>Elle délivre en effet gratuitement des certificats.</p>
+
+<p>Merci !</p>
+
+<p>La vidéo de la session :</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/hD4923vHXsY" allowfullscreen></iframe></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Mozilla Geckoview' au Devfest Nantes 2014]]></title>
+    <link href="https://blog.dlecan.com//mettez-panda-roux-dans-votre-webview-android/"/>
+    <updated>2014-11-10T16:31:00+00:00</updated>
+    <id>https://blog.dlecan.com//mettez-panda-roux-dans-votre-webview-android</id>
+    <content type="html"><![CDATA[<p>J'ai eu le plaisir de participer à cette superbe conférence que fut le <a href="http://devfest.gdgnantes.com/">Devfest Nantes 2014</a>, à la fois en tant que visiteur mais aussi en tant qu'orateur.</p>
+
+<p>J'y ai présenté la conférence "Mettez un Panda Roux dans votre Webview", dont voici le résumé :</p>
+
+<p><blockquote><p>Au-delà du simple navigateur pour Android, Firefox est aussi une plateforme d'exécution d'applications HTML5 ouverte, les Open Web Apps.<br/>Après une présentation de Mozilla Geckoview et de ce qu'il peut apporter à vos applications HTML5 sous Android par rapport à une Webview standard (modernité, performances...), nous détaillerons l'initiative de Mozilla avec les Open Web Apps et verrons concrètement comment l'utiliser pour déployer des applications HTML5 sous Android.</p></blockquote></p>
+
+<p>Et le support de présentation :</p>
+
+<p><a href="http://blog.dlecan.com/devfestnantes2014/prez-panda-roux-webview-android/"><img src="https://blog.dlecan.com//images/prez-panda-roux-webview-android/cover.png" width="768" height="432" alt='Support de présentation de la conférence' target='_blank'></a></p>
+
+<p>La vidéo :</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/SBzsADcBdBE" allowfullscreen></iframe></div></p>
+]]></content>
+  </entry>
+  
+</feed>

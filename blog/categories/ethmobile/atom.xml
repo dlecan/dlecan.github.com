@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ethmobile | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/ethmobile/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Smartphone et Blockchain' au Breizhcamp 2017]]></title>
+    <link href="https://blog.dlecan.com//smartphone-blockchain-armes-revolution-massive/"/>
+    <updated>2017-05-05T21:51:00+00:00</updated>
+    <id>https://blog.dlecan.com//smartphone-blockchain-armes-revolution-massive</id>
+    <content type="html"><![CDATA[<p>Les slides de la présentation "Smartphone et Blockchain, armes de révolution massive" que j'ai eu le plaisir co-animer avec <a href="https://twitter.com/guiillaumeN">GuiillaumeN</a> au <a href="http://www.breizhcamp.org/">Breizhcamp 2017</a>.</p>
+
+<p><a href="https://the-blockchain-machine.github.io/breizhcamp2017_revolution-blockchain-mobile-android/"><img src="https://blog.dlecan.com//images/prez-smartphone-blockchain/cover.png" width="690" height="519"></a></p>
+]]></content>
+  </entry>
+  
+</feed>

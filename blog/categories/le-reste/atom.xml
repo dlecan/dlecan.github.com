@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Le reste | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/le-reste/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Qui a la carte la plus juste de l'île de Nantes ?]]></title>
+    <link href="https://blog.dlecan.com//archives/64-Qui-a-la-carte-la-plus-juste-de-lile-de-Nantes.html"/>
+    <updated>2010-06-25T09:53:00+00:00</updated>
+    <id>https://blog.dlecan.com//archives/Qui-a-la-carte-la-plus-juste-de-lile-de-Nantes</id>
+    <content type="html"><![CDATA[<p>Il y 4 ans, il a fallu plusieurs années à TeleAtlas, le fournisseur de carte, pour prendre en <br />
+compte la mise en sens unique de ma rue, avec pour conséquence des <br />
+itinéraires sur ViaMichelin ou&#160; Google Maps complètement erronés. Cette rue étant très longue, les indications proposées dans les itinéraires pouvaient conduire à des différences de 10-15 minutes selon la circulation !</p>
+
+
+<p> <br /></p>
+
+<p>Très handicapant.</p>
+
+
+<p> <br /></p>
+
+<p>J'habite aujourd'hui dans un quartier (République) dont le plan des rues a été largement modifié ces dernières années. Des rues ont été crées ou prolongées, ce qui a été diversement été pris en compte par les fournisseurs de carte TeleAtlas ou Navteq. Avec des répercussions sur les services calculant des itinéraires comme Google Maps, ViaMichelin ou Mappy.</p>
+
+
+<p> <br /></p>
+
+<p>Voici les données que possèdent respectivement TeleAtlas et Navteq  sur l'environnement de la place de la République à Nantes :</p>
+
+
+<p> <br /></p>
+
+<p><!-- s9ymdb:12 --><img width="250" height="184" class="serendipity_image_center" style="border: 0px none; padding-left: 5px; padding-right: 5px;" src="http://www.dlecan.com/uploads/QuartierRepubliqueTeleAtlas.serendipityThumb.png" alt=""  /> <!-- s9ymdb:10 --><img width="250" height="141" class="serendipity_image_center" style="border: 0px none; padding-left: 5px; padding-right: 5px;" src="http://www.dlecan.com/uploads/QuartierRepubliqueNAVTEQ.serendipityThumb.png" alt=""  /></p>
+
+
+<p> <br /></p>
+
+<p>Remarquez sur les images :</p>
+
+
+<p> <br /></p>
+
+<ul> <br />
+<li>En bas à gauche, il manque le boulevard de l'Estuaire sur la carte TeleAtlas</li> <br />
+<li>Légèrement au dessus de la place de la république, la carte Navteq n'affiche pas une petite impasse</li> <br />
+<li>En haut à droite, la carte TeleAtlas &quot;oublie&quot; une autre petite impasse</li> <br />
+</ul>
+
+
+<p> <br /></p>
+
+<p>Or, dans la réalité le boulevard de l'Estuaire existe bel est bien, il y a même des commerces et des médecins qui y travaillent ! Les pages jaunes connaissent le boulevard (lien direct impossible), mais ne peuvent pas afficher la plan correspondant via Mappy puisque le boulevard n'existe dans la base de données de TeleAtlas.</p>
+
+
+<p> <br /></p>
+
+<p>Vous me direz que je chipote et qu'il suffit d'attendre qu'il soit pris en compte. Ce boulevard existe depuis 2008 et malgré une <a href="http://mapinsight.teleatlas.com/">suggestion de correction via l'outil de TeleAtlas</a> il y a un an, il n'existe pas.</p>
+
+
+<p> <br /></p>
+
+<p>Navteq s'en tire mieux, mais ses fonds de carte sont très peu utilisés par les services de cartes ou d'itinéraires sur le web. Je ne connais que <a href="http://www.fr.map24.com/">Map24</a> qui soit partenaire.<br /></p>
+
+
+<p> <br /></p>
+
+<p>Je récapitule :</p>
+
+
+<p> <br /></p>
+
+<ul> <br />
+<li>TeleAtlas a des cartes incomplètes, mais est le leader sur le web</li> <br />
+<li>Navteq a une carte plus à jour, mais est très peu répandu sur le web</li> <br />
+</ul>
+
+
+<p> <br /></p>
+
+<p>La solution serait donc d'utiliser Map24 ?</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rentrée des classes]]></title>
+    <link href="https://blog.dlecan.com//archives/39-Rentree-des-classes.html"/>
+    <updated>2005-08-23T08:57:44+00:00</updated>
+    <id>https://blog.dlecan.com//archives/Rentree-des-classes</id>
+    <content type="html"><![CDATA[<p>L'activité médiatique a été au plus bas pendant quelques semaines, mais le monde ne s'est pas arrêté pour autant : la Chine a continué à monter en puissance, les prix du pétrole ont poursuivi leur explosion. En bref, rien de bien nouveau.<br /></p>
+
+<br />
+
+
+<p>Pour cette rentrée, j'attends les chiffres de la <a href="http://www.banquemondiale.org/EXT/French.nsf/DocByUnid/34A9F43D563CEA2085256D71006AE08F?Opendocument">Banque Mondiale</a> de 2004 pour mettre à jour <a href="http://www.dlecan.com/archives/16-La-Chine-plus-tres-loin-de-la-5e-place.html">ma comparaison</a>.<br />
+J'essaie de préparer une comparaison des pays qui peuvent couvrir à eux seuls toutes les activités humaines : le Brésil (secteur primaire), la Chine (secteur secondaire) et l'Inde (secteur tertiaire). J'ajouterai la France et les Etats-Unis dans les graphiques si ça ne dérègle pas trop les échelles ;o)<br /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Un finish à la "Michel Vaillant"]]></title>
+    <link href="https://blog.dlecan.com//archives/31-Un-finish-a-la-Michel-Vaillant.html"/>
+    <updated>2005-04-24T13:36:49+00:00</updated>
+    <id>https://blog.dlecan.com//archives/Un-finish-a-la-Michel-Vaillant</id>
+    <content type="html"><![CDATA[<p>Je regarde rarement la Formule 1, surtout depuis la suprématie écrasante de Ferrari sur les autres écuries.<br />
+Il semble que les temps changent, puisque l'on assiste depuis le début la saison à la 4è victoire consécutive de Renault, la 3è consécutive d'Alonso et un finish sur ce dernier grand prix digne de la bande dessinée "Michel Vaillant".<br /></p>
+
+<br />
+
+
+<p>Ce qui m'a toujours déçu dans cette bande dessinée, ce sont les fins de grand prix, chevaleresques et épiques, mais totalement improbable : le finish à la Michel Vaillant.<br />
+Il s'agit tout simplement d'un fin de grand prix où s'affrontent deux F1, une Vaillante contre une Leader, une bleue contre une rouge (le bien contre le mal), finissant à quelques mètres l'une de l'autre.<br /></p>
+
+<br />
+
+
+<p>On ne peut s'empêcher de faire le parallèle avec la fin du grand prix de San-Marin d'aujourd'hui : Alonso (voiture bleue) gagne avec seulement quelques mètres d'avance sur Schumacher (voiture rouge).<br /></p>
+
+<br />
+
+
+<p>Finalement, comme disent Igor et Grishka, <i>rien n'est impossible</i> ...</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Réflexion sur mon objectivité]]></title>
+    <link href="https://blog.dlecan.com//archives/19-Reflexion-sur-mon-objectivite.html"/>
+    <updated>2005-02-19T09:11:00+00:00</updated>
+    <id>https://blog.dlecan.com//archives/Reflexion-sur-mon-objectivite</id>
+    <content type="html"><![CDATA[<p>C'est intéressant de voir comment chaque personne qui écrit un blog rencontre à un moment où à un autre les mêmes situations.<br /></p>
+
+<br />
+
+
+<p>Parmi la cinquaine de weblogs que je suis, tous ont plus ou moins écrit un billet à propos des remarques que leur entourage (famille, collègues, ...) pouvait leur faire et des conséquences que cela pouvait avoir.<br />
+On embraye alors sur des sujets comme "<i>est-ce que je peux vraiment écrire ce que je pense de mon boulot si mon boss me lit</i>" ou bien "<i>j'ai dis que mon voisin est un connard, mais pas de bol il a Internet</i>".<br /></p>
+
+<br />
+
+
+<p>Rançon du succès. Et il ne faudrait pas se plaindre, on écrit pour être lu quand même !<br /></p>
+
+<br />
+
+
+<p>Bref, j'en viens à ma situation. On m'a fait des remarques sur mon objectivité. Première confrontation physique avec un lecteur. Mince, moi pensait (naïvement ?) écrire de manière neutre, c'est un peu loupé. Je décide de creuser un peu, pour comprendre ce qui lui fait dire ça. Il me parle d'impression générale, pas d'élément en particulier.<br />
+Je suis complètement à côté de la plaque : on ne peut pas être objectif ...<br /></p>
+
+<br />
+
+
+<p>Concrètement, il m'a surtout reproché mes sources journalistiques. C'est vrai qu'elles proviennent principalement du <a href="http://www.lemonde.fr">Monde</a> et de <a href="http://www.liberation.fr">Libération</a> et apparemment, l'origine de ces sources jouent beaucoup contre mon objectivité car elles ne sont pas assez variées.<br /></p>
+
+<br />
+
+
+<p>Effectivement, je ne poste pas de références du <a href="http://www.lepoint.fr">Point</a> ou du <a href="http://www.lefigaro.fr">Figaro</a>, mais je ne n'ai pas non plus venant de l'<a href="http://www.lexpress.fr">Express</a> par exemple.<br /></p>
+
+<br />
+
+
+<p>L'explication est simple. Pour Le Monde, j'y suis abonné, donc facile pour moi d'y faire référence. Pour Libération, ils ont cet avantage de fournir un fil d'actualité RSS : l'information vient à moi. Les autres n'en fournissent pas à ma connaissance et je n'ai pas le temps malheureusement d'aller visiter tous les sites tous les jours.<br /></p>
+
+<br />
+
+
+<p>Cela nuit à mon objectivité, je vais faire des efforts <img src="http://www.dlecan.com/templates/default/img/emoticons/smile.png" alt=":-)" style="display: inline; vertical-align: bottom;" class="emoticon" />.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[LibertÃ© d'expression contrôlée]]></title>
+    <link href="https://blog.dlecan.com//archives/6-Liberte-dexpression-controlee.html"/>
+    <updated>2005-01-08T08:56:03+00:00</updated>
+    <id>https://blog.dlecan.com//archives/Liberte-dexpression-controlee</id>
+    <content type="html"><![CDATA[<p>Plus j'étends ma lecture des blogs, plus je me rend compte des difficultés que cela représente.<br /></p>
+
+<br />
+
+
+<p><b>Il faut tenir la route.</b><br />
+Pour certain, la lassitude l'emporte ou le sujet traité s'épuise ou n'est pas assez actif. <a href=" http://www.cybercodeur.net/weblog/commentaires/detailsCarnet.php?idmessage=1108">Denis Boudreau</a> débutait mal l'année 2005, mais semble s'être repris depuis.<br /></p>
+
+<br />
+
+
+<p><b>Il faut contrôler attentivement ce qui est écrit.</b><br />
+Ceci est mon site personnel par définition : le nom de domaine du site est mon nom de famille et j'y ai mis mon CV. Des recruteurs y passent quelquefois, quelquefois lisent aussi mes billets. Par conséquent, je ne peux pas y écrire n'importe quoi. <a href="http://www.svay.com/blog/index/2005/01/07/225-blogguer-ici-blogguer-ailleurs">Maurice Svay</a> l'a bien compris, puisqu'il pense blogguer autre part pour des sujets plus personnels (peut-être plus dérangeant).<br /></p>
+
+<br />
+
+
+<p>Donner ces opinons, faire avancer le <i>schimlblick</i> sont les buts d'un blog. Mais la censure est obligatoire. Ecrire autre part, anonymement de plus, c'est ne plus avoir de limite ou de censure, ainsi qu'admettre et accepter que l'on a des idées qui peuvent nous desservir.<br /></p>
+
+<br />
+
+
+<p>En parlant de mondialisation, je prend le risque de passer pour un "pro" ou un "anti", ce qui n'est pas mon but. En espérant que mes lecteurs sauront me replacer dans le bon le chemin.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gdgnantes | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/gdgnantes/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Web décentralisé' au GDG Nantes]]></title>
+    <link href="https://blog.dlecan.com//blockchain-decentralisation-tested-deployed-approved/"/>
+    <updated>2018-01-23T23:47:00+00:00</updated>
+    <id>https://blog.dlecan.com//blockchain-decentralisation-tested-deployed-approved</id>
+    <content type="html"><![CDATA[<p><a href="https://twitter.com/guiillaumeN">GuiillaumeN</a> et moi avons été invités par le <a href="https://www.meetup.com/fr-FR/GDG-Nantes/">GDG Nantes</a> à présenter notre conférence "Web décentralisé : testé, déployé, approuvé ✔️ !" fin janvier 2018.</p>
+
+<h1>Web décentralisé : testé, déployé, approuvé ✔️ !</h1>
+
+<p>Une belle occasion pour présenter la notion de <a href="https://en.wikipedia.org/wiki/%C3%90">Ð</a>app, des applications Web décentralisées, à la fois sur le code métier (dé)localisé dans une blockchain <a href="https://en.wikipedia.org/wiki/Ethereum">Ethereum</a>, mais aussi sur tous les assets nécessaires à l'application (Javacript, CSS, HTML ...), (dé)localisés eux dans un système de fichier réparti comme <a href="https://en.wikipedia.org/wiki/InterPlanetary_File_System">IPFS</a>.</p>
+
+<p>Les slides de notre présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRg9iV-YbON8rNSH159OMZhuoExZ0pr4RZvoJ1Dx4gHTZoNkIJAuipC_nDQpwFSSfsSmqntAAY3bbbN/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Des libs Android pour un dev carré' au GDG Nantes]]></title>
+    <link href="https://blog.dlecan.com//gdgnantes-2014-lib-android/"/>
+    <updated>2014-06-17T09:34:00+00:00</updated>
+    <id>https://blog.dlecan.com//gdgnantes-2014-lib-android</id>
+    <content type="html"><![CDATA[<p>Le <a href="http://gdgnantes.com">GDG Nantes</a> m'a invité à venir présenter les fantastiques librairies de développement Android de Square le 16 juin 2014 au soir.</p>
+
+<p>Merci pour l'apéro et pour le public !</p>
+
+<p>Support de présentation :</p>
+
+<p><a href="http://blog.dlecan.com/lib-android-dev-carre/prez/"><img src="https://blog.dlecan.com//images/prez-gdgnantes-2014-lib-android/cover.png" width="700" height="450" alt='Support de présentation de la conférence'></a></p>
+]]></content>
+  </entry>
+  
+</feed>

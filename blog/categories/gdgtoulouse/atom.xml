@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gdgtoulouse | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/gdgtoulouse/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Smart-contracts under attack' au GDG Toulouse]]></title>
+    <link href="https://blog.dlecan.com//meetup-gdg-toulouse-blockchain-smart-contract-security/"/>
+    <updated>2018-06-06T11:10:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-gdg-toulouse-blockchain-smart-contract-security</id>
+    <content type="html"><![CDATA[<p>J'ai été invité le 5 juin 2018 à venir parler des <em>smart-contracts</em> Ethereum au <a href="https://www.meetup.com/fr-FR/GDG-Toulouse/events/250099870/">GDG Toulouse</a>.
+Avec <a href="https://twitter.com/polo46">Paul Marty</a>, expert sécurité chez Orange Cybersécurité, nous avons orienté notre présentation autour de la sécurité des <em>smart-contracts</em>, avec une séance de live-coding avec attaque en direct : moi, développeur un peu naif, qui déploie des <em>smart-contrats</em> sur Ethereum et Paul qui siphonne l'argent en temps réel 😅.</p>
+
+<p>Une belle soirée sur Toulouse !</p>
+
+<p>Les slides de notre présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSuT2L6_82F7WhApJ6Ehdgj41bzPSkBRlFSXrZoay5aVqmf45kgcX_8sfq53m_j8PubUdWl642bqWH0/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>La vidéo :</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/rQywiljTQdg" allowfullscreen></iframe></div></p>
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+</feed>

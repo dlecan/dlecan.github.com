@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tutorial | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/tutorial/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction au langage de programmation Rust - Partie 3]]></title>
+    <link href="https://blog.dlecan.com//introduction-rust-part-3/"/>
+    <updated>2017-03-17T21:32:00+00:00</updated>
+    <id>https://blog.dlecan.com//introduction-rust-part-3</id>
+    <content type="html"><![CDATA[<blockquote><p>Initialement publié sur <a href="https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3">https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-3</a></p></blockquote>
+
+<p>Après avoir vu comment installer le compilateur Rust et Cargo, puis écrit quelques lignes de code dans la <a href="/introduction-rust-part-2/">seconde partie de cette introduction</a>, nous allons continuer dans cette troisième partie à faire évoluer notre programme en découvrant de nouvelles caractéristiques de Rust.</p>
+
+<p>Avant de nous lancer, rappelez-vous, une nouvelle version de Rust est publiée toutes les six semaines ; il est donc très probable que la version que vous avez installée est déjà obsolète.</p>
+
+<p>Mettez à jour Rustup lui-même, puis ensuite Rust :</p>
+
+<p><code>
+$ rustup self update // mise à jour de Rustup
+ ...
+$ rustup update // mise à jour de tous les canaux de Rust installés
+</code></p>
+
+<p>Pensez à effectuer régulièrement ces opérations : une version à jour de Rust vous donne accès à de nouvelles fonctionnalités et une meilleure compatibilité avec les librairies de la communauté.</p>
+
+<h2><code>Struct</code> et <code>trait</code></h2>
+
+<p>Notre programme des deux premières parties était structuré de manière procédurale. Nous allons lui donner une allure plus lisible et plus encapsulée, pour ne pas dire plus "objet". Rust n’a pas pour autant des "classes" comme dans d’autres langages, mais des <code>struct</code> et des <code>trait</code>.</p>
+
+<p>Comme leur nom l’indique, les struct sont des structures qui permettent de stocker un ensemble de données complexes ; on dira qu’une struct définie un nouveau type. Notez qu’il n’y a pas de constructeur ou d’accesseurs à proprement parler comme dans d’autre langage, Rust reste très simple ici.</p>
+
+<p>Faisons évoluer notre programme en introduisant une <em>struct</em> :</p>
+
+<p><code>rust
+struct Division {
+  numerateur: i32,
+  denominateur: i32,
+}
+</code></p>
+
+<p>La structure peut-être ensuite instanciée et ses propriétés manipulées :</p>
+
+<p>```rust
+let une_division = Division {numerateur: 10, denominateur: 12};</p>
+
+<p>println!("Une division ({} - {})", une_division.numerateur, une_division.denominateur);
+```</p>
+
+<p>Continuons notre logique d’encapsulation en ajoutant des méthodes à notre structure. Ici, la syntaxe de Rust sort vraiment de l’ordinaire. En effet, les méthodes ne sont pas ajoutées directement dans le corps de la <em>struct</em>, mais déclarées où vous le souhaitez dans votre programme avec le mot-clé impl.</p>
+
+<p>```rust
+impl Division {</p>
+
+<pre><code>fn calculer(&amp;self) -&gt; i32 {
+    match self.denominateur {
+        0 =&gt; panic!("Division par 0"),
+        1 =&gt; self.numerateur,
+        _ =&gt; self.numerateur / self.denominateur
+    }
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Le code de la méthode calculer est repris de la méthode <code>calculer_division</code> vu dans la précédente partie de cet article.</p>
+
+<p>Il est tentant de penser qu’on peut faire n’importe quoi, comme en Javascript, à savoir rajouter des méthodes à n’importe quelle <em>struct</em>, écrite par vous ou fournie par le langage. Par exemple, en Javascript, on peut rajouter des méthodes au prototype <code>String</code> et les utiliser comme des méthodes du langage (cette capacité est notamment utilisée par tous les polyfills).</p>
+
+<p>En Rust, il est impossible d’ajouter des méthodes à n’importe quelle <em>struct</em> ; les <code>impl</code> doivent être déclarés dans le même module (<code>crates</code> en Rust) que la <em>struct</em>.</p>
+
+<p>Mettez à jour votre programme Rust :</p>
+
+<ul>
+<li>déclarer le nouveau type <code>Division</code> à l’aide d’une <em>struct</em></li>
+<li>remplacer la déclaration de la méthode statique <code>calculer_division</code> par une méthode <code>calculer</code> qui implémente le type <code>Division</code> (attention à la signature de la méthode <code>calculer</code>)</li>
+<li>remplacer l’appel à la méthode <code>calculer_division</code> par l’instanciation du type <code>Division</code> avec le paramètre qui vient de l’analyse de la ligne de commande, puis calculer le résultat et l’afficher.</li>
+</ul>
+
+
+<p>A ce stade, vous devez avoir un programme qui compile et s’exécute, ce que vous pouvez vérifier à l’aide de la commande <code>cargo run 4</code> (code complet <a href="https://git.io/v1XJL">https://git.io/v1XJL</a>).</p>
+
+<p>S’il n’existe pas de "vrai" constructeur en Rust, les us et coutumes du langage encouragent cependant l’encapsulation de l’opération d’instanciation d’un type au sein d’une fonction statique déclarée dans l’implémentation de la struct elle-même, nommée par convention <code>new</code> et qui retourne évidemment une instance de votre type. Ce qui donne pour <code>Division</code> :</p>
+
+<p>```rust
+impl Division {</p>
+
+<pre><code>fn new(x: i32, y: i32) -&gt; Division {
+    Division {
+        numerateur: x,
+        denominateur: y,
+    }
+}
+...
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Pensez à remplacer l’instanciation manuelle de <code>Division</code> dans votre programme par l’usage de la fonction <code>new</code> (code complet <a href="https://git.io/v1XLo">https://git.io/v1XLo</a>).</p>
+
+<p>Outre les <code>struct</code>, Rust propose un autre mécanisme qui permet d’indiquer au compilateur les fonctionnalités qu’un type doit obligatoirement fournir : les <code>trait</code>. Par exemple, si nous souhaitons constraindre la façon dont une Division doit déclarer le symbole qu’elle représente, nous pouvons déclarer le <em>trait</em> suivant :</p>
+
+<p>```rust
+trait HasSymbol {</p>
+
+<pre><code>fn symbol(&amp;self) -&gt; String;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Les <em>traits</em> ressemblent aux interfaces Java ou C#, avec globalement les mêmes caractéristiques :</p>
+
+<ul>
+<li>ensemble de fonctions que le type doit obligatoirement redéfinir</li>
+<li>certaines fonctions peuvent avoir une implémentation par défaut</li>
+<li>un <em>trait</em> peut implémenter un autre <em>trait</em>, et donc "hériter" de ses caractéristiques (concrètement, il faudra implémenter les deux traits sur votre type)</li>
+</ul>
+
+
+<p>Implémentons notre <em>trait</em> pour la <code>Division</code> :</p>
+
+<p>```rust
+impl HasSymbol for Division {</p>
+
+<pre><code>fn symbol(&amp;self) -&gt; String {
+    "/".to_string() // "/" est du type &amp;str, qu'il faut donc convertir
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Notez ce point important, impossible en Java par exemple : implémenter un <em>trait</em> pour un type est une section de code déclarée a posteriori de la déclaration de ce type, ce qui veut dire qu’un nouveau <em>trait </em>peut enrichir retrospectivement un type existant (avec quelques restrictions cependant).</p>
+
+<p>Désormais, il est possible de tracer le symbole de la <code>Division</code>, juste après sa construction par exemple :</p>
+
+<p><code>rust
+let division = Division::new(numerateur, 2);
+println!("Symbole : {}", division.symbol());
+</code></p>
+
+<p>Le résultat d’exécution de votre programme est désormais enrichi du symbole de la Division (code complet <a href="https://git.io/v1X4I">https://git.io/v1X4I</a>) :</p>
+
+<p>```
+$ cargo run 2</p>
+
+<pre><code>Running `target/debug/division 2`
+</code></pre>
+
+<p>Symbole: /
+Résultat : 1
+```</p>
+
+<h2>Encore quelques concepts à maîtriser par le Rustacéen qui débute</h2>
+
+<p>Vous vous en souvenez peut-être, je vous avais promis dans la première partie de cet article de la sueur, en particulier avec la gestion de la mémoire : elle n’est ni à la charge du développeur, ni à la charge d’une machine virtuelle et de son ramasse-miette.</p>
+
+<p>Il est temps de mettre les mains dans le camboui et de transpirer. Accrochez-vous !</p>
+
+<p>Reprenons le code décrit plus haut, et ajoutons-y une instruction qui paraît anodine :</p>
+
+<p><code>rust
+let division = Division::new(numerateur, 2);
+let division2 = division; // &lt;= instruction anodine :-)
+println!("Symbole : {}", division.symbol());
+</code></p>
+
+<p>Que se passe-t-il à la compilation (<code>cargo build</code>) ?</p>
+
+<p><code>
+error[E0382]: use of moved value: `division`
+  --&gt; src/main.rs:48:30
+  |
+47 |     let division2 = division;
+  |         --------- value moved here
+48 |     println!("Symbole : {}", division.symbol());
+  |                              ^^^^^^^^ value used here after move
+  |
+  = note: move occurs because `division` has type `Division`, which
+  does not implement the `Copy` trait
+</code></p>
+
+<p>Le compilateur Rust vous indique que la valeur pointée par la variable division est déplacée (<em>moved</em>). En effet, une valeur ne peut être référencée que par une seule variable dans tout notre code. C’est le concept de possession (<em>ownership</em>), contrôlée à la lettre par le compilateur, qui va garantir la sécurité et la robustesse d’exécution d’un programme Rust. Nous avons déplacé la possession de la valeur de division vers division2, par conséquent, division ne peut plus être utilisée.</p>
+
+<p>Qui dit "possession", dit "emprunt" (<em>borrowing</em>) ou "copie" et pour illustrer l’une ou l’autre des solutions, nous allons introduire une nouvelle fonction statique et l’utiliser (code complet <a href="https://git.io/v1X2m">https://git.io/v1X2m</a>):</p>
+
+<p>```rust
+fn display_symbol(division: Division) {</p>
+
+<pre><code>println!("Symbole: {}", division.symbol());
+</code></pre>
+
+<p>}
+...
+let division = Division::new(numerateur, 2);
+display_symbol(division); // &lt;= à la place du 'let division2 = ...'
+```</p>
+
+<p>Ce code ne compile pas et vous optenez un message d’erreur très similaire au précédent. Trois solutions pour résoudre cette erreur de compilation s’offrent à nous :</p>
+
+<p>1/ Ne plus utiliser la variable division après l’appel à la méthode <code>display_symbol</code></p>
+
+<p>2/ Copier toute la valeur de la variable</p>
+
+<p>3/ Permettre l’emprunt de la variable et utiliser sa référence</p>
+
+<p>La solution 1/ est une façon de mettre le problème sous le tapis ou de le repousser, ce n’est pas vraiment une solution (même si le programme compilera effectivement 😉</p>
+
+<p>Copier toute la valeur de la variable (solution 2) est une façon intéressante de résoudre le problème. Dans cette solution, la valeur de la variable est entièrement copiée lors de l’appel à la fonction. Notez bien qu’il n’y a donc plus de lien entre la variable déclarée avant l’appel de la fonction et la variable utilisée dans la fonction.</p>
+
+<p>Pour déclarer un type "copiable", il suffit d’implémenter le <em>trait</em> <code>Copy</code>, ainsi que le <em>trait</em> <code>Clone</code> dont hérite <code>Copy</code>. Le plus simple, est d’utiliser l’implémentation automatique de certains traits, proposée par l’attribut <code>#[derive(...)]</code> (documentation : <a href="https://bit.ly/2hASRHt">https://bit.ly/2hASRHt</a>), à appliquer directement sur un type :</p>
+
+<p>```rust</p>
+
+<h1>[derive(Copy, Clone)]</h1>
+
+<p>Division {
+  ...
+```</p>
+
+<p>Avec cet ajout, notre programme compile de nouveau (code complet <a href="https://git.io/v11tL">https://git.io/v11tL</a>). Cependant, si cette solution peut sembler magique et simple (et de plus proposée par le compilateur), elle a ausi ses limites :</p>
+
+<ul>
+<li>un type peut implémenter <code>Copy</code> uniquement si l’ensemble de ses composants implémente aussi <code>Copy</code> (dans notre exemple, <code>i32</code> implémente <code>Copy</code>, donc <code>Division</code> peut implémenter <code>Copy</code>). Pour les Javaistes, on retrouve ici une propriété équivalente dans l’esprit aux objets sérialisables</li>
+<li>un certain nombre de types n’implémentent pas <code>Copy</code> ; par oubli du développeur ou par incompatibililté technique. Par exemple, les <code>String</code> ne sont pas compatibles avec <code>Copy</code>.</li>
+</ul>
+
+
+<p>La troisième et dernière solution s’applique donc à tous les autres cas. Elle s’appuie sur le principe de l’emprunt, à savoir qu’on va passer à notre fonction non pas la valeur d’une variable, mais une référence vers la valeur de cette variable.</p>
+
+<p>Concrètement, il faut faire évoluer la signature de notre fonction d’affichage pour permettre l’emprunt et l’usage de référence :</p>
+
+<p>```rust
+fn display_symbol(division: &amp;Division) { // &lt;= Notez le &amp; ici</p>
+
+<pre><code>...
+</code></pre>
+
+<p>}
+...
+let division = Division::new(numerateur, 2);
+display_symbol(&amp;division); // &lt;= Notez le &amp; ici
+```</p>
+
+<p>La fonction <code>display_symbol</code> attend une référence vers un type <code>Division</code>, identifiée par le symbole <code>&amp;</code> et nous pouvons passer la référence vers une valeur en ajoutant le même symbole devant le nom d’une variable (code complet <a href="https://git.io/v11ml">https://git.io/v11ml</a>). Cette solution est la plus universelle, au prix d’une complexité intellectuelle plus élevée.</p>
+
+<p>Finalement, grâce à ces différents mécanismes, le cycle de vie de toutes les données référencées par des variables, est connu dès la compilation de votre programme, ce qui garantit une bonne gestion de la mémoire et donc une certaine robustesse. En revanche, elle vous garantit aussi quelques "combats" contre le borrow checker du compilateur Rust.</p>
+
+<h2>Conclusion</h2>
+
+<p>Au cours de ces trois articles d’introduction à Rust, nous avons abordés les outils et les concepts les plus importants du langage : <em>struct</em>, <em>trait</em>, <em>pattern matching</em>, <em>enum</em>, possession (<em>ownership</em>), emprunt (<em>borrowing</em>), notions de programmation fonctionnelle ... Ces connaissances devraient être suffisantes pour écrire vos premiers programmes avec Rust.</p>
+
+<p>Vous découvrirez par vous-même des concepts plus avancés du langage comme les <em>lifetimes</em>, les types génériques, les modules et les <em>crates</em>, les <em>macros</em>, les tests, les itérateurs, la concurrence, la gestion des erreurs ... La lecture du livre "The Rust programming language" sera donc à ce propos un bon point de départ pour vous : <a href="https://doc.rust-lang.org/book/">https://doc.rust-lang.org/book/</a>. Enfin, tous ces concepts pourraient faire l’objet d’articles dédiés, avis donc aux amateurs !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction au langage de programmation Rust - Partie 2]]></title>
+    <link href="https://blog.dlecan.com//introduction-rust-part-2/"/>
+    <updated>2017-03-14T14:21:00+00:00</updated>
+    <id>https://blog.dlecan.com//introduction-rust-part-2</id>
+    <content type="html"><![CDATA[<blockquote><p>Article initialement publié sur <a href="https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-2">https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-2</a></p></blockquote>
+
+<p>Nous poursuivons notre découverte du langage Rust après <a href="/introduction-rust-part-1/">une première partie</a> dans laquelle vous avez pratiqué quelques concepts de base de Rust : éléments de syntaxe, déclaration de variables immuables, fonctions et matching. Si la pratique de Rust directement dans le navigateur était adaptée pour débuter, je vous propose désormais de développer directement sur votre poste. Nous pourrons alors continuer à explorer les possibilités de Rust.
+Installer Rust</p>
+
+<p>Le site officiel <a href="https://www.rust-lang.org">https://www.rust-lang.org</a> propose des binaires ou des installeurs pour Linux, Mac ou Windows, qui ne se mettent pas à jour automatiquement. Sachant qu’une nouvelle version du langage Rust et des outils est publiée toutes les six semaines et que l’on est régulièrement amené à jongler entre les différents channels de Rust (stable, beta, nightly), je vous déconseille cette façon d’installer Rust.</p>
+
+<p>Préférez plutôt l’usage de Rustup, le nouveau programme officiel d’installation de Rust (la page officielle de téléchargement commence aussi à y faire référence). Vous trouvez la procédure d’installation sur le site <a href="https://www.rustup.rs">https://www.rustup.rs</a>, à savoir une simple commande à taper dans une console : <code>curl https://sh.rustup.rs -sSf | sh</code>. Vous installez Rustup qui ensuite installe pour vous le compilateur Rust rustc, l’outil de gestion de dépendances et de build cargo, ainsi que le débuggueur ou le formateur de code de la version stable courante de Rust. Vous pourrez très simplement mettre à jour cette version stable avec rustup update quand vous en aurez besoin (toutes les six semaines !) ou bien installer la beta par exemple (rustup install beta).</p>
+
+<p>Précis et efficace ... quand vous avez curl et un interpréteur sh à disposition, ce qui n’est pas le cas par défaut sous Windows. Si vous développez avec Rust sous Windows, vous aurez, tôt ou tard, besoin aussi de Git pour versionner vos fichiers sources. Je vous recommande donc d’installer d’abord l’outillage de Git qui vient avec une ligne de commande assez complète et qui ressemble à ce que vous pourriez obtenir sur un Linux : <a href="https://git-for-windows.github.io">https://git-for-windows.github.io</a>. Téléchargez l’installeur 32 ou 64 bits selon votre machine, puis lancez la commande d’installation de Rustup dans le shell proposé par Git for Windows.</p>
+
+<p>A la fin de l’installation, en ligne de commande (sous Windows celle de Git for Windows, n’oubliez pas car je ne le répéterai plus :-), tapez :</p>
+
+<p><code>
+$ rustc --version
+</code></p>
+
+<p>Si vous obtenez quelque chose comme <code>rustc 1.10.0 (cfcb716cf 2016-07-03)</code>, le compilateur Rust est opérationnel sur votre poste !</p>
+
+<h2>Editeur de texte malin ou environnement de développement intégré (IDE) ?</h2>
+
+<p>Autant vous le dire d’emblée, les "assistants" de développement Rust sont loin d’être du niveau de ce que l’on peut trouver dans d’autres langages comme Java ou .Net. Il y a encore beaucoup de travail à faire mais on arrive tout même à se créer un environnement acceptable. Personnellement, je travaille avec Sublime Text, complété par quelques plugins qui me permettent d’avoir la coloration syntaxique, le formatage et le linting, une validation moins précise de la syntaxe. Je vous invite à consulter areweideyet.com pour choisir l’environnement le plus adapté à votre contexte : Vim, Emacs, Atom, Visual Studio, Eclipse ... ou simplement, si vous souhaitez aller vite, un éditeur de texte type Notepad++, Geany ou Sublime Text seront suffisants.</p>
+
+<h2>Calculer division : reboot</h2>
+
+<p>Vous souvenez-vous de votre premier programme Rust écrit dans la première partie de ce dossier ? Nous allons le revisiter avec les nouveaux outils dont nous nous sommes dotés, et en particulier cargo. C’est un mix de Maven pour la structure standard des projets Rust, de npm pour la gestion de dépendances ou l’installation d’un programme et de commandes permettant de gérer un projet Rust.</p>
+
+<p>Créons-en un de type "programme Rust" (grâce au paramètre <code>--bin</code>) :</p>
+
+<p><code>
+$ cargo new --bin division
+</code></p>
+
+<p>Avec votre éditeur de texte, copiez-collez le contenu de notre dernier programme dans le fichier src/main.rs du répertoire division créé par Cargo :</p>
+
+<p>```rust
+fn calculer_division(x: i32, y: i32) -> i32  {</p>
+
+<pre><code>match y {
+    0 =&gt; panic!("Division par 0"),
+    1 =&gt; x,
+    _ =&gt; x / y
+}
+</code></pre>
+
+<p>}</p>
+
+<p>fn main() {</p>
+
+<pre><code>let resultat = calculer_division(-4, 2);
+
+println!("Résultat : {}", resultat);
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Code complet sur ce Gist : <a href="https://git.io/vKcsS">https://git.io/vKcsS</a>. Sauvegardez, puis lancez en ligne de commande :</p>
+
+<p>```
+$ cargo run</p>
+
+<p>  Compiling division v0.1.0 (file://.../division)</p>
+
+<pre><code>Running `target/debug/division`
+</code></pre>
+
+<p>Résultat : -2
+```</p>
+
+<p>Cargo compile et lance à la suite le programme sans argument. Si vous souhaitez simplement compiler, lancez cargo build et si vous souhaitez lancer le programme vous-même, sachez qu’il se trouve dans le répertoire target/debug :</p>
+
+<p>```
+$ ./target/debug/division</p>
+
+<p>Résultat : -2
+```</p>
+
+<h2>Une API sûre</h2>
+
+<p>Nous allons variabiliser le numérateur de notre division et le passer en paramètre de la ligne de commande. Explorons l’API de Rust pour ce besoin : lire les arguments en paramètre du programme s’effectue grâce à une fonction du module std::env déclarée comme ceci (Cf. <a href="https://doc.rust-lang.org/std/env/fn.args.html">https://doc.rust-lang.org/std/env/fn.args.html</a>) :</p>
+
+<p><code>rust
+pub fn args() -&gt; Args
+</code></p>
+
+<p>La fonction <code>std::env::args()</code> nous renvoie donc une instance de la <em>struct</em> <code>Args</code> (elle-même dans le module <code>std::env</code>), une structure qui va contenir des champs et des méthodes permettant de manipuler les arguments du programme, et ce de manière sûre. Qu’est-ce que cela signifie ? Sûr implique par exemple le bannissement de la "nullité", source de fréquentes erreurs d’exécution (le fameux <em>NullPointerException</em> en Java par exemple). En Rust, toutes les API sont conçues pour renvoyer quelque chose -un résultat ou une erreur- et même "rien" est quelque chose en Rust.</p>
+
+<h2><code>Option</code> - <code>Some</code> - <code>None</code></h2>
+
+<p>Regardons la déclaration de la fonction nth de Args qui va nous permettre de récupérer le nième argument de notre programme. Elle est déclarée comme ceci (la signature est légèrement adaptée pour une compréhension plus aisée) :</p>
+
+<p><code>rust
+fn nth(&amp;mut self, n: usize) -&gt; Option&lt;String&gt;
+</code></p>
+
+<p>Mettons de coté le &amp;mut self, nous y reviendrons par la suite. nth est une fonction qui renvoie un Option de type String. Option est une énumération Rust à deux variantes possibles :</p>
+
+<p>```rust
+pub enum Option<T> {</p>
+
+<pre><code>None,
+Some(T),
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Si vous substituez le type générique <code>T</code> par <code>String</code>, vous comprenez alors que la méthode <code>nth</code> peut renvoyer soit <code>None</code>, qui signifie qu’il y a pas de valeur à cette position, soit <code>Some(String)</code>, qui signifie qu’il existe une valeur à la position demandée et quelle peut être extraite de la valeur de l’énumération. Ce qui est génial, c’est que ces variantes peuvent être "matchées" (Cf. partie 1 de ce dossier) :</p>
+
+<p>```rust
+use std::env;</p>
+
+<p>...</p>
+
+<p>let numerateur = match env::args().nth(1) {</p>
+
+<pre><code>Some(argument) =&gt; argument,
+None =&gt; panic!("Argument obligatoire manquant : le numérateur")
+</code></pre>
+
+<p>};
+```</p>
+
+<p>Ici, on effectue aussi du pattern matching pour extraire la valeur contenue dans le <code>Some</code>. <code>Some(argument)</code> permet de déclarer la variable argument, affectée à la valeur contenu dans le <code>Some</code>, que l’on peut alors renvoyer (avec un <code>return</code> implicite). On arrête le programme prématurément avec la macro <code>panic!</code> et un message explicite en cas de <code>None</code>.</p>
+
+<p>Enfin, cerise sur le gâteau, comme tout est expression en Rust, on peut affecter directement le retour de notre match à une variable : <code>let numerateur = match env::args() ...</code>.</p>
+
+<p>Notez l’utilisation du module env importé par une ligne en début de programme, <code>use std::env;</code>, à ajouter pour chaque module utilisé dans le programme.</p>
+
+<p>Avec les <code>Option</code> et l’API de Rust, nous avons pu extraire notre paramètre de ligne de commande et l’avons rendu obligatoire. Ce n’est cependant pas suffisant : en effet, la fonction <code>nth</code> renvoie un <code>Option&lt;String&gt;</code> dans notre cas, ce qui veut dire que la variable numerateur ci-dessus est de type <code>String</code>, alors que nous attendons un <code>i32</code>. Il faut donc convertir notre valeur.</p>
+
+<h2><code>Result</code> - <code>Ok</code> - <code>Err</code></h2>
+
+<p>Rust propose une API de conversion de <code>String</code> :</p>
+
+<p><code>rust
+fn parse&lt;F&gt;(&amp;self) -&gt; Result&lt;F, F::Err&gt; where F: FromStr
+</code></p>
+
+<p>Prenons quelques instants pour comprendre la signature de cette fonction :</p>
+
+<ul>
+<li><code>fn parse</code> : "parse" est le nom de la fonction :-)</li>
+<li><code>F</code> : il s’agit d’un type générique, que vous pouvez substituer mentalement par le type que vous voulez obtenir après le parsing de votre <code>String</code>
+La définition en est donnée en fin de ligne, <code>where F: FromStr</code>, ce qui signifie que <code>F</code> doit respecter le contrat décrit dans le <em>trait</em> <code>std::str::FromStr</code> (c’est une sorte d’interface)</li>
+<li><code>&amp;self</code> : il s’agit de la syntaxe spécifique à Rust qui indique que cette fonction n’est pas statique et qu’elle s’applique sur des instances de l’objet courant (<code>String</code> ici)</li>
+<li><code>Result&lt;F, F::Err&gt;</code> : le type de retour, encapsulant <code>F</code> et un type d’erreur associée à <code>F</code></li>
+</ul>
+
+
+<p><code>Result</code> est la façon élégante en Rust de gérer les éventuels retours en erreur d’un traitement. Il est décrit comme ceci dans l’API de Rust :</p>
+
+<p><code>rust
+pub enum Result&lt;T, E&gt; {
+  Ok(T),
+  Err(E),
+}
+</code></p>
+
+<p>Un peu comme <code>Option</code> vue précédemment, <code>Result</code> est une énumération à deux variantes, sur lesquelles on pourra <em>matcher</em> :</p>
+
+<ul>
+<li><code>Ok</code> est utilisé pour encapsuler le résultat d’un traitement qui s’est bien déroulé</li>
+<li><code>Err</code> permet de propager les erreurs de traitement</li>
+</ul>
+
+
+<p>Il n’y a donc pas d’exception en Rust et l’usage des codes retours pour indiquer un résultat de traitement est considéré comme une mauvaise pratique, car non sûre.</p>
+
+<p>Le type <code>i32</code> implémentant bien le <em>trait</em> <code>std::str::FromStr</code>, on pourrait écrire la fonction dédiée au parsing d’une <code>String</code> en <code>i32</code> :</p>
+
+<p><code>rust
+fn parse(&amp;self) -&gt; Result&lt;i32, ParseIntError&gt;
+</code></p>
+
+<p>L’association de <code>ParseIntError</code> à <code>i32</code> est décrite dans sa documentation (cherchez <code>impl FromStr for i32</code> et juste en dessous le type <code>Err = ParseIntError</code>).</p>
+
+<p>Gardez en tête que c’est une simple vue de l’esprit, car elle est redondante avec la définition de la fonction décrite avec un type générique, mais elle permet de fixer les idées quand on n’est pas encore à l’aise avec la syntaxe de Rust.</p>
+
+<p>Nous pouvons donc convertir notre <code>String</code> numerateur en <code>i32</code> après un <em>matching</em> :</p>
+
+<p>```rust
+let numerateur = match numerateur.parse::<i32>() {</p>
+
+<pre><code>Ok(numerateur) =&gt; numerateur,
+Err(error) =&gt; panic!("Impossible de convertir notre argument. Raison: {}", error)
+</code></pre>
+
+<p>};
+```</p>
+
+<p>Il faut un peu aider le compilateur car il ne peut pas deviner quelle conversion on souhaite appliquer. Pour cela, on utilise la syntaxe <em>turbofish</em>: <code>::&lt;&gt;</code>, qui permet de spécifier le type de destination.</p>
+
+<p>Si le <code>parse</code> s’est bien déroulé, le matching sur <code>Ok</code> permet d’extraire le numérateur sous forme de <code>i32</code> désormais ; sinon avec le matching sur <code>Err</code>, on arrête une nouvelle fois le programme avec un message d’erreur adéquat.</p>
+
+<p>Enfin, substituez le premier paramètre de l’appel de la fonction calculer_division par la variable numerateur (code complet : <a href="https://git.io/v6ypr">https://git.io/v6ypr</a>), compilez et exécutez en une fois :</p>
+
+<p>```
+$ cargo run 4</p>
+
+<p>  Compiling division v0.1.0 (file://.../division)</p>
+
+<pre><code>Running `target/debug/division 4`
+</code></pre>
+
+<p>Résultat : 2
+```</p>
+
+<p>Bravo, en quelques lignes de code robustes, vous avez gérés la présence et l’absence d’argument lors de l’exécution de notre programme et ce, de manière plutôt élégante.</p>
+
+<p>Ainsi se termine cette 2è partie de notre dossier consacré à Rust. <a href="/introduction-rust-part-3/">Dans la prochaine partie</a>, le niveau de difficulté montera d’un cran : il sera en effet temps de se confronter au <em>borrow checker</em> !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction au langage de programmation Rust - Partie 1]]></title>
+    <link href="https://blog.dlecan.com//introduction-rust-part-1/"/>
+    <updated>2017-03-09T11:34:00+00:00</updated>
+    <id>https://blog.dlecan.com//introduction-rust-part-1</id>
+    <content type="html"><![CDATA[<blockquote><p>Article initialement publié sur <a href="https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-1">https://www.technologies-ebusiness.com/langages/introduction-a-rust-partie-1</a></p></blockquote>
+
+<p>Rust est un jeune langage qui a pour ambition de se substituer au C/C++ en proposant de nouveaux paradigmes de programmation, une librairie standard de haut niveau et un écosystème riche soutenu par une communauté très active.</p>
+
+<p>Multiplateformes (systèmes d’exploitation ou architectures de processeurs) et pourvu de tous les concepts de programmation attendus pour un langage moderne (programmation orientée "objet", programmation fonctionnelle, facilités à développer des programmes d’exécution concurrente), Rust a beaucoup d’atouts pour séduire.</p>
+
+<p>Au travers de cette série d’articles, nous allons découvrir ensemble ce langage qui me paraît être le plus excitant depuis ces dernières années.</p>
+
+<h2>Genèse</h2>
+
+<p>Avant de plonger dans le code, je vous propose de revenir sur les origines du langage. Elles remontent à 2010 : Graydon Hoare, ingénieur chez Mozilla, révèle ses travaux sur Rust. A l’époque, le "marché" des langages informatiques est un peu similaire à aujourd’hui, à savoir une domination de C/C++ et de Java, chacun cantonné à ses domaines de prédilection. En schématisant, Java règne sur l’informatique de "gestion" (systèmes d’information bancaires, assurance ...) ainsi que sur Android, tandis que C/C++ est le choix par défaut de la programmation que je qualifierais de "système" ou "bas niveau" : système d’exploitation, pilotes, informatique embarquée, machines virtuelles (Java lui- même, ou NodeJS par exemple) ...</p>
+
+<p>Quelle caractéristique clivante peut bien isoler à ce point ces deux mondes de l’informatique ? Je pense qu’il s’agit principalement de la gestion de la mémoire, qui diverge totalement. Avec Java, elle est en grande partie masquée au développeur, c’est-à-dire que lorsqu’un développeur crée des objets en mémoire, il n’a pas vraiment à se soucier de son nettoyage. En effet, un processus qui s’exécute en arrière-plan, le ramasse-miette (garbage collector), se charge de détecter les objets qui ne seraient plus utilisés et de les supprimer de la mémoire. Le travail du développeur est donc grandement simplifié et celui-ci peut se concentrer sur le code métier le plus utile. C’est ce qui explique le succès de tous les langages à machine virtuelle et ramasse-miettes, comme Javascript ou .Net.</p>
+
+<p>Si le fonctionnement du ramasse-miettes n’a pas ou peu de conséquences négatives -largement compensées par d’autres avantages- dans les applications de haut niveau comme celles dédiées au web, il est problématique, voire rédhibitoire pour d’autres. La latence, certes réduite, induite par l’initialisation ou le fonctionnement du ramasse-miettes, ne permet pas de construire des systèmes de plus bas niveau, comme les systèmes d’exploitation, les pilotes, les machines virtuelles elles-mêmes ou encore des programmes en ligne de commandes efficaces ... Dans ces cas, la mémoire doit donc être gérée "à la main".</p>
+
+<p>En C/C++, la responsabilité du cycle de vie des structures ou objets en mémoire incombe au développeur et gare à la qualité du logiciel si cette tâche est mal effectuée : corruption de données, plantages, failles de sécurité ... sont les conséquences principales d’une mauvaise gestion de la mémoire, phénomène encore aggravé dans un contexte de programme à exécution concurrente. Ne jetons pas la pierre aux développeurs : c’est une tâche ingrate, pénible et peu outillée. Alors dans ces conditions, comment produire des logiciels bas niveau de qualité ?</p>
+
+<p>Depuis les premières ébauches, c’est précisément l’un des objectifs du langages Rust. Il ne repose ni sur un ramasse-miettes (ex: Java), ni sur une gestion mémoire manuelle du développeur (ex: C/C++). Rust propose une nouvelle façon de gérer la mémoire, qui se veut sûre et garantie à la compilation, ce qui permet d’en limiter l’impact sur les performances à l’exécution. Autant vous prévenir tout de suite : la courbe d’apprentissage de Rust est donc plus lente que dans d’autres langages mais largement compensée en qualité et fiabilité des programmes produits. Concrètement, vous allez transpirer au début mais serez fiers de la qualité de vos productions. Nous verrons par la suite comment elle se concrétise.</p>
+
+<p>La syntaxe du langage, ainsi que la librairie standard, ont été débattues, testées, amendées par la -déjà très active- communauté, pendant des années, la première version stable 1.0 de Rust ayant été publiée en avril 2015. Ce délai a permis aussi de mettre en place une gouvernance ouverte et transparente qui régit l’évolution du langage, à laquelle chacun peut participer (board central, RFC ouvertes ...). Trois channels de Rust sont édités en parallèle : nightly, beta et stable. De nouvelles versions de Rust stable et beta sont publiées toutes les 6 semaines, apportant à chaque fois leurs lots d’évolutions au langage.</p>
+
+<p>Avant de démarrer, soyez attentifs lors de vos recherches sur Internet à la version de Rust concernée par les articles de blogs ou les solutions apportées sur Stack Overflow. On y trouve en effet beaucoup de contenus obsolètes, car applicables à des versions de Rust antérieures à la version 1.0.</p>
+
+<p>Enfin, un mot sur la communauté de développeurs Rust. Elle est accueillante et bienveillante, vous trouverez de nombreux développeurs prêts à vous aider, à vous faire progresser ainsi qu’à critiquer votre code de manière constructive. Une bonne surprise et une des forces de ce langage.</p>
+
+<h2>Bonjour lecteurs !</h2>
+
+<p>Commençons à écrire quelques lignes de code, sans installation préalable de Rust sur votre poste. Rendez-vous sur <a href="https://play.rust-lang.org/">https://play.rust-lang.org/</a> pour ouvrir l’interpréteur web Rust, qui fonctionne très bien sur smartphone ou tablette. Idéal pour tester simplement Rust sans vous prendre la tête ! Ne modifiez pas le paramétrage par défaut de la page (boutons du haut) et concentrez-vous sur la zone de texte centrale : c’est là qu’il faut taper le code Rust.</p>
+
+<p>Lors de votre première connexion, le formulaire est déjà préinitialisé avec un morceau de code que je vous propose de substituer par un contenu plus adapté à notre contexte :</p>
+
+<p>```rust
+fn main() {</p>
+
+<pre><code>println!("{}", "Bonjour Programmez!");
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Si vous avez des difficultés à saisir ce code, vous pouvez ouvrir directement cette URL : https://is.gd/JzBaCy. Par la suite, je présenterai systématiquement un lien vers le code présenté, vous permettant éventuellement de le copier/coller.</p>
+
+<p>Cliquez ensuite sur le gros bouton rouge "Run" en haut pour exécuter ce programme. Vous devez alors obtenir sous la zone de texte de code l’affichage de "Bonjour Programmez!". Bravo, vous venez d’écrire votre premier programme Rust !</p>
+
+<h2>Analysons ensemble ces quelques lignes</h2>
+
+<p>La syntaxe s’inspire fortement du langage C (que l’on retrouve en Java, Javascript, .Net ...) et le formatage du code est standardisé par le langage : indentation, espaces, positions des accolades ... Notez le bouton "Format" dans l’interpréteur Web qui formate le code de la zone de texte comme on peut s’y attendre 🙂</p>
+
+<ul>
+<li><code>fn</code> permet de déclarer une fonction, nommée ici main et sans argument. Par convention, c’est le point d’entrée unique d’un programme écrit en Rust</li>
+<li><code>println!</code> permet d’écrire dans la sortie standard, du texte ou des structures plus complexes. Notez le <code>!</code> qui signifie que <code>println!</code> est une macro. C’est une routine de génération de code <strong>à la compilation</strong> et un pattern de développement très utilisé par les développeurs Rust pour masquer une complexité</li>
+</ul>
+
+
+<p>Je vous recommande l’utilisation de <code>println!</code> à deux arguments et plus, syntaxe familière à ceux qui connaissent les fonctions <code>printf/fprintf</code> du C ou <code>str.format</code> de Python : le 1er paramètre représente la mise en forme, les suivants les valeurs à substituer aux <code>{}</code> présents dans le contenu du 1er argument (plus de détails sur <a href="https://doc.rust-lang.org/std/fmt/">https://doc.rust-lang.org/std/fmt/</a>)</p>
+
+<ul>
+<li><code>;</code> obligatoire en fin de ligne la plupart du temps en Rust</li>
+</ul>
+
+
+<p>Modifions maintenant notre programme en déclarant une variable (<a href="https://is.gd/SIDHI3">https://is.gd/SIDHI3</a>) :</p>
+
+<p>```rust
+fn main() {</p>
+
+<pre><code>let une_chaine = "Bonjour Programmez!";
+println!("{}", une_chaine);
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Les variables se déclarent avec le mot-clé <code>let</code>, sont immuables (que l’on ne peut pas réaffecter) et sont fortement typées. Pourtant vous remarquerez que nous n’avons pas déclaré le type de cette variable. En effet, Rust met en œuvre de l’inférence de type, à savoir qu’il tente de détecter le type des variables mais pas des paramètres. Un allègement significatif de la syntaxe qui facilite l’écriture et la relecture. Il faudra cependant parfois l’aider à deviner correctement le type. Remarquez enfin la syntaxe de type <em>snake case</em>, avec des <code>_</code> pour séparer les concepts dans les noms des variables (par opposition à la syntaxe <em>camel case</em>: <code>uneVariable</code>). Pratique, car le compilateur râlera si vous ne respectez pas cette convention.</p>
+
+<p>Lancez avec "Run" pour compiler et exécuter ce code.</p>
+
+<p>Poursuivons la découverte des concepts de Rust en introduisant une nouvelle fonction qui permet d’effectuer la division d’un nombre par un autre :</p>
+
+<p>```rust
+fn calculer_division(x: i32, y: i32) -> i32  {</p>
+
+<pre><code>println!("Numérateur: {}", x);
+println!("Dénominateur: {}", y);
+x / y
+</code></pre>
+
+<p>}
+```</p>
+
+<p>L’appel de la fonction que nous venons de déclarer s’effectue exactement comme l’on s’y attend (programme complet : <a href="https://is.gd/0U61pa">https://is.gd/0U61pa</a>) :</p>
+
+<p>```rust
+...</p>
+
+<p>fn main() {</p>
+
+<pre><code>let resultat = calculer_division(-4, 2);
+println!("Résultat : {}", resultat);
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Par choix, il n’y a pas d’inférence de type en Rust lors de la déclaration des fonctions : les types des paramètres d’entrée et du retour doivent être explicitement spécifiés. Le type des arguments est indiqué après chaque nom de variable suivi de : et le type de retour est spécifié après la flèche <code>-&gt;</code>. Rust propose une liste de types primitifs très complète, puisque vous avez par exemple la possibilité de choisir des entiers, des flottants signés ou non signés, des entiers ou des flottants de "longueur" variable.</p>
+
+<p>Exemples :</p>
+
+<ul>
+<li><p><code>u8</code> : est un nombre de longueur 8 octets uniquement positif, donc un nombre compris entre 0 et 255 (2⁸-1)</p></li>
+<li><p><code>i16</code> : est un nombre de longueur 16 octets, positif ou négatif, donc un nombre compris entre -32 768 (-2<sup>16/2)</sup> et 32 767 (2<sup>16/2-1)</sup></p></li>
+</ul>
+
+
+<p>Je vous conseille d’explorer la liste complète des types primitifs pour vous faire une idée des autres types disponibles (<a href="https://doc.rust-lang.org/book/primitive-types.html">https://doc.rust-lang.org/book/primitive-types.html</a>).</p>
+
+<p>Les plus attentifs d’entre vous aurons remarqué que cette fonction ne "retourne" explicitement rien comparé à d’autres langages et que la dernière ligne ne se termine pas par un point-virgule, alors que l’on a précédemment vu qu’il était obligatoire. En Rust, il y a un return implicite sur la dernière expression exécutée d’une fonction. Attention, ce n’est pas nécessairement la dernière ligne de code de la fonction. Dans l’exemple ci-dessous, il y a 2 façons de sortir de la fonction et aucune d’entre elles ne correspond à la dernière ligne de code de la fonction.</p>
+
+<p>```rust
+fn calculer_division(x: i32, y: i32) -> i32  {</p>
+
+<pre><code>if y != 0 {
+    x / y
+} else {
+    panic!("Division par 0")
+}
+</code></pre>
+
+<p>}</p>
+
+<p>fn main() {
+...
+}
+```</p>
+
+<p>Exemple complet : <a href="https://is.gd/9LKj2d">https://is.gd/9LKj2d</a>.</p>
+
+<p>A propos du point-virgule, dans notre cas ici qui semble manquant, vous ne devez pas en mettre en fin de ligne. Essayez, vous aurez une erreur de compilation ! Pourquoi ? Rust est un langage basé sur les expressions et non sur des déclarations. Cela signifie que tout renvoie quelque chose : assigner une variable renvoie quelque chose, if renvoie quelque chose ... L’expression <code>x / y</code> renvoie le résultat de la division, compatible avec le type <code>i32</code>, là où l’expression <code>x / y;</code> un résultat dont le type est <code>()</code>, incompatible avec <code>i32</code>.</p>
+
+<p>Enfin, modifions une dernière fois notre programme pour induire une syntaxe plus habituelle pour les Rustacéens (traduction de <em>Rustaceans", le nom officiel des développeurs Rust) : le </em>matching*.</p>
+
+<p>```rust
+fn calculer_division(x: i32, y: i32) -> i32  {</p>
+
+<pre><code>match y {
+    0 =&gt; panic!("Division par 0"),
+    1 =&gt; x,
+    _ =&gt; x / y
+}
+</code></pre>
+
+<p>}</p>
+
+<p>fn main() {
+...
+}
+```</p>
+
+<p>Exemple complet : <a href="https://is.gd/X7889d">https://is.gd/X7889d</a>.</p>
+
+<p>La syntaxe parle d’elle-même, c’est simple à comprendre. Le <code>match</code> permet de gérer plus de cas que ne peut le faire un simple if tout en rendant obligatoire le traitement du cas par défaut. Qui n’a jamais oublié un else ou un case default en Java, par exemple ? En Rust, c’est impossible car le compilateur s’assure que tous les cas possibles de matching sont bien déclarés et gérés par le développeur. <code>_</code> signifie au compilateur "tous les autres cas de matching" (dans notre cas, "tout sauf 0 et 1"). Sachez aussi que le matching offre aussi beaucoup plus de possibilités que ne montre ce simple exemple.</p>
+
+<p>Ici se termine la 1ère partie de cette introduction à Rust. Je vous invite à poursuivre la lecture de ce dossier avec <a href="/introduction-rust-part-2/">la seconde partie</a>, dans laquelle vous installerez Rust et ses outils sur votre poste de développement et découvrirez d’autres concepts passionnants du langage, avec quelques notions de programmation fonctionnelle.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: serious game | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/serious-game/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Serious game 'Jouons à la Blockchain' pour l'inauguration de Novapuls]]></title>
+    <link href="https://blog.dlecan.com//inauguration-novapuls-jouons-blockchain/"/>
+    <updated>2018-12-10T15:00:00+00:00</updated>
+    <id>https://blog.dlecan.com//inauguration-novapuls-jouons-blockchain</id>
+    <content type="html"><![CDATA[<p><a href="https://twitter.com/lauremerlin">Laure Merlin</a> et moi avons animé un <em>serious game</em> grandeur nature sur le thème de la Blockchain pour l'inauguration de <a href="http://novapuls.fr/">l'incubateur de start-ups nantais Novapuls</a> mercredi 05 décembre 2018 : Jouons à la Blockchain.</p>
+
+<p>Par groupe de 4-6 personnes, la quarantaine de participants a joué à la Blockchain avec des Legos : miner par preuve de travail (Proof-of-Work - PoW) ou preuve de possession (Proof-of-Stake - PoS), diffuser des informations ou des blocs, enregistrer des informations, résister à des <em>hacks</em>, executer des *smart-contracts" ... tout le monde s'est pris au jeu !</p>
+
+<p>Quelques images :</p>
+
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:6476009903461924864">
+<img class="center" src="https://media-exp1.licdn.com/dms/image/C5622AQE7_rMYVO9Hdw/feedshare-shrink_800/0?e=1606953600&amp;v=beta&amp;t=57z02jMKwepOuBYGEnYjEMj_jgPqvaotIRUjrZnoDP0" title="Damien Lecan à Novapuls sur un post linkedIn" >
+</a></p>
+
+<p><blockquote><p>[Inauguration <a href="https://twitter.com/Novapuls_ouest">@Novapuls_ouest</a> ] Tout comprendre sur la <a href="https://twitter.com/hashtag/blockchain">#blockchain</a> avec <a href="https://twitter.com/lauremerlin">@lauremerlin</a> et <a href="https://twitter.com/dlecan">@dlecan</a>. Jouons aux legos chez <a href="https://twitter.com/SoderoGestion">@SoderoGestion</a> pour comprendre le noeud, le bloc, le minage, la fraude, le smart contract,...</p></p><p><p><img class="center" src="/images/2018-12-jouons-blockchain-1.jpg"></p></p><p><p></p><footer><strong>Amélie André (@Amelie_novapuls)</strong> <cite><a href='https://twitter.com/Amelie_novapuls/status/1070236752076517376'>twitter.com/Amelie_novapuls/&hellip;</a></cite></footer></blockquote></p>
+
+<p><blockquote><p><a href="https://twitter.com/hashtag/Inauguration">#Inauguration</a> 🚀 l Atelier conférence : Jouons ensemble à la <a href="https://twitter.com/hashtag/Blockchain">#Blockchain</a> par <a href="https://twitter.com/dlecan">@dlecan</a> CTO de <a href="https://twitter.com/UnikName_UNS">@UnikName_UNS</a> et <a href="https://twitter.com/lauremerlin">@lauremerlin</a> CEO de <a href="https://twitter.com/ChainSpring">@ChainSpring</a> 😉 <a href="https://twitter.com/hashtag/startups">#startups</a> <a href="https://twitter.com/hashtag/cryptocurrency">#cryptocurrency</a></p></p><p><p><video width='' height='' preload='none' controls poster=''><source src='/images/2018-12-jouons-blockchain-2.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/></video></p></p><p><p></p><footer><strong>Novapuls (@Novapuls_ouest)</strong> <cite><a href='https://twitter.com/Novapuls_ouest/status/1070233162565996544'>twitter.com/Novapuls_ouest/&hellip;</a></cite></footer></blockquote></p>
+
+<p>Un succès aux dires des participants et des organisateurs 😅</p>
+
+<p>Merci au public présent et à Novapuls pour sa confiance.</p>
+]]></content>
+  </entry>
+  
+</feed>

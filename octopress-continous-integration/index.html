@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress continous integration - ECT</title>
+  <meta name="author" content="Damien Lecan">
+
+  
+  <meta name="description" content="Update 2012-11-30: update script to adapt to last Cloudbees changes. Octopress is great for blogging: Clear and easy-to-read syntax thanks to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="uns-url-checker-verification" content="OmkUasE55sagTRMA_blFwhgGS0IG9BntA3XCJXY8L3fh-1QHLiJPT473b8CnbIPU1Be5WNkn1ed7_cAK8WYAUQ">
+
+  
+  <link rel="canonical" href="https://blog.dlecan.com//octopress-continous-integration/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="ECT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29727134-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">ECT</a></h1>
+  
+    <h2>Etoile Cercle Triangle - Star Circle Triangle</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.dlecan.com/" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+﻿<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="https://github.com/dlecan/">GitHub projects</a></li>
+  <li>
+    <a href="https://www.linkedin.com/in/damienlecan">LinkedIn profile</a>
+  </li>
+  <li><a href="/blog/categories/speaker/">Speaker</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Octopress continous integration</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-04T21:17:00+00:00" pubdate data-updated="true">2012-07-04</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><strong>Update 2012-11-30</strong>: update script to adapt to last Cloudbees changes.</p>
+
+<p><a href="http://octopress.org">Octopress</a> is great for blogging:</p>
+
+<ul>
+<li><a href="http://daringfireball.net/projects/markdown/syntax/">Clear and easy-to-read syntax</a> thanks to <a href="http://daringfireball.net/projects/markdown/syntax/">Markdown</a></li>
+<li>Offline editing (write your post offline, push it to Github, see it in &#8216;production)</li>
+</ul>
+
+
+<p>This blog is powered by Octopress.</p>
+
+<p>But Octopress relies on Ruby rake to generate and deploy your blog posts, so you need to install them on each computer from where you want to deploy your blog.
+And installing theses tools are generally a pain: ruby/rvm, rake, bundler, encoding issues between platforms, &#8230;</p>
+
+<p>So the perfect &#8220;blog post flow&#8221; would be:</p>
+
+<ol>
+<li>write blog post everywhere: laptop, personnal/professional computer, &#8230;</li>
+<li>generate and deploy from only one place</li>
+</ol>
+
+
+<p>I found a centralized place to generate and deploy this blog: a <a href="http://www.cloudbees.com">Cloudbees</a> Jenkins instance!
+Jenkins is a continuous integration server, which allows you to build and deploy Java, Ruby, &#8230; applications.</p>
+
+<p>What about a ruby/rake/bundler build ?</p>
+
+<p>Configure a new free-style projet, with the following <em>shell</em> job:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#export LC_ALL=fr_FR.UTF-8 # uncomment this if you need to force locale</span>
+</span><span class='line'><span class="c">#export LANG=fr_FR.UTF-8  # uncomment this if you need to force locale</span>
+</span><span class='line'>curl -s -o use-ruby https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/ruby/use-ruby
+</span><span class='line'><span class="nv">RUBY_VERSION</span><span class="o">=</span>1.9.3-p327 <span class="se">\</span>
+</span><span class='line'><span class="nb">source</span> ./use-ruby
+</span><span class='line'>ln -fs /scratch/jenkins/ruby /scratch/jenkins/rubies
+</span><span class='line'>gem install --conservative bundler
+</span><span class='line'>bundle install
+</span><span class='line'>rake setup_github_pages<span class="o">[</span>git@github.com:dlecan/dlecan.github.com.git<span class="o">]</span>
+</span><span class='line'>rake generate
+</span><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s it! Just replace <code>git@github.com:dlecan/dlecan.github.com.git</code> by your Git repository and let Jenkins do the job for you!</p>
+
+<p>This blog is also built thanks to Cloudbees :) <img class="right" src="http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png"></p>
+
+<p>See it in action on this <a href="https://play-war.ci.cloudbees.com/job/blog.dlecan.com/">Cloudbees Jenkins instance</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Damien Lecan</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-04T21:17:00+00:00" pubdate data-updated="true">2012-07-04</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/cloudbees/'>cloudbees</a>, <a class='category' href='/blog/categories/jenkins/'>jenkins</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://blog.dlecan.com//octopress-continous-integration/" data-via="dlecan" data-counturl="https://blog.dlecan.com//octopress-continous-integration/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/how-to-publish-play-framework-v2-dist-package/" title="Previous Post: How to publish Play2 'dist' package ?">&laquo; How to publish Play2 'dist' package ?</a>
+      
+      
+        <a class="basic-alignment right" href="/play2war-0.7-is-out%21/" title="Next Post: Play2War 0.7 is out!">Play2War 0.7 is out! &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me - A propos</h1>
+  <h2>Damien Lecan</h2>
+  <p>
+    #CTO @ <a href="https://www.spacelephant.org">Space Elephant</a> #blockchain
+    #decentralized #family #bike
+  </p>
+  <p></p>
+  <p>
+    #<a href="http://www.droitauvelo.org/spip.php?breve419">Vélotafeur</a> at
+    Nantes, France
+  </p>
+  <p>
+    <a href="https://www.bonial.fr/environnement/carbonneutral-blog/"
+      ><img
+        border="0"
+        width="100"
+        height="100"
+        src="https://www.bonial.fr/shared/content/uploads/sites/3/blog-zero-carbone/badge-co2_blog_bleu_100_tpt_2.png"
+        title="un arbre grâce au petit geste écolo de mon blog"
+        alt="plantez un arbre pour votre blog avec bonial"
+    /></a>
+  </p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/inauguration-novapuls-jouons-blockchain/">Serious game 'Jouons à la Blockchain' pour l'inauguration de Novapuls</a>
+      </li>
+    
+      <li class="post">
+        <a href="/keynote-blockchain-paris-etat-art/">Keynote 'État de l'art des Blockchains & co.' à Blockchain Paris 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/web2day2018-another-world-another-web-decentralisation/">Conférence 'Another World, another Web' au Web2day 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/meetup-gdg-toulouse-blockchain-smart-contract-security/">Conférence 'Smart-contracts under attack' au GDG Toulouse</a>
+      </li>
+    
+      <li class="post">
+        <a href="/meetup-blockchain-proof-stake/">Conférence 'Proof-of-Stake' au meetup Blockchain et Société</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Top Categories</h1>
+    <ul id="top-category-list"><li><a href='/blog/categories/Monde'>Monde (26)</a></li><li><a href='/blog/categories/speaker'>speaker (14)</a></li><li><a href='/blog/categories/conference'>conference (13)</a></li><li><a href='/blog/categories/Europe'>Europe (11)</a></li><li><a href='/blog/categories/FreeFileSync'>FreeFileSync (8)</a></li><li><a href='/blog/categories/blockchain'>blockchain (8)</a></li><li><a href='/blog/categories/Ubuntu'>Ubuntu (8)</a></li><li><a href='/blog/categories/Le reste'>Le reste (7)</a></li><li><a href='/blog/categories/video'>video (6)</a></li><li><a href='/blog/categories/decentralisation'>decentralisation (6)</a></li></ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2021 - Damien Lecan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'ect';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'https://blog.dlecan.com//octopress-continous-integration/';
+        var disqus_url = 'https://blog.dlecan.com//octopress-continous-integration/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'https://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

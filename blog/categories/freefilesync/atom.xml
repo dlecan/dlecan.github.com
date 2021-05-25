@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: FreeFileSync | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/freefilesync/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Versions of FreeFileSync available on Ubuntu via PPA installation]]></title>
+    <link href="https://blog.dlecan.com//versions-of-freefilesync-available-on-ubuntu-via-ppa-installation/"/>
+    <updated>2014-05-18T21:19:00+00:00</updated>
+    <id>https://blog.dlecan.com//versions-of-freefilesync-available-on-ubuntu-via-ppa-installation</id>
+    <content type="html"><![CDATA[<p>Author of <a href="http://freefilesync.sourceforge.net/">FreeFileSync</a> publishes <a href="http://www.fosshub.com/FreeFileSync.html">binaries</a> for Ubuntu for each release. But you have to install them again and again, once a month. That's why I am the maintainer of <a href="https://launchpad.net/~freefilesync/+archive/ffs">FreeFileSync PPA</a>, the way in Ubuntu to distribute binaries with automatic updates.</p>
+
+<p>As of May 2014, here are the FreeFileSync versions available for each Ubuntu series:</p>
+
+<table>
+<thead>
+<tr>
+<th>Ubuntu series </th>
+<th align="center"> Last available version of FreeFileSync </th>
+<th align="center"> Supported ? </th>
+<th> Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Natty         </td>
+<td align="center"> 4.0                                    </td>
+<td align="center"> No          </td>
+<td></td>
+</tr>
+<tr>
+<td>Oneiric       </td>
+<td align="center"> 5.5                                    </td>
+<td align="center"> No          </td>
+<td></td>
+</tr>
+<tr>
+<td>Precise       </td>
+<td align="center"> 5.21                                   </td>
+<td align="center"> No          </td>
+<td> Requires newer libraries</td>
+</tr>
+<tr>
+<td>Quantal       </td>
+<td align="center"> 5.23                                   </td>
+<td align="center"> No          </td>
+<td> Requires newer libraries</td>
+</tr>
+<tr>
+<td>Raring        </td>
+<td align="center"> 5.23                                   </td>
+<td align="center"> No          </td>
+<td> Requires newer libraries</td>
+</tr>
+<tr>
+<td>Saucy         </td>
+<td align="center"> 6.0                                    </td>
+<td align="center"> Could be if asked </td>
+<td></td>
+</tr>
+<tr>
+<td>Trusty        </td>
+<td align="center"> 6.5                                    </td>
+<td align="center"> Yes         </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FreeFileSync is looking for a Debian Mentor !]]></title>
+    <link href="https://blog.dlecan.com//archives/72-FreeFileSync-is-looking-for-a-Debian-Mentor-!.html"/>
+    <updated>2011-11-30T14:06:44+00:00</updated>
+    <id>https://blog.dlecan.com//archives/FreeFileSync-is-looking-for-a-Debian-Mentor-!</id>
+    <content type="html"><![CDATA[<p><a href="http://mentors.debian.net/package/freefilesync">FreeFileSync is looking for a Debian Mentor</a> in order to be uploaded into Debian repository.</p>
+
+
+<br />
+
+
+<p>Can someone help me to find one ?</p>
+
+
+<br />
+
+
+<p><a href="http://mentors.debian.net/package/freefilesync">http://mentors.debian.net/package/freefilesync</a></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FreeFileSync 3.21 with Ubuntu Unity Integration]]></title>
+    <link href="https://blog.dlecan.com//archives/70-FreeFileSync-3.21-with-Ubuntu-Unity-Integration.html"/>
+    <updated>2011-08-16T12:00:33+00:00</updated>
+    <id>https://blog.dlecan.com//archives/FreeFileSync-3.21-with-Ubuntu-Unity-Integration</id>
+    <content type="html"><![CDATA[<p>FreeFileSync 3.21 is available on its <a href="https://launchpad.net/%7Efreefilesync/+archive/ffs">official PPA</a>. For Ubuntu users, the main new feature is its integration with Unity.</p>
+
+
+<p> <br /></p>
+
+<p>This version is the first one only available on Natty and later versions. Lucid (10.04) and Maverick (10.10) users, you are sticked to FreeFileSync v3.17.</p>
+
+
+<p> <br /></p>
+
+<p>Install FreeFileSync <a href="http://www.dlecan.com/archives/56-How-to-install-FreeFileSync-on-Ubuntu-PPA-Edited.html">as usual</a>, or wait for an automatic software update !</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FreeFileSync 3.11 pour Ubuntu 10.10 et 10.04]]></title>
+    <link href="https://blog.dlecan.com//archives/66-FreeFileSync-3.11-pour-Ubuntu-10.10-et-10.04.html"/>
+    <updated>2010-11-03T07:03:34+00:00</updated>
+    <id>https://blog.dlecan.com//archives/FreeFileSync-3.11-pour-Ubuntu-10.10-et-10.04</id>
+    <content type="html"><![CDATA[<p><a href="http://www.dlecan.com/archives/65-Des-nouvelles-de-FreeFileSync-3.9.html">Contrairement à ce que j'indiquais dans mon précédent billet</a>, FreeFileSync est finalement disponible pour Ubuntu 10.10 comme pour Ubuntu 10.04.</p>
+
+
+<p> <br /></p>
+
+<p>En effet, j'ai réussi à <em>backporter</em> la librairie boost 1.44 disponible en <em>Debian experimental</em> pour Ubuntu 10.04 et 10.10. Combiné à une évolution du système de build introduite par ZenJu dans les sources de FreeFileSync et qui cassait le build du package, il m'a fallu plusieurs semaines pour réussir à contourner tous ces problèmes.</p>
+
+
+<p> <br /></p>
+
+<p>Pendant ce temps, FFS 3.10 est sorti, puis FFS 3.11 et c'est cette version qui se trouve aujourd'hui dans le <a href="https://launchpad.net/~freefilesync/+archive/ffs">dépôt PPA du projet</a>.</p>
+
+
+<p> <br /></p>
+
+<p>Voici les <em>changelogs</em> :</p>
+
+
+<p> <br /></p>
+
+<ol> <br />
+<li>FFS 3.10<br /> <br />
+<ul> <br />
+<li>Automatically solve daylight saving time and time zone shift issues on FAT/FAT32 (finally)&#160;</li> <br />
+<li>Instantly resolve abandoned directory locks associated with local computer&#160;</li> <br />
+<li>Show expanded directory name as tooltip and label text (resolves macros and relative paths)&#160;</li> <br />
+<li>Do not copy relative file attributes for base target directories that are created implicitly&#160;</li> <br />
+<li>Move dialogs by clicking (almost) anywhere&#160;</li> <br />
+<li>RealtimeSync: ignore request for device removal on Samba shares&#160;</li> <br />
+<li>Added UTF-8 BOM for CSV export&#160;</li> <br />
+<li>Correctly handle window position on multi-screen desktop&#160;</li> <br />
+<li>Disabled warning &quot;database not yet existing&quot;&#160;</li> <br />
+<li>RealtimeSync: replaced delay by minimum idle time&#160;</li> <br />
+<li>Maximum number of folder pairs configurable via GlobalSettings.xml (XML node &lt;FolderPairsMax&gt;)&#160;</li> <br />
+<li>Added tooltips to display long filenames on main grid&#160;</li> <br />
+<li>Keep application responsive when deleting large directories&#160;</li> <br />
+<li>Vista/Windows 7: harmonize modification times shown on main grid with Windows Explorer <br /></li> <br />
+<li>Changed background color to avoid unreadable texts in combination with certain color themes&#160;</li> <br />
+<li>Toggle middle grid comparison result/sync preview with right mouse button click&#160;</li> <br />
+<li>Further GUI enhancements/polishment/standard conformance&#160;</li> <br />
+<li>Updated translation files<br /></li> <br />
+</ul> <br />
+</li> <br />
+<li>FFS 3.11<br /> <br />
+<ul> <br />
+<li>Fixed migration issue: reasonable default value for number of folder pairs<br />
+</li> <br />
+<li>Better message box background color<br /></li> <br />
+</ul> <br />
+</li> <br />
+</ol>
+
+
+<br />
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Des nouvelles de FreeFileSync 3.9]]></title>
+    <link href="https://blog.dlecan.com//archives/65-Des-nouvelles-de-FreeFileSync-3.9.html"/>
+    <updated>2010-09-03T19:48:57+00:00</updated>
+    <id>https://blog.dlecan.com//archives/Des-nouvelles-de-FreeFileSync-3.9</id>
+    <content type="html"><![CDATA[<p>FreeFileSync 3.9 est sorti depuis quelques semaines déjà et j'ai pris du retard sur la construction du package pour Ubuntu.</p>
+
+
+<p> <br /></p>
+
+<p>Zenju, son auteur, l'a beaucoup fait évoluer techniquement pour cette version, en ajoutant en particulier une dépendance vers une librairie d'utilitaires très intéressante d'un point de vue du développement : <a href="http://www.boost.org/">libboost</a>.</p>
+
+
+<p> <br /></p>
+
+<p>Il y a cependant un problème : FFS 3.9 requiert la version 1.4<strong>2</strong> minimum de ce package quand Ubuntu 10.04 fourni la version 1.4<strong>0</strong> seulement.</p>
+
+
+<p> <br /></p>
+
+<p> L'équation sera donc simple :</p>
+
+
+<p> <br /></p>
+
+<ul> <br />
+<li>FFS 3.8 : Ubuntu 10.04 et versions antérieures</li> <br />
+<li>FFS 3.9 : Ubuntu 10.10 et versions supérieures</li> <br />
+</ul>
+
+
+<p>Rendez-vous donc courant octobre pour tester FFS 3.9 sur Ubuntu Maverick !<br /></p>
+]]></content>
+  </entry>
+  
+</feed>

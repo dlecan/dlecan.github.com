@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: devoxx | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/devoxx/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tool In Action 'Sécuriser vos applications Web gratuitement' à Devoxx 2016]]></title>
+    <link href="https://blog.dlecan.com//devoxx-securiser-web/"/>
+    <updated>2016-04-22T12:02:00+00:00</updated>
+    <id>https://blog.dlecan.com//devoxx-securiser-web</id>
+    <content type="html"><![CDATA[<p>J'ai été retenu par la prestigieuse conférence <a href="https://devoxx.fr">Devoxx FR</a> pour démontrer les capacité de <a href="https://letsencrypt.org/">Let's Encrypt</a> lors d'un <em>tool in action</em> <a href="http://cfp.devoxx.fr/2016/talk/WFF-3798/Securisez_vos_applications_Web_gratuitement_en_quelques_minutes_avec_Let's_Encrypt.html">"Sécurisez vos applications Web gratuitement en quelques minutes avec Let's Encrypt"</a> en avril 2016, où je démontre comment très facilement configurer du TLS/SSL sur votre site web à l'aide de cette nouvelle autorité de certification.</p>
+
+<p>Elle délivre en effet gratuitement des certificats.</p>
+
+<p>Merci !</p>
+
+<p>La vidéo de la session :</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/hD4923vHXsY" allowfullscreen></iframe></div></p>
+]]></content>
+  </entry>
+  
+</feed>

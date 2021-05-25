@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: play2war | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/play2war/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Play2War 0.7 is out!]]></title>
+    <link href="https://blog.dlecan.com//play2war-0.7-is-out%21/"/>
+    <updated>2012-07-26T21:34:00+00:00</updated>
+    <id>https://blog.dlecan.com//play2war-0.7-is-out!</id>
+    <content type="html"><![CDATA[<h2>A major release</h2>
+
+<p>Despite of his version number, <a href="https://github.com/dlecan/play2-war-plugin(%20v0.7%20is%0Areally%20a%20major%20release%20of%20this%20plugin%20for%20[Play%20Framework%202](http://www.playframework.org/">Play2War</a>,
+the famous productive web framework:</p>
+
+<p><blockquote><p>Servlet 2.5 containers can now be used to deploy your Play applications!</p></blockquote></p>
+
+<p>Servlet 2.5 containers means Tomcat 6, Jetty 7, ...</p>
+
+<p>But this compatibility as a price: performances. They are worth than with Servlet 3.0,
+themselves worth than with native Play 2.</p>
+
+<p>Two threads are indeed necessary to compute each request:</p>
+
+<ul>
+<li>one for handling HTTP request</li>
+<li>one for Akka asynchronous computing</li>
+</ul>
+
+
+<p>Standard Java synchronization mecanisms (wait/notify) are then used to make theses threads work together.
+Of course, they are managed by threads pools, but synchronization has a cost. So if you need high performances
+and have to deploy WAR packages, please upgrade to a modern servlet 3.0 container, such as Tomcat 7,
+Jetty 8, JBoss 7.x, Glassfish 3.x (not tested yet), ...</p>
+
+<p>Don't forget to look at full <a href="https://github.com/dlecan/play2-war-plugin/wiki/Changelog">Changelog</a>.</p>
+
+<h2>Upgrade your project's configuration</h2>
+
+<p>Switching between Servlet 2.5 and 3.0 requires configuration, so you will need to upgrade to Play project
+to be compatible with Play2War 0.7.</p>
+
+<p>Here is a typical Play2 project <code>project/Build.scala</code> using Play2war v0.6:</p>
+
+<p>```scala
+import sbt.<em>
+import Keys.</em>
+import PlayProject._</p>
+
+<p>object ApplicationBuild extends Build {</p>
+
+<pre><code>val appName         = "myproject"
+val appVersion      = "1.0-SNAPSHOT"
+
+val appDependencies = Seq(
+  "com.github.play2war" %% "play2-war-core" % "0.6"
+)
+
+val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
+  resolvers += "Play2war plugins release" at "http://repository-play-war.forge.cloudbees.com/release/"
+)
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Follow the next steps to upgrade it to play2War v0.7.</p>
+
+<h3>Remove Play2War core dependency</h3>
+
+<p>Dependency to Plat2War core is not necessary anymore. It will be automatically setup by the plugin.</p>
+
+<p>```scala Before
+val appDependencies = Seq(
+  "com.github.play2war" %% "play2-war-core" % "0.6"
+)</p>
+
+<p>...</p>
+
+<p>val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
+  resolvers += "Play2war plugins release" at "http://repository-play-war.forge.cloudbees.com/release/"
+)
+```</p>
+
+<p>So, remove it.</p>
+
+<p>```scala After
+val appDependencies = Seq(
+  // Nothing or your other dependencies
+)</p>
+
+<p>...</p>
+
+<p>val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
+  // Nothing or your other settings
+)</p>
+
+<p>```</p>
+
+<h3>Update Play2War plugin version</h3>
+
+<p>As usual, update <code>project/plugin.sbt</code>:</p>
+
+<p><code>scala
+addSbtPlugin("com.github.play2war" % "play2-war-plugin" % "0.7")
+</code></p>
+
+<h3>Import Play2War SBT settings</h3>
+
+<p><code>scala
+...
+import PlayProject._
+import com.github.play2war.plugin._
+</code></p>
+
+<h3>Move all settings in a variable and add Play2War SBT settings to your project's settings</h3>
+
+<p>```scala
+val appVersion      = "1.0-SNAPSHOT"</p>
+
+<p>val projectSettings = Play2WarPlugin.play2WarSettings ++ Seq(
+  // Your settings
+)</p>
+
+<p>...</p>
+
+<p>val main = PlayProject(
+   appName, appVersion, appDependencies, mainLang = JAVA
+).settings(projectSettings: _*)
+```</p>
+
+<h3>Configure servlet container version</h3>
+
+<p>```scala
+val projectSettings = Play2WarPlugin.play2WarSettings ++ Seq(
+  Play2WarKeys.servletVersion := "3.0"
+  // Or Play2WarKeys.servletVersion := "2.5"
+)</p>
+
+<p>```</p>
+
+<h3>Final project file</h3>
+
+<p>```scala
+import sbt.<em>
+import Keys.</em>
+import PlayProject.<em>
+import com.github.play2war.plugin.</em></p>
+
+<p>object ApplicationBuild extends Build {</p>
+
+<pre><code>val appName         = "myproject"
+val appVersion      = "1.0-SNAPSHOT"
+
+val projectSettings = Play2WarPlugin.play2WarSettings ++ Seq(
+   Play2WarKeys.servletVersion := "3.0"
+)
+
+val appDependencies = Seq(
+  // Nothing
+)
+
+val main = PlayProject(
+  appName, appVersion, appDependencies, mainLang = JAVA
+).settings(projectSettings: _*)
+</code></pre>
+
+<p>}
+```</p>
+
+<h3>Package your application</h3>
+
+<p>Then, package your application as usual: <code>sbt package</code> (or <code>play package</code>).</p>
+]]></content>
+  </entry>
+  
+</feed>

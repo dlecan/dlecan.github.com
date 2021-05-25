@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: devfest | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/devfest/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Mozilla Geckoview' au Devfest Nantes 2014]]></title>
+    <link href="https://blog.dlecan.com//mettez-panda-roux-dans-votre-webview-android/"/>
+    <updated>2014-11-10T16:31:00+00:00</updated>
+    <id>https://blog.dlecan.com//mettez-panda-roux-dans-votre-webview-android</id>
+    <content type="html"><![CDATA[<p>J'ai eu le plaisir de participer à cette superbe conférence que fut le <a href="http://devfest.gdgnantes.com/">Devfest Nantes 2014</a>, à la fois en tant que visiteur mais aussi en tant qu'orateur.</p>
+
+<p>J'y ai présenté la conférence "Mettez un Panda Roux dans votre Webview", dont voici le résumé :</p>
+
+<p><blockquote><p>Au-delà du simple navigateur pour Android, Firefox est aussi une plateforme d'exécution d'applications HTML5 ouverte, les Open Web Apps.<br/>Après une présentation de Mozilla Geckoview et de ce qu'il peut apporter à vos applications HTML5 sous Android par rapport à une Webview standard (modernité, performances...), nous détaillerons l'initiative de Mozilla avec les Open Web Apps et verrons concrètement comment l'utiliser pour déployer des applications HTML5 sous Android.</p></blockquote></p>
+
+<p>Et le support de présentation :</p>
+
+<p><a href="http://blog.dlecan.com/devfestnantes2014/prez-panda-roux-webview-android/"><img src="https://blog.dlecan.com//images/prez-panda-roux-webview-android/cover.png" width="768" height="432" alt='Support de présentation de la conférence' target='_blank'></a></p>
+
+<p>La vidéo :</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/SBzsADcBdBE" allowfullscreen></iframe></div></p>
+]]></content>
+  </entry>
+  
+</feed>

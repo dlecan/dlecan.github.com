@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Vélo | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/vélo/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Nouveau service pour les cyclistes sur Nantes]]></title>
+    <link href="https://blog.dlecan.com//archives/67-Nouveau-service-pour-les-cyclistes-sur-Nantes.html"/>
+    <updated>2011-06-27T13:35:32+00:00</updated>
+    <id>https://blog.dlecan.com//archives/Nouveau-service-pour-les-cyclistes-sur-Nantes</id>
+    <content type="html"><![CDATA[<p>Le service existait <a href="http://www.geovelo.fr/">de manière autonome</a> et a déjà été choisi <a href="http://vgps.paris.fr/">par la ville de Paris</a> en tant que service de calcul d'itinéraires à vélo, j'ai nommé Geovelo !<br /><br />
+Nantes métropole <a href="http://www.nantesmetropole.fr/actualite/l-actualite-thematique/le-plan-velo-trace-la-route-transport-et-deplacements-38586.kjsp">vient aussi de choisir</a> <a href="http://geovelo.nantesmetropole.fr/">ce service</a> pour renseigner les cyclistes nantais, mais nous sommes gratifiés de <a href="http://www.geovelo.fr/blog/20/06/2011/geovelo-nantes-metropole/">bonus supplémentaires</a> exclusifs, notamment &quot;[une] interface communautaire de notation de la cyclabilité&quot;.<br /><br />
+Quid ? Il s'agit simplement de la possibilité d'évaluer les rues de Nantes de manière à affiner les calculs d'itinéraires ou bien à renseigner Nantes Métropole sur les améliorations qu'il faudrait apporter à la voirie.<br /><br />
+J'ai décidé d'appliquer les règles suivantes aux notes que je donne sur le service :</p>
+
+
+<p> <br /></p>
+
+<ul> <br />
+<li>5 étoiles (4) : piste cyclable bien identifiée, séparée de la voie des voitures et des bus</li> <br />
+<li>4 étoiles (3) : piste cyclable bien identifiée, séparée de la voie des voitures, mais partagée avec des bus par exemple<br /></li> <br />
+<li>3 étoiles (2) : bande cyclable simple sur le bord de la voie des véhicules, matérialisée par une ligne blanche discontinue<br /></li> <br />
+<li>2 étoiles (1) : pas de piste cyclable ou bien juste une flèche verte (inutile ?) sur le côté droit de la chaussée<br /></li> <br />
+<li>1 étoile (0) : dangereux, chaussée dégradée : à éviter</li> <br />
+</ul>
+
+
+<p> <br /></p>
+
+<p>En ces temps d'ouverture des données, quelques questions me sont venues à l'esprit que j'ai rapidement posées <a href="http://www.geovelo.fr/blog/20/06/2011/geovelo-nantes-metropole/">sur le blog de Geovelo</a> :</p>
+
+
+<p> <br /></p>
+
+<ul> <br />
+<li>A quelle licence les données fournies par les internautes sont-elles soumise ?</li> <br />
+<li>Est-il prévu une ouverture de ces données ?</li> <br />
+</ul>
+
+
+<p> <br /></p>
+
+<p>Les réponses fournies ne me surprennent pas : &quot;... données ... propriétaires&quot;. Je ne blâme pas Geovelo, car c'est probablement Nantes Métropole qui impose son avis sur le sujet, mais je ne vois vraiment pas bien pourquoi de telle données ne pourraient pas être &quot;ouvertes&quot;.<br /><br />
+Je vais demander à <a href="http://libertic.wordpress.com/libertic/">l'association LiberTIC</a> ce qu'elle en pense, tiens ...</p>
+
+]]></content>
+  </entry>
+  
+</feed>

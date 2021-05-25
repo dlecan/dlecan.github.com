@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: golang | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/golang/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Go & Rust' au meetup SQLI Nantes 2015]]></title>
+    <link href="https://blog.dlecan.com//meetup-sqli-nantes-2015-golang-rust/"/>
+    <updated>2015-07-07T10:27:00+00:00</updated>
+    <id>https://blog.dlecan.com//meetup-sqli-nantes-2015-golang-rust</id>
+    <content type="html"><![CDATA[<p><a href="https://golang.org/">Go</a> et <a href="https://www.rust-lang.org/">Rust</a> font partie de ses "nouveaux" langages très exitants : à la fois modernes mais aussi très puissants.
+Je les ai présentés et comparés lors de ce meetup organisé par <a href="http://www.sqli.com/">SQLI Nantes</a> en juillet 2015.</p>
+
+<p>Support de présentation :</p>
+
+<p><a href="http://blog.dlecan.com/meetupsqlinantes2015-prez/#2"><img src="https://blog.dlecan.com//images/prez-meetup-sqli-go-rust/cover.png" width="752" height="366" alt='Support de présentation de la conférence'></a></p>
+
+<p>La vidéo (à partir de 66' pour ma conférence "Go &amp; Rust") :</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/OKg9gIs6W0Y" allowfullscreen></iframe></div></p>
+]]></content>
+  </entry>
+  
+</feed>

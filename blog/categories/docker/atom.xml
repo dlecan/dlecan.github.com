@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: docker | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/docker/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to configure Docker DNS on Ubuntu in a corporate environment?]]></title>
+    <link href="https://blog.dlecan.com//how-to-configure-docker-dns-on-ubuntu-in-a-corporate-environment/"/>
+    <updated>2016-11-24T22:17:00+00:00</updated>
+    <id>https://blog.dlecan.com//how-to-configure-docker-dns-on-ubuntu-in-a-corporate-environment</id>
+    <content type="html"><![CDATA[<p>When you are in a corporate environment, network is often configured to restrict outgoing requests, such as DNS resolution requests. By default, Docker uses Google DNS (8.8.8.8 and 8.8.4.4) to resolve domain names:</p>
+
+<p><code>
+$ docker run busybox nslookup google.com
+Server:    8.8.8.8
+Address 1: 8.8.8.8
+nslookup: can't resolve 'google.com'
+</code></p>
+
+<p>If you are in a corporate environment, resolution fails because you have to use your internal DNS server.</p>
+
+<p>You can find many, many documentation about how to configure Docker DNS on Ubuntu (such as official <a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/#/configure-a-dns-server-for-use-by-docker">Docker doc</a>), but none of them answer these requirements all together:</p>
+
+<p>1/ Configuration must be portable: works at home or at work or anywhere else</p>
+
+<p>2/ Configuration must be written in files not provided by a deb package to avoid conflicts after package updates</p>
+
+<h2>Portable configuration</h2>
+
+<p>Ubuntu provides Dnsmasq, a local DNS server configured to use DNS server of your network through DHCP. Docker can't use it because it doesn't allow to use a local DNS server if its IP address is a local configuration, such as <code>127.0.0.1</code>.</p>
+
+<p>So we'll configure Dnsmasq to listen to another available IP address, such as the one provided by <code>docker0</code> interface, to solve this issue.</p>
+
+<p>Edit the new file <code>/etc/NetworkManager/dnsmasq.d/docker.conf</code> (as sudo):</p>
+
+<p><code>
+interface=docker0
+</code></p>
+
+<p>Then restart NetworkManager service:</p>
+
+<p><code>
+sudo service network-manager restart
+</code></p>
+
+<h2>Configure Docker DNS</h2>
+
+<p>Extract the IP address of the <code>docker0</code> interface:</p>
+
+<p>```
+$ docker network inspect bridge | grep Gateway</p>
+
+<pre><code>                "Gateway": "172.17.0.1"
+</code></pre>
+
+<p>```</p>
+
+<p>Then edit <code>/etc/docker/daemon.json</code> (as sudo):</p>
+
+<p>```
+{</p>
+
+<pre><code>"dns": ["172.17.0.1"]
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Restart Docker:</p>
+
+<p><code>
+sudo service docker restart
+</code></p>
+
+<p>Finally, check DNS resolution works again:</p>
+
+<p><code>
+$ docker run busybox nslookup google.com
+Server:    172.17.0.1
+Address 1: 172.17.0.1
+Name:      google.com
+Address 1: 2a00:1450:4009:811::200e lhr26s02-in-x200e.1e100.net
+Address 2: 216.58.198.174 lhr25s10-in-f14.1e100.net
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

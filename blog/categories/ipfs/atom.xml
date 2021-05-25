@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ipfs | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/ipfs/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Another World, another Web' au Web2day 2018]]></title>
+    <link href="https://blog.dlecan.com//web2day2018-another-world-another-web-decentralisation/"/>
+    <updated>2018-06-13T09:13:00+00:00</updated>
+    <id>https://blog.dlecan.com//web2day2018-another-world-another-web-decentralisation</id>
+    <content type="html"><![CDATA[<p>Avec <a href="https://twitter.com/guiillaumeN">GuiillaumeN</a>, j'ai eu l'honneur de présenter <a href="https://web2day.co/evenements/another-world-another-web/">"Another World, another Web" au Web2day 2018</a>, sur le thème du web décentralisé et distribué.</p>
+
+<h2>Le pitch</h2>
+
+<blockquote><p>Vous rêvez d’un site web à la fois sécurisé, disponible h24/7j, fiable et respectueux de la vie privée ?
+Une architecture classique mêlerait cloud, load-balancers, chiffrement … plutôt compliqué pour des besoins élémentaires.</p>
+
+<p>Figurez vous qu’un autre monde existe déjà et se trouve à votre portée. Noms de domaines, stockage et distribution des fichiers, logique métier décentralisée, navigateurs adaptés … nous allons tout vous présenter !</p>
+
+<p>Voyage dans un autre monde, au coeur du Web décentralisé.</p></blockquote>
+
+<h2>La vidéo</h2>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/_0hO9uKDlok" allowfullscreen></iframe></div></p>
+
+<h2>Les slides</h2>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTVdjK6h78FPaYWS9C8d4In_LJt8dkaxe1RW2rkY6oUbF3nwDd9VH7jBVD2zU2hfD5BSSR1GtsCU7_Z/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conférence 'Web décentralisé' au GDG Nantes]]></title>
+    <link href="https://blog.dlecan.com//blockchain-decentralisation-tested-deployed-approved/"/>
+    <updated>2018-01-23T23:47:00+00:00</updated>
+    <id>https://blog.dlecan.com//blockchain-decentralisation-tested-deployed-approved</id>
+    <content type="html"><![CDATA[<p><a href="https://twitter.com/guiillaumeN">GuiillaumeN</a> et moi avons été invités par le <a href="https://www.meetup.com/fr-FR/GDG-Nantes/">GDG Nantes</a> à présenter notre conférence "Web décentralisé : testé, déployé, approuvé ✔️ !" fin janvier 2018.</p>
+
+<h1>Web décentralisé : testé, déployé, approuvé ✔️ !</h1>
+
+<p>Une belle occasion pour présenter la notion de <a href="https://en.wikipedia.org/wiki/%C3%90">Ð</a>app, des applications Web décentralisées, à la fois sur le code métier (dé)localisé dans une blockchain <a href="https://en.wikipedia.org/wiki/Ethereum">Ethereum</a>, mais aussi sur tous les assets nécessaires à l'application (Javacript, CSS, HTML ...), (dé)localisés eux dans un système de fichier réparti comme <a href="https://en.wikipedia.org/wiki/InterPlanetary_File_System">IPFS</a>.</p>
+
+<p>Les slides de notre présentation :</p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRg9iV-YbON8rNSH159OMZhuoExZ0pr4RZvoJ1Dx4gHTZoNkIJAuipC_nDQpwFSSfsSmqntAAY3bbbN/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="349" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+<p>Merci au public présent !</p>
+]]></content>
+  </entry>
+  
+</feed>

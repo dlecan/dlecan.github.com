@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: cloudbees | ECT]]></title>
+  <link href="https://blog.dlecan.com//blog/categories/cloudbees/atom.xml" rel="self"/>
+  <link href="https://blog.dlecan.com//"/>
+  <updated>2021-05-25T08:45:26+00:00</updated>
+  <id>https://blog.dlecan.com//</id>
+  <author>
+    <name><![CDATA[Damien Lecan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Configure SBT credentials on Cloudbees platform to publish artifacts]]></title>
+    <link href="https://blog.dlecan.com//configure-sbt-credentials-on-cloudbees-to-publish-artifacts/"/>
+    <updated>2013-01-21T17:10:00+00:00</updated>
+    <id>https://blog.dlecan.com//configure-sbt-credentials-on-cloudbees-to-publish-artifacts</id>
+    <content type="html"><![CDATA[<p>When you want to deploy your Scala artifacts (or anything else) with <a href="http://www.scala-sbt.org">SBT</a>, its reference documentation <a href="http://www.scala-sbt.org/release/docs/Community/Using-Sonatype.html#fourth-adding-credentials">explains well how to configure</a> your own repository's credentials.</p>
+
+<p>Great, just create a bunch of <code>*.sbt</code> file in <code>~/.sbt</code> folder. Easy, simple.</p>
+
+<p>But wait, I'm trying to publish artifacts from a Cloudbees Jenkins instance. How can I copy my <code>*.sbt</code> files into `~/.sbt``on Cloudbees Jenkins platform? You can't.</p>
+
+<p>On Cloudbees, all files handled by Jenkins come from either your SCM (GIT, SVN, ...) or from your private repository: <code>/private/&lt;my_account&gt;/</code> (<a href="http://wiki.cloudbees.com/bin/view/DEV/Sharing+Files+with+Build+Executors">you can upload files in thanks to WebDAV</a>).</p>
+
+<p>As I want to load crendentials in SBT, that is to say secret passwords, I want to the 2nd source.</p>
+
+<p><em>Note</em>: yes, I could have setup the following configuration in my build:</p>
+
+<p><code>scala
+credentials += Credentials(file("/private/&lt;my_account&gt;/.credentials"))
+</code>
+But, you should avoid it for the next reasons:</p>
+
+<ul>
+<li>your build is now platform-dependent</li>
+<li>as this is a project's configuration, you have to duplicate it in all of your project</li>
+</ul>
+
+
+<p>So it's much better to use <code>*.sbt</code> files to configure global credentials, but how to do it on Cloudbees ?</p>
+
+<h2>Create and upload your <code>*.sbt</code> file your private folder</h2>
+
+<p>I have choosen <a href="http://wiki.cloudbees.com/bin/view/DEV/Sharing+Files+with+Build+Executors">to copy all my <code>*.sbt</code> files</a> into <code>/private/&lt;my_account&gt;/.sbt</code> folder.</p>
+
+<h2>Create a new shell script</h2>
+
+<p>Create this new shell script <code>/private/&lt;my_account&gt;/bin/sbt-setup.sh</code> with the following content:</p>
+
+<p>```sh</p>
+
+<h1>!/bin/sh</h1>
+
+<p>mkdir -p ~/.sbt
+for f in /private/<my_account>/.sbt/*.sbt
+do
+  ln -s $f ~/.sbt/
+done
+<code>`` 
+This script will create a symbolic link in</code>~/.sbt/<code>for each files found in</code>/private/<my_account>/.sbt`.
+This will work regardless of the Jenkins slave selected by the master.</p>
+
+<h2>Add a new Jenkins Job to excute the shell script</h2>
+
+<p>Before a SBT build which requires credentials (eg. for <code>publish</code> task), create a new Jenkins job :</p>
+
+<p>```sh
+/bin/sh /private/<my_account>/bin/sbt-setup.sh</p>
+
+<p>```
+Save and run your job.</p>
+
+<p>Voilà, that's all folks!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress continous integration]]></title>
+    <link href="https://blog.dlecan.com//octopress-continous-integration/"/>
+    <updated>2012-07-04T21:17:00+00:00</updated>
+    <id>https://blog.dlecan.com//octopress-continous-integration</id>
+    <content type="html"><![CDATA[<p><strong>Update 2012-11-30</strong>: update script to adapt to last Cloudbees changes.</p>
+
+<p><a href="http://octopress.org">Octopress</a> is great for blogging:</p>
+
+<ul>
+<li><a href="http://daringfireball.net/projects/markdown/syntax/">Clear and easy-to-read syntax</a> thanks to <a href="http://daringfireball.net/projects/markdown/syntax/">Markdown</a></li>
+<li>Offline editing (write your post offline, push it to Github, see it in 'production)</li>
+</ul>
+
+
+<p>This blog is powered by Octopress.</p>
+
+<p>But Octopress relies on Ruby rake to generate and deploy your blog posts, so you need to install them on each computer from where you want to deploy your blog.
+And installing theses tools are generally a pain: ruby/rvm, rake, bundler, encoding issues between platforms, ...</p>
+
+<p>So the perfect "blog post flow" would be:</p>
+
+<ol>
+<li>write blog post everywhere: laptop, personnal/professional computer, ...</li>
+<li>generate and deploy from only one place</li>
+</ol>
+
+
+<p>I found a centralized place to generate and deploy this blog: a <a href="http://www.cloudbees.com">Cloudbees</a> Jenkins instance!
+Jenkins is a continuous integration server, which allows you to build and deploy Java, Ruby, ... applications.</p>
+
+<p>What about a ruby/rake/bundler build ?</p>
+
+<p>Configure a new free-style projet, with the following <em>shell</em> job:</p>
+
+<p>```sh</p>
+
+<h1>export LC_ALL=fr_FR.UTF-8 # uncomment this if you need to force locale</h1>
+
+<h1>export LANG=fr_FR.UTF-8  # uncomment this if you need to force locale</h1>
+
+<p>curl -s -o use-ruby https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/ruby/use-ruby
+RUBY_VERSION=1.9.3-p327 \
+source ./use-ruby
+ln -fs /scratch/jenkins/ruby /scratch/jenkins/rubies
+gem install --conservative bundler
+bundle install
+rake setup_github_pages[git@github.com:dlecan/dlecan.github.com.git]
+rake generate
+rake deploy
+<code>``
+That's it! Just replace</code>git@github.com:dlecan/dlecan.github.com.git` by your Git repository and let Jenkins do the job for you!</p>
+
+<p>This blog is also built thanks to Cloudbees :) <img class="right" src="http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png"></p>
+
+<p>See it in action on this <a href="https://play-war.ci.cloudbees.com/job/blog.dlecan.com/">Cloudbees Jenkins instance</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
